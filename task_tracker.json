@@ -24901,5 +24901,15 @@
     "end_time": 1776771628.779,
     "steps": [],
     "result": "✓ 搜索技能 (0ms)"
+  },
+  "auto_record_session_1776771645850": {
+    "id": "auto_record_session_1776771645850",
+    "name": "自动记录会话",
+    "description": "全局自动任务记录会话",
+    "status": "in_progress",
+    "start_time": 1776771645.85,
+    "end_time": null,
+    "steps": [],
+    "result": null
   }
 }
