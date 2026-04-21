@@ -90,17 +90,22 @@ flowchart TD
 | feishu_tools | 核心功能 | @larksuiteoapi/node-sdk, @larksuiteoapi/node-sdk | src\superpowers\feishu_tools.js |
 | fuzzy_match | 核心功能 |  | src\superpowers\fuzzy_match.js |
 | github_sync | 核心功能 | fs, path, child_process, ./doc_generator | src\superpowers\github_sync.js |
+| gnn_reasoner | 核心功能 | uuid | src\superpowers\gnn_reasoner.js |
 | index | 核心功能 | ./plugin_system, ./permanent_memory, ./self_evolution, ./auto_iteration_recorder, ./feishu_tools, ./feishu_skill, ./skill_discovery | src\superpowers\index.js |
 | intelligent_prediction | 核心功能 | fs, path, ml | src\superpowers\intelligent_prediction.js |
 | iteration_manager | 核心功能 | fs, path, ./storage_manager | src\superpowers\iteration_manager.js |
 | iteration_predictor | 核心功能 | fs, path, ./iteration_manager, ml, ml, ml, ml, ml | src\superpowers\iteration_predictor.js |
 | kg_dag_integration | 核心功能 | ./dag_manager, ./autonomous_learning | src\superpowers\kg_dag_integration.js |
 | kg_dag_integration_enhanced | 核心功能 | ./dag_manager, ./autonomous_learning, uuid, fs, path | src\superpowers\kg_dag_integration_enhanced.js |
+| knowledge_graph_embedding | 核心功能 | uuid, fs, path | src\superpowers\knowledge_graph_embedding.js |
+| knowledge_graph_reasoner | 核心功能 | ./autonomous_learning, uuid, fs, path | src\superpowers\knowledge_graph_reasoner.js |
 | machine_learning | 核心功能 | fs, path, ml | src\superpowers\machine_learning.js |
 | multi_dimensional_optimizer | 核心功能 | fs, path, os, systeminformation | src\superpowers\multi_dimensional_optimizer.js |
-| performance_optimizer | 核心功能 | fs, path, util | src\superpowers\performance_optimizer.js |
+| path_reasoner | 核心功能 | uuid | src\superpowers\path_reasoner.js |
+| performance_optimizer | 核心功能 | uuid, os | src\superpowers\performance_optimizer.js |
 | permanent_memory | 核心功能 | ../storage, fs, path | src\superpowers\permanent_memory.js |
 | plugin_system | 核心功能 | fs, path, ./events, unzipper, fs, path, rimraf | src\superpowers\plugin_system.js |
+| rule_reasoner | 核心功能 | uuid | src\superpowers\rule_reasoner.js |
 | security_manager | 核心功能 | fs, path, crypto | src\superpowers\security_manager.js |
 | self_evolution | 核心功能 | fs, path, ./skill_manager, ./events | src\superpowers\self_evolution.js |
 | skill_analytics | 核心功能 | fs, path | src\superpowers\skill_analytics.js |
@@ -123,6 +128,7 @@ flowchart TD
 | task_analyzer | 核心功能 | fs, path, crypto | src\superpowers\task_analyzer.js |
 | task_runner | 核心功能 | ./task_tracker, ./iteration_manager, ./permanent_memory | src\superpowers\task_runner.js |
 | task_tracker | 核心功能 | fs, path, ./events | src\superpowers\task_tracker.js |
+| temporal_reasoner | 核心功能 | uuid | src\superpowers\temporal_reasoner.js |
 | test_hooks | 核心功能 | ./permanent_memory | src\superpowers\test_hooks.js |
 | test_result_recorder | 核心功能 | fs, path, ./permanent_memory, ./iteration_manager | src\superpowers\test_result_recorder.js |
 | test_task_wrapper | 核心功能 | ./task_runner, ./permanent_memory | src\superpowers\test_task_wrapper.js |
@@ -141,12 +147,12 @@ flowchart TD
 #### 核心类：
 - **EventManager**
 
-### 3.21 index 模块 (src\superpowers\index.js)
+### 3.22 index 模块 (src\superpowers\index.js)
 
 #### 底层实现：
 - 核心功能模块
 
-### 3.30 permanent_memory 模块 (src\superpowers\permanent_memory.js)
+### 3.34 permanent_memory 模块 (src\superpowers\permanent_memory.js)
 
 #### 底层实现：
 - 核心功能模块
@@ -154,7 +160,7 @@ flowchart TD
 #### 核心类：
 - **PermanentMemorySystem**
 
-### 3.47 storage_manager 模块 (src\superpowers\storage_manager.js)
+### 3.52 storage_manager 模块 (src\superpowers\storage_manager.js)
 
 #### 底层实现：
 - 核心功能模块
@@ -192,12 +198,12 @@ flowchart TD
 #### 底层实现：
 - 功能模块
 
-### 4.29 performance_optimizer 模块 (src\superpowers\performance_optimizer.js)
+### 4.33 performance_optimizer 模块 (src\superpowers\performance_optimizer.js)
 
 #### 底层实现：
 - 功能模块
 
-### 4.33 self_evolution 模块 (src\superpowers\self_evolution.js)
+### 4.38 self_evolution 模块 (src\superpowers\self_evolution.js)
 
 #### 底层实现：
 - 功能模块
@@ -213,7 +219,7 @@ flowchart TD
 - **recordIteration(version, date, changes, issues)**
 - **checkSystemHealth(undefined)**
 
-### 4.40 skill_manager 模块 (src\superpowers\skill_manager.js)
+### 4.45 skill_manager 模块 (src\superpowers\skill_manager.js)
 
 #### 底层实现：
 - 功能模块
@@ -221,7 +227,7 @@ flowchart TD
 #### 关键函数：
 - **skillManage(name, action, kwargs = {})**
 
-### 4.53 task_tracker 模块 (src\superpowers\task_tracker.js)
+### 4.58 task_tracker 模块 (src\superpowers\task_tracker.js)
 
 #### 底层实现：
 - 功能模块
@@ -247,7 +253,7 @@ flowchart TD
 - **setRemote(url)**
 - **pushLocalProject()**
 
-### 5.31 plugin_system 模块 (src\superpowers\plugin_system.js)
+### 5.35 plugin_system 模块 (src\superpowers\plugin_system.js)
 
 #### 底层实现：
 - 集成模块
@@ -1274,7 +1280,45 @@ sequenceDiagram
     }
 ```
 
-### 7.22 machine_learning 数据结构
+### 7.22 knowledge_graph_embedding 数据结构
+
+#### data
+
+```json
+{
+      entityEmbeddings: Object.fromEntries(this.entityEmbeddings),
+      relationEmbeddings: Object.fromEntries(this.relationEmbeddings),
+      config: {
+        embeddingDim: this.embeddingDim,
+        margin: this.margin,
+        learningRate: this.learningRate
+      }
+    }
+```
+
+### 7.23 knowledge_graph_reasoner 数据结构
+
+#### exportData
+
+```json
+{
+      reasoningHistory: this.reasoningHistory,
+      exportTime: Date.now()
+    }
+```
+
+#### reasoning
+
+```json
+{
+      id: uuidv4(),
+      type: type,
+      details: details,
+      timestamp: Date.now()
+    }
+```
+
+### 7.24 machine_learning 数据结构
 
 #### data
 
@@ -1298,7 +1342,7 @@ sequenceDiagram
 {undefined}
 ```
 
-### 7.23 multi_dimensional_optimizer 数据结构
+### 7.25 multi_dimensional_optimizer 数据结构
 
 #### metrics
 
@@ -1422,41 +1466,7 @@ sequenceDiagram
       }
 ```
 
-### 7.24 performance_optimizer 数据结构
-
-#### performanceData
-
-```json
-{
-        operation: operation,
-        duration: endTime - startTime,
-        memoryUsage: endMemory - startMemory,
-        timestamp: Date.now()
-      }
-```
-
-#### report
-
-```json
-{
-      cacheStats: {},
-      memoryUsage: process.memoryUsage(),
-      batchJobs: this.batchJobs.length,
-      timestamp: Date.now()
-    }
-```
-
-#### data
-
-```json
-{
-        report: this.generatePerformanceReport(),
-        caches: {},
-        exportedAt: Date.now()
-      }
-```
-
-### 7.25 permanent_memory 数据结构
+### 7.26 permanent_memory 数据结构
 
 #### memory
 
@@ -1506,7 +1516,7 @@ sequenceDiagram
       }
 ```
 
-### 7.26 plugin_system 数据结构
+### 7.27 plugin_system 数据结构
 
 #### dependencyGraph
 
@@ -1552,7 +1562,7 @@ sequenceDiagram
     }
 ```
 
-### 7.27 security_manager 数据结构
+### 7.28 security_manager 数据结构
 
 #### keyData
 
@@ -1616,7 +1626,7 @@ sequenceDiagram
       }
 ```
 
-### 7.28 self_evolution 数据结构
+### 7.29 self_evolution 数据结构
 
 #### maintenanceResult
 
@@ -1834,7 +1844,7 @@ sequenceDiagram
     }
 ```
 
-### 7.29 skill_analytics 数据结构
+### 7.30 skill_analytics 数据结构
 
 #### usageRecord
 
@@ -1922,7 +1932,7 @@ sequenceDiagram
       }
 ```
 
-### 7.30 skill_discovery 数据结构
+### 7.31 skill_discovery 数据结构
 
 #### skill
 
@@ -1975,7 +1985,7 @@ sequenceDiagram
       }
 ```
 
-### 7.31 skill_generator 数据结构
+### 7.32 skill_generator 数据结构
 
 #### templates
 
@@ -2009,7 +2019,7 @@ sequenceDiagram
 {undefined}
 ```
 
-### 7.32 skill_knowledge_graph 数据结构
+### 7.33 skill_knowledge_graph 数据结构
 
 #### data
 
@@ -2092,7 +2102,7 @@ sequenceDiagram
       }
 ```
 
-### 7.33 skill_loader 数据结构
+### 7.34 skill_loader 数据结构
 
 #### metadata
 
@@ -2152,7 +2162,7 @@ sequenceDiagram
     }
 ```
 
-### 7.34 skill_manager 数据结构
+### 7.35 skill_manager 数据结构
 
 #### platformMap
 
@@ -2193,7 +2203,7 @@ sequenceDiagram
       }
 ```
 
-### 7.35 skill_market 数据结构
+### 7.36 skill_market 数据结构
 
 #### data
 
@@ -2298,7 +2308,7 @@ sequenceDiagram
     }
 ```
 
-### 7.36 skill_optimizer 数据结构
+### 7.37 skill_optimizer 数据结构
 
 #### optimizationRecord
 
@@ -2416,7 +2426,7 @@ sequenceDiagram
       }
 ```
 
-### 7.37 skill_scanner 数据结构
+### 7.38 skill_scanner 数据结构
 
 #### skill
 
@@ -2438,7 +2448,7 @@ sequenceDiagram
       }
 ```
 
-### 7.38 skill_security_scanner 数据结构
+### 7.39 skill_security_scanner 数据结构
 
 #### report
 
@@ -2501,7 +2511,7 @@ sequenceDiagram
     }
 ```
 
-### 7.39 skill_trigger 数据结构
+### 7.40 skill_trigger 数据结构
 
 #### params
 
@@ -2509,7 +2519,7 @@ sequenceDiagram
 {undefined}
 ```
 
-### 7.40 skill_version_detector 数据结构
+### 7.41 skill_version_detector 数据结构
 
 #### diff
 
@@ -2578,7 +2588,7 @@ sequenceDiagram
       }
 ```
 
-### 7.41 storage_manager 数据结构
+### 7.42 storage_manager 数据结构
 
 #### stats
 
@@ -2598,7 +2608,7 @@ sequenceDiagram
     }
 ```
 
-### 7.42 sync_monitor 数据结构
+### 7.43 sync_monitor 数据结构
 
 #### logEntry
 
@@ -2636,7 +2646,7 @@ sequenceDiagram
     }
 ```
 
-### 7.43 sync_scheduler 数据结构
+### 7.44 sync_scheduler 数据结构
 
 #### status
 
@@ -2655,7 +2665,7 @@ sequenceDiagram
     }
 ```
 
-### 7.44 system_identity 数据结构
+### 7.45 system_identity 数据结构
 
 #### metadata
 
@@ -2668,7 +2678,7 @@ sequenceDiagram
       }
 ```
 
-### 7.45 task_analyzer 数据结构
+### 7.46 task_analyzer 数据结构
 
 #### trajectory
 
@@ -2751,7 +2761,7 @@ sequenceDiagram
       }
 ```
 
-### 7.46 task_runner 数据结构
+### 7.47 task_runner 数据结构
 
 #### iteration
 
@@ -2773,7 +2783,7 @@ sequenceDiagram
       }
 ```
 
-### 7.47 task_tracker 数据结构
+### 7.48 task_tracker 数据结构
 
 #### task
 
@@ -2803,7 +2813,53 @@ sequenceDiagram
       }
 ```
 
-### 7.48 test_hooks 数据结构
+### 7.49 temporal_reasoner 数据结构
+
+#### triplet
+
+```json
+{
+      id: uuidv4(),
+      head,
+      relation,
+      tail,
+      timestamp: new Date(timestamp).toISOString(),
+      confidence,
+      createdAt: new Date().toISOString()
+    }
+```
+
+#### distribution
+
+```json
+{undefined}
+```
+
+#### eventCounts
+
+```json
+{undefined}
+```
+
+#### query
+
+```json
+{ entity, relation: null }
+```
+
+#### timeRange
+
+```json
+{ start: startTime, end: time }
+```
+
+#### intervalCounts
+
+```json
+{undefined}
+```
+
+### 7.50 test_hooks 数据结构
 
 #### result
 
@@ -2819,7 +2875,7 @@ sequenceDiagram
     }
 ```
 
-### 7.49 test_result_recorder 数据结构
+### 7.51 test_result_recorder 数据结构
 
 #### record
 
@@ -2864,7 +2920,7 @@ sequenceDiagram
     }
 ```
 
-### 7.50 test_verification 数据结构
+### 7.52 test_verification 数据结构
 
 #### results
 
@@ -2898,7 +2954,7 @@ sequenceDiagram
     }
 ```
 
-### 7.51 user_experience 数据结构
+### 7.53 user_experience 数据结构
 
 #### feedbackData
 
@@ -3065,7 +3121,7 @@ sequenceDiagram
       }
 ```
 
-### 7.52 user_partner 数据结构
+### 7.54 user_partner 数据结构
 
 #### messages
 
@@ -3097,7 +3153,7 @@ sequenceDiagram
     }
 ```
 
-### 7.53 webhook_manager 数据结构
+### 7.55 webhook_manager 数据结构
 
 #### webhook
 
@@ -3359,167 +3415,5 @@ Lossless Superpower JavaScript Version 是一个功能强大、架构清晰的AI
 ---
 
 **文档版本**: 1.0.0  
-**最后更新**: 2026-04-21T01:39:02.693Z  
+**最后更新**: 2026-04-21T03:39:02.442Z  
 **生成工具**: DocGenerator
-
-## 15. GitHub 同步功能使用方法
-
-### 15.1 核心功能
-- **外部仓库同步**: 每天0点自动同步 superpowers 和 hermes-agent 仓库
-- **本地项目推送**: 每天0点自动将 Lossless-Superpower-JS 项目推送到 GitHub
-- **变更分析**: 分析外部仓库变更，判断是否需要更新项目
-- **自动更新**: 根据变更分析结果，自动更新文档、依赖等
-
-### 15.2 配置选项
-
-#### 外部仓库配置
-```javascript
-repos: [
-  {
-    name: 'superpowers',
-    path: 'C:\\USERS\\55237\\superpowers',
-    remoteUrl: 'https://github.com/obra/superpowers.git',
-    branch: 'main'
-  },
-  {
-    name: 'hermes-agent',
-    path: 'C:\\USERS\\55237\\hermes-agent',
-    remoteUrl: 'https://github.com/NousResearch/hermes-agent.git',
-    branch: 'main'
-  }
-]
-```
-
-#### 本地项目配置
-```javascript
-localProject: {
-  name: 'Lossless-Superpower-JS',
-  path: 'C:\\USERS\\55237\\Lossless-Superpower-JS',
-  remoteUrl: 'https://github.com/TianMa-lab/Lossless-Superpower-JS.git',
-  branch: 'main',
-  autoCommit: true,
-  commitMessage: '自动同步更新'
-}
-```
-
-#### 同步时间配置
-```javascript
-syncTime: {
-  hour: 0,  // 每天0点
-  minute: 0
-}
-```
-
-### 15.3 使用方法
-
-#### 1. 手动触发同步
-```javascript
-const { sync } = require('./src/superpowers/github_sync');
-sync(); // 执行一次完整的同步
-```
-
-#### 2. 获取同步状态
-```javascript
-const { getSyncStatus, getLocalProjectStatus } = require('./src/superpowers/github_sync');
-
-// 获取外部仓库同步状态
-const syncStatus = getSyncStatus();
-console.log(syncStatus);
-
-// 获取本地项目状态
-const localStatus = getLocalProjectStatus();
-console.log(localStatus);
-```
-
-#### 3. 配置远程仓库
-```javascript
-const { setRemote } = require('./src/superpowers/github_sync');
-setRemote('https://github.com/your-username/your-repo.git');
-```
-
-#### 4. 手动推送本地项目
-```javascript
-const { pushLocalProject } = require('./src/superpowers/github_sync');
-pushLocalProject();
-```
-
-### 15.4 同步流程
-
-1. **初始化**: 系统启动时自动初始化 GitHub 同步器
-2. **定时同步**: 每天0点自动执行同步操作
-3. **外部仓库同步**: 拉取 superpowers 和 hermes-agent 最新代码
-4. **变更分析**: 分析代码变更，判断是否需要更新项目
-5. **项目更新**: 根据分析结果，自动更新文档、依赖等
-6. **本地项目推送**: 自动将本地项目推送到 GitHub
-
-### 15.5 变更分析规则
-
-系统会根据以下规则判断是否需要更新项目：
-
-| 判断条件 | 说明 |
-|---------|------|
-| 重大变更 (BREAKING) | 提交信息中包含 BREAKING、breaking-change 等关键字 |
-| 核心功能影响 | 变更涉及 skills/、agents/、commands/ 等核心目录 |
-| 新功能 | 提交信息中包含 feat、feature、new 等关键字 |
-| 配置变更 | 变更涉及 config、setting、environment 等配置文件 |
-| 大量文件变更 | 变更文件数超过 10 个阈值 |
-
-### 15.6 自动更新操作
-
-| 变更类型 | 自动执行的操作 |
-|---------|--------------|
-| 文档变更 | 自动更新系统设计文档 |
-| 依赖变更 | 提示用户更新依赖 |
-| 技能变更 | 同步更新技能定义 |
-| 配置变更 | 同步更新配置文件 |
-
-### 15.7 最佳实践
-
-1. **定期检查同步状态**：使用 `getSyncStatus()` 和 `getLocalProjectStatus()` 检查同步状态
-2. **手动触发同步**：在重要变更后，手动触发同步以确保代码及时更新
-3. **监控变更分析**：关注系统的变更分析结果，及时处理需要手动更新的内容
-4. **保持远程仓库可用**：确保 GitHub 远程仓库可访问，避免同步失败
-
-### 15.8 故障排除
-
-| 问题 | 可能原因 | 解决方案 |
-|------|---------|--------|
-| 同步失败 | 网络连接问题 | 检查网络连接，确保 GitHub 可访问 |
-| 推送失败 | 权限问题 | 确保本地 Git 配置了正确的 GitHub 凭证 |
-| 变更分析失败 | Git 命令执行失败 | 检查 Git 安装和仓库状态 |
-| 自动更新失败 | 依赖缺失 | 安装必要的依赖包 |
-
-### 15.9 示例输出
-
-```
-开始同步所有 GitHub 仓库...
-
-同步仓库: superpowers
-拉取 superpowers 最新代码...
-superpowers 已是最新版本
-superpowers 同步成功
-
-同步仓库: hermes-agent
-拉取 hermes-agent 最新代码...
-hermes-agent 已是最新版本
-hermes-agent 同步成功
-
-推送本地项目到 GitHub...
-添加所有变更到暂存区...
-提交变更: 自动同步更新 - 2026-04-21T01:31:47.955Z
-推送到 GitHub: https://github.com/TianMa-lab/Lossless-Superpower-JS.git
-Lossless-Superpower-JS 推送成功!
-
-所有 GitHub 仓库同步完成
-下次同步时间: 2026-04-21T16:00:00.000Z
-```
-
-### 15.10 注意事项
-
-- **网络连接**：确保系统能够访问 GitHub
-- **Git 配置**：确保本地 Git 已正确配置
-- **权限设置**：确保有推送权限到 GitHub 仓库
-- **存储空间**：确保有足够的存储空间同步外部仓库
-- **定时任务**：确保系统在0点时处于运行状态
-
-通过以上配置和使用方法，系统将每天0点自动同步外部仓库代码，并将本地项目推送到 GitHub，确保代码库的一致性和最新性。

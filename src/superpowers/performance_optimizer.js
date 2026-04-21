@@ -1,493 +1,640 @@
+const { v4: uuidv4 } = require('uuid');
+const os = require('os');
+
 /**
- * 性能优化模块
- * 负责技能系统的性能优化，包括缓存、异步处理和资源管理
+ * LRU 缓存实现
  */
-
-const fs = require('fs');
-const path = require('path');
-const { promisify } = require('util');
-
-class PerformanceOptimizer {
-  /**
-   * 性能优化器
-   * @param {string} cacheDir - 缓存目录
-   */
-  constructor(cacheDir) {
-    this.cacheDir = cacheDir;
-    this.caches = {
-      skillCache: new Map(),
-      recommendationCache: new Map(),
-      searchCache: new Map(),
-      analysisCache: new Map()
-    };
-    this.cacheExpiry = {
-      skillCache: 3600000, // 1小时
-      recommendationCache: 1800000, // 30分钟
-      searchCache: 600000, // 10分钟
-      analysisCache: 7200000 // 2小时
-    };
-    this.batchJobs = [];
-    this.batchProcessingInterval = null;
-    this.init();
-  }
-
-  /**
-   * 初始化性能优化器
-   */
-  init() {
-    // 创建缓存目录
-    if (!fs.existsSync(this.cacheDir)) {
-      fs.mkdirSync(this.cacheDir, { recursive: true });
-    }
-    
-    // 加载持久化缓存
-    this.loadCache();
-    
-    // 启动批处理
-    this.startBatchProcessing();
-    
-    // 启动缓存清理
-    this.startCacheCleanup();
-  }
-
-  /**
-   * 加载持久化缓存
-   */
-  loadCache() {
-    for (const cacheName in this.caches) {
-      const cacheFilePath = path.join(this.cacheDir, `${cacheName}.json`);
-      try {
-        if (fs.existsSync(cacheFilePath)) {
-          const content = fs.readFileSync(cacheFilePath, 'utf-8');
-          const cacheData = JSON.parse(content);
-          
-          // 恢复缓存数据，过滤过期数据
-          for (const [key, value] of Object.entries(cacheData)) {
-            if (value.timestamp + this.cacheExpiry[cacheName] > Date.now()) {
-              this.caches[cacheName].set(key, value);
-            }
-          }
-          
-          console.log(`加载 ${cacheName} 缓存成功，恢复 ${this.caches[cacheName].size} 个条目`);
-        }
-      } catch (error) {
-        console.error(`加载 ${cacheName} 缓存失败: ${error.message}`);
-      }
-    }
-  }
-
-  /**
-   * 保存缓存到磁盘
-   */
-  saveCache() {
-    for (const cacheName in this.caches) {
-      const cacheFilePath = path.join(this.cacheDir, `${cacheName}.json`);
-      try {
-        const cacheData = Object.fromEntries(this.caches[cacheName]);
-        fs.writeFileSync(cacheFilePath, JSON.stringify(cacheData, null, 2), 'utf-8');
-        console.log(`保存 ${cacheName} 缓存成功`);
-      } catch (error) {
-        console.error(`保存 ${cacheName} 缓存失败: ${error.message}`);
-      }
-    }
+class LRUCache {
+  constructor(maxSize = 1000) {
+    this.maxSize = maxSize;
+    this.cache = new Map();
+    this.order = [];
   }
 
   /**
    * 获取缓存
-   * @param {string} cacheName - 缓存名称
-   * @param {string} key - 缓存键
-   * @returns {any} 缓存值
+   * @param {string} key 键
+   * @returns {*} 值
    */
-  getCache(cacheName, key) {
-    const cache = this.caches[cacheName];
-    if (!cache) {
-      return null;
-    }
-    
-    const value = cache.get(key);
-    if (value) {
-      // 检查是否过期
-      if (value.timestamp + this.cacheExpiry[cacheName] > Date.now()) {
-        return value.data;
-      } else {
-        // 过期数据，从缓存中移除
-        cache.delete(key);
-        return null;
+  get(key) {
+    if (this.cache.has(key)) {
+      // 更新访问顺序
+      const index = this.order.indexOf(key);
+      if (index > -1) {
+        this.order.splice(index, 1);
       }
+      this.order.push(key);
+      return this.cache.get(key);
     }
-    
     return null;
   }
 
   /**
    * 设置缓存
-   * @param {string} cacheName - 缓存名称
-   * @param {string} key - 缓存键
-   * @param {any} data - 缓存值
+   * @param {string} key 键
+   * @param {*} value 值
    */
-  setCache(cacheName, key, data) {
-    const cache = this.caches[cacheName];
-    if (!cache) {
-      return;
-    }
-    
-    cache.set(key, {
-      data: data,
-      timestamp: Date.now()
-    });
-    
-    // 限制缓存大小
-    this.limitCacheSize(cacheName);
-  }
-
-  /**
-   * 限制缓存大小
-   * @param {string} cacheName - 缓存名称
-   * @param {number} maxSize - 最大大小
-   */
-  limitCacheSize(cacheName, maxSize = 1000) {
-    const cache = this.caches[cacheName];
-    if (!cache) {
-      return;
-    }
-    
-    if (cache.size > maxSize) {
-      // 按时间排序，删除最旧的条目
-      const entries = Array.from(cache.entries())
-        .sort((a, b) => a[1].timestamp - b[1].timestamp);
-      
-      const toDelete = entries.slice(0, cache.size - maxSize);
-      for (const [key] of toDelete) {
-        cache.delete(key);
+  set(key, value) {
+    if (this.cache.has(key)) {
+      // 更新访问顺序
+      const index = this.order.indexOf(key);
+      if (index > -1) {
+        this.order.splice(index, 1);
       }
+    } else if (this.cache.size >= this.maxSize) {
+      // 移除最久未使用的项
+      const oldestKey = this.order.shift();
+      this.cache.delete(oldestKey);
     }
+    
+    this.cache.set(key, value);
+    this.order.push(key);
   }
 
   /**
-   * 清除缓存
-   * @param {string} cacheName - 缓存名称（可选，不提供则清除所有缓存）
+   * 删除缓存
+   * @param {string} key 键
    */
-  clearCache(cacheName = null) {
-    if (cacheName) {
-      if (this.caches[cacheName]) {
-        this.caches[cacheName].clear();
-        console.log(`清除 ${cacheName} 缓存成功`);
+  delete(key) {
+    if (this.cache.has(key)) {
+      const index = this.order.indexOf(key);
+      if (index > -1) {
+        this.order.splice(index, 1);
       }
-    } else {
-      for (const name in this.caches) {
-        this.caches[name].clear();
-      }
-      console.log('清除所有缓存成功');
+      this.cache.delete(key);
     }
   }
 
   /**
-   * 启动批处理
+   * 清空缓存
    */
-  startBatchProcessing() {
-    this.batchProcessingInterval = setInterval(() => {
-      this.processBatchJobs();
-    }, 5000); // 每5秒处理一次批处理任务
+  clear() {
+    this.cache.clear();
+    this.order = [];
   }
 
   /**
-   * 停止批处理
+   * 获取缓存大小
+   * @returns {number} 大小
    */
-  stopBatchProcessing() {
-    if (this.batchProcessingInterval) {
-      clearInterval(this.batchProcessingInterval);
-      this.batchProcessingInterval = null;
+  size() {
+    return this.cache.size;
+  }
+}
+
+/**
+ * 多级缓存
+ */
+class MultiLevelCache {
+  constructor(config = {}) {
+    this.l1Cache = new LRUCache(config.l1Size || 1000);  // 内存缓存
+    this.l2Cache = new LRUCache(config.l2Size || 10000); // 二级缓存
+    this.hitCount = 0;
+    this.missCount = 0;
+  }
+
+  /**
+   * 获取缓存
+   * @param {string} key 键
+   * @returns {*} 值
+   */
+  get(key) {
+    // 先从 L1 缓存获取
+    let result = this.l1Cache.get(key);
+    if (result) {
+      this.hitCount++;
+      return result;
     }
-  }
 
-  /**
-   * 添加批处理任务
-   * @param {Function} job - 任务函数
-   * @param {Array} args - 任务参数
-   */
-  addBatchJob(job, args = []) {
-    this.batchJobs.push({ job, args });
-  }
-
-  /**
-   * 处理批处理任务
-   */
-  processBatchJobs() {
-    if (this.batchJobs.length === 0) {
-      return;
+    // 再从 L2 缓存获取
+    result = this.l2Cache.get(key);
+    if (result) {
+      this.hitCount++;
+      // 提升到 L1 缓存
+      this.l1Cache.set(key, result);
+      return result;
     }
-    
-    console.log(`开始处理 ${this.batchJobs.length} 个批处理任务`);
-    
-    // 处理任务
-    for (const job of this.batchJobs) {
-      try {
-        job.job(...job.args);
-      } catch (error) {
-        console.error(`处理批处理任务失败: ${error.message}`);
-      }
-    }
-    
-    // 清空任务队列
-    this.batchJobs = [];
+
+    this.missCount++;
+    return null;
   }
 
   /**
-   * 启动缓存清理
+   * 设置缓存
+   * @param {string} key 键
+   * @param {*} value 值
    */
-  startCacheCleanup() {
-    setInterval(() => {
-      this.cleanupExpiredCache();
-    }, 300000); // 每5分钟清理一次过期缓存
+  set(key, value) {
+    this.l1Cache.set(key, value);
+    this.l2Cache.set(key, value);
   }
 
   /**
-   * 清理过期缓存
+   * 删除缓存
+   * @param {string} key 键
    */
-  cleanupExpiredCache() {
-    let cleanedCount = 0;
-    
-    for (const cacheName in this.caches) {
-      const cache = this.caches[cacheName];
-      const expiry = this.cacheExpiry[cacheName];
-      const now = Date.now();
-      
-      for (const [key, value] of cache.entries()) {
-        if (value.timestamp + expiry < now) {
-          cache.delete(key);
-          cleanedCount++;
-        }
-      }
-    }
-    
-    if (cleanedCount > 0) {
-      console.log(`清理了 ${cleanedCount} 个过期缓存条目`);
-      // 保存清理后的缓存
-      this.saveCache();
-    }
+  delete(key) {
+    this.l1Cache.delete(key);
+    this.l2Cache.delete(key);
   }
 
   /**
-   * 异步执行函数
-   * @param {Function} fn - 要执行的函数
-   * @param {Array} args - 函数参数
-   * @returns {Promise} 执行结果
+   * 清空缓存
    */
-  async executeAsync(fn, args = []) {
-    return new Promise((resolve, reject) => {
-      setImmediate(() => {
-        try {
-          const result = fn(...args);
-          resolve(result);
-        } catch (error) {
-          reject(error);
-        }
-      });
-    });
+  clear() {
+    this.l1Cache.clear();
+    this.l2Cache.clear();
   }
 
   /**
-   * 并行执行多个函数
-   * @param {Array} tasks - 任务数组，每个任务是一个包含函数和参数的对象
-   * @returns {Promise<Array>} 执行结果数组
+   * 获取命中率
+   * @returns {number} 命中率
    */
-  async executeParallel(tasks) {
-    const promises = tasks.map(task => {
-      return this.executeAsync(task.fn, task.args || []);
-    });
-    
-    return Promise.all(promises);
+  getHitRate() {
+    const total = this.hitCount + this.missCount;
+    return total > 0 ? this.hitCount / total : 0;
   }
 
   /**
-   * 限制并发执行
-   * @param {Array} tasks - 任务数组
-   * @param {number} concurrency - 并发数
-   * @returns {Promise<Array>} 执行结果数组
+   * 获取缓存统计
+   * @returns {Object} 统计信息
    */
-  async executeWithConcurrency(tasks, concurrency = 5) {
-    const results = [];
-    const executing = [];
-    
-    for (const task of tasks) {
-      // 等待并发数小于限制
-      while (executing.length >= concurrency) {
-        await Promise.race(executing);
-      }
-      
-      const promise = this.executeAsync(task.fn, task.args || []);
-      results.push(promise);
-      
-      const executingPromise = promise.then(() => {
-        const index = executing.indexOf(executingPromise);
-        if (index > -1) {
-          executing.splice(index, 1);
-        }
-      });
-      
-      executing.push(executingPromise);
-    }
-    
-    return Promise.all(results);
-  }
-
-  /**
-   * 优化文件读取
-   * @param {string} filePath - 文件路径
-   * @returns {Promise<string>} 文件内容
-   */
-  async readFileOptimized(filePath) {
-    const cacheKey = `file_${filePath}`;
-    const cachedContent = this.getCache('skillCache', cacheKey);
-    
-    if (cachedContent) {
-      return cachedContent;
-    }
-    
-    try {
-      const readFile = promisify(fs.readFile);
-      const content = await readFile(filePath, 'utf-8');
-      
-      // 缓存文件内容
-      this.setCache('skillCache', cacheKey, content);
-      
-      return content;
-    } catch (error) {
-      console.error(`读取文件 ${filePath} 失败: ${error.message}`);
-      throw error;
-    }
-  }
-
-  /**
-   * 优化目录扫描
-   * @param {string} dirPath - 目录路径
-   * @returns {Promise<Array>} 文件列表
-   */
-  async scanDirectoryOptimized(dirPath) {
-    const cacheKey = `dir_${dirPath}`;
-    const cachedFiles = this.getCache('skillCache', cacheKey);
-    
-    if (cachedFiles) {
-      return cachedFiles;
-    }
-    
-    try {
-      const readdir = promisify(fs.readdir);
-      const files = await readdir(dirPath, { withFileTypes: true });
-      
-      // 缓存目录扫描结果
-      this.setCache('skillCache', cacheKey, files);
-      
-      return files;
-    } catch (error) {
-      console.error(`扫描目录 ${dirPath} 失败: ${error.message}`);
-      throw error;
-    }
-  }
-
-  /**
-   * 性能监控
-   * @param {string} operation - 操作名称
-   * @param {Function} fn - 要执行的函数
-   * @returns {Object} 执行结果和性能数据
-   */
-  async monitorPerformance(operation, fn) {
-    const startTime = Date.now();
-    const startMemory = process.memoryUsage().heapUsed;
-    
-    try {
-      const result = await fn();
-      const endTime = Date.now();
-      const endMemory = process.memoryUsage().heapUsed;
-      
-      const performanceData = {
-        operation: operation,
-        duration: endTime - startTime,
-        memoryUsage: endMemory - startMemory,
-        timestamp: Date.now()
-      };
-      
-      console.log(`性能监控: ${operation} - 耗时: ${performanceData.duration}ms, 内存: ${(performanceData.memoryUsage / 1024 / 1024).toFixed(2)}MB`);
-      
-      return {
-        result: result,
-        performance: performanceData
-      };
-    } catch (error) {
-      const endTime = Date.now();
-      const endMemory = process.memoryUsage().heapUsed;
-      
-      console.error(`性能监控: ${operation} - 执行失败: ${error.message}`);
-      
-      throw error;
-    }
-  }
-
-  /**
-   * 生成性能报告
-   * @returns {Object} 性能报告
-   */
-  generatePerformanceReport() {
-    const report = {
-      cacheStats: {},
-      memoryUsage: process.memoryUsage(),
-      batchJobs: this.batchJobs.length,
-      timestamp: Date.now()
+  getStats() {
+    return {
+      hitCount: this.hitCount,
+      missCount: this.missCount,
+      hitRate: this.getHitRate(),
+      l1Size: this.l1Cache.size(),
+      l2Size: this.l2Cache.size()
     };
-    
-    // 缓存统计
-    for (const cacheName in this.caches) {
-      report.cacheStats[cacheName] = {
-        size: this.caches[cacheName].size,
-        expiry: this.cacheExpiry[cacheName]
-      };
-    }
-    
-    return report;
+  }
+}
+
+/**
+ * 并行推理器
+ */
+class ParallelReasoner {
+  constructor(config = {}) {
+    this.numWorkers = config.numWorkers || os.cpus().length;
+    this.maxBatchSize = config.maxBatchSize || 100;
+    this.workers = [];
+    this.taskQueue = [];
+    this.running = false;
   }
 
   /**
-   * 导出性能数据
-   * @param {string} filePath - 导出文件路径
+   * 初始化
    */
-  exportPerformanceData(filePath) {
-    try {
-      const data = {
-        report: this.generatePerformanceReport(),
-        caches: {},
-        exportedAt: Date.now()
-      };
-      
-      // 导出缓存统计
-      for (const cacheName in this.caches) {
-        data.caches[cacheName] = {
-          size: this.caches[cacheName].size,
-          entries: Array.from(this.caches[cacheName].keys())
-        };
-      }
-      
-      fs.writeFileSync(filePath, JSON.stringify(data, null, 2), 'utf-8');
-      console.log(`性能数据导出成功: ${filePath}`);
-    } catch (error) {
-      console.error(`导出性能数据失败: ${error.message}`);
+  init() {
+    // 这里使用简单的并行实现，实际应该使用 Worker 线程
+    console.log(`初始化并行推理器，使用 ${this.numWorkers} 个工作线程`);
+  }
+
+  /**
+   * 并行执行推理
+   * @param {Array} queries 查询列表
+   * @param {Function}推理函数
+   * @returns {Promise<Array>} 推理结果
+   */
+  async reason(queries, reasonFunction) {
+    if (queries.length === 0) return [];
+
+    // 分割批次
+    const batches = this._createBatches(queries, this.maxBatchSize);
+    
+    // 并行执行
+    const results = await Promise.all(
+      batches.map(batch => this._processBatch(batch, reasonFunction))
+    );
+
+    return results.flat();
+  }
+
+  /**
+   * 创建批次
+   * @param {Array} items 项目列表
+   * @param {number} batchSize 批次大小
+   * @returns {Array} 批次列表
+   * @private
+   */
+  _createBatches(items, batchSize) {
+    const batches = [];
+    for (let i = 0; i < items.length; i += batchSize) {
+      batches.push(items.slice(i, i + batchSize));
     }
+    return batches;
+  }
+
+  /**
+   * 处理批次
+   * @param {Array} batch 批次
+   * @param {Function} reasonFunction 推理函数
+   * @returns {Promise<Array>} 处理结果
+   * @private
+   */
+  async _processBatch(batch, reasonFunction) {
+    const results = [];
+    for (const item of batch) {
+      try {
+        const result = await reasonFunction(item);
+        results.push(result);
+      } catch (error) {
+        console.error('处理批次项失败:', error.message);
+        results.push({ error: error.message });
+      }
+    }
+    return results;
   }
 
   /**
    * 清理资源
    */
   cleanup() {
-    // 停止批处理
-    this.stopBatchProcessing();
-    
-    // 保存缓存
-    this.saveCache();
-    
-    console.log('性能优化器资源清理完成');
+    this.taskQueue = [];
+    console.log('并行推理器资源清理完成');
   }
 }
 
-// 导出模块
+/**
+ * 图索引
+ */
+class GraphIndex {
+  constructor() {
+    this.entityIndex = new Map();      // 实体索引
+    this.relationIndex = new Map();   // 关系索引
+    this.adjacencyIndex = new Map();  // 邻接表索引
+    this.reverseAdjacencyIndex = new Map(); // 反向邻接表索引
+    this.typeIndex = new Map();       // 类型索引
+    this.communityIndex = new Map();  // 社区索引
+  }
+
+  /**
+   * 构建索引
+   * @param {Object} graph 知识图谱
+   */
+  buildIndexes(graph) {
+    console.log('开始构建图索引...');
+
+    // 构建实体索引
+    for (const node of graph.nodes) {
+      this.entityIndex.set(node.id, node);
+      
+      // 构建类型索引
+      if (!this.typeIndex.has(node.type)) {
+        this.typeIndex.set(node.type, []);
+      }
+      this.typeIndex.get(node.type).push(node.id);
+    }
+
+    // 构建关系索引
+    for (const edge of graph.edges) {
+      if (!this.relationIndex.has(edge.label)) {
+        this.relationIndex.set(edge.label, []);
+      }
+      this.relationIndex.get(edge.label).push(edge);
+
+      // 构建邻接表索引
+      if (!this.adjacencyIndex.has(edge.source)) {
+        this.adjacencyIndex.set(edge.source, []);
+      }
+      this.adjacencyIndex.get(edge.source).push({
+        target: edge.target,
+        relation: edge.label,
+        weight: edge.confidence || 1
+      });
+
+      // 构建反向邻接表索引
+      if (!this.reverseAdjacencyIndex.has(edge.target)) {
+        this.reverseAdjacencyIndex.set(edge.target, []);
+      }
+      this.reverseAdjacencyIndex.get(edge.target).push({
+        source: edge.source,
+        relation: edge.label,
+        weight: edge.confidence || 1
+      });
+    }
+
+    // 构建社区索引（简化版）
+    this._buildCommunityIndex(graph);
+
+    console.log(`索引构建完成，实体数: ${this.entityIndex.size}, 关系数: ${this.relationIndex.size}`);
+  }
+
+  /**
+   * 构建社区索引
+   * @param {Object} graph 知识图谱
+   * @private
+   */
+  _buildCommunityIndex(graph) {
+    // 简化的社区检测
+    const visited = new Set();
+    let communityId = 0;
+
+    for (const node of graph.nodes) {
+      if (!visited.has(node.id)) {
+        const community = this._dfsCommunity(node.id, visited);
+        for (const nodeId of community) {
+          this.communityIndex.set(nodeId, communityId);
+        }
+        communityId++;
+      }
+    }
+  }
+
+  /**
+   * DFS 社区检测
+   * @param {string} nodeId 节点ID
+   * @param {Set} visited 访问集合
+   * @returns {Array} 社区节点
+   * @private
+   */
+  _dfsCommunity(nodeId, visited) {
+    const community = [];
+    const stack = [nodeId];
+
+    while (stack.length > 0) {
+      const current = stack.pop();
+      if (!visited.has(current)) {
+        visited.add(current);
+        community.push(current);
+
+        // 添加邻居
+        const neighbors = this.adjacencyIndex.get(current) || [];
+        for (const neighbor of neighbors) {
+          if (!visited.has(neighbor.target)) {
+            stack.push(neighbor.target);
+          }
+        }
+      }
+    }
+
+    return community;
+  }
+
+  /**
+   * 查询索引
+   * @param {string} type 索引类型
+   * @param {string} value 值
+   * @returns {*} 查询结果
+   */
+  query(type, value) {
+    switch (type) {
+      case 'entity':
+        return this.entityIndex.get(value);
+      case 'relation':
+        return this.relationIndex.get(value);
+      case 'neighbors':
+        return this.adjacencyIndex.get(value) || [];
+      case 'reverse_neighbors':
+        return this.reverseAdjacencyIndex.get(value) || [];
+      case 'type':
+        return this.typeIndex.get(value) || [];
+      case 'community':
+        return this.communityIndex.get(value);
+      default:
+        return null;
+    }
+  }
+
+  /**
+   * 获取实体
+   * @param {string} entityId 实体ID
+   * @returns {Object} 实体
+   */
+  getEntity(entityId) {
+    return this.entityIndex.get(entityId);
+  }
+
+  /**
+   * 获取关系
+   * @param {string} relationName 关系名称
+   * @returns {Array} 关系列表
+   */
+  getRelations(relationName) {
+    return this.relationIndex.get(relationName) || [];
+  }
+
+  /**
+   * 获取邻居
+   * @param {string} nodeId 节点ID
+   * @returns {Array} 邻居列表
+   */
+  getNeighbors(nodeId) {
+    return this.adjacencyIndex.get(nodeId) || [];
+  }
+
+  /**
+   * 获取反向邻居
+   * @param {string} nodeId 节点ID
+   * @returns {Array} 反向邻居列表
+   */
+  getReverseNeighbors(nodeId) {
+    return this.reverseAdjacencyIndex.get(nodeId) || [];
+  }
+
+  /**
+   * 获取同类型实体
+   * @param {string} type 类型
+   * @returns {Array} 实体列表
+   */
+  getEntitiesByType(type) {
+    return this.typeIndex.get(type) || [];
+  }
+
+  /**
+   * 获取社区
+   * @param {string} nodeId 节点ID
+   * @returns {number} 社区ID
+   */
+  getCommunity(nodeId) {
+    return this.communityIndex.get(nodeId);
+  }
+
+  /**
+   * 清理资源
+   */
+  cleanup() {
+    this.entityIndex.clear();
+    this.relationIndex.clear();
+    this.adjacencyIndex.clear();
+    this.reverseAdjacencyIndex.clear();
+    this.typeIndex.clear();
+    this.communityIndex.clear();
+  }
+}
+
+/**
+ * 性能优化管理器
+ */
+class PerformanceOptimizer {
+  constructor(config = {}) {
+    this.cache = new MultiLevelCache(config.cache || {});
+    this.parallelReasoner = new ParallelReasoner(config.parallel || {});
+    this.graphIndex = new GraphIndex();
+    this.enabled = config.enabled || true;
+  }
+
+  /**
+   * 初始化
+   */
+  init() {
+    if (this.enabled) {
+      this.parallelReasoner.init();
+      console.log('性能优化管理器初始化完成');
+    }
+  }
+
+  /**
+   * 构建图索引
+   * @param {Object} graph 知识图谱
+   */
+  buildGraphIndex(graph) {
+    if (this.enabled) {
+      this.graphIndex.buildIndexes(graph);
+    }
+  }
+
+  /**
+   * 缓存包装器
+   * @param {Function} fn 函数
+   * @param {string} cacheKey 缓存键
+   * @returns {Function} 包装后的函数
+   */
+  cached(fn, cacheKey) {
+    if (!this.enabled) {
+      return fn;
+    }
+
+    return async (...args) => {
+      const key = `${cacheKey}:${JSON.stringify(args)}`;
+      const cachedResult = this.cache.get(key);
+      
+      if (cachedResult) {
+        return cachedResult;
+      }
+
+      const result = await fn(...args);
+      this.cache.set(key, result);
+      return result;
+    };
+  }
+
+  /**
+   * 并行执行
+   * @param {Array} tasks 任务列表
+   * @param {Function} taskFn 任务函数
+   * @returns {Promise<Array>} 执行结果
+   */
+  async parallel(tasks, taskFn) {
+    if (!this.enabled || tasks.length <= 1) {
+      return Promise.all(tasks.map(taskFn));
+    }
+
+    return this.parallelReasoner.reason(tasks, taskFn);
+  }
+
+  /**
+   * 获取图索引
+   * @returns {GraphIndex} 图索引
+   */
+  getGraphIndex() {
+    return this.graphIndex;
+  }
+
+  /**
+   * 获取缓存
+   * @returns {MultiLevelCache} 缓存
+   */
+  getCache() {
+    return this.cache;
+  }
+
+  /**
+   * 获取性能统计
+   * @returns {Object} 统计信息
+   */
+  getStats() {
+    return {
+      cache: this.cache.getStats(),
+      index: {
+        entities: this.graphIndex.entityIndex.size,
+        relations: this.graphIndex.relationIndex.size,
+        communities: new Set([...this.graphIndex.communityIndex.values()]).size
+      }
+    };
+  }
+
+  /**
+   * 清理资源
+   */
+  cleanup() {
+    this.cache.clear();
+    this.parallelReasoner.cleanup();
+    this.graphIndex.cleanup();
+    console.log('性能优化管理器资源清理完成');
+  }
+}
+
+/**
+ * 性能优化管理器
+ */
+class PerformanceOptimizerManager {
+  constructor() {
+    this.optimizers = new Map();
+  }
+
+  /**
+   * 创建性能优化器
+   * @param {Object} config 配置
+   * @returns {Object} 优化器
+   */
+  createOptimizer(config = {}) {
+    const optimizer = new PerformanceOptimizer(config);
+    const id = uuidv4();
+    this.optimizers.set(id, optimizer);
+    return { id, optimizer };
+  }
+
+  /**
+   * 获取性能优化器
+   * @param {string} id 优化器ID
+   * @returns {PerformanceOptimizer} 优化器
+   */
+  getOptimizer(id) {
+    return this.optimizers.get(id);
+  }
+
+  /**
+   * 删除性能优化器
+   * @param {string} id 优化器ID
+   */
+  deleteOptimizer(id) {
+    const optimizer = this.optimizers.get(id);
+    if (optimizer) {
+      optimizer.cleanup();
+    }
+    this.optimizers.delete(id);
+  }
+
+  /**
+   * 清理资源
+   */
+  cleanup() {
+    for (const optimizer of this.optimizers.values()) {
+      optimizer.cleanup();
+    }
+    this.optimizers.clear();
+  }
+}
+
+const performanceOptimizerManager = new PerformanceOptimizerManager();
+
 module.exports = {
-  PerformanceOptimizer
+  LRUCache,
+  MultiLevelCache,
+  ParallelReasoner,
+  GraphIndex,
+  PerformanceOptimizer,
+  PerformanceOptimizerManager,
+  performanceOptimizerManager
 };

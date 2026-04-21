@@ -13761,5 +13761,35 @@
     "end_time": null,
     "steps": [],
     "result": null
+  },
+  "auto_record_session_1776737567518": {
+    "id": "auto_record_session_1776737567518",
+    "name": "自动记录会话",
+    "description": "全局自动任务记录会话",
+    "status": "in_progress",
+    "start_time": 1776737567.518,
+    "end_time": null,
+    "steps": [],
+    "result": null
+  },
+  "promise_1776737567522_1": {
+    "id": "promise_1776737567522_1",
+    "name": "Promise执行",
+    "description": "异步Promise执行",
+    "status": "completed",
+    "start_time": 1776737567.522,
+    "end_time": 1776737567.525,
+    "steps": [],
+    "result": "Promise resolved (3ms)"
+  },
+  "promise_1776737567527_2": {
+    "id": "promise_1776737567527_2",
+    "name": "Promise执行",
+    "description": "异步Promise执行",
+    "status": "completed",
+    "start_time": 1776737567.527,
+    "end_time": 1776737567.529,
+    "steps": [],
+    "result": "Promise resolved (2ms)"
   }
 }

@@ -97,6 +97,42 @@ const lazyLoad = {
   get knowledgeGraphReasoner() {
     delete this.knowledgeGraphReasoner;
     return this.knowledgeGraphReasoner = require('./superpowers/knowledge_graph_reasoner');
+  },
+  
+  // 知识图谱嵌入
+  get knowledgeGraphEmbedding() {
+    delete this.knowledgeGraphEmbedding;
+    return this.knowledgeGraphEmbedding = require('./superpowers/knowledge_graph_embedding');
+  },
+  
+  // 路径推理
+  get pathReasoner() {
+    delete this.pathReasoner;
+    return this.pathReasoner = require('./superpowers/path_reasoner');
+  },
+  
+  // 图神经网络推理
+  get gnnReasoner() {
+    delete this.gnnReasoner;
+    return this.gnnReasoner = require('./superpowers/gnn_reasoner');
+  },
+  
+  // 规则推理
+  get ruleReasoner() {
+    delete this.ruleReasoner;
+    return this.ruleReasoner = require('./superpowers/rule_reasoner');
+  },
+  
+  // 时序推理
+  get temporalReasoner() {
+    delete this.temporalReasoner;
+    return this.temporalReasoner = require('./superpowers/temporal_reasoner');
+  },
+  
+  // 性能优化
+  get performanceOptimizer() {
+    delete this.performanceOptimizer;
+    return this.performanceOptimizer = require('./superpowers/performance_optimizer');
   }
 };
 
@@ -203,6 +239,44 @@ const coreFunctions = {
         throw new Error('Unknown reasoning type');
     }
   },
+  
+  // 知识图谱嵌入
+  knowledgeGraphEmbedding: lazyLoad.knowledgeGraphEmbedding.kgEmbeddingManager,
+  KGEmbedding: lazyLoad.knowledgeGraphEmbedding.KGEmbedding,
+  TransE: lazyLoad.knowledgeGraphEmbedding.TransE,
+  RotatE: lazyLoad.knowledgeGraphEmbedding.RotatE,
+  ComplEx: lazyLoad.knowledgeGraphEmbedding.ComplEx,
+  TuckER: lazyLoad.knowledgeGraphEmbedding.TuckER,
+  createEmbedding: (type, config) => lazyLoad.knowledgeGraphEmbedding.kgEmbeddingManager.createEmbedding(type, config),
+  
+  // 路径推理
+  pathReasoner: lazyLoad.pathReasoner.pathReasonerManager,
+  PathReasoner: lazyLoad.pathReasoner.PathReasoner,
+  createPathReasoner: (graph, config) => lazyLoad.pathReasoner.pathReasonerManager.createReasoner(graph, config),
+  
+  // 图神经网络推理
+  gnnReasoner: lazyLoad.gnnReasoner.gnnReasonerManager,
+  GNN: lazyLoad.gnnReasoner.GNN,
+  GCN: lazyLoad.gnnReasoner.GCN,
+  GAT: lazyLoad.gnnReasoner.GAT,
+  RGCN: lazyLoad.gnnReasoner.RGCN,
+  createGNNReasoner: (config) => lazyLoad.gnnReasoner.gnnReasonerManager.createReasoner(config),
+  
+  // 规则推理
+  ruleReasoner: lazyLoad.ruleReasoner.ruleReasonerManager,
+  RuleReasoner: lazyLoad.ruleReasoner.RuleReasoner,
+  createRuleReasoner: (config) => lazyLoad.ruleReasoner.ruleReasonerManager.createReasoner(config),
+  
+  // 时序推理
+  temporalReasoner: lazyLoad.temporalReasoner.temporalReasonerManager,
+  TemporalReasoner: lazyLoad.temporalReasoner.TemporalReasoner,
+  TemporalKnowledgeGraph: lazyLoad.temporalReasoner.TemporalKnowledgeGraph,
+  createTemporalReasoner: (config) => lazyLoad.temporalReasoner.temporalReasonerManager.createReasoner(config),
+  
+  // 性能优化
+  performanceOptimizer: lazyLoad.performanceOptimizer.performanceOptimizerManager,
+  PerformanceOptimizer: lazyLoad.performanceOptimizer.PerformanceOptimizer,
+  createPerformanceOptimizer: (config) => lazyLoad.performanceOptimizer.performanceOptimizerManager.createOptimizer(config),
   
   // 工具函数
   getCharter: () => {
@@ -319,6 +393,12 @@ const coreFunctions = {
         await knowledgeGraphReasoner.init();
       }
       
+      // 初始化性能优化器
+      if (mergedConfig.enablePerformanceOptimization !== false) {
+        const performanceOptimizer = new lazyLoad.performanceOptimizer.PerformanceOptimizer(mergedConfig.performanceOptimizerConfig || {});
+        performanceOptimizer.init();
+      }
+      
       console.log('Lossless Superpower 系统初始化成功');
       return true;
     } catch (error) {
@@ -353,6 +433,26 @@ const coreFunctions = {
       // 清理知识图谱推理器
       if (lazyLoad.knowledgeGraphReasoner) {
         lazyLoad.knowledgeGraphReasoner.knowledgeGraphReasoner.cleanup();
+      }
+      
+      // 清理新增模块
+      if (lazyLoad.knowledgeGraphEmbedding) {
+        lazyLoad.knowledgeGraphEmbedding.kgEmbeddingManager.cleanup();
+      }
+      if (lazyLoad.pathReasoner) {
+        lazyLoad.pathReasoner.pathReasonerManager.cleanup();
+      }
+      if (lazyLoad.gnnReasoner) {
+        lazyLoad.gnnReasoner.gnnReasonerManager.cleanup();
+      }
+      if (lazyLoad.ruleReasoner) {
+        lazyLoad.ruleReasoner.ruleReasonerManager.cleanup();
+      }
+      if (lazyLoad.temporalReasoner) {
+        lazyLoad.temporalReasoner.temporalReasonerManager.cleanup();
+      }
+      if (lazyLoad.performanceOptimizer) {
+        lazyLoad.performanceOptimizer.performanceOptimizerManager.cleanup();
       }
       
       console.log('Lossless Superpower 系统清理完成');
