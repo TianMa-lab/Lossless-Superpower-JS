@@ -84,7 +84,11 @@ const lazyLoad = {
   // 文档生成器
   get docGenerator() {
     delete this.docGenerator;
-    return this.docGenerator = require('./superpowers/doc_generator');
+    const DocGenerator = require('./superpowers/doc_generator');
+    return this.docGenerator = {
+      DocGenerator,
+      docGenerator: new DocGenerator()
+    };
   },
   
   // GitHub 同步
@@ -406,7 +410,7 @@ const coreFunctions = {
           ...(mergedConfig.docGeneratorConfig || {})
         };
         const docGenerator = new lazyLoad.docGenerator.DocGenerator(docGeneratorConfig);
-        docGenerator.init();
+        // DocGenerator 不需要单独的 init 方法，构造函数已完成初始化
       }
       
       // 启动 GitHub 同步
