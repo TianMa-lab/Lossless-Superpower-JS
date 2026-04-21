@@ -1,0 +1,62 @@
+{
+  "version": "1.0.0",
+  "last_updated": "2026-04-21",
+  "base_path": "D:\\opensource",
+  "projects": [
+    {
+      "id": "hermes",
+      "name": "Hermes Agent",
+      "type": "github",
+      "repository": "https://github.com/NousResearch/hermes-agent.git",
+      "local_path": "hermes/agent",
+      "branch": "main",
+      "auto_sync": true,
+      "last_sync": "2026-04-21",
+      "sync_interval": 3600
+    },
+    {
+      "id": "awesome-kgr",
+      "name": "Awesome Knowledge Graph Reasoning",
+      "type": "github",
+      "repository": "https://github.com/LIANGKE23/Awesome-Knowledge-Graph-Reasoning.git",
+      "local_path": "awesome-kgr",
+      "branch": "main",
+      "auto_sync": true,
+      "last_sync": "2026-04-21",
+      "sync_interval": 3600
+    },
+    {
+      "id": "openclaw",
+      "name": "OpenCLAW",
+      "type": "github",
+      "repository": "https://github.com/openclaw/openclaw.git",
+      "local_path": "openclaw",
+      "branch": "main",
+      "auto_sync": true,
+      "last_sync": "2026-04-21",
+      "sync_interval": 3600
+    },
+    {
+      "id": "superpower",
+      "name": "Superpowers",
+      "type": "github",
+      "repository": "https://github.com/obra/superpowers",
+      "local_path": "superpower",
+      "branch": "main",
+      "auto_sync": true,
+      "last_sync": "2026-04-21",
+      "sync_interval": 3600
+    }
+  ],
+  "config": {
+    "auto_scan": true,
+    "scan_interval": 3600,
+    "notification_enabled": true,
+    "max_concurrent_sync": 3
+  },
+  "metadata": {
+    "created_by": "System",
+    "created_at": "2026-04-21",
+    "description": "GitHub开源项目同步配置文件"
+  }
+}

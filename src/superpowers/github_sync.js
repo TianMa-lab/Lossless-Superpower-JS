@@ -357,7 +357,7 @@ class GitHubSync {
       return true;
     }
 
-    const affectsCore = this.checkCoreFunctionality(repo, fileTypes);
+    const affectsCore = this.checkCoreFunctionality(repo, changes.files);
     if (affectsCore) {
       console.log(`\n核心功能受到影响，需要更新项目`);
       return true;

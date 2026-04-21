@@ -1,0 +1,3414 @@
+[
+  {
+    "id": "128b6b39-c60c-4386-a477-111cb6d725e9",
+    "timestamp": "2026-04-21T04:11:11.301Z",
+    "iterationCount": 1,
+    "plan": {
+      "id": "b584d50a-22a5-4614-a340-b709eac95bb6",
+      "timestamp": "2026-04-21T04:11:01.306Z",
+      "optimizations": [
+        {
+          "type": "memory",
+          "action": "adjust_cache",
+          "parameters": {
+            "cacheSize": 8008499
+          },
+          "priority": "high"
+        },
+        {
+          "type": "indexing",
+          "action": "create_indexes",
+          "parameters": {
+            "indexTypes": [
+              "node",
+              "edge",
+              "property"
+            ]
+          },
+          "priority": "medium"
+        },
+        {
+          "type": "regular",
+          "action": "cleanup_cache",
+          "parameters": {
+            "retentionDays": 7
+          },
+          "priority": "low"
+        }
+      ],
+      "priority": "medium"
+    },
+    "optimizationResults": {
+      "id": "b584d50a-22a5-4614-a340-b709eac95bb6",
+      "timestamp": "2026-04-21T04:11:01.306Z",
+      "executedOptimizations": [
+        {
+          "type": "memory",
+          "action": "adjust_cache",
+          "parameters": {
+            "cacheSize": 8008499
+          },
+          "priority": "high",
+          "success": true,
+          "result": {
+            "message": "调整缓存大小为 8008499"
+          }
+        },
+        {
+          "type": "indexing",
+          "action": "create_indexes",
+          "parameters": {
+            "indexTypes": [
+              "node",
+              "edge",
+              "property"
+            ]
+          },
+          "priority": "medium",
+          "success": true,
+          "result": {
+            "message": "创建索引: node, edge, property"
+          }
+        },
+        {
+          "type": "regular",
+          "action": "cleanup_cache",
+          "parameters": {
+            "retentionDays": 7
+          },
+          "priority": "low",
+          "success": true,
+          "result": {
+            "message": "执行定期清理"
+          }
+        }
+      ],
+      "performanceImprovement": 0.15000000000000002,
+      "qualityImprovement": 0
+    },
+    "testResults": {
+      "id": "c0bb149d-9583-4c00-80b8-f820b412dc3b",
+      "timestamp": "2026-04-21T04:11:04.737Z",
+      "tests": [
+        {
+          "name": "performance",
+          "type": "benchmark",
+          "passed": true,
+          "duration": 2583.8895740342896,
+          "metrics": {
+            "averageInferenceTime": 38.42975591217635,
+            "throughput": 72.60293929326096
+          }
+        },
+        {
+          "name": "quality",
+          "type": "accuracy",
+          "passed": true,
+          "duration": 5298.964754880649,
+          "metrics": {
+            "accuracy": 0.9478645207805332,
+            "recall": 0.876865530315319
+          }
+        },
+        {
+          "name": "scalability",
+          "type": "load",
+          "passed": true,
+          "duration": 3847.107814793801,
+          "metrics": {
+            "maxConcurrentQueries": 142,
+            "responseTimeUnderLoad": 53.97774532123659
+          }
+        },
+        {
+          "name": "reliability",
+          "type": "stress",
+          "passed": true,
+          "duration": 5593.5036889222665,
+          "metrics": {
+            "uptime": 16.95633715282782,
+            "errorRate": 0.0461632621396866
+          }
+        }
+      ]
+    },
+    "evaluation": {
+      "performanceImprovement": 0.15000000000000002,
+      "qualityImprovement": 0,
+      "success": true,
+      "testPassRate": 1
+    }
+  },
+  {
+    "id": "d614bf59-fb41-45de-8e8f-95b60b438195",
+    "timestamp": "2026-04-21T04:12:22.536Z",
+    "iterationCount": 2,
+    "plan": {
+      "id": "31f3fd97-2e51-4d20-b65a-c0c84633d80c",
+      "timestamp": "2026-04-21T04:12:11.368Z",
+      "optimizations": [
+        {
+          "type": "memory",
+          "action": "adjust_cache",
+          "parameters": {
+            "cacheSize": 9915596
+          },
+          "priority": "high"
+        },
+        {
+          "type": "model",
+          "action": "retrain_embedding",
+          "parameters": {
+            "algorithm": "RotatE",
+            "embeddingDim": 128,
+            "epochs": 200
+          },
+          "priority": "medium"
+        },
+        {
+          "type": "indexing",
+          "action": "create_indexes",
+          "parameters": {
+            "indexTypes": [
+              "node",
+              "edge",
+              "property"
+            ]
+          },
+          "priority": "medium"
+        },
+        {
+          "type": "regular",
+          "action": "cleanup_cache",
+          "parameters": {
+            "retentionDays": 7
+          },
+          "priority": "low"
+        }
+      ],
+      "priority": "medium"
+    },
+    "optimizationResults": {
+      "id": "31f3fd97-2e51-4d20-b65a-c0c84633d80c",
+      "timestamp": "2026-04-21T04:12:11.368Z",
+      "executedOptimizations": [
+        {
+          "type": "memory",
+          "action": "adjust_cache",
+          "parameters": {
+            "cacheSize": 9915596
+          },
+          "priority": "high",
+          "success": true,
+          "result": {
+            "message": "调整缓存大小为 9915596"
+          }
+        },
+        {
+          "type": "model",
+          "action": "retrain_embedding",
+          "parameters": {
+            "algorithm": "RotatE",
+            "embeddingDim": 128,
+            "epochs": 200
+          },
+          "priority": "medium",
+          "success": true,
+          "result": {
+            "message": "使用 RotatE 重新训练模型"
+          }
+        },
+        {
+          "type": "indexing",
+          "action": "create_indexes",
+          "parameters": {
+            "indexTypes": [
+              "node",
+              "edge",
+              "property"
+            ]
+          },
+          "priority": "medium",
+          "success": true,
+          "result": {
+            "message": "创建索引: node, edge, property"
+          }
+        },
+        {
+          "type": "regular",
+          "action": "cleanup_cache",
+          "parameters": {
+            "retentionDays": 7
+          },
+          "priority": "low",
+          "success": true,
+          "result": {
+            "message": "执行定期清理"
+          }
+        }
+      ],
+      "performanceImprovement": 0.15000000000000002,
+      "qualityImprovement": 0.1
+    },
+    "testResults": {
+      "id": "6b9eb310-9a66-46ff-be2b-d59b9515db86",
+      "timestamp": "2026-04-21T04:12:15.946Z",
+      "tests": [
+        {
+          "name": "performance",
+          "type": "benchmark",
+          "passed": true,
+          "duration": 2195.659791993061,
+          "metrics": {
+            "averageInferenceTime": 13.35482679847034,
+            "throughput": 136.1385934333402
+          }
+        },
+        {
+          "name": "quality",
+          "type": "accuracy",
+          "passed": true,
+          "duration": 1638.5167522057461,
+          "metrics": {
+            "accuracy": 0.829561439299495,
+            "recall": 0.9953212260637013
+          }
+        },
+        {
+          "name": "scalability",
+          "type": "load",
+          "passed": true,
+          "duration": 5462.491407162433,
+          "metrics": {
+            "maxConcurrentQueries": 73,
+            "responseTimeUnderLoad": 56.77846415974417
+          }
+        },
+        {
+          "name": "reliability",
+          "type": "stress",
+          "passed": true,
+          "duration": 5409.500405781205,
+          "metrics": {
+            "uptime": 33.027322438222996,
+            "errorRate": 0.028749695856493753
+          }
+        }
+      ]
+    },
+    "evaluation": {
+      "performanceImprovement": 0.15000000000000002,
+      "qualityImprovement": 0.1,
+      "success": true,
+      "testPassRate": 1
+    }
+  },
+  {
+    "id": "2e299515-cbd3-4182-9a4d-ecfb86c7a760",
+    "timestamp": "2026-04-21T04:13:33.736Z",
+    "iterationCount": 3,
+    "plan": {
+      "id": "0d965172-dd0d-4356-9094-5d7bdfae892a",
+      "timestamp": "2026-04-21T04:13:22.609Z",
+      "optimizations": [
+        {
+          "type": "memory",
+          "action": "adjust_cache",
+          "parameters": {
+            "cacheSize": 9918873
+          },
+          "priority": "high"
+        },
+        {
+          "type": "model",
+          "action": "retrain_embedding",
+          "parameters": {
+            "algorithm": "RotatE",
+            "embeddingDim": 128,
+            "epochs": 200
+          },
+          "priority": "medium"
+        },
+        {
+          "type": "indexing",
+          "action": "create_indexes",
+          "parameters": {
+            "indexTypes": [
+              "node",
+              "edge",
+              "property"
+            ]
+          },
+          "priority": "medium"
+        },
+        {
+          "type": "regular",
+          "action": "cleanup_cache",
+          "parameters": {
+            "retentionDays": 7
+          },
+          "priority": "low"
+        }
+      ],
+      "priority": "medium"
+    },
+    "optimizationResults": {
+      "id": "0d965172-dd0d-4356-9094-5d7bdfae892a",
+      "timestamp": "2026-04-21T04:13:22.609Z",
+      "executedOptimizations": [
+        {
+          "type": "memory",
+          "action": "adjust_cache",
+          "parameters": {
+            "cacheSize": 9918873
+          },
+          "priority": "high",
+          "success": true,
+          "result": {
+            "message": "调整缓存大小为 9918873"
+          }
+        },
+        {
+          "type": "model",
+          "action": "retrain_embedding",
+          "parameters": {
+            "algorithm": "RotatE",
+            "embeddingDim": 128,
+            "epochs": 200
+          },
+          "priority": "medium",
+          "success": true,
+          "result": {
+            "message": "使用 RotatE 重新训练模型"
+          }
+        },
+        {
+          "type": "indexing",
+          "action": "create_indexes",
+          "parameters": {
+            "indexTypes": [
+              "node",
+              "edge",
+              "property"
+            ]
+          },
+          "priority": "medium",
+          "success": true,
+          "result": {
+            "message": "创建索引: node, edge, property"
+          }
+        },
+        {
+          "type": "regular",
+          "action": "cleanup_cache",
+          "parameters": {
+            "retentionDays": 7
+          },
+          "priority": "low",
+          "success": true,
+          "result": {
+            "message": "执行定期清理"
+          }
+        }
+      ],
+      "performanceImprovement": 0.15000000000000002,
+      "qualityImprovement": 0.1
+    },
+    "testResults": {
+      "id": "85d63d78-5fd7-4d86-95fe-337abdfa5def",
+      "timestamp": "2026-04-21T04:13:27.181Z",
+      "tests": [
+        {
+          "name": "performance",
+          "type": "benchmark",
+          "passed": false,
+          "duration": 1750.263144214759,
+          "metrics": {
+            "averageInferenceTime": 29.071592581427097,
+            "throughput": 83.54958380504064
+          }
+        },
+        {
+          "name": "quality",
+          "type": "accuracy",
+          "passed": true,
+          "duration": 5944.398339708291,
+          "metrics": {
+            "accuracy": 0.9665229414109169,
+            "recall": 0.9299543751718093
+          }
+        },
+        {
+          "name": "scalability",
+          "type": "load",
+          "passed": true,
+          "duration": 1955.8075582019605,
+          "metrics": {
+            "maxConcurrentQueries": 92,
+            "responseTimeUnderLoad": 114.32700127461494
+          }
+        },
+        {
+          "name": "reliability",
+          "type": "stress",
+          "passed": true,
+          "duration": 3434.3737627923706,
+          "metrics": {
+            "uptime": 22.5384940521219,
+            "errorRate": 0.020947244203597788
+          }
+        }
+      ]
+    },
+    "evaluation": {
+      "performanceImprovement": 0.15000000000000002,
+      "qualityImprovement": 0.1,
+      "success": true,
+      "testPassRate": 0.75
+    }
+  },
+  {
+    "id": "a9d9de73-e0e6-46bf-a431-a2f87315a814",
+    "timestamp": "2026-04-21T04:14:42.626Z",
+    "iterationCount": 4,
+    "plan": {
+      "id": "dd8e887f-0034-4f66-b080-0a7d2f562bf5",
+      "timestamp": "2026-04-21T04:14:33.801Z",
+      "optimizations": [
+        {
+          "type": "memory",
+          "action": "adjust_cache",
+          "parameters": {
+            "cacheSize": 9921331
+          },
+          "priority": "high"
+        },
+        {
+          "type": "regular",
+          "action": "cleanup_cache",
+          "parameters": {
+            "retentionDays": 7
+          },
+          "priority": "low"
+        }
+      ],
+      "priority": "medium"
+    },
+    "optimizationResults": {
+      "id": "dd8e887f-0034-4f66-b080-0a7d2f562bf5",
+      "timestamp": "2026-04-21T04:14:33.801Z",
+      "executedOptimizations": [
+        {
+          "type": "memory",
+          "action": "adjust_cache",
+          "parameters": {
+            "cacheSize": 9921331
+          },
+          "priority": "high",
+          "success": true,
+          "result": {
+            "message": "调整缓存大小为 9921331"
+          }
+        },
+        {
+          "type": "regular",
+          "action": "cleanup_cache",
+          "parameters": {
+            "retentionDays": 7
+          },
+          "priority": "low",
+          "success": true,
+          "result": {
+            "message": "执行定期清理"
+          }
+        }
+      ],
+      "performanceImprovement": 0.1,
+      "qualityImprovement": 0
+    },
+    "testResults": {
+      "id": "b1016369-e5a3-4097-ac1a-dc2a82cf52c1",
+      "timestamp": "2026-04-21T04:14:36.084Z",
+      "tests": [
+        {
+          "name": "performance",
+          "type": "benchmark",
+          "passed": true,
+          "duration": 2640.468707901515,
+          "metrics": {
+            "averageInferenceTime": 51.20783914824412,
+            "throughput": 108.7337862404676
+          }
+        },
+        {
+          "name": "quality",
+          "type": "accuracy",
+          "passed": false,
+          "duration": 1495.4055213435472,
+          "metrics": {
+            "accuracy": 0.9776671169370714,
+            "recall": 0.8903169760189383
+          }
+        },
+        {
+          "name": "scalability",
+          "type": "load",
+          "passed": true,
+          "duration": 3436.372989917926,
+          "metrics": {
+            "maxConcurrentQueries": 68,
+            "responseTimeUnderLoad": 111.29354015276316
+          }
+        },
+        {
+          "name": "reliability",
+          "type": "stress",
+          "passed": true,
+          "duration": 5130.959228111125,
+          "metrics": {
+            "uptime": 14.469663621874155,
+            "errorRate": 0.019156918948614782
+          }
+        }
+      ]
+    },
+    "evaluation": {
+      "performanceImprovement": 0.1,
+      "qualityImprovement": 0,
+      "success": true,
+      "testPassRate": 0.75
+    }
+  },
+  {
+    "id": "48bec5b9-0c3e-4012-9870-d31f47e2b6dd",
+    "timestamp": "2026-04-21T04:15:51.505Z",
+    "iterationCount": 5,
+    "plan": {
+      "id": "6f67c2e6-70a1-4799-8f14-d1e3de43ee4c",
+      "timestamp": "2026-04-21T04:15:42.685Z",
+      "optimizations": [
+        {
+          "type": "memory",
+          "action": "adjust_cache",
+          "parameters": {
+            "cacheSize": 9923788
+          },
+          "priority": "high"
+        },
+        {
+          "type": "regular",
+          "action": "cleanup_cache",
+          "parameters": {
+            "retentionDays": 7
+          },
+          "priority": "low"
+        }
+      ],
+      "priority": "medium"
+    },
+    "optimizationResults": {
+      "id": "6f67c2e6-70a1-4799-8f14-d1e3de43ee4c",
+      "timestamp": "2026-04-21T04:15:42.685Z",
+      "executedOptimizations": [
+        {
+          "type": "memory",
+          "action": "adjust_cache",
+          "parameters": {
+            "cacheSize": 9923788
+          },
+          "priority": "high",
+          "success": true,
+          "result": {
+            "message": "调整缓存大小为 9923788"
+          }
+        },
+        {
+          "type": "regular",
+          "action": "cleanup_cache",
+          "parameters": {
+            "retentionDays": 7
+          },
+          "priority": "low",
+          "success": true,
+          "result": {
+            "message": "执行定期清理"
+          }
+        }
+      ],
+      "performanceImprovement": 0.1,
+      "qualityImprovement": 0
+    },
+    "testResults": {
+      "id": "b92d0bd8-73e4-4e9c-907a-46e3c79bb461",
+      "timestamp": "2026-04-21T04:15:44.970Z",
+      "tests": [
+        {
+          "name": "performance",
+          "type": "benchmark",
+          "passed": true,
+          "duration": 2020.0557560692823,
+          "metrics": {
+            "averageInferenceTime": 34.78602924991837,
+            "throughput": 102.12832464302195
+          }
+        },
+        {
+          "name": "quality",
+          "type": "accuracy",
+          "passed": true,
+          "duration": 1998.7328022712454,
+          "metrics": {
+            "accuracy": 0.9366278577368226,
+            "recall": 0.9654959036115032
+          }
+        },
+        {
+          "name": "scalability",
+          "type": "load",
+          "passed": true,
+          "duration": 1102.3245058413797,
+          "metrics": {
+            "maxConcurrentQueries": 88,
+            "responseTimeUnderLoad": 72.38322932504082
+          }
+        },
+        {
+          "name": "reliability",
+          "type": "stress",
+          "passed": true,
+          "duration": 1669.5711763472234,
+          "metrics": {
+            "uptime": 32.25959559360811,
+            "errorRate": 0.02010395295773076
+          }
+        }
+      ]
+    },
+    "evaluation": {
+      "performanceImprovement": 0.1,
+      "qualityImprovement": 0,
+      "success": true,
+      "testPassRate": 1
+    }
+  },
+  {
+    "id": "123e9745-5b0b-4ff0-b634-7f81b9c1db9f",
+    "timestamp": "2026-04-21T04:17:02.532Z",
+    "iterationCount": 6,
+    "plan": {
+      "id": "5a67ead7-bd88-485b-99b3-6cd3e787b18a",
+      "timestamp": "2026-04-21T04:16:51.564Z",
+      "optimizations": [
+        {
+          "type": "memory",
+          "action": "adjust_cache",
+          "parameters": {
+            "cacheSize": 9925427
+          },
+          "priority": "high"
+        },
+        {
+          "type": "model",
+          "action": "retrain_embedding",
+          "parameters": {
+            "algorithm": "RotatE",
+            "embeddingDim": 128,
+            "epochs": 200
+          },
+          "priority": "medium"
+        },
+        {
+          "type": "indexing",
+          "action": "create_indexes",
+          "parameters": {
+            "indexTypes": [
+              "node",
+              "edge",
+              "property"
+            ]
+          },
+          "priority": "medium"
+        },
+        {
+          "type": "regular",
+          "action": "cleanup_cache",
+          "parameters": {
+            "retentionDays": 7
+          },
+          "priority": "low"
+        }
+      ],
+      "priority": "medium"
+    },
+    "optimizationResults": {
+      "id": "5a67ead7-bd88-485b-99b3-6cd3e787b18a",
+      "timestamp": "2026-04-21T04:16:51.564Z",
+      "executedOptimizations": [
+        {
+          "type": "memory",
+          "action": "adjust_cache",
+          "parameters": {
+            "cacheSize": 9925427
+          },
+          "priority": "high",
+          "success": true,
+          "result": {
+            "message": "调整缓存大小为 9925427"
+          }
+        },
+        {
+          "type": "model",
+          "action": "retrain_embedding",
+          "parameters": {
+            "algorithm": "RotatE",
+            "embeddingDim": 128,
+            "epochs": 200
+          },
+          "priority": "medium",
+          "success": true,
+          "result": {
+            "message": "使用 RotatE 重新训练模型"
+          }
+        },
+        {
+          "type": "indexing",
+          "action": "create_indexes",
+          "parameters": {
+            "indexTypes": [
+              "node",
+              "edge",
+              "property"
+            ]
+          },
+          "priority": "medium",
+          "success": true,
+          "result": {
+            "message": "创建索引: node, edge, property"
+          }
+        },
+        {
+          "type": "regular",
+          "action": "cleanup_cache",
+          "parameters": {
+            "retentionDays": 7
+          },
+          "priority": "low",
+          "success": true,
+          "result": {
+            "message": "执行定期清理"
+          }
+        }
+      ],
+      "performanceImprovement": 0.15000000000000002,
+      "qualityImprovement": 0.1
+    },
+    "testResults": {
+      "id": "5fe8c106-0054-4102-a079-2279b7d74dc3",
+      "timestamp": "2026-04-21T04:16:56.049Z",
+      "tests": [
+        {
+          "name": "performance",
+          "type": "benchmark",
+          "passed": true,
+          "duration": 5578.157644051372,
+          "metrics": {
+            "averageInferenceTime": 18.805021373721644,
+            "throughput": 122.33473650977677
+          }
+        },
+        {
+          "name": "quality",
+          "type": "accuracy",
+          "passed": true,
+          "duration": 5017.212407194625,
+          "metrics": {
+            "accuracy": 0.9859220581275263,
+            "recall": 0.8997443288538081
+          }
+        },
+        {
+          "name": "scalability",
+          "type": "load",
+          "passed": true,
+          "duration": 2317.603028154067,
+          "metrics": {
+            "maxConcurrentQueries": 71,
+            "responseTimeUnderLoad": 76.44545096678621
+          }
+        },
+        {
+          "name": "reliability",
+          "type": "stress",
+          "passed": true,
+          "duration": 3873.700824818772,
+          "metrics": {
+            "uptime": 14.226936292800524,
+            "errorRate": 0.02676628860430724
+          }
+        }
+      ]
+    },
+    "evaluation": {
+      "performanceImprovement": 0.15000000000000002,
+      "qualityImprovement": 0.1,
+      "success": true,
+      "testPassRate": 1
+    }
+  },
+  {
+    "id": "b4a2b5c2-9d40-4620-839c-64acfa7225f2",
+    "timestamp": "2026-04-21T04:18:11.378Z",
+    "iterationCount": 7,
+    "plan": {
+      "id": "00093d8d-4577-4b75-bd0a-b7e9cd8ce7a5",
+      "timestamp": "2026-04-21T04:18:02.587Z",
+      "optimizations": [
+        {
+          "type": "memory",
+          "action": "adjust_cache",
+          "parameters": {
+            "cacheSize": 9928704
+          },
+          "priority": "high"
+        },
+        {
+          "type": "regular",
+          "action": "cleanup_cache",
+          "parameters": {
+            "retentionDays": 7
+          },
+          "priority": "low"
+        }
+      ],
+      "priority": "medium"
+    },
+    "optimizationResults": {
+      "id": "00093d8d-4577-4b75-bd0a-b7e9cd8ce7a5",
+      "timestamp": "2026-04-21T04:18:02.587Z",
+      "executedOptimizations": [
+        {
+          "type": "memory",
+          "action": "adjust_cache",
+          "parameters": {
+            "cacheSize": 9928704
+          },
+          "priority": "high",
+          "success": true,
+          "result": {
+            "message": "调整缓存大小为 9928704"
+          }
+        },
+        {
+          "type": "regular",
+          "action": "cleanup_cache",
+          "parameters": {
+            "retentionDays": 7
+          },
+          "priority": "low",
+          "success": true,
+          "result": {
+            "message": "执行定期清理"
+          }
+        }
+      ],
+      "performanceImprovement": 0.1,
+      "qualityImprovement": 0
+    },
+    "testResults": {
+      "id": "ea648da2-772d-4530-a73b-2c02e307549e",
+      "timestamp": "2026-04-21T04:18:04.855Z",
+      "tests": [
+        {
+          "name": "performance",
+          "type": "benchmark",
+          "passed": true,
+          "duration": 5215.404046254764,
+          "metrics": {
+            "averageInferenceTime": 14.292733178712531,
+            "throughput": 126.2320518976878
+          }
+        },
+        {
+          "name": "quality",
+          "type": "accuracy",
+          "passed": true,
+          "duration": 5986.248291108785,
+          "metrics": {
+            "accuracy": 0.931763627897492,
+            "recall": 0.9499612785937344
+          }
+        },
+        {
+          "name": "scalability",
+          "type": "load",
+          "passed": true,
+          "duration": 5184.45129084107,
+          "metrics": {
+            "maxConcurrentQueries": 72,
+            "responseTimeUnderLoad": 133.6652305854319
+          }
+        },
+        {
+          "name": "reliability",
+          "type": "stress",
+          "passed": true,
+          "duration": 3187.248085563056,
+          "metrics": {
+            "uptime": 31.00983031998025,
+            "errorRate": 0.007684472258672615
+          }
+        }
+      ]
+    },
+    "evaluation": {
+      "performanceImprovement": 0.1,
+      "qualityImprovement": 0,
+      "success": true,
+      "testPassRate": 1
+    }
+  },
+  {
+    "id": "0f74a4e5-1b54-4e0d-9d02-9ada3f499c8c",
+    "timestamp": "2026-04-21T04:19:21.384Z",
+    "iterationCount": 8,
+    "plan": {
+      "id": "d2d6032a-be71-4397-80e1-c8b434177015",
+      "timestamp": "2026-04-21T04:19:11.438Z",
+      "optimizations": [
+        {
+          "type": "memory",
+          "action": "adjust_cache",
+          "parameters": {
+            "cacheSize": 9983590
+          },
+          "priority": "high"
+        },
+        {
+          "type": "indexing",
+          "action": "create_indexes",
+          "parameters": {
+            "indexTypes": [
+              "node",
+              "edge",
+              "property"
+            ]
+          },
+          "priority": "medium"
+        },
+        {
+          "type": "regular",
+          "action": "cleanup_cache",
+          "parameters": {
+            "retentionDays": 7
+          },
+          "priority": "low"
+        }
+      ],
+      "priority": "medium"
+    },
+    "optimizationResults": {
+      "id": "d2d6032a-be71-4397-80e1-c8b434177015",
+      "timestamp": "2026-04-21T04:19:11.438Z",
+      "executedOptimizations": [
+        {
+          "type": "memory",
+          "action": "adjust_cache",
+          "parameters": {
+            "cacheSize": 9983590
+          },
+          "priority": "high",
+          "success": true,
+          "result": {
+            "message": "调整缓存大小为 9983590"
+          }
+        },
+        {
+          "type": "indexing",
+          "action": "create_indexes",
+          "parameters": {
+            "indexTypes": [
+              "node",
+              "edge",
+              "property"
+            ]
+          },
+          "priority": "medium",
+          "success": true,
+          "result": {
+            "message": "创建索引: node, edge, property"
+          }
+        },
+        {
+          "type": "regular",
+          "action": "cleanup_cache",
+          "parameters": {
+            "retentionDays": 7
+          },
+          "priority": "low",
+          "success": true,
+          "result": {
+            "message": "执行定期清理"
+          }
+        }
+      ],
+      "performanceImprovement": 0.15000000000000002,
+      "qualityImprovement": 0
+    },
+    "testResults": {
+      "id": "78c0bdbe-d51f-4af3-b54a-ceea5ec34336",
+      "timestamp": "2026-04-21T04:19:14.866Z",
+      "tests": [
+        {
+          "name": "performance",
+          "type": "benchmark",
+          "passed": true,
+          "duration": 4319.599165627464,
+          "metrics": {
+            "averageInferenceTime": 49.00295638565706,
+            "throughput": 50.977926551332864
+          }
+        },
+        {
+          "name": "quality",
+          "type": "accuracy",
+          "passed": true,
+          "duration": 1970.9572609775487,
+          "metrics": {
+            "accuracy": 0.9176609140064222,
+            "recall": 0.8689633845730432
+          }
+        },
+        {
+          "name": "scalability",
+          "type": "load",
+          "passed": true,
+          "duration": 1370.1623867464848,
+          "metrics": {
+            "maxConcurrentQueries": 118,
+            "responseTimeUnderLoad": 84.67888709704049
+          }
+        },
+        {
+          "name": "reliability",
+          "type": "stress",
+          "passed": true,
+          "duration": 5496.503381293457,
+          "metrics": {
+            "uptime": 27.41088907716828,
+            "errorRate": 0.04826371495787768
+          }
+        }
+      ]
+    },
+    "evaluation": {
+      "performanceImprovement": 0.15000000000000002,
+      "qualityImprovement": 0,
+      "success": true,
+      "testPassRate": 1
+    }
+  },
+  {
+    "id": "8cfea18b-9a1d-4650-975b-a00052532a1e",
+    "timestamp": "2026-04-21T04:20:30.281Z",
+    "iterationCount": 9,
+    "plan": {
+      "id": "c4ac91b5-f2b7-4949-aedc-0d0d546ca23f",
+      "timestamp": "2026-04-21T04:20:21.438Z",
+      "optimizations": [
+        {
+          "type": "memory",
+          "action": "adjust_cache",
+          "parameters": {
+            "cacheSize": 9986048
+          },
+          "priority": "high"
+        },
+        {
+          "type": "regular",
+          "action": "cleanup_cache",
+          "parameters": {
+            "retentionDays": 7
+          },
+          "priority": "low"
+        }
+      ],
+      "priority": "medium"
+    },
+    "optimizationResults": {
+      "id": "c4ac91b5-f2b7-4949-aedc-0d0d546ca23f",
+      "timestamp": "2026-04-21T04:20:21.438Z",
+      "executedOptimizations": [
+        {
+          "type": "memory",
+          "action": "adjust_cache",
+          "parameters": {
+            "cacheSize": 9986048
+          },
+          "priority": "high",
+          "success": true,
+          "result": {
+            "message": "调整缓存大小为 9986048"
+          }
+        },
+        {
+          "type": "regular",
+          "action": "cleanup_cache",
+          "parameters": {
+            "retentionDays": 7
+          },
+          "priority": "low",
+          "success": true,
+          "result": {
+            "message": "执行定期清理"
+          }
+        }
+      ],
+      "performanceImprovement": 0.1,
+      "qualityImprovement": 0
+    },
+    "testResults": {
+      "id": "450b0f3a-3cce-414c-9ce2-12913dd3bd5a",
+      "timestamp": "2026-04-21T04:20:23.728Z",
+      "tests": [
+        {
+          "name": "performance",
+          "type": "benchmark",
+          "passed": true,
+          "duration": 3081.106407064502,
+          "metrics": {
+            "averageInferenceTime": 38.58960564892795,
+            "throughput": 72.23205268456802
+          }
+        },
+        {
+          "name": "quality",
+          "type": "accuracy",
+          "passed": true,
+          "duration": 5420.739697876541,
+          "metrics": {
+            "accuracy": 0.8110112261344133,
+            "recall": 0.8715491227670742
+          }
+        },
+        {
+          "name": "scalability",
+          "type": "load",
+          "passed": true,
+          "duration": 5158.383579410459,
+          "metrics": {
+            "maxConcurrentQueries": 91,
+            "responseTimeUnderLoad": 131.47247351052286
+          }
+        },
+        {
+          "name": "reliability",
+          "type": "stress",
+          "passed": true,
+          "duration": 3902.317629542932,
+          "metrics": {
+            "uptime": 16.944403030426894,
+            "errorRate": 0.029862768779383816
+          }
+        }
+      ]
+    },
+    "evaluation": {
+      "performanceImprovement": 0.1,
+      "qualityImprovement": 0,
+      "success": true,
+      "testPassRate": 1
+    }
+  },
+  {
+    "id": "0f862d8a-2922-4a2a-970d-116f47291aa5",
+    "timestamp": "2026-04-21T04:21:39.147Z",
+    "iterationCount": 10,
+    "plan": {
+      "id": "fccfcccc-4df3-41c7-8cf9-0767c1eeee1f",
+      "timestamp": "2026-04-21T04:21:30.342Z",
+      "optimizations": [
+        {
+          "type": "memory",
+          "action": "adjust_cache",
+          "parameters": {
+            "cacheSize": 9987686
+          },
+          "priority": "high"
+        },
+        {
+          "type": "regular",
+          "action": "cleanup_cache",
+          "parameters": {
+            "retentionDays": 7
+          },
+          "priority": "low"
+        }
+      ],
+      "priority": "medium"
+    },
+    "optimizationResults": {
+      "id": "fccfcccc-4df3-41c7-8cf9-0767c1eeee1f",
+      "timestamp": "2026-04-21T04:21:30.342Z",
+      "executedOptimizations": [
+        {
+          "type": "memory",
+          "action": "adjust_cache",
+          "parameters": {
+            "cacheSize": 9987686
+          },
+          "priority": "high",
+          "success": true,
+          "result": {
+            "message": "调整缓存大小为 9987686"
+          }
+        },
+        {
+          "type": "regular",
+          "action": "cleanup_cache",
+          "parameters": {
+            "retentionDays": 7
+          },
+          "priority": "low",
+          "success": true,
+          "result": {
+            "message": "执行定期清理"
+          }
+        }
+      ],
+      "performanceImprovement": 0.1,
+      "qualityImprovement": 0
+    },
+    "testResults": {
+      "id": "f4f4ba18-3692-4d5c-8352-322301d29d85",
+      "timestamp": "2026-04-21T04:21:32.612Z",
+      "tests": [
+        {
+          "name": "performance",
+          "type": "benchmark",
+          "passed": false,
+          "duration": 3542.803642070765,
+          "metrics": {
+            "averageInferenceTime": 13.58731520764713,
+            "throughput": 123.59887566516676
+          }
+        },
+        {
+          "name": "quality",
+          "type": "accuracy",
+          "passed": true,
+          "duration": 1968.2466412098745,
+          "metrics": {
+            "accuracy": 0.9227084022597783,
+            "recall": 0.8763701630067683
+          }
+        },
+        {
+          "name": "scalability",
+          "type": "load",
+          "passed": true,
+          "duration": 1051.2665747730134,
+          "metrics": {
+            "maxConcurrentQueries": 132,
+            "responseTimeUnderLoad": 65.19132779442593
+          }
+        },
+        {
+          "name": "reliability",
+          "type": "stress",
+          "passed": true,
+          "duration": 1738.7813015030015,
+          "metrics": {
+            "uptime": 34.82534566678372,
+            "errorRate": 0.04068661944435121
+          }
+        }
+      ]
+    },
+    "evaluation": {
+      "performanceImprovement": 0.1,
+      "qualityImprovement": 0,
+      "success": true,
+      "testPassRate": 0.75
+    }
+  },
+  {
+    "id": "9e78adf2-a98c-441f-9f36-339ea60dd83e",
+    "timestamp": "2026-04-21T04:22:49.192Z",
+    "iterationCount": 11,
+    "plan": {
+      "id": "52bced5d-f129-4a87-8063-d950206d5f95",
+      "timestamp": "2026-04-21T04:22:39.210Z",
+      "optimizations": [
+        {
+          "type": "memory",
+          "action": "adjust_cache",
+          "parameters": {
+            "cacheSize": 9990144
+          },
+          "priority": "high"
+        },
+        {
+          "type": "indexing",
+          "action": "create_indexes",
+          "parameters": {
+            "indexTypes": [
+              "node",
+              "edge",
+              "property"
+            ]
+          },
+          "priority": "medium"
+        },
+        {
+          "type": "regular",
+          "action": "cleanup_cache",
+          "parameters": {
+            "retentionDays": 7
+          },
+          "priority": "low"
+        }
+      ],
+      "priority": "medium"
+    },
+    "optimizationResults": {
+      "id": "52bced5d-f129-4a87-8063-d950206d5f95",
+      "timestamp": "2026-04-21T04:22:39.210Z",
+      "executedOptimizations": [
+        {
+          "type": "memory",
+          "action": "adjust_cache",
+          "parameters": {
+            "cacheSize": 9990144
+          },
+          "priority": "high",
+          "success": true,
+          "result": {
+            "message": "调整缓存大小为 9990144"
+          }
+        },
+        {
+          "type": "indexing",
+          "action": "create_indexes",
+          "parameters": {
+            "indexTypes": [
+              "node",
+              "edge",
+              "property"
+            ]
+          },
+          "priority": "medium",
+          "success": true,
+          "result": {
+            "message": "创建索引: node, edge, property"
+          }
+        },
+        {
+          "type": "regular",
+          "action": "cleanup_cache",
+          "parameters": {
+            "retentionDays": 7
+          },
+          "priority": "low",
+          "success": true,
+          "result": {
+            "message": "执行定期清理"
+          }
+        }
+      ],
+      "performanceImprovement": 0.15000000000000002,
+      "qualityImprovement": 0
+    },
+    "testResults": {
+      "id": "1f489129-8655-4e7c-90ce-efc7441e9bcf",
+      "timestamp": "2026-04-21T04:22:42.624Z",
+      "tests": [
+        {
+          "name": "performance",
+          "type": "benchmark",
+          "passed": true,
+          "duration": 5141.374397168252,
+          "metrics": {
+            "averageInferenceTime": 25.07940714787537,
+            "throughput": 115.02248343465246
+          }
+        },
+        {
+          "name": "quality",
+          "type": "accuracy",
+          "passed": true,
+          "duration": 2741.208915480484,
+          "metrics": {
+            "accuracy": 0.9056245550490041,
+            "recall": 0.9044665183532458
+          }
+        },
+        {
+          "name": "scalability",
+          "type": "load",
+          "passed": true,
+          "duration": 4751.1273996377895,
+          "metrics": {
+            "maxConcurrentQueries": 90,
+            "responseTimeUnderLoad": 97.30065903683989
+          }
+        },
+        {
+          "name": "reliability",
+          "type": "stress",
+          "passed": true,
+          "duration": 1039.9826567027073,
+          "metrics": {
+            "uptime": 27.214474071691427,
+            "errorRate": 0.023262255437996537
+          }
+        }
+      ]
+    },
+    "evaluation": {
+      "performanceImprovement": 0.15000000000000002,
+      "qualityImprovement": 0,
+      "success": true,
+      "testPassRate": 1
+    }
+  },
+  {
+    "id": "a0796fa4-caf6-4ad9-9b82-67b7bcfb5e89",
+    "timestamp": "2026-04-21T04:23:59.218Z",
+    "iterationCount": 12,
+    "plan": {
+      "id": "e0cbe638-a92e-4e1e-a438-1f76f8eb591d",
+      "timestamp": "2026-04-21T04:23:49.262Z",
+      "optimizations": [
+        {
+          "type": "memory",
+          "action": "adjust_cache",
+          "parameters": {
+            "cacheSize": 9992601
+          },
+          "priority": "high"
+        },
+        {
+          "type": "model",
+          "action": "retrain_embedding",
+          "parameters": {
+            "algorithm": "RotatE",
+            "embeddingDim": 128,
+            "epochs": 200
+          },
+          "priority": "medium"
+        },
+        {
+          "type": "regular",
+          "action": "cleanup_cache",
+          "parameters": {
+            "retentionDays": 7
+          },
+          "priority": "low"
+        }
+      ],
+      "priority": "medium"
+    },
+    "optimizationResults": {
+      "id": "e0cbe638-a92e-4e1e-a438-1f76f8eb591d",
+      "timestamp": "2026-04-21T04:23:49.262Z",
+      "executedOptimizations": [
+        {
+          "type": "memory",
+          "action": "adjust_cache",
+          "parameters": {
+            "cacheSize": 9992601
+          },
+          "priority": "high",
+          "success": true,
+          "result": {
+            "message": "调整缓存大小为 9992601"
+          }
+        },
+        {
+          "type": "model",
+          "action": "retrain_embedding",
+          "parameters": {
+            "algorithm": "RotatE",
+            "embeddingDim": 128,
+            "epochs": 200
+          },
+          "priority": "medium",
+          "success": true,
+          "result": {
+            "message": "使用 RotatE 重新训练模型"
+          }
+        },
+        {
+          "type": "regular",
+          "action": "cleanup_cache",
+          "parameters": {
+            "retentionDays": 7
+          },
+          "priority": "low",
+          "success": true,
+          "result": {
+            "message": "执行定期清理"
+          }
+        }
+      ],
+      "performanceImprovement": 0.1,
+      "qualityImprovement": 0.1
+    },
+    "testResults": {
+      "id": "8eccbd7d-1ee2-488f-8ca1-cd9b5bccb23a",
+      "timestamp": "2026-04-21T04:23:52.680Z",
+      "tests": [
+        {
+          "name": "performance",
+          "type": "benchmark",
+          "passed": true,
+          "duration": 1051.3521580916515,
+          "metrics": {
+            "averageInferenceTime": 37.90485687783659,
+            "throughput": 82.55739059075654
+          }
+        },
+        {
+          "name": "quality",
+          "type": "accuracy",
+          "passed": true,
+          "duration": 5269.801659303107,
+          "metrics": {
+            "accuracy": 0.8797058178026673,
+            "recall": 0.9223144322708386
+          }
+        },
+        {
+          "name": "scalability",
+          "type": "load",
+          "passed": false,
+          "duration": 3553.9953110483593,
+          "metrics": {
+            "maxConcurrentQueries": 84,
+            "responseTimeUnderLoad": 53.590355239151286
+          }
+        },
+        {
+          "name": "reliability",
+          "type": "stress",
+          "passed": true,
+          "duration": 5698.626310244704,
+          "metrics": {
+            "uptime": 23.734081303011678,
+            "errorRate": 0.008290980192706382
+          }
+        }
+      ]
+    },
+    "evaluation": {
+      "performanceImprovement": 0.1,
+      "qualityImprovement": 0.1,
+      "success": true,
+      "testPassRate": 0.75
+    }
+  },
+  {
+    "id": "0aee8716-c465-4cdd-bd66-e6387a3bb1c9",
+    "timestamp": "2026-04-21T04:25:09.275Z",
+    "iterationCount": 13,
+    "plan": {
+      "id": "2d7c8c1f-6592-471e-bdf8-d04f878ec60c",
+      "timestamp": "2026-04-21T04:24:59.279Z",
+      "optimizations": [
+        {
+          "type": "memory",
+          "action": "adjust_cache",
+          "parameters": {
+            "cacheSize": 10047488
+          },
+          "priority": "high"
+        },
+        {
+          "type": "indexing",
+          "action": "create_indexes",
+          "parameters": {
+            "indexTypes": [
+              "node",
+              "edge",
+              "property"
+            ]
+          },
+          "priority": "medium"
+        },
+        {
+          "type": "regular",
+          "action": "cleanup_cache",
+          "parameters": {
+            "retentionDays": 7
+          },
+          "priority": "low"
+        }
+      ],
+      "priority": "medium"
+    },
+    "optimizationResults": {
+      "id": "2d7c8c1f-6592-471e-bdf8-d04f878ec60c",
+      "timestamp": "2026-04-21T04:24:59.279Z",
+      "executedOptimizations": [
+        {
+          "type": "memory",
+          "action": "adjust_cache",
+          "parameters": {
+            "cacheSize": 10047488
+          },
+          "priority": "high",
+          "success": true,
+          "result": {
+            "message": "调整缓存大小为 10047488"
+          }
+        },
+        {
+          "type": "indexing",
+          "action": "create_indexes",
+          "parameters": {
+            "indexTypes": [
+              "node",
+              "edge",
+              "property"
+            ]
+          },
+          "priority": "medium",
+          "success": true,
+          "result": {
+            "message": "创建索引: node, edge, property"
+          }
+        },
+        {
+          "type": "regular",
+          "action": "cleanup_cache",
+          "parameters": {
+            "retentionDays": 7
+          },
+          "priority": "low",
+          "success": true,
+          "result": {
+            "message": "执行定期清理"
+          }
+        }
+      ],
+      "performanceImprovement": 0.15000000000000002,
+      "qualityImprovement": 0
+    },
+    "testResults": {
+      "id": "b86a545a-951c-4d09-9e90-4c88f12c0637",
+      "timestamp": "2026-04-21T04:25:02.701Z",
+      "tests": [
+        {
+          "name": "performance",
+          "type": "benchmark",
+          "passed": true,
+          "duration": 5162.400546501785,
+          "metrics": {
+            "averageInferenceTime": 21.67946299689722,
+            "throughput": 94.02350924840712
+          }
+        },
+        {
+          "name": "quality",
+          "type": "accuracy",
+          "passed": true,
+          "duration": 4945.808330147551,
+          "metrics": {
+            "accuracy": 0.8870016279174034,
+            "recall": 0.8417388335068263
+          }
+        },
+        {
+          "name": "scalability",
+          "type": "load",
+          "passed": true,
+          "duration": 5001.16875929827,
+          "metrics": {
+            "maxConcurrentQueries": 74,
+            "responseTimeUnderLoad": 138.0470642477627
+          }
+        },
+        {
+          "name": "reliability",
+          "type": "stress",
+          "passed": true,
+          "duration": 4332.583111691593,
+          "metrics": {
+            "uptime": 17.11541887052644,
+            "errorRate": 0.0284733000670363
+          }
+        }
+      ]
+    },
+    "evaluation": {
+      "performanceImprovement": 0.15000000000000002,
+      "qualityImprovement": 0,
+      "success": true,
+      "testPassRate": 1
+    }
+  },
+  {
+    "id": "9e044f57-4c13-42a0-a394-7c3403ba68cc",
+    "timestamp": "2026-04-21T04:26:19.352Z",
+    "iterationCount": 14,
+    "plan": {
+      "id": "3ce0c717-9b87-4102-a785-4c58436daaf7",
+      "timestamp": "2026-04-21T04:26:09.333Z",
+      "optimizations": [
+        {
+          "type": "memory",
+          "action": "adjust_cache",
+          "parameters": {
+            "cacheSize": 10049945
+          },
+          "priority": "high"
+        },
+        {
+          "type": "indexing",
+          "action": "create_indexes",
+          "parameters": {
+            "indexTypes": [
+              "node",
+              "edge",
+              "property"
+            ]
+          },
+          "priority": "medium"
+        },
+        {
+          "type": "regular",
+          "action": "cleanup_cache",
+          "parameters": {
+            "retentionDays": 7
+          },
+          "priority": "low"
+        }
+      ],
+      "priority": "medium"
+    },
+    "optimizationResults": {
+      "id": "3ce0c717-9b87-4102-a785-4c58436daaf7",
+      "timestamp": "2026-04-21T04:26:09.333Z",
+      "executedOptimizations": [
+        {
+          "type": "memory",
+          "action": "adjust_cache",
+          "parameters": {
+            "cacheSize": 10049945
+          },
+          "priority": "high",
+          "success": true,
+          "result": {
+            "message": "调整缓存大小为 10049945"
+          }
+        },
+        {
+          "type": "indexing",
+          "action": "create_indexes",
+          "parameters": {
+            "indexTypes": [
+              "node",
+              "edge",
+              "property"
+            ]
+          },
+          "priority": "medium",
+          "success": true,
+          "result": {
+            "message": "创建索引: node, edge, property"
+          }
+        },
+        {
+          "type": "regular",
+          "action": "cleanup_cache",
+          "parameters": {
+            "retentionDays": 7
+          },
+          "priority": "low",
+          "success": true,
+          "result": {
+            "message": "执行定期清理"
+          }
+        }
+      ],
+      "performanceImprovement": 0.15000000000000002,
+      "qualityImprovement": 0
+    },
+    "testResults": {
+      "id": "e8e69e93-1fd6-4cc5-b6a6-66ff182d060a",
+      "timestamp": "2026-04-21T04:26:12.770Z",
+      "tests": [
+        {
+          "name": "performance",
+          "type": "benchmark",
+          "passed": true,
+          "duration": 2324.322927000617,
+          "metrics": {
+            "averageInferenceTime": 37.39045771311696,
+            "throughput": 51.26625061069249
+          }
+        },
+        {
+          "name": "quality",
+          "type": "accuracy",
+          "passed": true,
+          "duration": 4366.205013153156,
+          "metrics": {
+            "accuracy": 0.8812116794757552,
+            "recall": 0.860721600621696
+          }
+        },
+        {
+          "name": "scalability",
+          "type": "load",
+          "passed": true,
+          "duration": 1365.6148875126657,
+          "metrics": {
+            "maxConcurrentQueries": 130,
+            "responseTimeUnderLoad": 85.32475859440915
+          }
+        },
+        {
+          "name": "reliability",
+          "type": "stress",
+          "passed": true,
+          "duration": 5406.79267089577,
+          "metrics": {
+            "uptime": 18.995943019520364,
+            "errorRate": 0.03401033890236165
+          }
+        }
+      ]
+    },
+    "evaluation": {
+      "performanceImprovement": 0.15000000000000002,
+      "qualityImprovement": 0,
+      "success": true,
+      "testPassRate": 1
+    }
+  },
+  {
+    "id": "d93e445c-ab12-4c81-8f72-edf9b1e5c544",
+    "timestamp": "2026-04-21T04:27:29.357Z",
+    "iterationCount": 15,
+    "plan": {
+      "id": "bfa00e3d-66e3-4e52-8f0b-bd461a286bc1",
+      "timestamp": "2026-04-21T04:27:19.410Z",
+      "optimizations": [
+        {
+          "type": "memory",
+          "action": "adjust_cache",
+          "parameters": {
+            "cacheSize": 10053222
+          },
+          "priority": "high"
+        },
+        {
+          "type": "model",
+          "action": "retrain_embedding",
+          "parameters": {
+            "algorithm": "RotatE",
+            "embeddingDim": 128,
+            "epochs": 200
+          },
+          "priority": "medium"
+        },
+        {
+          "type": "regular",
+          "action": "cleanup_cache",
+          "parameters": {
+            "retentionDays": 7
+          },
+          "priority": "low"
+        }
+      ],
+      "priority": "medium"
+    },
+    "optimizationResults": {
+      "id": "bfa00e3d-66e3-4e52-8f0b-bd461a286bc1",
+      "timestamp": "2026-04-21T04:27:19.410Z",
+      "executedOptimizations": [
+        {
+          "type": "memory",
+          "action": "adjust_cache",
+          "parameters": {
+            "cacheSize": 10053222
+          },
+          "priority": "high",
+          "success": true,
+          "result": {
+            "message": "调整缓存大小为 10053222"
+          }
+        },
+        {
+          "type": "model",
+          "action": "retrain_embedding",
+          "parameters": {
+            "algorithm": "RotatE",
+            "embeddingDim": 128,
+            "epochs": 200
+          },
+          "priority": "medium",
+          "success": true,
+          "result": {
+            "message": "使用 RotatE 重新训练模型"
+          }
+        },
+        {
+          "type": "regular",
+          "action": "cleanup_cache",
+          "parameters": {
+            "retentionDays": 7
+          },
+          "priority": "low",
+          "success": true,
+          "result": {
+            "message": "执行定期清理"
+          }
+        }
+      ],
+      "performanceImprovement": 0.1,
+      "qualityImprovement": 0.1
+    },
+    "testResults": {
+      "id": "26e398dc-6552-4982-a441-8a0141d21f33",
+      "timestamp": "2026-04-21T04:27:22.814Z",
+      "tests": [
+        {
+          "name": "performance",
+          "type": "benchmark",
+          "passed": true,
+          "duration": 1394.3806382631237,
+          "metrics": {
+            "averageInferenceTime": 19.27551932687122,
+            "throughput": 132.9729668398773
+          }
+        },
+        {
+          "name": "quality",
+          "type": "accuracy",
+          "passed": true,
+          "duration": 2161.2443591899473,
+          "metrics": {
+            "accuracy": 0.8956132665749656,
+            "recall": 0.8530111792310717
+          }
+        },
+        {
+          "name": "scalability",
+          "type": "load",
+          "passed": true,
+          "duration": 5302.224369260557,
+          "metrics": {
+            "maxConcurrentQueries": 136,
+            "responseTimeUnderLoad": 109.89912267545843
+          }
+        },
+        {
+          "name": "reliability",
+          "type": "stress",
+          "passed": false,
+          "duration": 4600.775131926081,
+          "metrics": {
+            "uptime": 27.880102237039722,
+            "errorRate": 0.012553348054162134
+          }
+        }
+      ]
+    },
+    "evaluation": {
+      "performanceImprovement": 0.1,
+      "qualityImprovement": 0.1,
+      "success": true,
+      "testPassRate": 0.75
+    }
+  },
+  {
+    "id": "98cf3a75-1645-44f9-bab2-1833b0a4ae17",
+    "timestamp": "2026-04-21T04:28:39.377Z",
+    "iterationCount": 16,
+    "plan": {
+      "id": "57061fb8-a4a0-43b4-9fd8-86f89b3c6afa",
+      "timestamp": "2026-04-21T04:28:29.416Z",
+      "optimizations": [
+        {
+          "type": "memory",
+          "action": "adjust_cache",
+          "parameters": {
+            "cacheSize": 10055680
+          },
+          "priority": "high"
+        },
+        {
+          "type": "indexing",
+          "action": "create_indexes",
+          "parameters": {
+            "indexTypes": [
+              "node",
+              "edge",
+              "property"
+            ]
+          },
+          "priority": "medium"
+        },
+        {
+          "type": "regular",
+          "action": "cleanup_cache",
+          "parameters": {
+            "retentionDays": 7
+          },
+          "priority": "low"
+        }
+      ],
+      "priority": "medium"
+    },
+    "optimizationResults": {
+      "id": "57061fb8-a4a0-43b4-9fd8-86f89b3c6afa",
+      "timestamp": "2026-04-21T04:28:29.416Z",
+      "executedOptimizations": [
+        {
+          "type": "memory",
+          "action": "adjust_cache",
+          "parameters": {
+            "cacheSize": 10055680
+          },
+          "priority": "high",
+          "success": true,
+          "result": {
+            "message": "调整缓存大小为 10055680"
+          }
+        },
+        {
+          "type": "indexing",
+          "action": "create_indexes",
+          "parameters": {
+            "indexTypes": [
+              "node",
+              "edge",
+              "property"
+            ]
+          },
+          "priority": "medium",
+          "success": true,
+          "result": {
+            "message": "创建索引: node, edge, property"
+          }
+        },
+        {
+          "type": "regular",
+          "action": "cleanup_cache",
+          "parameters": {
+            "retentionDays": 7
+          },
+          "priority": "low",
+          "success": true,
+          "result": {
+            "message": "执行定期清理"
+          }
+        }
+      ],
+      "performanceImprovement": 0.15000000000000002,
+      "qualityImprovement": 0
+    },
+    "testResults": {
+      "id": "0c8b329b-45b3-4e1b-90af-4b9b17b74a10",
+      "timestamp": "2026-04-21T04:28:32.832Z",
+      "tests": [
+        {
+          "name": "performance",
+          "type": "benchmark",
+          "passed": true,
+          "duration": 4315.755586283669,
+          "metrics": {
+            "averageInferenceTime": 50.900664401195826,
+            "throughput": 55.94616493140776
+          }
+        },
+        {
+          "name": "quality",
+          "type": "accuracy",
+          "passed": false,
+          "duration": 5961.6461875506975,
+          "metrics": {
+            "accuracy": 0.9668116837974549,
+            "recall": 0.8895616376008675
+          }
+        },
+        {
+          "name": "scalability",
+          "type": "load",
+          "passed": true,
+          "duration": 3632.9747678498647,
+          "metrics": {
+            "maxConcurrentQueries": 85,
+            "responseTimeUnderLoad": 134.32827048988548
+          }
+        },
+        {
+          "name": "reliability",
+          "type": "stress",
+          "passed": true,
+          "duration": 2247.3409458495607,
+          "metrics": {
+            "uptime": 25.738330695120872,
+            "errorRate": 0.0159036635474429
+          }
+        }
+      ]
+    },
+    "evaluation": {
+      "performanceImprovement": 0.15000000000000002,
+      "qualityImprovement": 0,
+      "success": true,
+      "testPassRate": 0.75
+    }
+  },
+  {
+    "id": "1411bc5b-370b-4d45-a8c9-8ca66e091747",
+    "timestamp": "2026-04-21T04:29:49.411Z",
+    "iterationCount": 17,
+    "plan": {
+      "id": "5e45a62a-bd9f-497e-b50a-dabbfc9a3c4c",
+      "timestamp": "2026-04-21T04:29:39.444Z",
+      "optimizations": [
+        {
+          "type": "memory",
+          "action": "adjust_cache",
+          "parameters": {
+            "cacheSize": 10058137
+          },
+          "priority": "high"
+        },
+        {
+          "type": "model",
+          "action": "retrain_embedding",
+          "parameters": {
+            "algorithm": "RotatE",
+            "embeddingDim": 128,
+            "epochs": 200
+          },
+          "priority": "medium"
+        },
+        {
+          "type": "regular",
+          "action": "cleanup_cache",
+          "parameters": {
+            "retentionDays": 7
+          },
+          "priority": "low"
+        }
+      ],
+      "priority": "medium"
+    },
+    "optimizationResults": {
+      "id": "5e45a62a-bd9f-497e-b50a-dabbfc9a3c4c",
+      "timestamp": "2026-04-21T04:29:39.444Z",
+      "executedOptimizations": [
+        {
+          "type": "memory",
+          "action": "adjust_cache",
+          "parameters": {
+            "cacheSize": 10058137
+          },
+          "priority": "high",
+          "success": true,
+          "result": {
+            "message": "调整缓存大小为 10058137"
+          }
+        },
+        {
+          "type": "model",
+          "action": "retrain_embedding",
+          "parameters": {
+            "algorithm": "RotatE",
+            "embeddingDim": 128,
+            "epochs": 200
+          },
+          "priority": "medium",
+          "success": true,
+          "result": {
+            "message": "使用 RotatE 重新训练模型"
+          }
+        },
+        {
+          "type": "regular",
+          "action": "cleanup_cache",
+          "parameters": {
+            "retentionDays": 7
+          },
+          "priority": "low",
+          "success": true,
+          "result": {
+            "message": "执行定期清理"
+          }
+        }
+      ],
+      "performanceImprovement": 0.1,
+      "qualityImprovement": 0.1
+    },
+    "testResults": {
+      "id": "ce6b8bcf-54cb-4ed8-b755-982041db9fc9",
+      "timestamp": "2026-04-21T04:29:42.859Z",
+      "tests": [
+        {
+          "name": "performance",
+          "type": "benchmark",
+          "passed": true,
+          "duration": 5049.611230014716,
+          "metrics": {
+            "averageInferenceTime": 11.228851869000602,
+            "throughput": 139.86389856162225
+          }
+        },
+        {
+          "name": "quality",
+          "type": "accuracy",
+          "passed": true,
+          "duration": 4085.3388665528246,
+          "metrics": {
+            "accuracy": 0.8542558680855996,
+            "recall": 0.9697290899035793
+          }
+        },
+        {
+          "name": "scalability",
+          "type": "load",
+          "passed": false,
+          "duration": 3372.488785640598,
+          "metrics": {
+            "maxConcurrentQueries": 132,
+            "responseTimeUnderLoad": 143.07849731305657
+          }
+        },
+        {
+          "name": "reliability",
+          "type": "stress",
+          "passed": true,
+          "duration": 1856.8354398123702,
+          "metrics": {
+            "uptime": 28.733817268756642,
+            "errorRate": 0.03533509479119989
+          }
+        }
+      ]
+    },
+    "evaluation": {
+      "performanceImprovement": 0.1,
+      "qualityImprovement": 0.1,
+      "success": true,
+      "testPassRate": 0.75
+    }
+  },
+  {
+    "id": "ff380ccc-cab5-4ff8-94a7-1ceca1ec7390",
+    "timestamp": "2026-04-21T04:30:59.457Z",
+    "iterationCount": 18,
+    "plan": {
+      "id": "c671d675-c5a1-49a9-a958-309acfb5368b",
+      "timestamp": "2026-04-21T04:30:49.465Z",
+      "optimizations": [
+        {
+          "type": "memory",
+          "action": "adjust_cache",
+          "parameters": {
+            "cacheSize": 10060595
+          },
+          "priority": "high"
+        },
+        {
+          "type": "indexing",
+          "action": "create_indexes",
+          "parameters": {
+            "indexTypes": [
+              "node",
+              "edge",
+              "property"
+            ]
+          },
+          "priority": "medium"
+        },
+        {
+          "type": "regular",
+          "action": "cleanup_cache",
+          "parameters": {
+            "retentionDays": 7
+          },
+          "priority": "low"
+        }
+      ],
+      "priority": "medium"
+    },
+    "optimizationResults": {
+      "id": "c671d675-c5a1-49a9-a958-309acfb5368b",
+      "timestamp": "2026-04-21T04:30:49.465Z",
+      "executedOptimizations": [
+        {
+          "type": "memory",
+          "action": "adjust_cache",
+          "parameters": {
+            "cacheSize": 10060595
+          },
+          "priority": "high",
+          "success": true,
+          "result": {
+            "message": "调整缓存大小为 10060595"
+          }
+        },
+        {
+          "type": "indexing",
+          "action": "create_indexes",
+          "parameters": {
+            "indexTypes": [
+              "node",
+              "edge",
+              "property"
+            ]
+          },
+          "priority": "medium",
+          "success": true,
+          "result": {
+            "message": "创建索引: node, edge, property"
+          }
+        },
+        {
+          "type": "regular",
+          "action": "cleanup_cache",
+          "parameters": {
+            "retentionDays": 7
+          },
+          "priority": "low",
+          "success": true,
+          "result": {
+            "message": "执行定期清理"
+          }
+        }
+      ],
+      "performanceImprovement": 0.15000000000000002,
+      "qualityImprovement": 0
+    },
+    "testResults": {
+      "id": "6e5ca17b-5661-4d99-8d35-e792c2f78b6d",
+      "timestamp": "2026-04-21T04:30:52.890Z",
+      "tests": [
+        {
+          "name": "performance",
+          "type": "benchmark",
+          "passed": true,
+          "duration": 1921.6732762180723,
+          "metrics": {
+            "averageInferenceTime": 55.444149528788216,
+            "throughput": 125.6321671422824
+          }
+        },
+        {
+          "name": "quality",
+          "type": "accuracy",
+          "passed": true,
+          "duration": 2440.7809854035913,
+          "metrics": {
+            "accuracy": 0.9013724596309792,
+            "recall": 0.8664715913183239
+          }
+        },
+        {
+          "name": "scalability",
+          "type": "load",
+          "passed": true,
+          "duration": 2015.8426869476384,
+          "metrics": {
+            "maxConcurrentQueries": 126,
+            "responseTimeUnderLoad": 56.1688065397226
+          }
+        },
+        {
+          "name": "reliability",
+          "type": "stress",
+          "passed": true,
+          "duration": 1042.0095277613113,
+          "metrics": {
+            "uptime": 18.316832613796066,
+            "errorRate": 0.01046972546876459
+          }
+        }
+      ]
+    },
+    "evaluation": {
+      "performanceImprovement": 0.15000000000000002,
+      "qualityImprovement": 0,
+      "success": true,
+      "testPassRate": 1
+    }
+  },
+  {
+    "id": "d9cc16fa-1fc8-4aed-aec4-0a7fa90c93c7",
+    "timestamp": "2026-04-21T04:32:09.514Z",
+    "iterationCount": 19,
+    "plan": {
+      "id": "7c41bfae-5289-4bc4-945a-b87aad5f73cc",
+      "timestamp": "2026-04-21T04:31:59.517Z",
+      "optimizations": [
+        {
+          "type": "memory",
+          "action": "adjust_cache",
+          "parameters": {
+            "cacheSize": 10063052
+          },
+          "priority": "high"
+        },
+        {
+          "type": "indexing",
+          "action": "create_indexes",
+          "parameters": {
+            "indexTypes": [
+              "node",
+              "edge",
+              "property"
+            ]
+          },
+          "priority": "medium"
+        },
+        {
+          "type": "regular",
+          "action": "cleanup_cache",
+          "parameters": {
+            "retentionDays": 7
+          },
+          "priority": "low"
+        }
+      ],
+      "priority": "medium"
+    },
+    "optimizationResults": {
+      "id": "7c41bfae-5289-4bc4-945a-b87aad5f73cc",
+      "timestamp": "2026-04-21T04:31:59.517Z",
+      "executedOptimizations": [
+        {
+          "type": "memory",
+          "action": "adjust_cache",
+          "parameters": {
+            "cacheSize": 10063052
+          },
+          "priority": "high",
+          "success": true,
+          "result": {
+            "message": "调整缓存大小为 10063052"
+          }
+        },
+        {
+          "type": "indexing",
+          "action": "create_indexes",
+          "parameters": {
+            "indexTypes": [
+              "node",
+              "edge",
+              "property"
+            ]
+          },
+          "priority": "medium",
+          "success": true,
+          "result": {
+            "message": "创建索引: node, edge, property"
+          }
+        },
+        {
+          "type": "regular",
+          "action": "cleanup_cache",
+          "parameters": {
+            "retentionDays": 7
+          },
+          "priority": "low",
+          "success": true,
+          "result": {
+            "message": "执行定期清理"
+          }
+        }
+      ],
+      "performanceImprovement": 0.15000000000000002,
+      "qualityImprovement": 0
+    },
+    "testResults": {
+      "id": "1b89b1d5-3a73-452f-b9a2-c0a5ad74c706",
+      "timestamp": "2026-04-21T04:32:02.952Z",
+      "tests": [
+        {
+          "name": "performance",
+          "type": "benchmark",
+          "passed": true,
+          "duration": 4270.009892693382,
+          "metrics": {
+            "averageInferenceTime": 13.734063752808954,
+            "throughput": 102.8954172090748
+          }
+        },
+        {
+          "name": "quality",
+          "type": "accuracy",
+          "passed": true,
+          "duration": 1499.1884360874715,
+          "metrics": {
+            "accuracy": 0.8516471383811396,
+            "recall": 0.9426673633076882
+          }
+        },
+        {
+          "name": "scalability",
+          "type": "load",
+          "passed": true,
+          "duration": 3097.1620026581977,
+          "metrics": {
+            "maxConcurrentQueries": 60,
+            "responseTimeUnderLoad": 127.93950686332595
+          }
+        },
+        {
+          "name": "reliability",
+          "type": "stress",
+          "passed": true,
+          "duration": 5738.648400847891,
+          "metrics": {
+            "uptime": 17.504417134379622,
+            "errorRate": 0.013502380555417293
+          }
+        }
+      ]
+    },
+    "evaluation": {
+      "performanceImprovement": 0.15000000000000002,
+      "qualityImprovement": 0,
+      "success": true,
+      "testPassRate": 1
+    }
+  },
+  {
+    "id": "47cb42dc-c6cc-497a-8871-137b56555853",
+    "timestamp": "2026-04-21T04:33:19.567Z",
+    "iterationCount": 20,
+    "plan": {
+      "id": "b71d3ade-6920-49f9-957f-b9ca74a620df",
+      "timestamp": "2026-04-21T04:33:09.577Z",
+      "optimizations": [
+        {
+          "type": "memory",
+          "action": "adjust_cache",
+          "parameters": {
+            "cacheSize": 10065510
+          },
+          "priority": "high"
+        },
+        {
+          "type": "indexing",
+          "action": "create_indexes",
+          "parameters": {
+            "indexTypes": [
+              "node",
+              "edge",
+              "property"
+            ]
+          },
+          "priority": "medium"
+        },
+        {
+          "type": "regular",
+          "action": "cleanup_cache",
+          "parameters": {
+            "retentionDays": 7
+          },
+          "priority": "low"
+        }
+      ],
+      "priority": "medium"
+    },
+    "optimizationResults": {
+      "id": "b71d3ade-6920-49f9-957f-b9ca74a620df",
+      "timestamp": "2026-04-21T04:33:09.577Z",
+      "executedOptimizations": [
+        {
+          "type": "memory",
+          "action": "adjust_cache",
+          "parameters": {
+            "cacheSize": 10065510
+          },
+          "priority": "high",
+          "success": true,
+          "result": {
+            "message": "调整缓存大小为 10065510"
+          }
+        },
+        {
+          "type": "indexing",
+          "action": "create_indexes",
+          "parameters": {
+            "indexTypes": [
+              "node",
+              "edge",
+              "property"
+            ]
+          },
+          "priority": "medium",
+          "success": true,
+          "result": {
+            "message": "创建索引: node, edge, property"
+          }
+        },
+        {
+          "type": "regular",
+          "action": "cleanup_cache",
+          "parameters": {
+            "retentionDays": 7
+          },
+          "priority": "low",
+          "success": true,
+          "result": {
+            "message": "执行定期清理"
+          }
+        }
+      ],
+      "performanceImprovement": 0.15000000000000002,
+      "qualityImprovement": 0
+    },
+    "testResults": {
+      "id": "cc1dc959-d075-407b-80dc-35594b61fba4",
+      "timestamp": "2026-04-21T04:33:13.000Z",
+      "tests": [
+        {
+          "name": "performance",
+          "type": "benchmark",
+          "passed": true,
+          "duration": 3693.5390388027354,
+          "metrics": {
+            "averageInferenceTime": 35.21376917037077,
+            "throughput": 58.186138980848156
+          }
+        },
+        {
+          "name": "quality",
+          "type": "accuracy",
+          "passed": true,
+          "duration": 5008.1173840366155,
+          "metrics": {
+            "accuracy": 0.8802512271358782,
+            "recall": 0.9780366488196985
+          }
+        },
+        {
+          "name": "scalability",
+          "type": "load",
+          "passed": true,
+          "duration": 5374.281706478113,
+          "metrics": {
+            "maxConcurrentQueries": 73,
+            "responseTimeUnderLoad": 115.8444321522578
+          }
+        },
+        {
+          "name": "reliability",
+          "type": "stress",
+          "passed": true,
+          "duration": 5073.418484928263,
+          "metrics": {
+            "uptime": 32.808647195830275,
+            "errorRate": 0.02594079695804774
+          }
+        }
+      ]
+    },
+    "evaluation": {
+      "performanceImprovement": 0.15000000000000002,
+      "qualityImprovement": 0,
+      "success": true,
+      "testPassRate": 1
+    }
+  },
+  {
+    "id": "dc063e91-e5eb-420f-9706-d89593cf47a7",
+    "timestamp": "2026-04-21T04:34:29.576Z",
+    "iterationCount": 21,
+    "plan": {
+      "id": "32df9106-e210-4b9b-97b2-735c2ef95cc5",
+      "timestamp": "2026-04-21T04:34:19.626Z",
+      "optimizations": [
+        {
+          "type": "memory",
+          "action": "adjust_cache",
+          "parameters": {
+            "cacheSize": 10067968
+          },
+          "priority": "high"
+        },
+        {
+          "type": "indexing",
+          "action": "create_indexes",
+          "parameters": {
+            "indexTypes": [
+              "node",
+              "edge",
+              "property"
+            ]
+          },
+          "priority": "medium"
+        },
+        {
+          "type": "regular",
+          "action": "cleanup_cache",
+          "parameters": {
+            "retentionDays": 7
+          },
+          "priority": "low"
+        }
+      ],
+      "priority": "medium"
+    },
+    "optimizationResults": {
+      "id": "32df9106-e210-4b9b-97b2-735c2ef95cc5",
+      "timestamp": "2026-04-21T04:34:19.626Z",
+      "executedOptimizations": [
+        {
+          "type": "memory",
+          "action": "adjust_cache",
+          "parameters": {
+            "cacheSize": 10067968
+          },
+          "priority": "high",
+          "success": true,
+          "result": {
+            "message": "调整缓存大小为 10067968"
+          }
+        },
+        {
+          "type": "indexing",
+          "action": "create_indexes",
+          "parameters": {
+            "indexTypes": [
+              "node",
+              "edge",
+              "property"
+            ]
+          },
+          "priority": "medium",
+          "success": true,
+          "result": {
+            "message": "创建索引: node, edge, property"
+          }
+        },
+        {
+          "type": "regular",
+          "action": "cleanup_cache",
+          "parameters": {
+            "retentionDays": 7
+          },
+          "priority": "low",
+          "success": true,
+          "result": {
+            "message": "执行定期清理"
+          }
+        }
+      ],
+      "performanceImprovement": 0.15000000000000002,
+      "qualityImprovement": 0
+    },
+    "testResults": {
+      "id": "f3e0c7f5-8af8-4db8-9f8f-3c8e1430fc35",
+      "timestamp": "2026-04-21T04:34:23.024Z",
+      "tests": [
+        {
+          "name": "performance",
+          "type": "benchmark",
+          "passed": true,
+          "duration": 1558.3925527036488,
+          "metrics": {
+            "averageInferenceTime": 40.11214391123546,
+            "throughput": 78.21038731159877
+          }
+        },
+        {
+          "name": "quality",
+          "type": "accuracy",
+          "passed": false,
+          "duration": 5291.587240768372,
+          "metrics": {
+            "accuracy": 0.9979401150577455,
+            "recall": 0.9283911588312792
+          }
+        },
+        {
+          "name": "scalability",
+          "type": "load",
+          "passed": true,
+          "duration": 2406.9286801210637,
+          "metrics": {
+            "maxConcurrentQueries": 54,
+            "responseTimeUnderLoad": 145.97572936986137
+          }
+        },
+        {
+          "name": "reliability",
+          "type": "stress",
+          "passed": true,
+          "duration": 2948.1929928764366,
+          "metrics": {
+            "uptime": 14.75902640605511,
+            "errorRate": 0.0431736745840709
+          }
+        }
+      ]
+    },
+    "evaluation": {
+      "performanceImprovement": 0.15000000000000002,
+      "qualityImprovement": 0,
+      "success": true,
+      "testPassRate": 0.75
+    }
+  },
+  {
+    "id": "6f258e04-f3a9-443b-a959-930a70408b15",
+    "timestamp": "2026-04-21T04:35:40.752Z",
+    "iterationCount": 22,
+    "plan": {
+      "id": "b6a3d90f-ac0c-4d20-9693-d4899bfaa0b9",
+      "timestamp": "2026-04-21T04:35:29.642Z",
+      "optimizations": [
+        {
+          "type": "memory",
+          "action": "adjust_cache",
+          "parameters": {
+            "cacheSize": 10070425
+          },
+          "priority": "high"
+        },
+        {
+          "type": "model",
+          "action": "retrain_embedding",
+          "parameters": {
+            "algorithm": "RotatE",
+            "embeddingDim": 128,
+            "epochs": 200
+          },
+          "priority": "medium"
+        },
+        {
+          "type": "indexing",
+          "action": "create_indexes",
+          "parameters": {
+            "indexTypes": [
+              "node",
+              "edge",
+              "property"
+            ]
+          },
+          "priority": "medium"
+        },
+        {
+          "type": "regular",
+          "action": "cleanup_cache",
+          "parameters": {
+            "retentionDays": 7
+          },
+          "priority": "low"
+        }
+      ],
+      "priority": "medium"
+    },
+    "optimizationResults": {
+      "id": "b6a3d90f-ac0c-4d20-9693-d4899bfaa0b9",
+      "timestamp": "2026-04-21T04:35:29.642Z",
+      "executedOptimizations": [
+        {
+          "type": "memory",
+          "action": "adjust_cache",
+          "parameters": {
+            "cacheSize": 10070425
+          },
+          "priority": "high",
+          "success": true,
+          "result": {
+            "message": "调整缓存大小为 10070425"
+          }
+        },
+        {
+          "type": "model",
+          "action": "retrain_embedding",
+          "parameters": {
+            "algorithm": "RotatE",
+            "embeddingDim": 128,
+            "epochs": 200
+          },
+          "priority": "medium",
+          "success": true,
+          "result": {
+            "message": "使用 RotatE 重新训练模型"
+          }
+        },
+        {
+          "type": "indexing",
+          "action": "create_indexes",
+          "parameters": {
+            "indexTypes": [
+              "node",
+              "edge",
+              "property"
+            ]
+          },
+          "priority": "medium",
+          "success": true,
+          "result": {
+            "message": "创建索引: node, edge, property"
+          }
+        },
+        {
+          "type": "regular",
+          "action": "cleanup_cache",
+          "parameters": {
+            "retentionDays": 7
+          },
+          "priority": "low",
+          "success": true,
+          "result": {
+            "message": "执行定期清理"
+          }
+        }
+      ],
+      "performanceImprovement": 0.15000000000000002,
+      "qualityImprovement": 0.1
+    },
+    "testResults": {
+      "id": "0d354e72-7f1c-495c-bb0c-2927b5044256",
+      "timestamp": "2026-04-21T04:35:34.202Z",
+      "tests": [
+        {
+          "name": "performance",
+          "type": "benchmark",
+          "passed": false,
+          "duration": 3315.0162855007084,
+          "metrics": {
+            "averageInferenceTime": 12.13939801001765,
+            "throughput": 115.44039081572559
+          }
+        },
+        {
+          "name": "quality",
+          "type": "accuracy",
+          "passed": true,
+          "duration": 5021.645217451158,
+          "metrics": {
+            "accuracy": 0.8342453122906779,
+            "recall": 0.9445089905310918
+          }
+        },
+        {
+          "name": "scalability",
+          "type": "load",
+          "passed": true,
+          "duration": 4858.028624779203,
+          "metrics": {
+            "maxConcurrentQueries": 141,
+            "responseTimeUnderLoad": 124.28247419025658
+          }
+        },
+        {
+          "name": "reliability",
+          "type": "stress",
+          "passed": true,
+          "duration": 2084.2816533227497,
+          "metrics": {
+            "uptime": 28.887833946666866,
+            "errorRate": 0.04274270742817782
+          }
+        }
+      ]
+    },
+    "evaluation": {
+      "performanceImprovement": 0.15000000000000002,
+      "qualityImprovement": 0.1,
+      "success": true,
+      "testPassRate": 0.75
+    }
+  },
+  {
+    "id": "d3b37029-0131-40f9-a6ba-dccbccf4ff9a",
+    "timestamp": "2026-04-21T04:36:51.933Z",
+    "iterationCount": 23,
+    "plan": {
+      "id": "bf339fba-f57a-4d11-b9b4-609128654f45",
+      "timestamp": "2026-04-21T04:36:40.816Z",
+      "optimizations": [
+        {
+          "type": "memory",
+          "action": "adjust_cache",
+          "parameters": {
+            "cacheSize": 10126131
+          },
+          "priority": "high"
+        },
+        {
+          "type": "model",
+          "action": "retrain_embedding",
+          "parameters": {
+            "algorithm": "RotatE",
+            "embeddingDim": 128,
+            "epochs": 200
+          },
+          "priority": "medium"
+        },
+        {
+          "type": "indexing",
+          "action": "create_indexes",
+          "parameters": {
+            "indexTypes": [
+              "node",
+              "edge",
+              "property"
+            ]
+          },
+          "priority": "medium"
+        },
+        {
+          "type": "regular",
+          "action": "cleanup_cache",
+          "parameters": {
+            "retentionDays": 7
+          },
+          "priority": "low"
+        }
+      ],
+      "priority": "medium"
+    },
+    "optimizationResults": {
+      "id": "bf339fba-f57a-4d11-b9b4-609128654f45",
+      "timestamp": "2026-04-21T04:36:40.816Z",
+      "executedOptimizations": [
+        {
+          "type": "memory",
+          "action": "adjust_cache",
+          "parameters": {
+            "cacheSize": 10126131
+          },
+          "priority": "high",
+          "success": true,
+          "result": {
+            "message": "调整缓存大小为 10126131"
+          }
+        },
+        {
+          "type": "model",
+          "action": "retrain_embedding",
+          "parameters": {
+            "algorithm": "RotatE",
+            "embeddingDim": 128,
+            "epochs": 200
+          },
+          "priority": "medium",
+          "success": true,
+          "result": {
+            "message": "使用 RotatE 重新训练模型"
+          }
+        },
+        {
+          "type": "indexing",
+          "action": "create_indexes",
+          "parameters": {
+            "indexTypes": [
+              "node",
+              "edge",
+              "property"
+            ]
+          },
+          "priority": "medium",
+          "success": true,
+          "result": {
+            "message": "创建索引: node, edge, property"
+          }
+        },
+        {
+          "type": "regular",
+          "action": "cleanup_cache",
+          "parameters": {
+            "retentionDays": 7
+          },
+          "priority": "low",
+          "success": true,
+          "result": {
+            "message": "执行定期清理"
+          }
+        }
+      ],
+      "performanceImprovement": 0.15000000000000002,
+      "qualityImprovement": 0.1
+    },
+    "testResults": {
+      "id": "a6884a11-070f-4d2a-bb5d-b9370cf8af4f",
+      "timestamp": "2026-04-21T04:36:45.389Z",
+      "tests": [
+        {
+          "name": "performance",
+          "type": "benchmark",
+          "passed": true,
+          "duration": 2606.5634923733096,
+          "metrics": {
+            "averageInferenceTime": 31.996084583991426,
+            "throughput": 115.88075805788507
+          }
+        },
+        {
+          "name": "quality",
+          "type": "accuracy",
+          "passed": true,
+          "duration": 5978.80707891368,
+          "metrics": {
+            "accuracy": 0.9091818346485152,
+            "recall": 0.8808772819754849
+          }
+        },
+        {
+          "name": "scalability",
+          "type": "load",
+          "passed": true,
+          "duration": 2701.256027980173,
+          "metrics": {
+            "maxConcurrentQueries": 135,
+            "responseTimeUnderLoad": 64.47695112430095
+          }
+        },
+        {
+          "name": "reliability",
+          "type": "stress",
+          "passed": true,
+          "duration": 5712.235303140072,
+          "metrics": {
+            "uptime": 27.398315761138385,
+            "errorRate": 0.009771325613546844
+          }
+        }
+      ]
+    },
+    "evaluation": {
+      "performanceImprovement": 0.15000000000000002,
+      "qualityImprovement": 0.1,
+      "success": true,
+      "testPassRate": 1
+    }
+  },
+  {
+    "id": "011bedb1-2e2b-489a-89e6-4e84f2070e73",
+    "timestamp": "2026-04-21T04:38:00.813Z",
+    "iterationCount": 24,
+    "plan": {
+      "id": "e14e792b-6f11-48a3-8ae4-0edefa9fa7f6",
+      "timestamp": "2026-04-21T04:37:51.994Z",
+      "optimizations": [
+        {
+          "type": "memory",
+          "action": "adjust_cache",
+          "parameters": {
+            "cacheSize": 10128588
+          },
+          "priority": "high"
+        },
+        {
+          "type": "regular",
+          "action": "cleanup_cache",
+          "parameters": {
+            "retentionDays": 7
+          },
+          "priority": "low"
+        }
+      ],
+      "priority": "medium"
+    },
+    "optimizationResults": {
+      "id": "e14e792b-6f11-48a3-8ae4-0edefa9fa7f6",
+      "timestamp": "2026-04-21T04:37:51.994Z",
+      "executedOptimizations": [
+        {
+          "type": "memory",
+          "action": "adjust_cache",
+          "parameters": {
+            "cacheSize": 10128588
+          },
+          "priority": "high",
+          "success": true,
+          "result": {
+            "message": "调整缓存大小为 10128588"
+          }
+        },
+        {
+          "type": "regular",
+          "action": "cleanup_cache",
+          "parameters": {
+            "retentionDays": 7
+          },
+          "priority": "low",
+          "success": true,
+          "result": {
+            "message": "执行定期清理"
+          }
+        }
+      ],
+      "performanceImprovement": 0.1,
+      "qualityImprovement": 0
+    },
+    "testResults": {
+      "id": "acd5b79d-8f2f-44eb-a551-ae54c2f408df",
+      "timestamp": "2026-04-21T04:37:54.278Z",
+      "tests": [
+        {
+          "name": "performance",
+          "type": "benchmark",
+          "passed": true,
+          "duration": 2471.9483407216903,
+          "metrics": {
+            "averageInferenceTime": 57.31494266088478,
+            "throughput": 51.90027643706864
+          }
+        },
+        {
+          "name": "quality",
+          "type": "accuracy",
+          "passed": true,
+          "duration": 1955.7392521589863,
+          "metrics": {
+            "accuracy": 0.9540231379549726,
+            "recall": 0.8628637468202529
+          }
+        },
+        {
+          "name": "scalability",
+          "type": "load",
+          "passed": false,
+          "duration": 4293.288345877299,
+          "metrics": {
+            "maxConcurrentQueries": 136,
+            "responseTimeUnderLoad": 58.1498668278394
+          }
+        },
+        {
+          "name": "reliability",
+          "type": "stress",
+          "passed": true,
+          "duration": 2241.733206002471,
+          "metrics": {
+            "uptime": 31.614579262957687,
+            "errorRate": 0.008235912129911815
+          }
+        }
+      ]
+    },
+    "evaluation": {
+      "performanceImprovement": 0.1,
+      "qualityImprovement": 0,
+      "success": true,
+      "testPassRate": 0.75
+    }
+  },
+  {
+    "id": "a83458c0-65e4-4c3d-a4f9-2ccf988ebcfd",
+    "timestamp": "2026-04-21T04:39:09.751Z",
+    "iterationCount": 25,
+    "plan": {
+      "id": "3a9fc40b-6cd2-432f-9fb8-3576c99fef2e",
+      "timestamp": "2026-04-21T04:39:00.882Z",
+      "optimizations": [
+        {
+          "type": "memory",
+          "action": "adjust_cache",
+          "parameters": {
+            "cacheSize": 10183475
+          },
+          "priority": "high"
+        },
+        {
+          "type": "regular",
+          "action": "cleanup_cache",
+          "parameters": {
+            "retentionDays": 7
+          },
+          "priority": "low"
+        }
+      ],
+      "priority": "medium"
+    },
+    "optimizationResults": {
+      "id": "3a9fc40b-6cd2-432f-9fb8-3576c99fef2e",
+      "timestamp": "2026-04-21T04:39:00.882Z",
+      "executedOptimizations": [
+        {
+          "type": "memory",
+          "action": "adjust_cache",
+          "parameters": {
+            "cacheSize": 10183475
+          },
+          "priority": "high",
+          "success": true,
+          "result": {
+            "message": "调整缓存大小为 10183475"
+          }
+        },
+        {
+          "type": "regular",
+          "action": "cleanup_cache",
+          "parameters": {
+            "retentionDays": 7
+          },
+          "priority": "low",
+          "success": true,
+          "result": {
+            "message": "执行定期清理"
+          }
+        }
+      ],
+      "performanceImprovement": 0.1,
+      "qualityImprovement": 0
+    },
+    "testResults": {
+      "id": "b3187d72-49dd-4d7e-8b6d-d60980a4a7a6",
+      "timestamp": "2026-04-21T04:39:03.166Z",
+      "tests": [
+        {
+          "name": "performance",
+          "type": "benchmark",
+          "passed": false,
+          "duration": 1622.2286271891314,
+          "metrics": {
+            "averageInferenceTime": 32.920510004010836,
+            "throughput": 51.8387726604101
+          }
+        },
+        {
+          "name": "quality",
+          "type": "accuracy",
+          "passed": true,
+          "duration": 2492.7617190238825,
+          "metrics": {
+            "accuracy": 0.9983417851097682,
+            "recall": 0.866988489423191
+          }
+        },
+        {
+          "name": "scalability",
+          "type": "load",
+          "passed": true,
+          "duration": 1685.1320353525941,
+          "metrics": {
+            "maxConcurrentQueries": 138,
+            "responseTimeUnderLoad": 114.73819485230725
+          }
+        },
+        {
+          "name": "reliability",
+          "type": "stress",
+          "passed": false,
+          "duration": 2597.7090474986308,
+          "metrics": {
+            "uptime": 26.42672474605193,
+            "errorRate": 0.012732652042130378
+          }
+        }
+      ]
+    },
+    "evaluation": {
+      "performanceImprovement": 0.1,
+      "qualityImprovement": 0,
+      "success": true,
+      "testPassRate": 0.5
+    }
+  }
+]

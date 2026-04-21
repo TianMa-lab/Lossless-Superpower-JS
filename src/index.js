@@ -139,6 +139,12 @@ const lazyLoad = {
   get kgrAutoIteration() {
     delete this.kgrAutoIteration;
     return this.kgrAutoIteration = require('./superpowers/kgr_auto_iteration');
+  },
+  
+  // DAG-KG自动迭代
+  get dagKgAutoIteration() {
+    delete this.dagKgAutoIteration;
+    return this.dagKgAutoIteration = require('./superpowers/dag_kg_auto_iteration');
   }
 };
 
@@ -290,6 +296,16 @@ const coreFunctions = {
   createKGR_auto_iteration: (config) => lazyLoad.kgrAutoIteration.kgrAutoIterationManager.createAutoIteration(config),
   startKGR_auto_iteration: (config) => {
     const autoIteration = lazyLoad.kgrAutoIteration.kgrAutoIterationManager.createAutoIteration(config);
+    autoIteration.start();
+    return autoIteration;
+  },
+  
+  // DAG-KG自动迭代
+  dagKgAutoIteration: lazyLoad.dagKgAutoIteration.dagkgAutoIterationManager,
+  DAGKG_autoIteration: lazyLoad.dagKgAutoIteration.DAGKG_autoIteration,
+  createDAGKG_auto_iteration: (config) => lazyLoad.dagKgAutoIteration.dagkgAutoIterationManager.createAutoIteration(config),
+  startDAGKG_auto_iteration: (config) => {
+    const autoIteration = lazyLoad.dagKgAutoIteration.dagkgAutoIterationManager.createAutoIteration(config);
     autoIteration.start();
     return autoIteration;
   },
@@ -482,12 +498,57 @@ const coreFunctions = {
         // KGR自动迭代的清理逻辑
       }
       
+      // 清理自动迭代系统
+      if (lazyLoad.autoIterationSystem) {
+        // 自动迭代系统的清理逻辑
+      }
+      
       console.log('Lossless Superpower 系统清理完成');
       return true;
     } catch (error) {
       console.error('系统清理失败:', error.message);
       return false;
     }
+  },
+  
+  // 自动迭代系统
+  startAutoIteration: function() {
+    if (!lazyLoad.autoIterationSystem) {
+      lazyLoad.autoIterationSystem = {
+        scheduler: require('./superpowers/scheduler')
+      };
+    }
+    
+    const Scheduler = lazyLoad.autoIterationSystem.scheduler;
+    const scheduler = new Scheduler();
+    scheduler.startScheduledCycle();
+    return true;
+  },
+  
+  // 手动执行一次自动迭代
+  runAutoIteration: async function() {
+    if (!lazyLoad.autoIterationSystem) {
+      lazyLoad.autoIterationSystem = {
+        scheduler: require('./superpowers/scheduler')
+      };
+    }
+    
+    const Scheduler = lazyLoad.autoIterationSystem.scheduler;
+    const scheduler = new Scheduler();
+    return scheduler.runManualCycle();
+  },
+  
+  // 获取自动迭代系统状态
+  getAutoIterationStatus: function() {
+    if (!lazyLoad.autoIterationSystem) {
+      lazyLoad.autoIterationSystem = {
+        scheduler: require('./superpowers/scheduler')
+      };
+    }
+    
+    const Scheduler = lazyLoad.autoIterationSystem.scheduler;
+    const scheduler = new Scheduler();
+    return scheduler.getStatus();
   }
 };
 

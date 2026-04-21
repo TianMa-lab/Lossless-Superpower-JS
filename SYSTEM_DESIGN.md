@@ -70,6 +70,7 @@ flowchart TD
 
 | 模块 | 主要职责 | 依赖模块 | 实现文件 |
 |------|---------|----------|----------|
+| analyzer | 核心功能 | fs, path, child_process | src\superpowers\analyzer.js |
 | api | 核心功能 | ./skill_manager, ./events, path | src\superpowers\api.js |
 | autonomous_learning | 核心功能 | ../storage, ./permanent_memory, fs, path, compromise | src\superpowers\autonomous_learning.js |
 | auto_iteration_config | 核心功能 | fs, path | src\superpowers\auto_iteration_config.js |
@@ -78,6 +79,7 @@ flowchart TD
 | auto_task_recorder | 核心功能 | ./task_tracker, ./permanent_memory, ./event_recorder, ./iteration_manager, fs, http, https, child_process, crypto, os | src\superpowers\auto_task_recorder.js |
 | auto_test_runner | 核心功能 | fs, path, ./test_task_wrapper, ./task_runner | src\superpowers\auto_test_runner.js |
 | community_manager | 核心功能 | fs, path | src\superpowers\community_manager.js |
+| dag_kg_auto_iteration | 核心功能 | uuid, fs, path, ../../monitor, ./kg_dag_integration_enhanced, ./kg_dag_integration_enhanced, ./kg_dag_integration_enhanced, ./kg_dag_integration_enhanced, ./kg_dag_integration_enhanced | src\superpowers\dag_kg_auto_iteration.js |
 | dag_manager | 核心功能 | fs, path | src\superpowers\dag_manager.js |
 | data_migration | 核心功能 | fs, path | src\superpowers\data_migration.js |
 | doc_generator | 核心功能 | fs, path, child_process | src\superpowers\doc_generator.js |
@@ -95,6 +97,7 @@ flowchart TD
 | intelligent_prediction | 核心功能 | fs, path, ml | src\superpowers\intelligent_prediction.js |
 | iteration_manager | 核心功能 | fs, path, ./storage_manager | src\superpowers\iteration_manager.js |
 | iteration_predictor | 核心功能 | fs, path, ./iteration_manager, ml, ml, ml, ml, ml | src\superpowers\iteration_predictor.js |
+| kgr_auto_iteration | 核心功能 | uuid, fs, path, os | src\superpowers\kgr_auto_iteration.js |
 | kg_dag_integration | 核心功能 | ./dag_manager, ./autonomous_learning | src\superpowers\kg_dag_integration.js |
 | kg_dag_integration_enhanced | 核心功能 | ./dag_manager, ./autonomous_learning, uuid, fs, path | src\superpowers\kg_dag_integration_enhanced.js |
 | knowledge_graph_embedding | 核心功能 | uuid, fs, path | src\superpowers\knowledge_graph_embedding.js |
@@ -122,6 +125,7 @@ flowchart TD
 | skill_trigger | 核心功能 | ./fuzzy_match, ./skills/dag_query, ./skills/iteration_recorder, ./skills/lesson_collector, ./skills/self_introspection | src\superpowers\skill_trigger.js |
 | skill_version_detector | 核心功能 | fs, path, crypto | src\superpowers\skill_version_detector.js |
 | storage_manager | 核心功能 | fs, path, zlib | src\superpowers\storage_manager.js |
+| sync_manager | 核心功能 | child_process, fs, path, uuid | src\superpowers\sync_manager.js |
 | sync_monitor | 核心功能 | fs, path | src\superpowers\sync_monitor.js |
 | sync_scheduler | 核心功能 | fs, path, ./github_sync | src\superpowers\sync_scheduler.js |
 | system_identity | 核心功能 | ./permanent_memory | src\superpowers\system_identity.js |
@@ -139,7 +143,7 @@ flowchart TD
 
 ## 3. 核心模块设计
 
-### 3.12 events 模块 (src\superpowers\events.js)
+### 3.14 events 模块 (src\superpowers\events.js)
 
 #### 底层实现：
 - 核心功能模块
@@ -147,12 +151,12 @@ flowchart TD
 #### 核心类：
 - **EventManager**
 
-### 3.22 index 模块 (src\superpowers\index.js)
+### 3.24 index 模块 (src\superpowers\index.js)
 
 #### 底层实现：
 - 核心功能模块
 
-### 3.34 permanent_memory 模块 (src\superpowers\permanent_memory.js)
+### 3.37 permanent_memory 模块 (src\superpowers\permanent_memory.js)
 
 #### 底层实现：
 - 核心功能模块
@@ -160,7 +164,7 @@ flowchart TD
 #### 核心类：
 - **PermanentMemorySystem**
 
-### 3.52 storage_manager 模块 (src\superpowers\storage_manager.js)
+### 3.55 storage_manager 模块 (src\superpowers\storage_manager.js)
 
 #### 底层实现：
 - 核心功能模块
@@ -182,7 +186,7 @@ flowchart TD
 
 ## 4. 功能模块设计
 
-### 4.4 auto_iteration_recorder 模块 (src\superpowers\auto_iteration_recorder.js)
+### 4.5 auto_iteration_recorder 模块 (src\superpowers\auto_iteration_recorder.js)
 
 #### 底层实现：
 - 功能模块
@@ -193,17 +197,17 @@ flowchart TD
 - **getAutoIterationStatus(undefined)**
 - **triggerIteration(undefined)**
 
-### 4.6 auto_task_recorder 模块 (src\superpowers\auto_task_recorder.js)
+### 4.7 auto_task_recorder 模块 (src\superpowers\auto_task_recorder.js)
 
 #### 底层实现：
 - 功能模块
 
-### 4.33 performance_optimizer 模块 (src\superpowers\performance_optimizer.js)
+### 4.36 performance_optimizer 模块 (src\superpowers\performance_optimizer.js)
 
 #### 底层实现：
 - 功能模块
 
-### 4.38 self_evolution 模块 (src\superpowers\self_evolution.js)
+### 4.41 self_evolution 模块 (src\superpowers\self_evolution.js)
 
 #### 底层实现：
 - 功能模块
@@ -219,7 +223,7 @@ flowchart TD
 - **recordIteration(version, date, changes, issues)**
 - **checkSystemHealth(undefined)**
 
-### 4.45 skill_manager 模块 (src\superpowers\skill_manager.js)
+### 4.48 skill_manager 模块 (src\superpowers\skill_manager.js)
 
 #### 底层实现：
 - 功能模块
@@ -227,19 +231,19 @@ flowchart TD
 #### 关键函数：
 - **skillManage(name, action, kwargs = {})**
 
-### 4.58 task_tracker 模块 (src\superpowers\task_tracker.js)
+### 4.62 task_tracker 模块 (src\superpowers\task_tracker.js)
 
 #### 底层实现：
 - 功能模块
 
 ## 5. 集成模块设计
 
-### 5.18 feishu_tools 模块 (src\superpowers\feishu_tools.js)
+### 5.20 feishu_tools 模块 (src\superpowers\feishu_tools.js)
 
 #### 底层实现：
 - 集成模块
 
-### 5.20 github_sync 模块 (src\superpowers\github_sync.js)
+### 5.22 github_sync 模块 (src\superpowers\github_sync.js)
 
 #### 底层实现：
 - 集成模块
@@ -253,7 +257,7 @@ flowchart TD
 - **setRemote(url)**
 - **pushLocalProject()**
 
-### 5.35 plugin_system 模块 (src\superpowers\plugin_system.js)
+### 5.38 plugin_system 模块 (src\superpowers\plugin_system.js)
 
 #### 底层实现：
 - 集成模块
@@ -328,7 +332,38 @@ sequenceDiagram
 
 ## 7. 数据结构设计
 
-### 7.1 api 数据结构
+### 7.1 analyzer 数据结构
+
+#### analysis
+
+```json
+{
+        project: project.name,
+        timestamp: new Date().toISOString(),
+        structure,
+        techStack,
+        coreFeatures,
+        api
+      }
+```
+
+#### structure
+
+```json
+{undefined}
+```
+
+#### techStack
+
+```json
+{
+      languages: new Set(),
+      dependencies: new Set(),
+      frameworks: new Set()
+    }
+```
+
+### 7.2 api 数据结构
 
 #### result
 
@@ -415,7 +450,7 @@ sequenceDiagram
     }
 ```
 
-### 7.2 autonomous_learning 数据结构
+### 7.3 autonomous_learning 数据结构
 
 #### learningData
 
@@ -474,7 +509,7 @@ sequenceDiagram
       }
 ```
 
-### 7.3 auto_iteration_config 数据结构
+### 7.4 auto_iteration_config 数据结构
 
 #### envConfig
 
@@ -484,7 +519,7 @@ sequenceDiagram
     }
 ```
 
-### 7.4 auto_iteration_recorder 数据结构
+### 7.5 auto_iteration_recorder 数据结构
 
 #### changes
 
@@ -500,7 +535,7 @@ sequenceDiagram
     }
 ```
 
-### 7.5 auto_optimizer 数据结构
+### 7.6 auto_optimizer 数据结构
 
 #### entry
 
@@ -537,7 +572,7 @@ sequenceDiagram
 {undefined}
 ```
 
-### 7.6 auto_task_recorder 数据结构
+### 7.7 auto_task_recorder 数据结构
 
 #### config
 
@@ -563,7 +598,7 @@ sequenceDiagram
     }
 ```
 
-### 7.7 auto_test_runner 数据结构
+### 7.8 auto_test_runner 数据结构
 
 #### result
 
@@ -594,7 +629,7 @@ sequenceDiagram
       }
 ```
 
-### 7.8 community_manager 数据结构
+### 7.9 community_manager 数据结构
 
 #### contributionData
 
@@ -638,7 +673,72 @@ sequenceDiagram
       }
 ```
 
-### 7.9 dag_manager 数据结构
+### 7.10 dag_kg_auto_iteration 数据结构
+
+#### plan
+
+```json
+{
+      id: uuidv4(),
+      timestamp: new Date().toISOString(),
+      optimizations: [],
+      priority: 'medium'
+    }
+```
+
+#### results
+
+```json
+{
+      id: plan.id,
+      timestamp: new Date().toISOString(),
+      executedOptimizations: [],
+      extractionImprovement: 0,
+      mappingImprovement: 0,
+      alignmentImprovement: 0
+    }
+```
+
+#### evaluation
+
+```json
+{
+      id: uuidv4(),
+      timestamp: new Date().toISOString(),
+      overallScore: 0,
+      componentScores: {},
+      issues: [],
+      recommendations: []
+    }
+```
+
+#### iteration
+
+```json
+{
+      id: uuidv4(),
+      timestamp: new Date().toISOString(),
+      iterationCount: this.iterationCount,
+      data,
+      evaluation,
+      plan,
+      optimizationResults
+    }
+```
+
+#### dagkgAutoIterationManager
+
+```json
+{
+  createAutoIteration: (config) => new DAGKG_autoIteration(config),
+  DAGKG_autoIteration,
+  DAGKGDataCollector,
+  DAGKGOptimizationEngine,
+  DAGKGQualityEvaluator
+}
+```
+
+### 7.11 dag_manager 数据结构
 
 #### analysis
 
@@ -651,7 +751,7 @@ sequenceDiagram
     }
 ```
 
-### 7.10 data_migration 数据结构
+### 7.12 data_migration 数据结构
 
 #### validationResults
 
@@ -700,7 +800,7 @@ sequenceDiagram
     }
 ```
 
-### 7.11 doc_generator 数据结构
+### 7.13 doc_generator 数据结构
 
 #### systemInfo
 
@@ -754,7 +854,7 @@ sequenceDiagram
 { directories: [], files: [] }
 ```
 
-### 7.12 event_analyzer 数据结构
+### 7.14 event_analyzer 数据结构
 
 #### eventsByType
 
@@ -837,7 +937,7 @@ sequenceDiagram
 {undefined}
 ```
 
-### 7.13 event_monitor 数据结构
+### 7.15 event_monitor 数据结构
 
 #### eventRecord
 
@@ -902,7 +1002,7 @@ sequenceDiagram
       }
 ```
 
-### 7.14 event_recorder 数据结构
+### 7.16 event_recorder 数据结构
 
 #### eventData
 
@@ -927,7 +1027,7 @@ sequenceDiagram
       }
 ```
 
-### 7.15 feedback_manager 数据结构
+### 7.17 feedback_manager 数据结构
 
 #### feedback
 
@@ -1004,7 +1104,7 @@ sequenceDiagram
       }
 ```
 
-### 7.16 github_sync 数据结构
+### 7.18 github_sync 数据结构
 
 #### categories
 
@@ -1034,7 +1134,7 @@ sequenceDiagram
 {undefined}
 ```
 
-### 7.17 intelligent_prediction 数据结构
+### 7.19 intelligent_prediction 数据结构
 
 #### data
 
@@ -1070,7 +1170,7 @@ sequenceDiagram
     }
 ```
 
-### 7.18 iteration_manager 数据结构
+### 7.20 iteration_manager 数据结构
 
 #### monthlyStats
 
@@ -1138,7 +1238,7 @@ sequenceDiagram
     }
 ```
 
-### 7.19 iteration_predictor 数据结构
+### 7.21 iteration_predictor 数据结构
 
 #### predictions
 
@@ -1152,7 +1252,92 @@ sequenceDiagram
       }
 ```
 
-### 7.20 kg_dag_integration 数据结构
+### 7.22 kgr_auto_iteration 数据结构
+
+#### data
+
+```json
+{
+      inferenceTimes: [],
+      memoryUsage: process.memoryUsage(),
+      cpuUsage: this.getCPUUsage(),
+      cacheHits: 0,
+      cacheMisses: 0
+    }
+```
+
+#### plan
+
+```json
+{
+      id: uuidv4(),
+      timestamp: new Date().toISOString(),
+      optimizations: [],
+      priority: 'medium'
+    }
+```
+
+#### results
+
+```json
+{
+      id: plan.id,
+      timestamp: new Date().toISOString(),
+      executedOptimizations: [],
+      performanceImprovement: 0,
+      qualityImprovement: 0
+    }
+```
+
+#### results
+
+```json
+{
+      id: uuidv4(),
+      timestamp: new Date().toISOString(),
+      tests: []
+    }
+```
+
+#### result
+
+```json
+{
+      name: test.name,
+      type: test.type,
+      passed: Math.random() > 0.1, // 90% 通过率
+      duration: Math.random() * 5000 + 1000,
+      metrics: {}
+    }
+```
+
+#### iteration
+
+```json
+{
+      id: uuidv4(),
+      timestamp: new Date().toISOString(),
+      iterationCount: this.iterationCount,
+      plan,
+      optimizationResults,
+      testResults,
+      evaluation
+    }
+```
+
+#### kgrAutoIterationManager
+
+```json
+{
+  createAutoIteration: (config) => new KGRAutoIteration(config),
+  KGRAutoIteration,
+  DataCollector,
+  OptimizationEngine,
+  TestFramework
+}
+```
+
+### 7.23 kg_dag_integration 数据结构
 
 #### dagQuery
 
@@ -1179,7 +1364,7 @@ sequenceDiagram
       }
 ```
 
-### 7.21 kg_dag_integration_enhanced 数据结构
+### 7.24 kg_dag_integration_enhanced 数据结构
 
 #### properties
 
@@ -1280,7 +1465,7 @@ sequenceDiagram
     }
 ```
 
-### 7.22 knowledge_graph_embedding 数据结构
+### 7.25 knowledge_graph_embedding 数据结构
 
 #### data
 
@@ -1296,7 +1481,7 @@ sequenceDiagram
     }
 ```
 
-### 7.23 knowledge_graph_reasoner 数据结构
+### 7.26 knowledge_graph_reasoner 数据结构
 
 #### exportData
 
@@ -1318,7 +1503,7 @@ sequenceDiagram
     }
 ```
 
-### 7.24 machine_learning 数据结构
+### 7.27 machine_learning 数据结构
 
 #### data
 
@@ -1342,7 +1527,7 @@ sequenceDiagram
 {undefined}
 ```
 
-### 7.25 multi_dimensional_optimizer 数据结构
+### 7.28 multi_dimensional_optimizer 数据结构
 
 #### metrics
 
@@ -1466,7 +1651,7 @@ sequenceDiagram
       }
 ```
 
-### 7.26 permanent_memory 数据结构
+### 7.29 permanent_memory 数据结构
 
 #### memory
 
@@ -1516,7 +1701,7 @@ sequenceDiagram
       }
 ```
 
-### 7.27 plugin_system 数据结构
+### 7.30 plugin_system 数据结构
 
 #### dependencyGraph
 
@@ -1562,7 +1747,7 @@ sequenceDiagram
     }
 ```
 
-### 7.28 security_manager 数据结构
+### 7.31 security_manager 数据结构
 
 #### keyData
 
@@ -1626,7 +1811,7 @@ sequenceDiagram
       }
 ```
 
-### 7.29 self_evolution 数据结构
+### 7.32 self_evolution 数据结构
 
 #### maintenanceResult
 
@@ -1844,7 +2029,7 @@ sequenceDiagram
     }
 ```
 
-### 7.30 skill_analytics 数据结构
+### 7.33 skill_analytics 数据结构
 
 #### usageRecord
 
@@ -1932,7 +2117,7 @@ sequenceDiagram
       }
 ```
 
-### 7.31 skill_discovery 数据结构
+### 7.34 skill_discovery 数据结构
 
 #### skill
 
@@ -1985,7 +2170,7 @@ sequenceDiagram
       }
 ```
 
-### 7.32 skill_generator 数据结构
+### 7.35 skill_generator 数据结构
 
 #### templates
 
@@ -2019,7 +2204,7 @@ sequenceDiagram
 {undefined}
 ```
 
-### 7.33 skill_knowledge_graph 数据结构
+### 7.36 skill_knowledge_graph 数据结构
 
 #### data
 
@@ -2102,7 +2287,7 @@ sequenceDiagram
       }
 ```
 
-### 7.34 skill_loader 数据结构
+### 7.37 skill_loader 数据结构
 
 #### metadata
 
@@ -2162,7 +2347,7 @@ sequenceDiagram
     }
 ```
 
-### 7.35 skill_manager 数据结构
+### 7.38 skill_manager 数据结构
 
 #### platformMap
 
@@ -2203,7 +2388,7 @@ sequenceDiagram
       }
 ```
 
-### 7.36 skill_market 数据结构
+### 7.39 skill_market 数据结构
 
 #### data
 
@@ -2308,7 +2493,7 @@ sequenceDiagram
     }
 ```
 
-### 7.37 skill_optimizer 数据结构
+### 7.40 skill_optimizer 数据结构
 
 #### optimizationRecord
 
@@ -2426,7 +2611,7 @@ sequenceDiagram
       }
 ```
 
-### 7.38 skill_scanner 数据结构
+### 7.41 skill_scanner 数据结构
 
 #### skill
 
@@ -2448,7 +2633,7 @@ sequenceDiagram
       }
 ```
 
-### 7.39 skill_security_scanner 数据结构
+### 7.42 skill_security_scanner 数据结构
 
 #### report
 
@@ -2511,7 +2696,7 @@ sequenceDiagram
     }
 ```
 
-### 7.40 skill_trigger 数据结构
+### 7.43 skill_trigger 数据结构
 
 #### params
 
@@ -2519,7 +2704,7 @@ sequenceDiagram
 {undefined}
 ```
 
-### 7.41 skill_version_detector 数据结构
+### 7.44 skill_version_detector 数据结构
 
 #### diff
 
@@ -2588,7 +2773,7 @@ sequenceDiagram
       }
 ```
 
-### 7.42 storage_manager 数据结构
+### 7.45 storage_manager 数据结构
 
 #### stats
 
@@ -2608,7 +2793,7 @@ sequenceDiagram
     }
 ```
 
-### 7.43 sync_monitor 数据结构
+### 7.46 sync_monitor 数据结构
 
 #### logEntry
 
@@ -2646,7 +2831,7 @@ sequenceDiagram
     }
 ```
 
-### 7.44 sync_scheduler 数据结构
+### 7.47 sync_scheduler 数据结构
 
 #### status
 
@@ -2665,7 +2850,7 @@ sequenceDiagram
     }
 ```
 
-### 7.45 system_identity 数据结构
+### 7.48 system_identity 数据结构
 
 #### metadata
 
@@ -2678,7 +2863,7 @@ sequenceDiagram
       }
 ```
 
-### 7.46 task_analyzer 数据结构
+### 7.49 task_analyzer 数据结构
 
 #### trajectory
 
@@ -2761,7 +2946,7 @@ sequenceDiagram
       }
 ```
 
-### 7.47 task_runner 数据结构
+### 7.50 task_runner 数据结构
 
 #### iteration
 
@@ -2783,7 +2968,7 @@ sequenceDiagram
       }
 ```
 
-### 7.48 task_tracker 数据结构
+### 7.51 task_tracker 数据结构
 
 #### task
 
@@ -2813,7 +2998,7 @@ sequenceDiagram
       }
 ```
 
-### 7.49 temporal_reasoner 数据结构
+### 7.52 temporal_reasoner 数据结构
 
 #### triplet
 
@@ -2859,7 +3044,7 @@ sequenceDiagram
 {undefined}
 ```
 
-### 7.50 test_hooks 数据结构
+### 7.53 test_hooks 数据结构
 
 #### result
 
@@ -2875,7 +3060,7 @@ sequenceDiagram
     }
 ```
 
-### 7.51 test_result_recorder 数据结构
+### 7.54 test_result_recorder 数据结构
 
 #### record
 
@@ -2920,7 +3105,7 @@ sequenceDiagram
     }
 ```
 
-### 7.52 test_verification 数据结构
+### 7.55 test_verification 数据结构
 
 #### results
 
@@ -2954,7 +3139,7 @@ sequenceDiagram
     }
 ```
 
-### 7.53 user_experience 数据结构
+### 7.56 user_experience 数据结构
 
 #### feedbackData
 
@@ -3121,7 +3306,7 @@ sequenceDiagram
       }
 ```
 
-### 7.54 user_partner 数据结构
+### 7.57 user_partner 数据结构
 
 #### messages
 
@@ -3153,7 +3338,7 @@ sequenceDiagram
     }
 ```
 
-### 7.55 webhook_manager 数据结构
+### 7.58 webhook_manager 数据结构
 
 #### webhook
 
@@ -3415,5 +3600,5 @@ Lossless Superpower JavaScript Version 是一个功能强大、架构清晰的AI
 ---
 
 **文档版本**: 1.0.0  
-**最后更新**: 2026-04-21T03:46:24.263Z  
+**最后更新**: 2026-04-21T09:39:01.618Z  
 **生成工具**: DocGenerator
