@@ -25029,5 +25029,95 @@
     "end_time": null,
     "steps": [],
     "result": null
+  },
+  "timeout_1776773153120_19": {
+    "id": "timeout_1776773153120_19",
+    "name": "setTimeout执行",
+    "description": "延迟 14046880ms 执行任务",
+    "status": "in_progress",
+    "start_time": 1776773153.12,
+    "end_time": null,
+    "steps": [],
+    "result": null
+  },
+  "promise_1776773153125_20": {
+    "id": "promise_1776773153125_20",
+    "name": "Promise执行",
+    "description": "异步Promise执行",
+    "status": "completed",
+    "start_time": 1776773153.125,
+    "end_time": 1776773153.129,
+    "steps": [],
+    "result": "Promise resolved (4ms)"
+  },
+  "promise_1776773153132_21": {
+    "id": "promise_1776773153132_21",
+    "name": "Promise执行",
+    "description": "异步Promise执行",
+    "status": "completed",
+    "start_time": 1776773153.132,
+    "end_time": 1776773153.136,
+    "steps": [],
+    "result": "Promise resolved (4ms)"
+  },
+  "promise_1776773153140_22": {
+    "id": "promise_1776773153140_22",
+    "name": "Promise执行",
+    "description": "异步Promise执行",
+    "status": "completed",
+    "start_time": 1776773153.14,
+    "end_time": 1776773153.144,
+    "steps": [],
+    "result": "Promise resolved (4ms)"
+  },
+  "promise_1776773153148_23": {
+    "id": "promise_1776773153148_23",
+    "name": "Promise执行",
+    "description": "异步Promise执行",
+    "status": "completed",
+    "start_time": 1776773153.148,
+    "end_time": 1776773153.152,
+    "steps": [],
+    "result": "Promise resolved (4ms)"
+  },
+  "promise_1776773153157_24": {
+    "id": "promise_1776773153157_24",
+    "name": "Promise执行",
+    "description": "异步Promise执行",
+    "status": "completed",
+    "start_time": 1776773153.157,
+    "end_time": 1776773153.162,
+    "steps": [],
+    "result": "Promise resolved (5ms)"
+  },
+  "promise_1776773153166_25": {
+    "id": "promise_1776773153166_25",
+    "name": "Promise执行",
+    "description": "异步Promise执行",
+    "status": "completed",
+    "start_time": 1776773153.166,
+    "end_time": 1776773153.17,
+    "steps": [],
+    "result": "Promise resolved (4ms)"
+  },
+  "os_cpus_1776773153174_26": {
+    "id": "os_cpus_1776773153174_26",
+    "name": "os.cpus",
+    "description": "系统操作: cpus",
+    "status": "completed",
+    "start_time": 1776773153.174,
+    "end_time": 1776773153.179,
+    "steps": [],
+    "result": "系统操作完成 (5ms)"
+  },
+  "timeout_1776773153183_27": {
+    "id": "timeout_1776773153183_27",
+    "name": "setTimeout执行",
+    "description": "延迟 86400000ms 执行任务",
+    "status": "in_progress",
+    "start_time": 1776773153.183,
+    "end_time": null,
+    "steps": [],
+    "result": null
   }
 }
