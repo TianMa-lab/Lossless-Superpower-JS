@@ -10,83 +10,83 @@
       padding: 0;
       box-sizing: border-box;
     }
-    
+
     body {
       font-family: Arial, sans-serif;
       background-color: #f5f5f5;
       color: #333;
       line-height: 1.6;
     }
-    
+
     .container {
       max-width: 1200px;
       margin: 0 auto;
       padding: 20px;
     }
-    
+
     h1 {
       text-align: center;
       margin-bottom: 30px;
       color: #2c3e50;
     }
-    
+
     .dashboard {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 20px;
       margin-bottom: 30px;
     }
-    
+
     .card {
       background: white;
       border-radius: 8px;
       box-shadow: 0 2px 4px rgba(0,0,0,0.1);
       padding: 20px;
     }
-    
+
     .card h2 {
       margin-bottom: 15px;
       color: #34495e;
       font-size: 18px;
     }
-    
+
     .stats {
       display: flex;
       justify-content: space-between;
       margin-bottom: 10px;
     }
-    
+
     .stat-item {
       text-align: center;
     }
-    
+
     .stat-value {
       font-size: 24px;
       font-weight: bold;
       color: #3498db;
     }
-    
+
     .stat-label {
       font-size: 14px;
       color: #7f8c8d;
     }
-    
+
     .projects {
       margin-top: 30px;
     }
-    
+
     .projects h2 {
       margin-bottom: 20px;
       color: #2c3e50;
     }
-    
+
     .project-list {
       background: white;
       border-radius: 8px;
       box-shadow: 0 2px 4px rgba(0,0,0,0.1);
       padding: 20px;
     }
-    
+
     .project-item {
       display: flex;
       justify-content: space-between;
@@ -94,30 +94,30 @@
       padding: 15px;
       border-bottom: 1px solid #eee;
     }
-    
+
     .project-item:last-child {
       border-bottom: none;
     }
-    
+
     .project-info {
       flex: 1;
     }
-    
+
     .project-name {
       font-weight: bold;
       margin-bottom: 5px;
     }
-    
+
     .project-meta {
       font-size: 14px;
       color: #7f8c8d;
     }
-    
+
     .project-actions {
       display: flex;
       gap: 10px;
     }
-    
+
     .btn {
       padding: 8px 16px;
       border: none;
@@ -125,79 +125,108 @@
       cursor: pointer;
       font-size: 14px;
     }
-    
+
     .btn-primary {
       background-color: #3498db;
       color: white;
     }
-    
+
     .btn-secondary {
       background-color: #95a5a6;
       color: white;
     }
-    
+
     .btn-danger {
       background-color: #e74c3c;
       color: white;
     }
-    
+
     .btn-success {
       background-color: #2ecc71;
       color: white;
     }
-    
+
+    .btn:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+
     .alerts {
       margin-top: 30px;
     }
-    
+
     .alert-item {
       padding: 15px;
       border-radius: 4px;
       margin-bottom: 10px;
     }
-    
+
     .alert-error {
       background-color: #fee;
       border-left: 4px solid #e74c3c;
     }
-    
+
     .alert-warning {
       background-color: #fff3cd;
       border-left: 4px solid #ffc107;
     }
-    
+
     .alert-info {
       background-color: #d1ecf1;
       border-left: 4px solid #17a2b8;
     }
-    
+
     .status {
       padding: 4px 8px;
       border-radius: 12px;
       font-size: 12px;
       font-weight: bold;
     }
-    
+
     .status-success {
       background-color: #d4edda;
       color: #155724;
     }
-    
+
     .status-error {
       background-color: #f8d7da;
       color: #721c24;
     }
-    
+
     .status-pending {
       background-color: #fff3cd;
       color: #856404;
+    }
+
+    .loading {
+      text-align: center;
+      padding: 20px;
+      color: #7f8c8d;
+    }
+
+    .error-message {
+      color: #e74c3c;
+      padding: 10px;
+      background-color: #fee;
+      border-radius: 4px;
+      margin-bottom: 10px;
+    }
+
+    .success-message {
+      color: #155724;
+      padding: 10px;
+      background-color: #d4edda;
+      border-radius: 4px;
+      margin-bottom: 10px;
     }
   </style>
 </head>
 <body>
   <div class="container">
     <h1>自动迭代系统管理</h1>
-    
+
+    <div id="message-container"></div>
+
     <div class="dashboard">
       <div class="card">
         <h2>同步状态</h2>
@@ -215,9 +244,9 @@
             <div class="stat-label">同步失败</div>
           </div>
         </div>
-        <button class="btn btn-primary" onclick="syncAll()">同步所有项目</button>
+        <button class="btn btn-primary" id="sync-all-btn" onclick="syncAll()">同步所有项目</button>
       </div>
-      
+
       <div class="card">
         <h2>分析状态</h2>
         <div class="stats">
@@ -234,9 +263,9 @@
             <div class="stat-label">分析失败</div>
           </div>
         </div>
-        <button class="btn btn-primary" onclick="analyzeAll()">分析所有项目</button>
+        <button class="btn btn-primary" id="analyze-all-btn" onclick="analyzeAll()">分析所有项目</button>
       </div>
-      
+
       <div class="card">
         <h2>系统状态</h2>
         <div class="stats">
@@ -256,169 +285,131 @@
         <button class="btn btn-primary" onclick="refreshStatus()">刷新状态</button>
       </div>
     </div>
-    
+
     <div class="projects">
       <h2>项目管理</h2>
       <div class="project-list" id="project-list">
-        <!-- 项目列表将通过JavaScript动态生成 -->
+        <div class="loading">加载中...</div>
       </div>
     </div>
-    
+
     <div class="alerts" id="alerts">
       <h2>告警信息</h2>
-      <!-- 告警信息将通过JavaScript动态生成 -->
+      <div class="loading">加载中...</div>
     </div>
   </div>
-  
+
   <script>
-    // 模拟数据
-    const mockData = {
-      sync: {
-        total: 8,
-        success: 6,
-        failed: 2
-      },
-      analysis: {
-        total: 8,
-        success: 7,
-        failed: 1
-      },
-      system: {
-        memoryUsage: 128,
-        uptime: 24,
-        alertCount: 3
-      },
-      projects: [
-        {
-          id: 'hermes',
-          name: 'Hermes Agent',
-          category: 'AI Agent',
-          priority: 'high',
-          status: 'success',
-          lastSync: '2026-04-21T09:00:00Z'
-        },
-        {
-          id: 'openclaw',
-          name: 'OpenCLAW',
-          category: 'Workflow',
-          priority: 'high',
-          status: 'success',
-          lastSync: '2026-04-21T09:05:00Z'
-        },
-        {
-          id: 'awesome-kgr',
-          name: 'Awesome Knowledge Graph Reasoning',
-          category: 'Knowledge Graph',
-          priority: 'high',
-          status: 'failed',
-          lastSync: '2026-04-21T09:10:00Z'
-        },
-        {
-          id: 'superpower',
-          name: 'Superpowers',
-          category: 'AI Agent',
-          priority: 'high',
-          status: 'success',
-          lastSync: '2026-04-21T09:15:00Z'
-        },
-        {
-          id: 'langchain',
-          name: 'LangChain',
-          category: 'AI Agent',
-          priority: 'medium',
-          status: 'success',
-          lastSync: '2026-04-20T10:00:00Z'
-        },
-        {
-          id: 'llama-index',
-          name: 'LlamaIndex',
-          category: 'AI Agent',
-          priority: 'medium',
-          status: 'success',
-          lastSync: '2026-04-20T10:30:00Z'
-        },
-        {
-          id: 'neo4j',
-          name: 'Neo4j',
-          category: 'Knowledge Graph',
-          priority: 'medium',
-          status: 'failed',
-          lastSync: '2026-04-20T11:00:00Z'
-        },
-        {
-          id: 'dgraph',
-          name: 'Dgraph',
-          category: 'Knowledge Graph',
-          priority: 'medium',
-          status: 'success',
-          lastSync: '2026-04-19T12:00:00Z'
-        }
-      ],
-      alerts: [
-        {
-          id: 1,
-          type: 'sync',
-          message: 'Awesome Knowledge Graph Reasoning 同步失败',
-          severity: 'error',
-          timestamp: '2026-04-21T09:10:00Z'
-        },
-        {
-          id: 2,
-          type: 'sync',
-          message: 'Neo4j 同步失败',
-          severity: 'error',
-          timestamp: '2026-04-20T11:00:00Z'
-        },
-        {
-          id: 3,
-          type: 'system',
-          message: '内存使用过高',
-          severity: 'warning',
-          timestamp: '2026-04-21T08:30:00Z'
-        }
-      ]
+    // API基础URL
+    const API_BASE = 'http://localhost:3001/api';
+
+    // 数据状态
+    let dataState = {
+      sync: { total: 0, success: 0, failed: 0 },
+      analysis: { total: 0, success: 0, failed: 0 },
+      system: { memoryUsage: 0, uptime: 0, alertCount: 0 },
+      projects: [],
+      alerts: []
     };
-    
+
+    // 显示消息
+    function showMessage(message, type = 'info') {
+      const container = document.getElementById('message-container');
+      container.innerHTML = `<div class="${type}-message">${message}</div>`;
+      setTimeout(() => {
+        container.innerHTML = '';
+      }, 3000);
+    }
+
     // 初始化页面
-    function init() {
+    async function init() {
+      await loadData();
       updateDashboard();
       updateProjectList();
       updateAlerts();
     }
-    
+
+    // 加载数据
+    async function loadData() {
+      try {
+        // 并行加载所有数据
+        const [syncRes, projectsRes, systemRes, analysisRes] = await Promise.all([
+          fetch(`${API_BASE}/sync/status`).then(r => r.json()).catch(() => ({ success: true, stats: { total: 0, success: 0, failed: 0 } })),
+          fetch(`${API_BASE}/projects`).then(r => r.json()).catch(() => ({ success: true, projects: [] })),
+          fetch(`${API_BASE}/system/status`).then(r => r.json()).catch(() => ({ success: true, status: { memoryUsage: 0, uptime: 0 } })),
+          fetch(`${API_BASE}/analysis/status`).then(r => r.json()).catch(() => ({ success: true, stats: { total: 0, completed: 0, pending: 0 } }))
+        ]);
+
+        dataState.sync = syncRes.stats || { total: 0, success: 0, failed: 0 };
+        dataState.projects = projectsRes.projects || [];
+        dataState.system = {
+          memoryUsage: systemRes.status?.memoryUsage || 0,
+          uptime: systemRes.status?.uptime || 0,
+          alertCount: 0
+        };
+        dataState.analysis = {
+          total: analysisRes.stats?.total || 0,
+          success: analysisRes.stats?.completed || 0,
+          failed: analysisRes.stats?.pending || 0
+        };
+
+        // 设置默认状态
+        dataState.projects.forEach(project => {
+          project.status = project.lastSync ? 'success' : 'pending';
+        });
+
+      } catch (error) {
+        console.error('加载数据失败:', error);
+        // 使用默认空数据
+        dataState = {
+          sync: { total: 0, success: 0, failed: 0 },
+          analysis: { total: 0, success: 0, failed: 0 },
+          system: { memoryUsage: 0, uptime: 0, alertCount: 0 },
+          projects: [],
+          alerts: []
+        };
+      }
+    }
+
     // 更新仪表盘
     function updateDashboard() {
-      document.getElementById('sync-total').textContent = mockData.sync.total;
-      document.getElementById('sync-success').textContent = mockData.sync.success;
-      document.getElementById('sync-failed').textContent = mockData.sync.failed;
-      
-      document.getElementById('analysis-total').textContent = mockData.analysis.total;
-      document.getElementById('analysis-success').textContent = mockData.analysis.success;
-      document.getElementById('analysis-failed').textContent = mockData.analysis.failed;
-      
-      document.getElementById('memory-usage').textContent = mockData.system.memoryUsage;
-      document.getElementById('uptime').textContent = mockData.system.uptime;
-      document.getElementById('alert-count').textContent = mockData.system.alertCount;
+      document.getElementById('sync-total').textContent = dataState.sync.total;
+      document.getElementById('sync-success').textContent = dataState.sync.success;
+      document.getElementById('sync-failed').textContent = dataState.sync.failed;
+
+      document.getElementById('analysis-total').textContent = dataState.analysis.total;
+      document.getElementById('analysis-success').textContent = dataState.analysis.success;
+      document.getElementById('analysis-failed').textContent = dataState.analysis.failed;
+
+      document.getElementById('memory-usage').textContent = dataState.system.memoryUsage;
+      document.getElementById('uptime').textContent = dataState.system.uptime;
+      document.getElementById('alert-count').textContent = dataState.system.alertCount;
     }
-    
+
     // 更新项目列表
     function updateProjectList() {
       const projectList = document.getElementById('project-list');
+
+      if (dataState.projects.length === 0) {
+        projectList.innerHTML = '<div class="loading">暂无项目</div>';
+        return;
+      }
+
       projectList.innerHTML = '';
-      
-      mockData.projects.forEach(project => {
+
+      dataState.projects.forEach(project => {
         const projectItem = document.createElement('div');
         projectItem.className = 'project-item';
-        
+
         projectItem.innerHTML = `
           <div class="project-info">
             <div class="project-name">${project.name}</div>
             <div class="project-meta">
-              分类: ${project.category} | 优先级: ${project.priority} | 最后同步: ${new Date(project.lastSync).toLocaleString()}
+              分类: ${project.category || 'N/A'} | 优先级: ${project.priority || 'N/A'} | 最后同步: ${project.lastSync ? new Date(project.lastSync).toLocaleString() : '从未同步'}
             </div>
           </div>
           <div>
-            <span class="status status-${project.status}">${project.status}</span>
+            <span class="status status-${project.status || 'pending'}">${project.status || 'pending'}</span>
           </div>
           <div class="project-actions">
             <button class="btn btn-primary" onclick="syncProject('${project.id}')">同步</button>
@@ -426,89 +417,199 @@
             <button class="btn btn-danger" onclick="removeProject('${project.id}')">删除</button>
           </div>
         `;
-        
+
         projectList.appendChild(projectItem);
       });
     }
-    
+
     // 更新告警信息
     function updateAlerts() {
       const alertsContainer = document.getElementById('alerts');
-      alertsContainer.innerHTML = '<h2>告警信息</h2>';
-      
-      mockData.alerts.forEach(alert => {
-        const alertItem = document.createElement('div');
-        alertItem.className = `alert-item alert-${alert.severity}`;
-        
-        alertItem.innerHTML = `
-          <strong>${alert.type.toUpperCase()}</strong>: ${alert.message}
-          <br>
-          <small>${new Date(alert.timestamp).toLocaleString()}</small>
+
+      if (dataState.alerts.length === 0) {
+        alertsContainer.innerHTML = '<h2>告警信息</h2><div class="loading">暂无告警</div>';
+        return;
+      }
+
+      let html = '<h2>告警信息</h2>';
+      dataState.alerts.forEach(alert => {
+        html += `
+          <div class="alert-item alert-${alert.severity}">
+            <strong>${alert.type.toUpperCase()}</strong>: ${alert.message}
+            <br>
+            <small>${new Date(alert.timestamp).toLocaleString()}</small>
+          </div>
         `;
-        
-        alertsContainer.appendChild(alertItem);
       });
+
+      alertsContainer.innerHTML = html;
     }
-    
+
     // 同步所有项目
-    function syncAll() {
-      alert('开始同步所有项目...');
-      // 这里可以添加实际的API调用
-      setTimeout(() => {
-        alert('同步完成！');
-        refreshStatus();
-      }, 2000);
-    }
-    
-    // 分析所有项目
-    function analyzeAll() {
-      alert('开始分析所有项目...');
-      // 这里可以添加实际的API调用
-      setTimeout(() => {
-        alert('分析完成！');
-        refreshStatus();
-      }, 2000);
-    }
-    
-    // 同步单个项目
-    function syncProject(projectId) {
-      alert(`开始同步项目: ${projectId}`);
-      // 这里可以添加实际的API调用
-      setTimeout(() => {
-        alert('同步完成！');
-        refreshStatus();
-      }, 1000);
-    }
-    
-    // 分析单个项目
-    function analyzeProject(projectId) {
-      alert(`开始分析项目: ${projectId}`);
-      // 这里可以添加实际的API调用
-      setTimeout(() => {
-        alert('分析完成！');
-        refreshStatus();
-      }, 1000);
-    }
-    
-    // 删除项目
-    function removeProject(projectId) {
-      if (confirm(`确定要删除项目: ${projectId}吗？`)) {
-        // 这里可以添加实际的API调用
-        alert('项目已删除！');
-        refreshStatus();
+    async function syncAll() {
+      const btn = document.getElementById('sync-all-btn');
+      btn.disabled = true;
+      btn.textContent = '同步中...';
+
+      try {
+        showMessage('开始同步所有项目...', 'info');
+
+        const response = await fetch(`${API_BASE}/sync/all`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' }
+        });
+
+        const result = await response.json();
+
+        if (result.success) {
+          showMessage('同步完成！', 'success');
+
+          // 更新项目状态
+          dataState.projects.forEach(project => {
+            project.status = 'success';
+            project.lastSync = new Date().toISOString();
+          });
+
+          // 更新统计数据
+          dataState.sync.success = dataState.projects.length;
+          dataState.sync.failed = 0;
+
+          updateDashboard();
+          updateProjectList();
+        } else {
+          showMessage(`同步失败: ${result.error}`, 'error');
+        }
+      } catch (error) {
+        console.error('同步失败:', error);
+        showMessage(`同步失败: ${error.message}`, 'error');
+      } finally {
+        btn.disabled = false;
+        btn.textContent = '同步所有项目';
       }
     }
-    
-    // 刷新状态
-    function refreshStatus() {
-      alert('刷新状态...');
-      // 这里可以添加实际的API调用
-      setTimeout(() => {
-        init();
-        alert('状态已更新！');
-      }, 1000);
+
+    // 分析所有项目
+    async function analyzeAll() {
+      const btn = document.getElementById('analyze-all-btn');
+      btn.disabled = true;
+      btn.textContent = '分析中...';
+
+      try {
+        showMessage('开始分析所有项目...', 'info');
+
+        const response = await fetch(`${API_BASE}/analyze/all`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' }
+        });
+
+        const result = await response.json();
+
+        if (result.success) {
+          showMessage('分析完成！', 'success');
+
+          // 更新分析状态
+          dataState.analysis.success = result.results?.length || 0;
+          dataState.analysis.failed = 0;
+
+          updateDashboard();
+        } else {
+          showMessage(`分析失败: ${result.error}`, 'error');
+        }
+      } catch (error) {
+        console.error('分析失败:', error);
+        showMessage(`分析失败: ${error.message}`, 'error');
+      } finally {
+        btn.disabled = false;
+        btn.textContent = '分析所有项目';
+      }
     }
-    
+
+    // 同步单个项目
+    async function syncProject(projectId) {
+      const project = dataState.projects.find(p => p.id === projectId);
+      if (!project) {
+        showMessage('项目不存在', 'error');
+        return;
+      }
+
+      try {
+        showMessage(`开始同步项目: ${project.name}`, 'info');
+
+        const response = await fetch(`${API_BASE}/sync/${projectId}`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' }
+        });
+
+        const result = await response.json();
+
+        if (result.success) {
+          showMessage(`项目 ${project.name} 同步成功！`, 'success');
+
+          // 更新项目状态
+          project.status = 'success';
+          project.lastSync = new Date().toISOString();
+
+          // 更新统计数据
+          dataState.sync.failed = Math.max(0, dataState.sync.failed - 1);
+          dataState.sync.success = Math.min(dataState.sync.total, dataState.sync.success + 1);
+
+          updateDashboard();
+          updateProjectList();
+        } else {
+          showMessage(`项目 ${project.name} 同步失败: ${result.error}`, 'error');
+        }
+      } catch (error) {
+        console.error('同步失败:', error);
+        showMessage(`同步失败: ${error.message}`, 'error');
+      }
+    }
+
+    // 分析单个项目
+    async function analyzeProject(projectId) {
+      const project = dataState.projects.find(p => p.id === projectId);
+      if (!project) {
+        showMessage('项目不存在', 'error');
+        return;
+      }
+
+      try {
+        showMessage(`开始分析项目: ${project.name}`, 'info');
+
+        const response = await fetch(`${API_BASE}/analyze/${projectId}`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' }
+        });
+
+        const result = await response.json();
+
+        if (result.success) {
+          showMessage(`项目 ${project.name} 分析成功！`, 'success');
+        } else {
+          showMessage(`项目 ${project.name} 分析失败: ${result.error}`, 'error');
+        }
+      } catch (error) {
+        console.error('分析失败:', error);
+        showMessage(`分析失败: ${error.message}`, 'error');
+      }
+    }
+
+    // 删除项目
+    function removeProject(projectId) {
+      if (confirm(`确定要删除项目 ${projectId} 吗？`)) {
+        showMessage('删除功能暂未实现', 'info');
+      }
+    }
+
+    // 刷新状态
+    async function refreshStatus() {
+      showMessage('刷新状态...', 'info');
+      await loadData();
+      updateDashboard();
+      updateProjectList();
+      updateAlerts();
+      showMessage('状态已更新！', 'success');
+    }
+
     // 页面加载完成后初始化
     window.onload = init;
   </script>

@@ -25129,5 +25129,15 @@
     "end_time": null,
     "steps": [],
     "result": null
+  },
+  "auto_record_session_1776773483536": {
+    "id": "auto_record_session_1776773483536",
+    "name": "自动记录会话",
+    "description": "全局自动任务记录会话",
+    "status": "in_progress",
+    "start_time": 1776773483.537,
+    "end_time": null,
+    "steps": [],
+    "result": null
   }
 }

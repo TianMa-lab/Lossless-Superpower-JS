@@ -84,7 +84,10 @@ class SelfEvolution {
       const currentTime = Date.now() / 1000;
       // 每2小时检查一次技能生成
       if (currentTime - this.lastSkillGeneration > 2 * 3600) {
-        this._extractSkillsFromExperience();
+        // 从错误模式中提取技能
+        if (this.errorPatterns && this.errorPatterns.length > 0) {
+          this._createSkillFromPattern(this.errorPatterns[0]);
+        }
         this.lastSkillGeneration = currentTime;
       }
     }, 3600000); // 每小时检查一次
