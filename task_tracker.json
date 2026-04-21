@@ -13791,5 +13791,205 @@
     "end_time": 1776737567.529,
     "steps": [],
     "result": "Promise resolved (2ms)"
+  },
+  "auto_record_session_1776743184079": {
+    "id": "auto_record_session_1776743184079",
+    "name": "自动记录会话",
+    "description": "全局自动任务记录会话",
+    "status": "in_progress",
+    "start_time": 1776743184.079,
+    "end_time": null,
+    "steps": [],
+    "result": null
+  },
+  "promise_1776743184086_1": {
+    "id": "promise_1776743184086_1",
+    "name": "Promise执行",
+    "description": "异步Promise执行",
+    "status": "in_progress",
+    "start_time": 1776743184.086,
+    "end_time": null,
+    "steps": [],
+    "result": null
+  },
+  "promise_1776743184088_2": {
+    "id": "promise_1776743184088_2",
+    "name": "Promise执行",
+    "description": "异步Promise执行",
+    "status": "completed",
+    "start_time": 1776743184.088,
+    "end_time": 1776743184.091,
+    "steps": [],
+    "result": "Promise resolved (3ms)"
+  },
+  "promise_1776743184095_3": {
+    "id": "promise_1776743184095_3",
+    "name": "Promise执行",
+    "description": "异步Promise执行",
+    "status": "in_progress",
+    "start_time": 1776743184.095,
+    "end_time": null,
+    "steps": [],
+    "result": null
+  },
+  "promise_1776743184100_4": {
+    "id": "promise_1776743184100_4",
+    "name": "Promise执行",
+    "description": "异步Promise执行",
+    "status": "completed",
+    "start_time": 1776743184.1,
+    "end_time": 1776743184.104,
+    "steps": [],
+    "result": "Promise resolved (4ms)"
+  },
+  "promise_1776743184107_5": {
+    "id": "promise_1776743184107_5",
+    "name": "Promise执行",
+    "description": "异步Promise执行",
+    "status": "in_progress",
+    "start_time": 1776743184.107,
+    "end_time": null,
+    "steps": [],
+    "result": null
+  },
+  "promise_1776743184111_6": {
+    "id": "promise_1776743184111_6",
+    "name": "Promise执行",
+    "description": "异步Promise执行",
+    "status": "completed",
+    "start_time": 1776743184.111,
+    "end_time": 1776743184.115,
+    "steps": [],
+    "result": "Promise resolved (4ms)"
+  },
+  "promise_1776743184119_7": {
+    "id": "promise_1776743184119_7",
+    "name": "Promise执行",
+    "description": "异步Promise执行",
+    "status": "in_progress",
+    "start_time": 1776743184.119,
+    "end_time": null,
+    "steps": [],
+    "result": null
+  },
+  "promise_1776743184122_8": {
+    "id": "promise_1776743184122_8",
+    "name": "Promise执行",
+    "description": "异步Promise执行",
+    "status": "completed",
+    "start_time": 1776743184.122,
+    "end_time": 1776743184.128,
+    "steps": [],
+    "result": "Promise resolved (6ms)"
+  },
+  "promise_1776743184132_9": {
+    "id": "promise_1776743184132_9",
+    "name": "Promise执行",
+    "description": "异步Promise执行",
+    "status": "in_progress",
+    "start_time": 1776743184.132,
+    "end_time": null,
+    "steps": [],
+    "result": null
+  },
+  "promise_1776743184136_10": {
+    "id": "promise_1776743184136_10",
+    "name": "Promise执行",
+    "description": "异步Promise执行",
+    "status": "completed",
+    "start_time": 1776743184.136,
+    "end_time": 1776743184.139,
+    "steps": [],
+    "result": "Promise resolved (3ms)"
+  },
+  "promise_1776743184143_11": {
+    "id": "promise_1776743184143_11",
+    "name": "Promise执行",
+    "description": "异步Promise执行",
+    "status": "in_progress",
+    "start_time": 1776743184.143,
+    "end_time": null,
+    "steps": [],
+    "result": null
+  },
+  "promise_1776743184147_12": {
+    "id": "promise_1776743184147_12",
+    "name": "Promise执行",
+    "description": "异步Promise执行",
+    "status": "completed",
+    "start_time": 1776743184.147,
+    "end_time": 1776743184.15,
+    "steps": [],
+    "result": "Promise resolved (3ms)"
+  },
+  "promise_1776743184152_13": {
+    "id": "promise_1776743184152_13",
+    "name": "Promise执行",
+    "description": "异步Promise执行",
+    "status": "in_progress",
+    "start_time": 1776743184.152,
+    "end_time": null,
+    "steps": [],
+    "result": null
+  },
+  "promise_1776743184155_14": {
+    "id": "promise_1776743184155_14",
+    "name": "Promise执行",
+    "description": "异步Promise执行",
+    "status": "completed",
+    "start_time": 1776743184.155,
+    "end_time": 1776743184.158,
+    "steps": [],
+    "result": "Promise resolved (3ms)"
+  },
+  "promise_1776743184161_15": {
+    "id": "promise_1776743184161_15",
+    "name": "Promise执行",
+    "description": "异步Promise执行",
+    "status": "in_progress",
+    "start_time": 1776743184.161,
+    "end_time": null,
+    "steps": [],
+    "result": null
+  },
+  "promise_1776743184167_16": {
+    "id": "promise_1776743184167_16",
+    "name": "Promise执行",
+    "description": "异步Promise执行",
+    "status": "in_progress",
+    "start_time": 1776743184.167,
+    "end_time": null,
+    "steps": [],
+    "result": null
+  },
+  "interval_1776743184171_17": {
+    "id": "interval_1776743184171_17",
+    "name": "setInterval执行",
+    "description": "每 3600000ms 重复执行任务",
+    "status": "in_progress",
+    "start_time": 1776743184.171,
+    "end_time": null,
+    "steps": [],
+    "result": null
+  },
+  "interval_1776743184174_18": {
+    "id": "interval_1776743184174_18",
+    "name": "setInterval执行",
+    "description": "每 60000ms 重复执行任务",
+    "status": "in_progress",
+    "start_time": 1776743184.174,
+    "end_time": null,
+    "steps": [],
+    "result": null
+  },
+  "interval_1776743184264_19": {
+    "id": "interval_1776743184264_19",
+    "name": "setInterval执行",
+    "description": "每 3600000ms 重复执行任务",
+    "status": "in_progress",
+    "start_time": 1776743184.264,
+    "end_time": null,
+    "steps": [],
+    "result": null
   }
 }
