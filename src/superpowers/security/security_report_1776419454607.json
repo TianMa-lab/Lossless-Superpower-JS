@@ -1,0 +1,56 @@
+{
+  "generatedAt": 1776419454607,
+  "auditLogs": [
+    {
+      "id": "event_1776419454604_xsxq7bt90",
+      "timestamp": 1776419454604,
+      "type": "test_event",
+      "severity": "info",
+      "description": "测试安全事件",
+      "details": {
+        "test": "data"
+      }
+    }
+  ],
+  "securityScan": {
+    "id": "scan_1776419454606",
+    "timestamp": 1776419454606,
+    "scanType": "comprehensive",
+    "results": {
+      "vulnerabilities": [
+        {
+          "type": "file_permission",
+          "severity": "high",
+          "description": "文件 C:\\Users\\55237\\Lossless-Superpower-JS\\src\\superpowers\\security\\keys\\encryption_key.json 权限过于宽松",
+          "recommendation": "限制文件权限为 600"
+        },
+        {
+          "type": "file_permission",
+          "severity": "high",
+          "description": "文件 C:\\Users\\55237\\Lossless-Superpower-JS\\src\\storage\\db\\data\\memories.json 权限过于宽松",
+          "recommendation": "限制文件权限为 600"
+        },
+        {
+          "type": "file_permission",
+          "severity": "high",
+          "description": "文件 C:\\Users\\55237\\Lossless-Superpower-JS\\src\\storage\\db\\data\\knowledge.json 权限过于宽松",
+          "recommendation": "限制文件权限为 600"
+        },
+        {
+          "type": "file_permission",
+          "severity": "high",
+          "description": "文件 C:\\Users\\55237\\Lossless-Superpower-JS\\src\\storage\\db\\data\\users.json 权限过于宽松",
+          "recommendation": "限制文件权限为 600"
+        }
+      ],
+      "warnings": [],
+      "recommendations": []
+    }
+  },
+  "summary": {
+    "totalEvents": 1,
+    "totalVulnerabilities": 4,
+    "totalWarnings": 0,
+    "totalRecommendations": 0
+  }
+}

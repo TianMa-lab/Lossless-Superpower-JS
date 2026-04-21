@@ -1,0 +1,14 @@
+{
+  "version": "1.4.902",
+  "date": "2026-04-17",
+  "changes": [
+    "修改了 src/superpowers/self_evolution.js",
+    "修改了 src/superpowers/skill_manager.js",
+    "修改了 src/superpowers/skill_trigger.js",
+    "修改了 src/superpowers/plugin_system.js",
+    "修改了 src/superpowers/knowledge/index.js",
+    "修改了 src/superpowers/skills/iteration_recorder.js"
+  ],
+  "issues": [],
+  "timestamp": 1776397902.161
+}

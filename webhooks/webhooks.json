@@ -1,0 +1,20 @@
+[
+  {
+    "id": "webhook_1776413572620_9ary6ol19",
+    "name": "测试Webhook",
+    "url": "https://example.com/webhook",
+    "events": [
+      "iteration_created"
+    ],
+    "enabled": true,
+    "secret": null,
+    "headers": {},
+    "retryCount": 3,
+    "retryDelay": 1000,
+    "timeout": 30000,
+    "createdAt": 1776413572620,
+    "lastTriggered": null,
+    "successCount": 0,
+    "failureCount": 0
+  }
+]

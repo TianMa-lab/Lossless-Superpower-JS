@@ -1,0 +1,26 @@
+[
+  {
+    "id": "metrics_1776419620520_zc6sht2dg",
+    "timestamp": 1776419620520,
+    "responseTime": 350,
+    "satisfaction": 4.5,
+    "action": "api_call",
+    "endpoint": "/api/memory"
+  },
+  {
+    "id": "metrics_1776419732239_32uoaz4cw",
+    "timestamp": 1776419732239,
+    "responseTime": 350,
+    "satisfaction": 4.5,
+    "action": "api_call",
+    "endpoint": "/api/memory"
+  },
+  {
+    "id": "metrics_1776419748730_v51shqeaq",
+    "timestamp": 1776419748730,
+    "responseTime": 350,
+    "satisfaction": 4.5,
+    "action": "api_call",
+    "endpoint": "/api/memory"
+  }
+]

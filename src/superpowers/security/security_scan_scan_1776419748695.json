@@ -1,0 +1,35 @@
+{
+  "id": "scan_1776419748695",
+  "timestamp": 1776419748695,
+  "scanType": "comprehensive",
+  "results": {
+    "vulnerabilities": [
+      {
+        "type": "file_permission",
+        "severity": "high",
+        "description": "文件 C:\\Users\\55237\\Lossless-Superpower-JS\\src\\superpowers\\security\\keys\\encryption_key.json 权限过于宽松",
+        "recommendation": "限制文件权限为 600"
+      },
+      {
+        "type": "file_permission",
+        "severity": "high",
+        "description": "文件 C:\\Users\\55237\\Lossless-Superpower-JS\\src\\storage\\db\\data\\memories.json 权限过于宽松",
+        "recommendation": "限制文件权限为 600"
+      },
+      {
+        "type": "file_permission",
+        "severity": "high",
+        "description": "文件 C:\\Users\\55237\\Lossless-Superpower-JS\\src\\storage\\db\\data\\knowledge.json 权限过于宽松",
+        "recommendation": "限制文件权限为 600"
+      },
+      {
+        "type": "file_permission",
+        "severity": "high",
+        "description": "文件 C:\\Users\\55237\\Lossless-Superpower-JS\\src\\storage\\db\\data\\users.json 权限过于宽松",
+        "recommendation": "限制文件权限为 600"
+      }
+    ],
+    "warnings": [],
+    "recommendations": []
+  }
+}

@@ -1,0 +1,69 @@
+[
+  {
+    "id": "learning_1776416786753_ccek3o4wq",
+    "userInput": "如何使用永久记忆系统",
+    "systemResponse": "永久记忆系统可以通过addMemory方法添加记忆，通过getMemories方法获取记忆",
+    "context": {
+      "context": "API使用"
+    },
+    "timestamp": 1776416786753,
+    "confidence": 0.8,
+    "tags": [
+      "方法",
+      "教程"
+    ]
+  },
+  {
+    "id": "learning_1776416786757_gz7uz7gpo",
+    "userInput": "什么是知识图谱",
+    "systemResponse": "知识图谱是一种以图形方式表示知识的结构，包含节点和边",
+    "context": {
+      "context": "概念解释"
+    },
+    "timestamp": 1776416786757,
+    "confidence": 0.8,
+    "tags": [
+      "知识",
+      "概念"
+    ]
+  },
+  {
+    "id": "learning_1776419743563_57puuscwg",
+    "userInput": "如何使用永久记忆系统",
+    "systemResponse": "永久记忆系统可以通过addMemory方法添加记忆，通过getMemories方法获取记忆",
+    "context": {
+      "context": "API使用"
+    },
+    "timestamp": 1776419743563,
+    "confidence": 0.8,
+    "tags": [
+      "方法",
+      "教程"
+    ]
+  },
+  {
+    "id": "learning_1776419743567_1vevnvt2b",
+    "userInput": "什么是知识图谱",
+    "systemResponse": "知识图谱是一种以图形方式表示知识的结构，包含节点和边",
+    "context": {
+      "context": "概念解释"
+    },
+    "timestamp": 1776419743567,
+    "confidence": 0.8,
+    "tags": [
+      "知识",
+      "概念"
+    ]
+  },
+  {
+    "id": "learning_1776423123553_kxchlyblq",
+    "userInput": "系统需要自动记录任务",
+    "systemResponse": "是的，TaskRunner可以自动记录任务并存储到记忆系统",
+    "context": {},
+    "timestamp": 1776423123553,
+    "confidence": 0.8,
+    "tags": [
+      "其他"
+    ]
+  }
+]

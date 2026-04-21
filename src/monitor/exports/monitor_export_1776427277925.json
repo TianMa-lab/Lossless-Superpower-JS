@@ -1,0 +1,13 @@
+{
+  "metrics": {
+    "nodeCount": 0,
+    "edgeCount": 0,
+    "mappingCoverage": 0,
+    "syncStatus": "idle",
+    "lastSyncTime": null,
+    "errorCount": 0
+  },
+  "alerts": [],
+  "logs": [],
+  "exportTime": "2026-04-17T12:01:17.925Z"
+}

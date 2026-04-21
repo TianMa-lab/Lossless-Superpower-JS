@@ -1,0 +1,273 @@
+{
+  "mappings": [
+    [
+      "kg_1776415869917_c6z5yot51",
+      {
+        "originalId": "kg_1776415869917_c6z5yot51",
+        "unifiedId": "kg_1776415869917_c6z5yot51_d5bee93f",
+        "sourceDagId": "kg_node_测试主体_b70b1a3f",
+        "targetDagId": "kg_node_测试对象_ccad4ce2",
+        "type": "edge",
+        "timestamp": 1776427331955
+      }
+    ],
+    [
+      "kg_1776416786753_fh6uu460r",
+      {
+        "originalId": "kg_1776416786753_fh6uu460r",
+        "unifiedId": "kg_1776416786753_fh6uu460r_dd2151da",
+        "sourceDagId": "kg_node_如何使用永久记忆系统_永久记忆系统_3048c78c",
+        "targetDagId": "kg_node_通过addmemory方法添加记忆，通过getmemories方法获取记忆_520dccbe",
+        "type": "edge",
+        "timestamp": 1776427331955
+      }
+    ],
+    [
+      "kg_1776416786757_hfswltfy0",
+      {
+        "originalId": "kg_1776416786757_hfswltfy0",
+        "unifiedId": "kg_1776416786757_hfswltfy0_07e4fb1c",
+        "sourceDagId": "kg_node_什么是知识图谱_知识图谱_f84a2ea9",
+        "targetDagId": "kg_node_一种以图形方式表示知识的结构，包含节点和边_603aecff",
+        "type": "edge",
+        "timestamp": 1776427331955
+      }
+    ],
+    [
+      "kg_1776419743487_p5kfqgji6",
+      {
+        "originalId": "kg_1776419743487_p5kfqgji6",
+        "unifiedId": "kg_1776419743487_p5kfqgji6_a43fbdc3",
+        "sourceDagId": "kg_node_测试主体_b70b1a3f",
+        "targetDagId": "kg_node_测试对象_ccad4ce2",
+        "type": "edge",
+        "timestamp": 1776427331956
+      }
+    ],
+    [
+      "kg_1776419743564_m86bkgwhn",
+      {
+        "originalId": "kg_1776419743564_m86bkgwhn",
+        "unifiedId": "kg_1776419743564_m86bkgwhn_62000b31",
+        "sourceDagId": "kg_node_如何使用永久记忆系统_永久记忆系统_3048c78c",
+        "targetDagId": "kg_node_通过addmemory方法添加记忆，通过getmemories方法获取记忆_520dccbe",
+        "type": "edge",
+        "timestamp": 1776427331956
+      }
+    ],
+    [
+      "kg_1776419743567_v651u5g7p",
+      {
+        "originalId": "kg_1776419743567_v651u5g7p",
+        "unifiedId": "kg_1776419743567_v651u5g7p_bd08070b",
+        "sourceDagId": "kg_node_什么是知识图谱_知识图谱_f84a2ea9",
+        "targetDagId": "kg_node_一种以图形方式表示知识的结构，包含节点和边_603aecff",
+        "type": "edge",
+        "timestamp": 1776427331957
+      }
+    ],
+    [
+      "kg_1776423123570_x3gkj7itr",
+      {
+        "originalId": "kg_1776423123570_x3gkj7itr",
+        "unifiedId": "kg_1776423123570_x3gkj7itr_9f3411d2",
+        "sourceDagId": "kg_node_系统需要自动记录任务_234f34b8",
+        "targetDagId": "kg_node_的，taskrunner可以自动记录任务并存储到记忆系统_0750473a",
+        "type": "edge",
+        "timestamp": 1776427331957
+      }
+    ],
+    [
+      "kg_1776423123571_9qq5u07a5",
+      {
+        "originalId": "kg_1776423123571_9qq5u07a5",
+        "unifiedId": "kg_1776423123571_9qq5u07a5_d5a0f094",
+        "sourceDagId": "kg_node_系统需要自动记录任务_是的，taskrunner_0877f05c",
+        "targetDagId": "kg_node_自动记录任务并存储到记忆系统_befdec47",
+        "type": "edge",
+        "timestamp": 1776427331958
+      }
+    ],
+    [
+      "kg_1776423123572_f5m3w6wgu",
+      {
+        "originalId": "kg_1776423123572_f5m3w6wgu",
+        "unifiedId": "kg_1776423123572_f5m3w6wgu_613b856e",
+        "sourceDagId": "kg_node_系统_e34667b1",
+        "targetDagId": "kg_node_自动记录任务_是的，taskrunner可以自动记录任务并存储到记忆系统_e6929dae",
+        "type": "edge",
+        "timestamp": 1776427331958
+      }
+    ],
+    [
+      "测试主体",
+      {
+        "originalId": "测试主体",
+        "unifiedId": "测试主体_ccb54af4",
+        "dagNodeId": "kg_node_测试主体_ccb54af4",
+        "type": "node",
+        "timestamp": 1776427331960
+      }
+    ],
+    [
+      "测试对象",
+      {
+        "originalId": "测试对象",
+        "unifiedId": "测试对象_22a11f4e",
+        "dagNodeId": "kg_node_测试对象_22a11f4e",
+        "type": "node",
+        "timestamp": 1776427331960
+      }
+    ],
+    [
+      "如何使用永久记忆系统 永久记忆系统",
+      {
+        "originalId": "如何使用永久记忆系统 永久记忆系统",
+        "unifiedId": "如何使用永久记忆系统_永久记忆系统_33a29fc1",
+        "dagNodeId": "kg_node_如何使用永久记忆系统_永久记忆系统_33a29fc1",
+        "type": "node",
+        "timestamp": 1776427331961
+      }
+    ],
+    [
+      "通过addMemory方法添加记忆，通过getMemories方法获取记忆",
+      {
+        "originalId": "通过addMemory方法添加记忆，通过getMemories方法获取记忆",
+        "unifiedId": "通过addmemory方法添加记忆，通过getmemories方法获取记忆_fa09ea32",
+        "dagNodeId": "kg_node_通过addmemory方法添加记忆，通过getmemories方法获取记忆_fa09ea32",
+        "type": "node",
+        "timestamp": 1776427331961
+      }
+    ],
+    [
+      "什么是知识图谱 知识图谱",
+      {
+        "originalId": "什么是知识图谱 知识图谱",
+        "unifiedId": "什么是知识图谱_知识图谱_247ad4e1",
+        "dagNodeId": "kg_node_什么是知识图谱_知识图谱_247ad4e1",
+        "type": "node",
+        "timestamp": 1776427331962
+      }
+    ],
+    [
+      "一种以图形方式表示知识的结构，包含节点和边",
+      {
+        "originalId": "一种以图形方式表示知识的结构，包含节点和边",
+        "unifiedId": "一种以图形方式表示知识的结构，包含节点和边_dc620b4b",
+        "dagNodeId": "kg_node_一种以图形方式表示知识的结构，包含节点和边_dc620b4b",
+        "type": "node",
+        "timestamp": 1776427331962
+      }
+    ],
+    [
+      "系统需要自动记录任务",
+      {
+        "originalId": "系统需要自动记录任务",
+        "unifiedId": "系统需要自动记录任务_103f0443",
+        "dagNodeId": "kg_node_系统需要自动记录任务_103f0443",
+        "type": "node",
+        "timestamp": 1776427331963
+      }
+    ],
+    [
+      "的，TaskRunner可以自动记录任务并存储到记忆系统",
+      {
+        "originalId": "的，TaskRunner可以自动记录任务并存储到记忆系统",
+        "unifiedId": "的，taskrunner可以自动记录任务并存储到记忆系统_e39d73bb",
+        "dagNodeId": "kg_node_的，taskrunner可以自动记录任务并存储到记忆系统_e39d73bb",
+        "type": "node",
+        "timestamp": 1776427331963
+      }
+    ],
+    [
+      "系统需要自动记录任务 是的，TaskRunner",
+      {
+        "originalId": "系统需要自动记录任务 是的，TaskRunner",
+        "unifiedId": "系统需要自动记录任务_是的，taskrunner_326407f1",
+        "dagNodeId": "kg_node_系统需要自动记录任务_是的，taskrunner_326407f1",
+        "type": "node",
+        "timestamp": 1776427331963
+      }
+    ],
+    [
+      "自动记录任务并存储到记忆系统",
+      {
+        "originalId": "自动记录任务并存储到记忆系统",
+        "unifiedId": "自动记录任务并存储到记忆系统_9b07deb3",
+        "dagNodeId": "kg_node_自动记录任务并存储到记忆系统_9b07deb3",
+        "type": "node",
+        "timestamp": 1776427331964
+      }
+    ],
+    [
+      "系统",
+      {
+        "originalId": "系统",
+        "unifiedId": "系统_154fdb9f",
+        "dagNodeId": "kg_node_系统_154fdb9f",
+        "type": "node",
+        "timestamp": 1776427331964
+      }
+    ],
+    [
+      "自动记录任务 是的，TaskRunner可以自动记录任务并存储到记忆系统",
+      {
+        "originalId": "自动记录任务 是的，TaskRunner可以自动记录任务并存储到记忆系统",
+        "unifiedId": "自动记录任务_是的，taskrunner可以自动记录任务并存储到记忆系统_9eed351b",
+        "dagNodeId": "kg_node_自动记录任务_是的，taskrunner可以自动记录任务并存储到记忆系统_9eed351b",
+        "type": "node",
+        "timestamp": 1776427331965
+      }
+    ]
+  ],
+  "changeLog": [
+    {
+      "id": "2c02b7d0-ddc4-4b3d-a2a5-43131928d9d2",
+      "type": "extract",
+      "details": {
+        "nodes": 0,
+        "edges": 9,
+        "totalNodes": 12,
+        "totalEdges": 9,
+        "timestamp": 1776427331954
+      },
+      "timestamp": 1776427331954
+    },
+    {
+      "id": "9e302835-d78f-46c1-a56a-be2357fcb724",
+      "type": "optimize_edge_mapping",
+      "details": {
+        "processedEdges": 9,
+        "failedEdges": 0,
+        "totalEdges": 9,
+        "timestamp": 1776427331958
+      },
+      "timestamp": 1776427331958
+    },
+    {
+      "id": "7c15798d-bf05-441d-b316-3b3458f62e72",
+      "type": "realtime_sync",
+      "details": {
+        "addedNodes": 12,
+        "addedEdges": 0,
+        "updatedNodes": 0,
+        "updatedEdges": 9,
+        "timestamp": 1776427331965
+      },
+      "timestamp": 1776427331965
+    },
+    {
+      "id": "78ac8eef-677d-4d96-91b8-00e0436cd41c",
+      "type": "sync_kg_to_dag",
+      "details": {
+        "addedNodes": 0,
+        "addedEdges": 0,
+        "updatedNodes": 12,
+        "updatedEdges": 9,
+        "timestamp": 1776427331966
+      },
+      "timestamp": 1776427331966
+    }
+  ],
+  "exportTime": 1776427331969
+}

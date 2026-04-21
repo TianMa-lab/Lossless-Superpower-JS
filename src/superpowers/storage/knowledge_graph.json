@@ -1,0 +1,2440 @@
+{
+  "nodes": {
+    "node_1775823282.014014": {
+      "content": "人工智能是计算机科学的一个分支",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-10T20:14:42.014014",
+      "updated_at": "2026-04-10T20:14:42.014014"
+    },
+    "node_1775823282.016114": {
+      "content": "机器学习是人工智能的一个子领域",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-10T20:14:42.016114",
+      "updated_at": "2026-04-10T20:14:42.016114"
+    },
+    "node_1775823282.072007": {
+      "content": "机器学习是人工智能的一个子领域",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-10T20:14:42.072007",
+      "updated_at": "2026-04-10T20:14:42.072007"
+    },
+    "node_1775823282.104038": {
+      "content": "测试知识 0: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-10T20:14:42.104038",
+      "updated_at": "2026-04-10T20:14:42.104038"
+    },
+    "node_1775823282.105558": {
+      "content": "测试知识 1: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-10T20:14:42.105558",
+      "updated_at": "2026-04-10T20:14:42.105558"
+    },
+    "node_1775823282.106115": {
+      "content": "测试知识 4: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-10T20:14:42.106115",
+      "updated_at": "2026-04-10T20:14:42.106115"
+    },
+    "node_1775823282.107119": {
+      "content": "测试知识 9: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-10T20:14:42.107119",
+      "updated_at": "2026-04-10T20:14:42.107119"
+    },
+    "node_1775823282.236165": {
+      "content": "测试知识 2: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-10T20:14:42.236165",
+      "updated_at": "2026-04-10T20:14:42.236165"
+    },
+    "node_1775823282.237687": {
+      "content": "测试知识 7: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-10T20:14:42.237687",
+      "updated_at": "2026-04-10T20:14:42.237687"
+    },
+    "node_1775823282.239206": {
+      "content": "测试知识 12: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-10T20:14:42.239206",
+      "updated_at": "2026-04-10T20:14:42.239206"
+    },
+    "node_1775823282.240725": {
+      "content": "测试知识 14: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-10T20:14:42.240725",
+      "updated_at": "2026-04-10T20:14:42.240725"
+    },
+    "node_1775823282.272494": {
+      "content": "人工智能是计算机科学的一个分支",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-10T20:14:42.272494",
+      "updated_at": "2026-04-10T20:14:42.272494"
+    },
+    "node_1775823282.274018": {
+      "content": "人工智能是计算机科学的一个分支，包括机器学习、深度学习等子领域",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-10T20:14:42.274018",
+      "updated_at": "2026-04-10T20:14:42.274018"
+    },
+    "node_1775823325.06594": {
+      "content": "人工智能是计算机科学的一个分支",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-10T20:15:25.065940",
+      "updated_at": "2026-04-10T20:15:25.065940"
+    },
+    "node_1775823325.066444": {
+      "content": "机器学习是人工智能的一个子领域",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-10T20:15:25.066444",
+      "updated_at": "2026-04-10T20:15:25.066444"
+    },
+    "node_1775823325.06745": {
+      "content": "机器学习是人工智能的一个子领域",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-10T20:15:25.067450",
+      "updated_at": "2026-04-10T20:15:25.067450"
+    },
+    "node_1775823325.067953": {
+      "content": "测试知识 2: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-10T20:15:25.067953",
+      "updated_at": "2026-04-10T20:15:25.067953"
+    },
+    "node_1775823325.069471": {
+      "content": "测试知识 8: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-10T20:15:25.069471",
+      "updated_at": "2026-04-10T20:15:25.069471"
+    },
+    "node_1775823325.070994": {
+      "content": "测试知识 9: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-10T20:15:25.070994",
+      "updated_at": "2026-04-10T20:15:25.070994"
+    },
+    "node_1775823325.07251": {
+      "content": "测试知识 1: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-10T20:15:25.072510",
+      "updated_at": "2026-04-10T20:15:25.072510"
+    },
+    "node_1775823325.074095": {
+      "content": "测试知识 7: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-10T20:15:25.074095",
+      "updated_at": "2026-04-10T20:15:25.074095"
+    },
+    "node_1775823325.075616": {
+      "content": "测试知识 9: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-10T20:15:25.075616",
+      "updated_at": "2026-04-10T20:15:25.075616"
+    },
+    "node_1775823325.076124": {
+      "content": "测试知识 13: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-10T20:15:25.076124",
+      "updated_at": "2026-04-10T20:15:25.076124"
+    },
+    "node_1775823325.077126": {
+      "content": "人工智能是计算机科学的一个分支，包括机器学习、深度学习等子领域",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-10T20:15:25.077126",
+      "updated_at": "2026-04-10T20:15:25.077126"
+    },
+    "node_1775823364.788801": {
+      "content": "人工智能是计算机科学的一个分支",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-10T20:16:04.788801",
+      "updated_at": "2026-04-10T20:16:04.788801"
+    },
+    "node_1775823364.790321": {
+      "content": "机器学习是人工智能的一个子领域",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-10T20:16:04.790321",
+      "updated_at": "2026-04-10T20:16:04.790321"
+    },
+    "node_1775823364.862568": {
+      "content": "机器学习是人工智能的一个子领域",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-10T20:16:04.862568",
+      "updated_at": "2026-04-10T20:16:04.862568"
+    },
+    "node_1775823364.897287": {
+      "content": "测试知识 0: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-10T20:16:04.897287",
+      "updated_at": "2026-04-10T20:16:04.897287"
+    },
+    "node_1775823364.897843": {
+      "content": "测试知识 2: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-10T20:16:04.897843",
+      "updated_at": "2026-04-10T20:16:04.897843"
+    },
+    "node_1775823364.898848": {
+      "content": "测试知识 6: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-10T20:16:04.898848",
+      "updated_at": "2026-04-10T20:16:04.898848"
+    },
+    "node_1775823364.900529": {
+      "content": "测试知识 9: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-10T20:16:04.900529",
+      "updated_at": "2026-04-10T20:16:04.900529"
+    },
+    "node_1775823365.001347": {
+      "content": "测试知识 2: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-10T20:16:05.001347",
+      "updated_at": "2026-04-10T20:16:05.001347"
+    },
+    "node_1775823365.002871": {
+      "content": "测试知识 5: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-10T20:16:05.002871",
+      "updated_at": "2026-04-10T20:16:05.002871"
+    },
+    "node_1775823365.004389": {
+      "content": "测试知识 8: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-10T20:16:05.004389",
+      "updated_at": "2026-04-10T20:16:05.004389"
+    },
+    "node_1775823365.005947": {
+      "content": "测试知识 12: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-10T20:16:05.005947",
+      "updated_at": "2026-04-10T20:16:05.005947"
+    },
+    "node_1775823365.00747": {
+      "content": "测试知识 14: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-10T20:16:05.007470",
+      "updated_at": "2026-04-10T20:16:05.007470"
+    },
+    "node_1775823365.041444": {
+      "content": "人工智能是计算机科学的一个分支",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-10T20:16:05.041444",
+      "updated_at": "2026-04-10T20:16:05.041444"
+    },
+    "node_1775823365.041971": {
+      "content": "人工智能是计算机科学的一个分支，包括机器学习、深度学习等子领域",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-10T20:16:05.041971",
+      "updated_at": "2026-04-10T20:16:05.041971"
+    },
+    "node_1776040276.111468": {
+      "content": "人工智能是计算机科学的一个分支",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T08:31:16.111468",
+      "updated_at": "2026-04-13T08:31:16.111468"
+    },
+    "node_1776040276.112001": {
+      "content": "机器学习是人工智能的一个子领域",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T08:31:16.112001",
+      "updated_at": "2026-04-13T08:31:16.112001"
+    },
+    "node_1776040276.113083": {
+      "content": "人工智能是计算机科学的一个分支",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T08:31:16.113083",
+      "updated_at": "2026-04-13T08:31:16.113083"
+    },
+    "node_1776040276.1136": {
+      "content": "机器学习是人工智能的一个子领域",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T08:31:16.113600",
+      "updated_at": "2026-04-13T08:31:16.113600"
+    },
+    "node_1776040276.114648": {
+      "content": "测试知识 0: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T08:31:16.114648",
+      "updated_at": "2026-04-13T08:31:16.114648"
+    },
+    "node_1776040276.115195": {
+      "content": "测试知识 1: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T08:31:16.115195",
+      "updated_at": "2026-04-13T08:31:16.115195"
+    },
+    "node_1776040276.11571": {
+      "content": "测试知识 2: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T08:31:16.115710",
+      "updated_at": "2026-04-13T08:31:16.115710"
+    },
+    "node_1776040276.116294": {
+      "content": "测试知识 3: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T08:31:16.116294",
+      "updated_at": "2026-04-13T08:31:16.116294"
+    },
+    "node_1776040276.116804": {
+      "content": "测试知识 5: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T08:31:16.116804",
+      "updated_at": "2026-04-13T08:31:16.116804"
+    },
+    "node_1776040276.117331": {
+      "content": "测试知识 6: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T08:31:16.117331",
+      "updated_at": "2026-04-13T08:31:16.117331"
+    },
+    "node_1776040276.117845": {
+      "content": "测试知识 7: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T08:31:16.117845",
+      "updated_at": "2026-04-13T08:31:16.117845"
+    },
+    "node_1776040276.118361": {
+      "content": "测试知识 9: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T08:31:16.118361",
+      "updated_at": "2026-04-13T08:31:16.118361"
+    },
+    "node_1776040276.121248": {
+      "content": "测试知识 2: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T08:31:16.121248",
+      "updated_at": "2026-04-13T08:31:16.121248"
+    },
+    "node_1776040276.122769": {
+      "content": "测试知识 5: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T08:31:16.122769",
+      "updated_at": "2026-04-13T08:31:16.122769"
+    },
+    "node_1776040276.124295": {
+      "content": "测试知识 9: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T08:31:16.124295",
+      "updated_at": "2026-04-13T08:31:16.124295"
+    },
+    "node_1776040276.125538": {
+      "content": "测试知识 11: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T08:31:16.125538",
+      "updated_at": "2026-04-13T08:31:16.125538"
+    },
+    "node_1776040276.126584": {
+      "content": "测试知识 14: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T08:31:16.126584",
+      "updated_at": "2026-04-13T08:31:16.126584"
+    },
+    "node_1776040276.128096": {
+      "content": "人工智能是计算机科学的一个分支，包括机器学习、深度学习等子领域",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T08:31:16.128096",
+      "updated_at": "2026-04-13T08:31:16.128096"
+    },
+    "node_1776040317.27576": {
+      "content": "机器学习是人工智能的一个子领域",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T08:31:57.275760",
+      "updated_at": "2026-04-13T08:31:57.275760"
+    },
+    "node_1776040317.315708": {
+      "content": "人工智能是计算机科学的一个分支",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T08:31:57.315708",
+      "updated_at": "2026-04-13T08:31:57.315708"
+    },
+    "node_1776040317.316466": {
+      "content": "机器学习是人工智能的一个子领域",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T08:31:57.316466",
+      "updated_at": "2026-04-13T08:31:57.316466"
+    },
+    "node_1776040317.356823": {
+      "content": "测试知识 0: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T08:31:57.356823",
+      "updated_at": "2026-04-13T08:31:57.356823"
+    },
+    "node_1776040317.357327": {
+      "content": "测试知识 1: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T08:31:57.357327",
+      "updated_at": "2026-04-13T08:31:57.357327"
+    },
+    "node_1776040317.358335": {
+      "content": "测试知识 2: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T08:31:57.358335",
+      "updated_at": "2026-04-13T08:31:57.358335"
+    },
+    "node_1776040317.358838": {
+      "content": "测试知识 4: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T08:31:57.358838",
+      "updated_at": "2026-04-13T08:31:57.358838"
+    },
+    "node_1776040317.360358": {
+      "content": "测试知识 7: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T08:31:57.360358",
+      "updated_at": "2026-04-13T08:31:57.360358"
+    },
+    "node_1776040317.362272": {
+      "content": "测试知识 8: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T08:31:57.362272",
+      "updated_at": "2026-04-13T08:31:57.362272"
+    },
+    "node_1776040317.362778": {
+      "content": "测试知识 9: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T08:31:57.362778",
+      "updated_at": "2026-04-13T08:31:57.362778"
+    },
+    "node_1776040317.486262": {
+      "content": "测试知识 0: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T08:31:57.486262",
+      "updated_at": "2026-04-13T08:31:57.486262"
+    },
+    "node_1776040317.487794": {
+      "content": "测试知识 1: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T08:31:57.487794",
+      "updated_at": "2026-04-13T08:31:57.487794"
+    },
+    "node_1776040317.488378": {
+      "content": "测试知识 2: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T08:31:57.488378",
+      "updated_at": "2026-04-13T08:31:57.488378"
+    },
+    "node_1776040317.4894": {
+      "content": "测试知识 4: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T08:31:57.489400",
+      "updated_at": "2026-04-13T08:31:57.489400"
+    },
+    "node_1776040317.490406": {
+      "content": "测试知识 5: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T08:31:57.490406",
+      "updated_at": "2026-04-13T08:31:57.490406"
+    },
+    "node_1776040317.49091": {
+      "content": "测试知识 7: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T08:31:57.490910",
+      "updated_at": "2026-04-13T08:31:57.490910"
+    },
+    "node_1776040317.492419": {
+      "content": "测试知识 9: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T08:31:57.492419",
+      "updated_at": "2026-04-13T08:31:57.492419"
+    },
+    "node_1776040317.493424": {
+      "content": "测试知识 10: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T08:31:57.493424",
+      "updated_at": "2026-04-13T08:31:57.493424"
+    },
+    "node_1776040317.493928": {
+      "content": "测试知识 11: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T08:31:57.493928",
+      "updated_at": "2026-04-13T08:31:57.493928"
+    },
+    "node_1776040317.494932": {
+      "content": "测试知识 12: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T08:31:57.494932",
+      "updated_at": "2026-04-13T08:31:57.494932"
+    },
+    "node_1776040317.495435": {
+      "content": "测试知识 13: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T08:31:57.495435",
+      "updated_at": "2026-04-13T08:31:57.495435"
+    },
+    "node_1776040317.49644": {
+      "content": "测试知识 14: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T08:31:57.496440",
+      "updated_at": "2026-04-13T08:31:57.496440"
+    },
+    "node_1776040317.562863": {
+      "content": "人工智能是计算机科学的一个分支，包括机器学习、深度学习等子领域",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T08:31:57.562863",
+      "updated_at": "2026-04-13T08:31:57.562863"
+    },
+    "node_1776040323.844309": {
+      "content": "机器学习是人工智能的一个子领域",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T08:32:03.844309",
+      "updated_at": "2026-04-13T08:32:03.844309"
+    },
+    "node_1776040323.84583": {
+      "content": "机器学习是人工智能的一个子领域",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T08:32:03.845830",
+      "updated_at": "2026-04-13T08:32:03.845830"
+    },
+    "node_1776040323.84835": {
+      "content": "测试知识 0: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T08:32:03.848350",
+      "updated_at": "2026-04-13T08:32:03.848350"
+    },
+    "node_1776040323.848852": {
+      "content": "测试知识 1: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T08:32:03.848852",
+      "updated_at": "2026-04-13T08:32:03.848852"
+    },
+    "node_1776040323.849358": {
+      "content": "测试知识 3: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T08:32:03.849358",
+      "updated_at": "2026-04-13T08:32:03.849358"
+    },
+    "node_1776040323.85036": {
+      "content": "测试知识 5: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T08:32:03.850360",
+      "updated_at": "2026-04-13T08:32:03.850360"
+    },
+    "node_1776040323.851768": {
+      "content": "测试知识 8: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T08:32:03.851768",
+      "updated_at": "2026-04-13T08:32:03.851768"
+    },
+    "node_1776040323.853284": {
+      "content": "测试知识 9: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T08:32:03.853284",
+      "updated_at": "2026-04-13T08:32:03.853284"
+    },
+    "node_1776040323.856371": {
+      "content": "测试知识 0: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T08:32:03.856371",
+      "updated_at": "2026-04-13T08:32:03.856371"
+    },
+    "node_1776040323.857156": {
+      "content": "测试知识 1: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T08:32:03.857156",
+      "updated_at": "2026-04-13T08:32:03.857156"
+    },
+    "node_1776040323.857664": {
+      "content": "测试知识 2: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T08:32:03.857664",
+      "updated_at": "2026-04-13T08:32:03.857664"
+    },
+    "node_1776040323.858171": {
+      "content": "测试知识 3: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T08:32:03.858171",
+      "updated_at": "2026-04-13T08:32:03.858171"
+    },
+    "node_1776040323.859231": {
+      "content": "测试知识 4: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T08:32:03.859231",
+      "updated_at": "2026-04-13T08:32:03.859231"
+    },
+    "node_1776040323.859752": {
+      "content": "测试知识 5: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T08:32:03.859752",
+      "updated_at": "2026-04-13T08:32:03.859752"
+    },
+    "node_1776040323.860258": {
+      "content": "测试知识 6: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T08:32:03.860258",
+      "updated_at": "2026-04-13T08:32:03.860258"
+    },
+    "node_1776040323.860774": {
+      "content": "测试知识 7: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T08:32:03.860774",
+      "updated_at": "2026-04-13T08:32:03.860774"
+    },
+    "node_1776040323.861283": {
+      "content": "测试知识 8: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T08:32:03.861283",
+      "updated_at": "2026-04-13T08:32:03.861283"
+    },
+    "node_1776040323.86231": {
+      "content": "测试知识 9: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T08:32:03.862310",
+      "updated_at": "2026-04-13T08:32:03.862310"
+    },
+    "node_1776040323.86285": {
+      "content": "测试知识 10: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T08:32:03.862850",
+      "updated_at": "2026-04-13T08:32:03.862850"
+    },
+    "node_1776040323.863357": {
+      "content": "测试知识 11: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T08:32:03.863357",
+      "updated_at": "2026-04-13T08:32:03.863357"
+    },
+    "node_1776040323.863878": {
+      "content": "测试知识 12: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T08:32:03.863878",
+      "updated_at": "2026-04-13T08:32:03.863878"
+    },
+    "node_1776040323.864383": {
+      "content": "测试知识 14: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T08:32:03.864383",
+      "updated_at": "2026-04-13T08:32:03.864383"
+    },
+    "node_1776040323.86589": {
+      "content": "人工智能是计算机科学的一个分支",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T08:32:03.865890",
+      "updated_at": "2026-04-13T08:32:03.865890"
+    },
+    "node_1776040323.866893": {
+      "content": "人工智能是计算机科学的一个分支，包括机器学习、深度学习等子领域",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T08:32:03.866893",
+      "updated_at": "2026-04-13T08:32:03.866893"
+    },
+    "node_1776040370.138559": {
+      "content": "人工智能是计算机科学的一个分支",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T08:32:50.138559",
+      "updated_at": "2026-04-13T08:32:50.138559"
+    },
+    "node_1776040370.140093": {
+      "content": "机器学习是人工智能的一个子领域",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T08:32:50.140093",
+      "updated_at": "2026-04-13T08:32:50.140093"
+    },
+    "node_1776040370.171796": {
+      "content": "人工智能是计算机科学的一个分支",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T08:32:50.171796",
+      "updated_at": "2026-04-13T08:32:50.171796"
+    },
+    "node_1776040370.173316": {
+      "content": "机器学习是人工智能的一个子领域",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T08:32:50.173316",
+      "updated_at": "2026-04-13T08:32:50.173316"
+    },
+    "node_1776040370.20702": {
+      "content": "测试知识 0: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T08:32:50.207020",
+      "updated_at": "2026-04-13T08:32:50.207020"
+    },
+    "node_1776040370.208023": {
+      "content": "测试知识 1: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T08:32:50.208023",
+      "updated_at": "2026-04-13T08:32:50.208023"
+    },
+    "node_1776040370.208526": {
+      "content": "测试知识 3: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T08:32:50.208526",
+      "updated_at": "2026-04-13T08:32:50.208526"
+    },
+    "node_1776040370.210039": {
+      "content": "测试知识 4: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T08:32:50.210039",
+      "updated_at": "2026-04-13T08:32:50.210039"
+    },
+    "node_1776040370.211565": {
+      "content": "测试知识 6: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T08:32:50.211565",
+      "updated_at": "2026-04-13T08:32:50.211565"
+    },
+    "node_1776040370.213085": {
+      "content": "测试知识 7: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T08:32:50.213085",
+      "updated_at": "2026-04-13T08:32:50.213085"
+    },
+    "node_1776040370.213647": {
+      "content": "测试知识 8: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T08:32:50.213647",
+      "updated_at": "2026-04-13T08:32:50.213647"
+    },
+    "node_1776040370.215155": {
+      "content": "测试知识 9: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T08:32:50.215155",
+      "updated_at": "2026-04-13T08:32:50.215155"
+    },
+    "node_1776040370.363305": {
+      "content": "测试知识 0: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T08:32:50.363305",
+      "updated_at": "2026-04-13T08:32:50.363305"
+    },
+    "node_1776040370.364309": {
+      "content": "测试知识 1: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T08:32:50.364309",
+      "updated_at": "2026-04-13T08:32:50.364309"
+    },
+    "node_1776040370.364813": {
+      "content": "测试知识 2: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T08:32:50.364813",
+      "updated_at": "2026-04-13T08:32:50.364813"
+    },
+    "node_1776040370.365816": {
+      "content": "测试知识 4: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T08:32:50.365816",
+      "updated_at": "2026-04-13T08:32:50.365816"
+    },
+    "node_1776040370.367337": {
+      "content": "测试知识 5: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T08:32:50.367337",
+      "updated_at": "2026-04-13T08:32:50.367337"
+    },
+    "node_1776040370.368845": {
+      "content": "测试知识 7: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T08:32:50.368845",
+      "updated_at": "2026-04-13T08:32:50.368845"
+    },
+    "node_1776040370.370388": {
+      "content": "测试知识 8: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T08:32:50.370388",
+      "updated_at": "2026-04-13T08:32:50.370388"
+    },
+    "node_1776040370.371907": {
+      "content": "测试知识 10: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T08:32:50.371907",
+      "updated_at": "2026-04-13T08:32:50.371907"
+    },
+    "node_1776040370.373428": {
+      "content": "测试知识 12: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T08:32:50.373428",
+      "updated_at": "2026-04-13T08:32:50.373428"
+    },
+    "node_1776040370.374954": {
+      "content": "测试知识 14: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T08:32:50.374954",
+      "updated_at": "2026-04-13T08:32:50.374954"
+    },
+    "node_1776040370.428044": {
+      "content": "人工智能是计算机科学的一个分支",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T08:32:50.428044",
+      "updated_at": "2026-04-13T08:32:50.428044"
+    },
+    "node_1776040370.429087": {
+      "content": "人工智能是计算机科学的一个分支，包括机器学习、深度学习等子领域",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T08:32:50.429087",
+      "updated_at": "2026-04-13T08:32:50.429087"
+    },
+    "node_1776040801.403155": {
+      "content": "机器学习是人工智能的一个子领域",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T08:40:01.403155",
+      "updated_at": "2026-04-13T08:40:01.403155"
+    },
+    "node_1776040801.40475": {
+      "content": "人工智能是计算机科学的一个分支",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T08:40:01.404750",
+      "updated_at": "2026-04-13T08:40:01.404750"
+    },
+    "node_1776040801.40627": {
+      "content": "机器学习是人工智能的一个子领域",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T08:40:01.406270",
+      "updated_at": "2026-04-13T08:40:01.406270"
+    },
+    "node_1776040801.408291": {
+      "content": "测试知识 1: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T08:40:01.408291",
+      "updated_at": "2026-04-13T08:40:01.408291"
+    },
+    "node_1776040801.409798": {
+      "content": "测试知识 2: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T08:40:01.409798",
+      "updated_at": "2026-04-13T08:40:01.409798"
+    },
+    "node_1776040801.410801": {
+      "content": "测试知识 4: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T08:40:01.410801",
+      "updated_at": "2026-04-13T08:40:01.410801"
+    },
+    "node_1776040801.412317": {
+      "content": "测试知识 6: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T08:40:01.412317",
+      "updated_at": "2026-04-13T08:40:01.412317"
+    },
+    "node_1776040801.413836": {
+      "content": "测试知识 7: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T08:40:01.413836",
+      "updated_at": "2026-04-13T08:40:01.413836"
+    },
+    "node_1776040801.415356": {
+      "content": "测试知识 9: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T08:40:01.415356",
+      "updated_at": "2026-04-13T08:40:01.415356"
+    },
+    "node_1776040801.418374": {
+      "content": "测试知识 0: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T08:40:01.418374",
+      "updated_at": "2026-04-13T08:40:01.418374"
+    },
+    "node_1776040801.419962": {
+      "content": "测试知识 1: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T08:40:01.419962",
+      "updated_at": "2026-04-13T08:40:01.419962"
+    },
+    "node_1776040801.421482": {
+      "content": "测试知识 3: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T08:40:01.421482",
+      "updated_at": "2026-04-13T08:40:01.421482"
+    },
+    "node_1776040801.423": {
+      "content": "测试知识 4: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T08:40:01.423000",
+      "updated_at": "2026-04-13T08:40:01.423000"
+    },
+    "node_1776040801.42452": {
+      "content": "测试知识 6: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T08:40:01.424520",
+      "updated_at": "2026-04-13T08:40:01.424520"
+    },
+    "node_1776040801.426049": {
+      "content": "测试知识 8: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T08:40:01.426049",
+      "updated_at": "2026-04-13T08:40:01.426049"
+    },
+    "node_1776040801.428075": {
+      "content": "测试知识 10: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T08:40:01.428075",
+      "updated_at": "2026-04-13T08:40:01.428075"
+    },
+    "node_1776040801.429583": {
+      "content": "测试知识 11: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T08:40:01.429583",
+      "updated_at": "2026-04-13T08:40:01.429583"
+    },
+    "node_1776040801.430586": {
+      "content": "测试知识 13: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T08:40:01.430586",
+      "updated_at": "2026-04-13T08:40:01.430586"
+    },
+    "node_1776040801.432616": {
+      "content": "测试知识 14: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T08:40:01.432616",
+      "updated_at": "2026-04-13T08:40:01.432616"
+    },
+    "node_1776040801.434123": {
+      "content": "人工智能是计算机科学的一个分支",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T08:40:01.434123",
+      "updated_at": "2026-04-13T08:40:01.434123"
+    },
+    "node_1776040801.435128": {
+      "content": "人工智能是计算机科学的一个分支，包括机器学习、深度学习等子领域",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T08:40:01.435128",
+      "updated_at": "2026-04-13T08:40:01.435128"
+    },
+    "node_1776042634.033367": {
+      "content": "【自我检查】心跳未更新超过1小时，上次摘要: ",
+      "topic": "general",
+      "type": "knowledge",
+      "created_at": "2026-04-13T09:10:34.033367",
+      "updated_at": "2026-04-13T09:10:34.033367"
+    },
+    "node_1776042634.034952": {
+      "content": "【自我健康检查】发现问题: 1, 已修复: 0 | 关键词: 发现, 健康 | 实体: 发现, 健康",
+      "topic": "science",
+      "type": "knowledge",
+      "created_at": "2026-04-13T09:10:34.034952",
+      "updated_at": "2026-04-13T09:10:34.034952"
+    },
+    "node_1776043946.143073": {
+      "content": "【自我检查】心跳未更新超过1小时，上次摘要: ",
+      "topic": "general",
+      "type": "knowledge",
+      "created_at": "2026-04-13T09:32:26.143073",
+      "updated_at": "2026-04-13T09:32:26.143073"
+    },
+    "node_1776043978.217437": {
+      "content": "【自我健康检查】发现问题: 1, 已修复: 0 | 关键词: 健康, 发现 | 实体: 健康, 发现",
+      "topic": "science",
+      "type": "knowledge",
+      "created_at": "2026-04-13T09:32:58.217437",
+      "updated_at": "2026-04-13T09:32:58.217437"
+    },
+    "node_1776043978.220564": {
+      "content": "[Auto-Reflection] trigger=guardian issues=1 fixes=0",
+      "topic": "general",
+      "type": "knowledge",
+      "created_at": "2026-04-13T09:32:58.220564",
+      "updated_at": "2026-04-13T09:32:58.220564"
+    },
+    "node_1776044010.285767": {
+      "content": "【自动记录】会话空闲 63.3719167秒，记录：[Auto-Reflection] trigger=guardian issues=1 fixes=0",
+      "topic": "general",
+      "type": "knowledge",
+      "created_at": "2026-04-13T09:33:30.285767",
+      "updated_at": "2026-04-13T09:33:30.285767"
+    },
+    "node_1776044138.534043": {
+      "content": "【自我检查】心跳未更新超过1小时，上次摘要: [Auto-Reflection] trigger=guardian issues=1 fixes=0",
+      "topic": "general",
+      "type": "knowledge",
+      "created_at": "2026-04-13T09:35:38.534043",
+      "updated_at": "2026-04-13T09:35:38.534043"
+    },
+    "node_1776044298.801777": {
+      "content": "【自动记录】会话空闲 64.1417386秒，记录：【自我检查】心跳未更新超过1小时，上次摘要: [Auto-Reflection] trigger=guardian is",
+      "topic": "general",
+      "type": "knowledge",
+      "created_at": "2026-04-13T09:38:18.801777",
+      "updated_at": "2026-04-13T09:38:18.801777"
+    },
+    "node_1776044459.110498": {
+      "content": "【自我检查】心跳未更新超过1小时，上次摘要: 銆愯嚜鎴戞鏌ャ€戝績璺虫湭鏇存柊瓒呰繃1灏忔椂锛屼笂娆℃憳瑕? [Auto-Reflection] trigger=guardian is",
+      "topic": "general",
+      "type": "knowledge",
+      "created_at": "2026-04-13T09:40:59.110498",
+      "updated_at": "2026-04-13T09:40:59.110498"
+    },
+    "node_1776044619.400118": {
+      "content": "【自动记录】会话空闲 63.8290042秒，记录：【自我检查】心跳未更新超过1小时，上次摘要: 銆愯嚜鎴戞鏌ャ€戝績璺虫湭鏇存柊瓒呰繃1灏忔椂锛屼笂娆℃憳瑕? [Aut",
+      "topic": "general",
+      "type": "knowledge",
+      "created_at": "2026-04-13T09:43:39.400118",
+      "updated_at": "2026-04-13T09:43:39.400118"
+    },
+    "node_1776044779.661315": {
+      "content": "【自我检查】心跳未更新超过1小时，上次摘要: 銆愯嚜鎴戞鏌ャ€戝績璺虫湭鏇存柊瓒呰繃1灏忔椂锛屼笂娆℃憳瑕? 閵嗘劘鍤滈幋鎴烆梾閺屻儯鈧垵绺剧捄铏弓閺囧瓨鏌婄搾鍛扮箖1鐏忓繑妞傞敍灞肩瑐濞嗏剝鎲崇憰? [Aut",
+      "topic": "general",
+      "type": "knowledge",
+      "created_at": "2026-04-13T09:46:19.661315",
+      "updated_at": "2026-04-13T09:46:19.661315"
+    },
+    "node_1776044939.942646": {
+      "content": "【自动记录】会话空闲 62.8371768秒，记录：【自我检查】心跳未更新超过1小时，上次摘要: 銆愯嚜鎴戞鏌ャ€戝績璺虫湭鏇存柊瓒呰繃1灏忔椂锛屼笂娆℃憳瑕? 閵嗘劘鍤",
+      "topic": "general",
+      "type": "knowledge",
+      "created_at": "2026-04-13T09:48:59.942646",
+      "updated_at": "2026-04-13T09:48:59.942646"
+    },
+    "node_1776045100.264988": {
+      "content": "[Auto-Reflection] trigger=guardian issues=2 fixes=1",
+      "topic": "general",
+      "type": "knowledge",
+      "created_at": "2026-04-13T09:51:40.264988",
+      "updated_at": "2026-04-13T09:51:40.264988"
+    },
+    "node_1776045260.633928": {
+      "content": "【自动记录】会话空闲 63.2575518秒，记录：[Auto-Reflection] trigger=guardian issues=2 fixes=1",
+      "topic": "general",
+      "type": "knowledge",
+      "created_at": "2026-04-13T09:54:20.633928",
+      "updated_at": "2026-04-13T09:54:20.633928"
+    },
+    "node_1776045420.96401": {
+      "content": "【自我检查】心跳未更新超过1小时，上次摘要: [Auto-Reflection] trigger=guardian issues=2 fixes=1",
+      "topic": "general",
+      "type": "knowledge",
+      "created_at": "2026-04-13T09:57:00.964010",
+      "updated_at": "2026-04-13T09:57:00.964010"
+    },
+    "node_1776045581.267729": {
+      "content": "【自动记录】会话空闲 64.4524543秒，记录：【自我检查】心跳未更新超过1小时，上次摘要: [Auto-Reflection] trigger=guardian is",
+      "topic": "general",
+      "type": "knowledge",
+      "created_at": "2026-04-13T09:59:41.267729",
+      "updated_at": "2026-04-13T09:59:41.267729"
+    },
+    "node_1776045741.583059": {
+      "content": "【自动记录】会话空闲 60.2664094秒，记录：",
+      "topic": "general",
+      "type": "knowledge",
+      "created_at": "2026-04-13T10:02:21.583059",
+      "updated_at": "2026-04-13T10:02:21.583059"
+    },
+    "node_1776045787.395068": {
+      "content": "【自动记录】会话空闲 63.3656126秒，记录：",
+      "topic": "general",
+      "type": "knowledge",
+      "created_at": "2026-04-13T10:03:07.395068",
+      "updated_at": "2026-04-13T10:03:07.395068"
+    },
+    "node_1776045787.396594": {
+      "content": "【自动记录】会话空闲 60.2356997秒，记录：",
+      "topic": "general",
+      "type": "knowledge",
+      "created_at": "2026-04-13T10:03:07.396594",
+      "updated_at": "2026-04-13T10:03:07.396594"
+    },
+    "node_1776045787.397726": {
+      "content": "【自动记录】会话空闲 63.581029秒，记录：",
+      "topic": "general",
+      "type": "knowledge",
+      "created_at": "2026-04-13T10:03:07.397726",
+      "updated_at": "2026-04-13T10:03:07.397726"
+    },
+    "node_1776045787.399234": {
+      "content": "【自动记录】会话空闲 60.2660754秒，记录：",
+      "topic": "general",
+      "type": "knowledge",
+      "created_at": "2026-04-13T10:03:07.399234",
+      "updated_at": "2026-04-13T10:03:07.399234"
+    },
+    "node_1776045787.400749": {
+      "content": "【自动记录】会话空闲 60.236391秒，记录：",
+      "topic": "general",
+      "type": "knowledge",
+      "created_at": "2026-04-13T10:03:07.400749",
+      "updated_at": "2026-04-13T10:03:07.400749"
+    },
+    "node_1776045787.402267": {
+      "content": "【自动记录】会话空闲 63.6465164秒，记录：",
+      "topic": "general",
+      "type": "knowledge",
+      "created_at": "2026-04-13T10:03:07.402267",
+      "updated_at": "2026-04-13T10:03:07.402267"
+    },
+    "node_1776045787.403778": {
+      "content": "【自动记录】会话空闲 60.2638059秒，记录：",
+      "topic": "general",
+      "type": "knowledge",
+      "created_at": "2026-04-13T10:03:07.403778",
+      "updated_at": "2026-04-13T10:03:07.403778"
+    },
+    "node_1776045787.405361": {
+      "content": "【自动记录】会话空闲 63.2977088秒，记录：",
+      "topic": "general",
+      "type": "knowledge",
+      "created_at": "2026-04-13T10:03:07.405361",
+      "updated_at": "2026-04-13T10:03:07.405361"
+    },
+    "node_1776045787.407388": {
+      "content": "【自动记录】会话空闲 60.2643852秒，记录：",
+      "topic": "general",
+      "type": "knowledge",
+      "created_at": "2026-04-13T10:03:07.407388",
+      "updated_at": "2026-04-13T10:03:07.407388"
+    },
+    "node_1776045787.408391": {
+      "content": "【自动记录】会话空闲 63.3918309秒，记录：",
+      "topic": "general",
+      "type": "knowledge",
+      "created_at": "2026-04-13T10:03:07.408391",
+      "updated_at": "2026-04-13T10:03:07.408391"
+    },
+    "node_1776045787.409953": {
+      "content": "【自动记录】会话空闲 60.2387265秒，记录：",
+      "topic": "general",
+      "type": "knowledge",
+      "created_at": "2026-04-13T10:03:07.409953",
+      "updated_at": "2026-04-13T10:03:07.409953"
+    },
+    "node_1776045787.411477": {
+      "content": "【自动记录】会话空闲 60.2570508秒，记录：",
+      "topic": "general",
+      "type": "knowledge",
+      "created_at": "2026-04-13T10:03:07.411477",
+      "updated_at": "2026-04-13T10:03:07.411477"
+    },
+    "node_1776045787.413019": {
+      "content": "【自动记录】会话空闲 63.0570176秒，记录：",
+      "topic": "general",
+      "type": "knowledge",
+      "created_at": "2026-04-13T10:03:07.413019",
+      "updated_at": "2026-04-13T10:03:07.413019"
+    },
+    "node_1776045787.414535": {
+      "content": "【自动记录】会话空闲 60.2530389秒，记录：",
+      "topic": "general",
+      "type": "knowledge",
+      "created_at": "2026-04-13T10:03:07.414535",
+      "updated_at": "2026-04-13T10:03:07.414535"
+    },
+    "node_1776045787.416052": {
+      "content": "【自动记录】会话空闲 63.5828398秒，记录：",
+      "topic": "general",
+      "type": "knowledge",
+      "created_at": "2026-04-13T10:03:07.416052",
+      "updated_at": "2026-04-13T10:03:07.416052"
+    },
+    "node_1776045787.417558": {
+      "content": "【自动记录】会话空闲 60.282139秒，记录：",
+      "topic": "general",
+      "type": "knowledge",
+      "created_at": "2026-04-13T10:03:07.417558",
+      "updated_at": "2026-04-13T10:03:07.417558"
+    },
+    "node_1776045787.419073": {
+      "content": "【自动记录】会话空闲 63.0386271秒，记录：",
+      "topic": "general",
+      "type": "knowledge",
+      "created_at": "2026-04-13T10:03:07.419073",
+      "updated_at": "2026-04-13T10:03:07.419073"
+    },
+    "node_1776045787.42063": {
+      "content": "【自动记录】会话空闲 63.4587426秒，记录：【自我检查】心跳未更新超过1小时，上次摘要: [Auto-Reflection] trigger=guardian is",
+      "topic": "general",
+      "type": "knowledge",
+      "created_at": "2026-04-13T10:03:07.420630",
+      "updated_at": "2026-04-13T10:03:07.420630"
+    },
+    "node_1776045787.422152": {
+      "content": "【自动记录】会话空闲 63.4698331秒，记录：【自我检查】心跳未更新超过1小时，上次摘要: 銆愯嚜鎴戞鏌ャ€戝績璺虫湭鏇存柊瓒呰繃1灏忔椂锛屼笂娆℃憳瑕? 閵嗘劘鍤",
+      "topic": "general",
+      "type": "knowledge",
+      "created_at": "2026-04-13T10:03:07.422152",
+      "updated_at": "2026-04-13T10:03:07.422152"
+    },
+    "node_1776045787.423668": {
+      "content": "[Auto-Reflection] trigger=guardian issues=2 fixes=1",
+      "topic": "general",
+      "type": "knowledge",
+      "created_at": "2026-04-13T10:03:07.423668",
+      "updated_at": "2026-04-13T10:03:07.423668"
+    },
+    "node_1776045787.425187": {
+      "content": "【自动记录】会话空闲 64.2869079秒，记录：[Auto-Reflection] trigger=guardian issues=2 fixes=1",
+      "topic": "general",
+      "type": "knowledge",
+      "created_at": "2026-04-13T10:03:07.425187",
+      "updated_at": "2026-04-13T10:03:07.425187"
+    },
+    "node_1776045787.427206": {
+      "content": "【自动记录】会话空闲 60.220809秒，记录：",
+      "topic": "general",
+      "type": "knowledge",
+      "created_at": "2026-04-13T10:03:07.427206",
+      "updated_at": "2026-04-13T10:03:07.427206"
+    },
+    "node_1776045787.428208": {
+      "content": "【自动记录】会话空闲 62.9260772秒，记录：",
+      "topic": "general",
+      "type": "knowledge",
+      "created_at": "2026-04-13T10:03:07.428208",
+      "updated_at": "2026-04-13T10:03:07.428208"
+    },
+    "node_1776045787.429957": {
+      "content": "【自动记录】会话空闲 60.236542秒，记录：",
+      "topic": "general",
+      "type": "knowledge",
+      "created_at": "2026-04-13T10:03:07.429957",
+      "updated_at": "2026-04-13T10:03:07.429957"
+    },
+    "node_1776045787.431473": {
+      "content": "【自动记录】会话空闲 63.3525026秒，记录：",
+      "topic": "general",
+      "type": "knowledge",
+      "created_at": "2026-04-13T10:03:07.431473",
+      "updated_at": "2026-04-13T10:03:07.431473"
+    },
+    "node_1776045787.433007": {
+      "content": "【自动记录】会话空闲 60.2148743秒，记录：",
+      "topic": "general",
+      "type": "knowledge",
+      "created_at": "2026-04-13T10:03:07.433007",
+      "updated_at": "2026-04-13T10:03:07.433007"
+    },
+    "node_1776045787.434556": {
+      "content": "【自动记录】会话空闲 60.2121081秒，记录：",
+      "topic": "general",
+      "type": "knowledge",
+      "created_at": "2026-04-13T10:03:07.434556",
+      "updated_at": "2026-04-13T10:03:07.434556"
+    },
+    "node_1776045787.43718": {
+      "content": "【自动记录】会话空闲 63.1845797秒，记录：",
+      "topic": "general",
+      "type": "knowledge",
+      "created_at": "2026-04-13T10:03:07.437180",
+      "updated_at": "2026-04-13T10:03:07.437180"
+    },
+    "node_1776045787.437684": {
+      "content": "【自动记录】会话空闲 60.2965899秒，记录：",
+      "topic": "general",
+      "type": "knowledge",
+      "created_at": "2026-04-13T10:03:07.437684",
+      "updated_at": "2026-04-13T10:03:07.437684"
+    },
+    "node_1776045787.4392": {
+      "content": "【自动记录】会话空闲 63.7604311秒，记录：",
+      "topic": "general",
+      "type": "knowledge",
+      "created_at": "2026-04-13T10:03:07.439200",
+      "updated_at": "2026-04-13T10:03:07.439200"
+    },
+    "node_1776045787.440715": {
+      "content": "【自动记录】会话空闲 60.2684697秒，记录：",
+      "topic": "general",
+      "type": "knowledge",
+      "created_at": "2026-04-13T10:03:07.440715",
+      "updated_at": "2026-04-13T10:03:07.440715"
+    },
+    "node_1776045787.442235": {
+      "content": "【自动记录】会话空闲 63.6085856秒，记录：",
+      "topic": "general",
+      "type": "knowledge",
+      "created_at": "2026-04-13T10:03:07.442235",
+      "updated_at": "2026-04-13T10:03:07.442235"
+    },
+    "node_1776045787.443753": {
+      "content": "【自动记录】会话空闲 60.2784037秒，记录：",
+      "topic": "general",
+      "type": "knowledge",
+      "created_at": "2026-04-13T10:03:07.443753",
+      "updated_at": "2026-04-13T10:03:07.443753"
+    },
+    "node_1776045787.445275": {
+      "content": "【自动记录】会话空闲 62.8688218秒，记录：",
+      "topic": "general",
+      "type": "knowledge",
+      "created_at": "2026-04-13T10:03:07.445275",
+      "updated_at": "2026-04-13T10:03:07.445275"
+    },
+    "node_1776045787.446782": {
+      "content": "【自动记录】会话空闲 60.2264444秒，记录：",
+      "topic": "general",
+      "type": "knowledge",
+      "created_at": "2026-04-13T10:03:07.446782",
+      "updated_at": "2026-04-13T10:03:07.446782"
+    },
+    "node_1776045787.447802": {
+      "content": "【自动记录】会话空闲 62.7455299秒，记录：",
+      "topic": "general",
+      "type": "knowledge",
+      "created_at": "2026-04-13T10:03:07.447802",
+      "updated_at": "2026-04-13T10:03:07.447802"
+    },
+    "node_1776045787.449323": {
+      "content": "【自动记录】会话空闲 60.2484662秒，记录：",
+      "topic": "general",
+      "type": "knowledge",
+      "created_at": "2026-04-13T10:03:07.449323",
+      "updated_at": "2026-04-13T10:03:07.449323"
+    },
+    "node_1776045787.45084": {
+      "content": "【自动记录】会话空闲 63.2019316秒，记录：",
+      "topic": "general",
+      "type": "knowledge",
+      "created_at": "2026-04-13T10:03:07.450840",
+      "updated_at": "2026-04-13T10:03:07.450840"
+    },
+    "node_1776045787.452427": {
+      "content": "【自动记录】会话空闲 60.2844127秒，记录：",
+      "topic": "general",
+      "type": "knowledge",
+      "created_at": "2026-04-13T10:03:07.452427",
+      "updated_at": "2026-04-13T10:03:07.452427"
+    },
+    "node_1776045787.453943": {
+      "content": "【自动记录】会话空闲 63.6542371秒，记录：",
+      "topic": "general",
+      "type": "knowledge",
+      "created_at": "2026-04-13T10:03:07.453943",
+      "updated_at": "2026-04-13T10:03:07.453943"
+    },
+    "node_1776045787.456988": {
+      "content": "【自动记录】会话空闲 62.7102861秒，记录：[Auto-Reflection] trigger=guardian issues=1 fixes=0",
+      "topic": "general",
+      "type": "knowledge",
+      "created_at": "2026-04-13T10:03:07.456988",
+      "updated_at": "2026-04-13T10:03:07.456988"
+    },
+    "node_1776045787.459529": {
+      "content": "【自动记录】会话空闲 62.6273274秒，记录：[Auto-Reflection] trigger=guardian issues=2 fixes=1",
+      "topic": "general",
+      "type": "knowledge",
+      "created_at": "2026-04-13T10:03:07.459529",
+      "updated_at": "2026-04-13T10:03:07.459529"
+    },
+    "node_1776045787.461041": {
+      "content": "【自动记录】会话空闲 60.2356202秒，记录：",
+      "topic": "general",
+      "type": "knowledge",
+      "created_at": "2026-04-13T10:03:07.461041",
+      "updated_at": "2026-04-13T10:03:07.461041"
+    },
+    "node_1776045787.462592": {
+      "content": "【自动记录】会话空闲 63.7315547秒，记录：",
+      "topic": "general",
+      "type": "knowledge",
+      "created_at": "2026-04-13T10:03:07.462592",
+      "updated_at": "2026-04-13T10:03:07.462592"
+    },
+    "node_1776045787.464112": {
+      "content": "【自动记录】会话空闲 60.2735288秒，记录：",
+      "topic": "general",
+      "type": "knowledge",
+      "created_at": "2026-04-13T10:03:07.464112",
+      "updated_at": "2026-04-13T10:03:07.464112"
+    },
+    "node_1776045787.465634": {
+      "content": "【自动记录】会话空闲 63.3265143秒，记录：",
+      "topic": "general",
+      "type": "knowledge",
+      "created_at": "2026-04-13T10:03:07.465634",
+      "updated_at": "2026-04-13T10:03:07.465634"
+    },
+    "node_1776045787.46715": {
+      "content": "【自动记录】会话空闲 60.2756386秒，记录：",
+      "topic": "general",
+      "type": "knowledge",
+      "created_at": "2026-04-13T10:03:07.467150",
+      "updated_at": "2026-04-13T10:03:07.467150"
+    },
+    "node_1776045787.468953": {
+      "content": "【自动记录】会话空闲 64.0390857秒，记录：",
+      "topic": "general",
+      "type": "knowledge",
+      "created_at": "2026-04-13T10:03:07.468953",
+      "updated_at": "2026-04-13T10:03:07.468953"
+    },
+    "node_1776045787.471011": {
+      "content": "【自动记录】会话空闲 60.2676011秒，记录：",
+      "topic": "general",
+      "type": "knowledge",
+      "created_at": "2026-04-13T10:03:07.471011",
+      "updated_at": "2026-04-13T10:03:07.471011"
+    },
+    "node_1776045787.472561": {
+      "content": "【自动记录】会话空闲 63.5438331秒，记录：",
+      "topic": "general",
+      "type": "knowledge",
+      "created_at": "2026-04-13T10:03:07.472561",
+      "updated_at": "2026-04-13T10:03:07.472561"
+    },
+    "node_1776045787.474099": {
+      "content": "【自动记录】会话空闲 60.2704589秒，记录：",
+      "topic": "general",
+      "type": "knowledge",
+      "created_at": "2026-04-13T10:03:07.474099",
+      "updated_at": "2026-04-13T10:03:07.474099"
+    },
+    "node_1776045787.475606": {
+      "content": "【自动记录】会话空闲 63.8249056秒，记录：",
+      "topic": "general",
+      "type": "knowledge",
+      "created_at": "2026-04-13T10:03:07.475606",
+      "updated_at": "2026-04-13T10:03:07.475606"
+    },
+    "node_1776045787.477618": {
+      "content": "MCP Server test",
+      "topic": "general",
+      "type": "knowledge",
+      "created_at": "2026-04-13T10:03:07.477618",
+      "updated_at": "2026-04-13T10:03:07.477618"
+    },
+    "node_1776045787.479127": {
+      "content": "【MCP Server 实现】创建 mcp_server.py，暴露 11 个工具：memory_record/search/overview/get_context, skill_trigger, reflection_run, lesson_check/list, router_chat/status/test。采用 MCP 协议 (JSON-RPC 2.0)，支持 stdin/stdout 通信。配置方式：在 ~/.iflow/config.json 添加 mcpServers 配置。",
+      "topic": "general",
+      "type": "knowledge",
+      "created_at": "2026-04-13T10:03:07.479127",
+      "updated_at": "2026-04-13T10:03:07.479127"
+    },
+    "node_1776045787.480634": {
+      "content": "【iFlow CLI 调用方案】方案B (MCP Server) 胜出。理由：1) 不修改 iFlow CLI 源码 2) 其他 CLI (Claude Code/Cursor) 也能用 3) 符合三包独立可被任何智能体调用的目标。配置：mcpServers.lossless-superpower.command=python, args=[mcp_server.py路径]",
+      "topic": "general",
+      "type": "knowledge",
+      "created_at": "2026-04-13T10:03:07.480634",
+      "updated_at": "2026-04-13T10:03:07.480634"
+    },
+    "node_1776045787.481638": {
+      "content": "【项目清理完成】iflow-memory-system 已废弃，功能迁移到 Lossless-Superpower 三包结构。数据保留在 data/ 目录。三个包可独立 pip install，可被任何智能体/app 通过 MCP 调用。 | 关键词: 数据 | 实体: 数据",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T10:03:07.481638",
+      "updated_at": "2026-04-13T10:03:07.481638"
+    },
+    "node_1776045787.483166": {
+      "content": "\n\n你好！有什么我可以帮助你的吗？ 😊",
+      "topic": "general",
+      "type": "knowledge",
+      "created_at": "2026-04-13T10:03:07.483166",
+      "updated_at": "2026-04-13T10:03:07.483166"
+    },
+    "node_1776045787.484718": {
+      "content": "你好，今天天气怎么样？",
+      "topic": "general",
+      "type": "knowledge",
+      "created_at": "2026-04-13T10:03:07.484718",
+      "updated_at": "2026-04-13T10:03:07.484718"
+    },
+    "node_1776045787.487241": {
+      "content": "你好！今天天气晴朗，适合户外活动。",
+      "topic": "general",
+      "type": "knowledge",
+      "created_at": "2026-04-13T10:03:07.487241",
+      "updated_at": "2026-04-13T10:03:07.487241"
+    },
+    "node_1776045787.488772": {
+      "content": "测试内容1",
+      "topic": "general",
+      "type": "knowledge",
+      "created_at": "2026-04-13T10:03:07.488772",
+      "updated_at": "2026-04-13T10:03:07.488772"
+    },
+    "node_1776045787.490319": {
+      "content": "测试内容2",
+      "topic": "general",
+      "type": "knowledge",
+      "created_at": "2026-04-13T10:03:07.490319",
+      "updated_at": "2026-04-13T10:03:07.490319"
+    },
+    "node_1776045787.491854": {
+      "content": "",
+      "topic": "general",
+      "type": "knowledge",
+      "created_at": "2026-04-13T10:03:07.491854",
+      "updated_at": "2026-04-13T10:03:07.491854"
+    },
+    "node_1776045787.493881": {
+      "content": "",
+      "topic": "general",
+      "type": "knowledge",
+      "created_at": "2026-04-13T10:03:07.493881",
+      "updated_at": "2026-04-13T10:03:07.493881"
+    },
+    "node_1776045815.19716": {
+      "content": "【自我检查】心跳未更新超过1小时，上次摘要: ",
+      "topic": "general",
+      "type": "knowledge",
+      "created_at": "2026-04-13T10:03:35.197160",
+      "updated_at": "2026-04-13T10:03:35.197160"
+    },
+    "node_1776045815.199844": {
+      "content": "[Auto-Reflection] trigger=guardian issues=2 fixes=1",
+      "topic": "general",
+      "type": "knowledge",
+      "created_at": "2026-04-13T10:03:35.199844",
+      "updated_at": "2026-04-13T10:03:35.199844"
+    },
+    "node_1776045815.202436": {
+      "content": "【自动记录】会话空闲 63.521097秒，记录：",
+      "topic": "general",
+      "type": "knowledge",
+      "created_at": "2026-04-13T10:03:35.202436",
+      "updated_at": "2026-04-13T10:03:35.202436"
+    },
+    "node_1776045815.204682": {
+      "content": "【自动记录】会话空闲 63.3710613秒，记录：",
+      "topic": "general",
+      "type": "knowledge",
+      "created_at": "2026-04-13T10:03:35.204682",
+      "updated_at": "2026-04-13T10:03:35.204682"
+    },
+    "node_1776045815.208912": {
+      "content": "[Auto-Reflection] trigger=guardian issues=2 fixes=1",
+      "topic": "general",
+      "type": "knowledge",
+      "created_at": "2026-04-13T10:03:35.208912",
+      "updated_at": "2026-04-13T10:03:35.208912"
+    },
+    "node_1776045815.211173": {
+      "content": "【自动记录】会话空闲 63.277071秒，记录：",
+      "topic": "general",
+      "type": "knowledge",
+      "created_at": "2026-04-13T10:03:35.211173",
+      "updated_at": "2026-04-13T10:03:35.211173"
+    },
+    "node_1776045815.215719": {
+      "content": "[Auto-Reflection] trigger=guardian issues=2 fixes=1",
+      "topic": "general",
+      "type": "knowledge",
+      "created_at": "2026-04-13T10:03:35.215719",
+      "updated_at": "2026-04-13T10:03:35.215719"
+    },
+    "node_1776045815.220266": {
+      "content": "",
+      "topic": "general",
+      "type": "knowledge",
+      "created_at": "2026-04-13T10:03:35.220266",
+      "updated_at": "2026-04-13T10:03:35.220266"
+    },
+    "node_1776045815.223306": {
+      "content": "",
+      "topic": "general",
+      "type": "knowledge",
+      "created_at": "2026-04-13T10:03:35.223306",
+      "updated_at": "2026-04-13T10:03:35.223306"
+    },
+    "node_1776045842.06402": {
+      "content": "人工智能是计算机科学的一个分支",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T10:04:02.064020",
+      "updated_at": "2026-04-13T10:04:02.064020"
+    },
+    "node_1776045842.065633": {
+      "content": "机器学习是人工智能的一个子领域",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T10:04:02.065633",
+      "updated_at": "2026-04-13T10:04:02.065633"
+    },
+    "node_1776045842.10017": {
+      "content": "人工智能是计算机科学的一个分支",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T10:04:02.100170",
+      "updated_at": "2026-04-13T10:04:02.100170"
+    },
+    "node_1776045842.101705": {
+      "content": "机器学习是人工智能的一个子领域",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T10:04:02.101705",
+      "updated_at": "2026-04-13T10:04:02.101705"
+    },
+    "node_1776045842.14085": {
+      "content": "测试知识 0: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T10:04:02.140850",
+      "updated_at": "2026-04-13T10:04:02.140850"
+    },
+    "node_1776045842.143924": {
+      "content": "测试知识 1: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T10:04:02.143924",
+      "updated_at": "2026-04-13T10:04:02.143924"
+    },
+    "node_1776045842.14547": {
+      "content": "测试知识 2: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T10:04:02.145470",
+      "updated_at": "2026-04-13T10:04:02.145470"
+    },
+    "node_1776045842.147515": {
+      "content": "测试知识 3: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T10:04:02.147515",
+      "updated_at": "2026-04-13T10:04:02.147515"
+    },
+    "node_1776045842.148518": {
+      "content": "测试知识 4: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T10:04:02.148518",
+      "updated_at": "2026-04-13T10:04:02.148518"
+    },
+    "node_1776045842.150049": {
+      "content": "测试知识 5: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T10:04:02.150049",
+      "updated_at": "2026-04-13T10:04:02.150049"
+    },
+    "node_1776045842.153112": {
+      "content": "测试知识 6: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T10:04:02.153112",
+      "updated_at": "2026-04-13T10:04:02.153112"
+    },
+    "node_1776045842.155239": {
+      "content": "测试知识 7: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T10:04:02.155239",
+      "updated_at": "2026-04-13T10:04:02.155239"
+    },
+    "node_1776045842.157248": {
+      "content": "测试知识 8: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T10:04:02.157248",
+      "updated_at": "2026-04-13T10:04:02.157248"
+    },
+    "node_1776045842.15928": {
+      "content": "测试知识 9: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T10:04:02.159280",
+      "updated_at": "2026-04-13T10:04:02.159280"
+    },
+    "node_1776045842.267869": {
+      "content": "测试知识 0: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T10:04:02.267869",
+      "updated_at": "2026-04-13T10:04:02.267869"
+    },
+    "node_1776045842.269449": {
+      "content": "测试知识 1: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T10:04:02.269449",
+      "updated_at": "2026-04-13T10:04:02.269449"
+    },
+    "node_1776045842.271526": {
+      "content": "测试知识 2: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T10:04:02.271526",
+      "updated_at": "2026-04-13T10:04:02.271526"
+    },
+    "node_1776045842.273071": {
+      "content": "测试知识 3: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T10:04:02.273071",
+      "updated_at": "2026-04-13T10:04:02.273071"
+    },
+    "node_1776045842.274666": {
+      "content": "测试知识 4: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T10:04:02.274666",
+      "updated_at": "2026-04-13T10:04:02.274666"
+    },
+    "node_1776045842.27601": {
+      "content": "测试知识 5: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T10:04:02.276010",
+      "updated_at": "2026-04-13T10:04:02.276010"
+    },
+    "node_1776045842.277567": {
+      "content": "测试知识 6: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T10:04:02.277567",
+      "updated_at": "2026-04-13T10:04:02.277567"
+    },
+    "node_1776045842.279751": {
+      "content": "测试知识 7: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T10:04:02.279751",
+      "updated_at": "2026-04-13T10:04:02.279751"
+    },
+    "node_1776045842.281654": {
+      "content": "测试知识 8: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T10:04:02.281654",
+      "updated_at": "2026-04-13T10:04:02.281654"
+    },
+    "node_1776045842.282195": {
+      "content": "测试知识 9: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T10:04:02.282195",
+      "updated_at": "2026-04-13T10:04:02.282195"
+    },
+    "node_1776045842.283821": {
+      "content": "测试知识 10: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T10:04:02.283821",
+      "updated_at": "2026-04-13T10:04:02.283821"
+    },
+    "node_1776045842.287072": {
+      "content": "测试知识 11: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T10:04:02.287072",
+      "updated_at": "2026-04-13T10:04:02.287072"
+    },
+    "node_1776045842.288683": {
+      "content": "测试知识 12: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T10:04:02.288683",
+      "updated_at": "2026-04-13T10:04:02.288683"
+    },
+    "node_1776045842.290197": {
+      "content": "测试知识 13: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T10:04:02.290197",
+      "updated_at": "2026-04-13T10:04:02.290197"
+    },
+    "node_1776045842.291753": {
+      "content": "测试知识 14: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T10:04:02.291753",
+      "updated_at": "2026-04-13T10:04:02.291753"
+    },
+    "node_1776045842.328263": {
+      "content": "人工智能是计算机科学的一个分支",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T10:04:02.328263",
+      "updated_at": "2026-04-13T10:04:02.328263"
+    },
+    "node_1776045842.329952": {
+      "content": "人工智能是计算机科学的一个分支，包括机器学习、深度学习等子领域",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T10:04:02.329952",
+      "updated_at": "2026-04-13T10:04:02.330461"
+    },
+    "node_1776045989.956843": {
+      "content": "人工智能是计算机科学的一个分支",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T10:06:29.956843",
+      "updated_at": "2026-04-13T10:06:29.956843"
+    },
+    "node_1776045989.958558": {
+      "content": "机器学习是人工智能的一个子领域",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T10:06:29.958558",
+      "updated_at": "2026-04-13T10:06:29.958558"
+    },
+    "node_1776045989.96008": {
+      "content": "人工智能是计算机科学的一个分支",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T10:06:29.960080",
+      "updated_at": "2026-04-13T10:06:29.960080"
+    },
+    "node_1776045989.962818": {
+      "content": "机器学习是人工智能的一个子领域",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T10:06:29.962818",
+      "updated_at": "2026-04-13T10:06:29.962818"
+    },
+    "node_1776045989.967106": {
+      "content": "测试知识 0: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T10:06:29.967106",
+      "updated_at": "2026-04-13T10:06:29.967106"
+    },
+    "node_1776045989.969192": {
+      "content": "测试知识 1: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T10:06:29.969192",
+      "updated_at": "2026-04-13T10:06:29.969192"
+    },
+    "node_1776045989.97061": {
+      "content": "测试知识 2: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T10:06:29.970610",
+      "updated_at": "2026-04-13T10:06:29.970610"
+    },
+    "node_1776045989.972147": {
+      "content": "测试知识 3: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T10:06:29.972147",
+      "updated_at": "2026-04-13T10:06:29.972147"
+    },
+    "node_1776045989.973654": {
+      "content": "测试知识 4: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T10:06:29.973654",
+      "updated_at": "2026-04-13T10:06:29.973654"
+    },
+    "node_1776045989.97516": {
+      "content": "测试知识 5: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T10:06:29.975160",
+      "updated_at": "2026-04-13T10:06:29.975160"
+    },
+    "node_1776045989.977174": {
+      "content": "测试知识 6: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T10:06:29.977174",
+      "updated_at": "2026-04-13T10:06:29.977174"
+    },
+    "node_1776045989.978192": {
+      "content": "测试知识 7: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T10:06:29.978192",
+      "updated_at": "2026-04-13T10:06:29.978192"
+    },
+    "node_1776045989.979698": {
+      "content": "测试知识 8: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T10:06:29.979698",
+      "updated_at": "2026-04-13T10:06:29.979698"
+    },
+    "node_1776045989.98221": {
+      "content": "测试知识 9: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T10:06:29.982210",
+      "updated_at": "2026-04-13T10:06:29.982210"
+    },
+    "node_1776045989.986578": {
+      "content": "测试知识 0: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T10:06:29.986578",
+      "updated_at": "2026-04-13T10:06:29.986578"
+    },
+    "node_1776045989.988085": {
+      "content": "测试知识 1: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T10:06:29.988085",
+      "updated_at": "2026-04-13T10:06:29.988085"
+    },
+    "node_1776045989.990189": {
+      "content": "测试知识 2: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T10:06:29.990189",
+      "updated_at": "2026-04-13T10:06:29.990189"
+    },
+    "node_1776045989.991793": {
+      "content": "测试知识 3: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T10:06:29.991793",
+      "updated_at": "2026-04-13T10:06:29.991793"
+    },
+    "node_1776045989.993333": {
+      "content": "测试知识 4: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T10:06:29.993333",
+      "updated_at": "2026-04-13T10:06:29.993333"
+    },
+    "node_1776045989.994889": {
+      "content": "测试知识 5: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T10:06:29.994889",
+      "updated_at": "2026-04-13T10:06:29.994889"
+    },
+    "node_1776045989.996489": {
+      "content": "测试知识 6: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T10:06:29.996489",
+      "updated_at": "2026-04-13T10:06:29.996489"
+    },
+    "node_1776045989.998086": {
+      "content": "测试知识 7: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T10:06:29.998086",
+      "updated_at": "2026-04-13T10:06:29.998086"
+    },
+    "node_1776045989.999632": {
+      "content": "测试知识 8: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T10:06:29.999632",
+      "updated_at": "2026-04-13T10:06:29.999632"
+    },
+    "node_1776045990.001701": {
+      "content": "测试知识 9: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T10:06:30.001701",
+      "updated_at": "2026-04-13T10:06:30.001701"
+    },
+    "node_1776045990.003228": {
+      "content": "测试知识 10: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T10:06:30.003228",
+      "updated_at": "2026-04-13T10:06:30.003228"
+    },
+    "node_1776045990.0048": {
+      "content": "测试知识 11: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T10:06:30.004800",
+      "updated_at": "2026-04-13T10:06:30.004800"
+    },
+    "node_1776045990.006537": {
+      "content": "测试知识 12: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T10:06:30.006537",
+      "updated_at": "2026-04-13T10:06:30.006537"
+    },
+    "node_1776045990.008085": {
+      "content": "测试知识 13: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T10:06:30.008085",
+      "updated_at": "2026-04-13T10:06:30.008085"
+    },
+    "node_1776045990.009624": {
+      "content": "测试知识 14: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T10:06:30.009624",
+      "updated_at": "2026-04-13T10:06:30.009624"
+    },
+    "node_1776045990.011173": {
+      "content": "人工智能是计算机科学的一个分支",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T10:06:30.011173",
+      "updated_at": "2026-04-13T10:06:30.011173"
+    },
+    "node_1776045990.014217": {
+      "content": "人工智能是计算机科学的一个分支，包括机器学习、深度学习等子领域",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T10:06:30.014217",
+      "updated_at": "2026-04-13T10:06:30.014217"
+    },
+    "node_1776046531.649442": {
+      "content": "",
+      "topic": "general",
+      "type": "knowledge",
+      "created_at": "2026-04-13T10:15:31.649442",
+      "updated_at": "2026-04-13T10:15:31.649442"
+    },
+    "node_1776046531.6525": {
+      "content": "",
+      "topic": "general",
+      "type": "knowledge",
+      "created_at": "2026-04-13T10:15:31.652500",
+      "updated_at": "2026-04-13T10:15:31.652500"
+    },
+    "node_1776046531.680992": {
+      "content": "",
+      "topic": "general",
+      "type": "knowledge",
+      "created_at": "2026-04-13T10:15:31.680992",
+      "updated_at": "2026-04-13T10:15:31.680992"
+    },
+    "node_1776046531.684558": {
+      "content": "",
+      "topic": "general",
+      "type": "knowledge",
+      "created_at": "2026-04-13T10:15:31.684558",
+      "updated_at": "2026-04-13T10:15:31.684558"
+    },
+    "node_1776049455.807456": {
+      "content": "人工智能是计算机科学的一个分支",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T11:04:15.807456",
+      "updated_at": "2026-04-13T11:04:15.807456"
+    },
+    "node_1776049455.810484": {
+      "content": "机器学习是人工智能的一个子领域",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T11:04:15.810484",
+      "updated_at": "2026-04-13T11:04:15.810484"
+    },
+    "node_1776049455.812547": {
+      "content": "人工智能是计算机科学的一个分支",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T11:04:15.812547",
+      "updated_at": "2026-04-13T11:04:15.812547"
+    },
+    "node_1776049455.813553": {
+      "content": "机器学习是人工智能的一个子领域",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T11:04:15.813553",
+      "updated_at": "2026-04-13T11:04:15.813553"
+    },
+    "node_1776049455.818308": {
+      "content": "测试知识 0: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T11:04:15.818308",
+      "updated_at": "2026-04-13T11:04:15.818308"
+    },
+    "node_1776049455.820433": {
+      "content": "测试知识 1: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T11:04:15.820433",
+      "updated_at": "2026-04-13T11:04:15.820433"
+    },
+    "node_1776049455.821939": {
+      "content": "测试知识 2: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T11:04:15.821939",
+      "updated_at": "2026-04-13T11:04:15.821939"
+    },
+    "node_1776049455.822941": {
+      "content": "测试知识 3: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T11:04:15.822941",
+      "updated_at": "2026-04-13T11:04:15.822941"
+    },
+    "node_1776049455.824458": {
+      "content": "测试知识 4: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T11:04:15.824458",
+      "updated_at": "2026-04-13T11:04:15.824458"
+    },
+    "node_1776049455.826478": {
+      "content": "测试知识 5: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T11:04:15.826478",
+      "updated_at": "2026-04-13T11:04:15.826478"
+    },
+    "node_1776049455.82748": {
+      "content": "测试知识 6: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T11:04:15.827480",
+      "updated_at": "2026-04-13T11:04:15.827480"
+    },
+    "node_1776049455.829235": {
+      "content": "测试知识 7: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T11:04:15.829235",
+      "updated_at": "2026-04-13T11:04:15.829235"
+    },
+    "node_1776049455.830753": {
+      "content": "测试知识 8: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T11:04:15.830753",
+      "updated_at": "2026-04-13T11:04:15.830753"
+    },
+    "node_1776049455.833723": {
+      "content": "测试知识 9: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T11:04:15.833723",
+      "updated_at": "2026-04-13T11:04:15.833723"
+    },
+    "node_1776049455.837892": {
+      "content": "测试知识 0: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T11:04:15.837892",
+      "updated_at": "2026-04-13T11:04:15.837892"
+    },
+    "node_1776049455.839412": {
+      "content": "测试知识 1: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T11:04:15.839412",
+      "updated_at": "2026-04-13T11:04:15.839412"
+    },
+    "node_1776049455.840969": {
+      "content": "测试知识 2: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T11:04:15.840969",
+      "updated_at": "2026-04-13T11:04:15.840969"
+    },
+    "node_1776049455.842481": {
+      "content": "测试知识 3: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T11:04:15.842481",
+      "updated_at": "2026-04-13T11:04:15.842481"
+    },
+    "node_1776049455.843997": {
+      "content": "测试知识 4: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T11:04:15.843997",
+      "updated_at": "2026-04-13T11:04:15.843997"
+    },
+    "node_1776049455.846517": {
+      "content": "测试知识 5: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T11:04:15.846517",
+      "updated_at": "2026-04-13T11:04:15.846517"
+    },
+    "node_1776049455.847019": {
+      "content": "测试知识 6: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T11:04:15.847019",
+      "updated_at": "2026-04-13T11:04:15.847019"
+    },
+    "node_1776049455.850054": {
+      "content": "测试知识 7: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T11:04:15.850054",
+      "updated_at": "2026-04-13T11:04:15.850054"
+    },
+    "node_1776049455.851579": {
+      "content": "测试知识 8: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T11:04:15.851579",
+      "updated_at": "2026-04-13T11:04:15.851579"
+    },
+    "node_1776049455.854664": {
+      "content": "测试知识 9: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T11:04:15.854664",
+      "updated_at": "2026-04-13T11:04:15.854664"
+    },
+    "node_1776049455.856189": {
+      "content": "测试知识 10: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T11:04:15.856189",
+      "updated_at": "2026-04-13T11:04:15.856189"
+    },
+    "node_1776049455.857721": {
+      "content": "测试知识 11: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T11:04:15.857721",
+      "updated_at": "2026-04-13T11:04:15.857721"
+    },
+    "node_1776049455.859323": {
+      "content": "测试知识 12: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T11:04:15.859323",
+      "updated_at": "2026-04-13T11:04:15.859323"
+    },
+    "node_1776049455.860862": {
+      "content": "测试知识 13: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T11:04:15.860862",
+      "updated_at": "2026-04-13T11:04:15.860862"
+    },
+    "node_1776049455.862368": {
+      "content": "测试知识 14: 人工智能相关内容",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T11:04:15.862368",
+      "updated_at": "2026-04-13T11:04:15.862368"
+    },
+    "node_1776049455.865403": {
+      "content": "人工智能是计算机科学的一个分支",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T11:04:15.865403",
+      "updated_at": "2026-04-13T11:04:15.865403"
+    },
+    "node_1776049455.868179": {
+      "content": "人工智能是计算机科学的一个分支，包括机器学习、深度学习等子领域",
+      "topic": "technology",
+      "type": "knowledge",
+      "created_at": "2026-04-13T11:04:15.868179",
+      "updated_at": "2026-04-13T11:04:15.868179"
+    }
+  },
+  "edges": [
+    {
+      "id": "edge_1775823282.072007",
+      "source": "node_1775823282.072007",
+      "target": "node_1775823282.072007",
+      "type": "includes",
+      "confidence": 0.9,
+      "created_at": "2026-04-10T20:14:42.072007"
+    },
+    {
+      "id": "edge_1775823325.067953",
+      "source": "node_1775823325.06745",
+      "target": "node_1775823325.06745",
+      "type": "includes",
+      "confidence": 0.9,
+      "created_at": "2026-04-10T20:15:25.067953"
+    },
+    {
+      "id": "edge_1775823364.862568",
+      "source": "node_1775823364.862568",
+      "target": "node_1775823364.862568",
+      "type": "includes",
+      "confidence": 0.9,
+      "created_at": "2026-04-10T20:16:04.862568"
+    },
+    {
+      "id": "edge_1776040276.1136",
+      "source": "node_1776040276.113083",
+      "target": "node_1776040276.1136",
+      "type": "includes",
+      "confidence": 0.9,
+      "created_at": "2026-04-13T08:31:16.113600"
+    },
+    {
+      "id": "edge_1776040317.316993",
+      "source": "node_1776040317.315708",
+      "target": "node_1776040317.316466",
+      "type": "includes",
+      "confidence": 0.9,
+      "created_at": "2026-04-13T08:31:57.316993"
+    },
+    {
+      "id": "edge_1776040323.847347",
+      "source": "node_1776040323.84583",
+      "target": "node_1776040323.84583",
+      "type": "includes",
+      "confidence": 0.9,
+      "created_at": "2026-04-13T08:32:03.847347"
+    },
+    {
+      "id": "edge_1776040370.173316",
+      "source": "node_1776040370.171796",
+      "target": "node_1776040370.173316",
+      "type": "includes",
+      "confidence": 0.9,
+      "created_at": "2026-04-13T08:32:50.173316"
+    },
+    {
+      "id": "edge_1776040801.40627",
+      "source": "node_1776040801.40475",
+      "target": "node_1776040801.40627",
+      "type": "includes",
+      "confidence": 0.9,
+      "created_at": "2026-04-13T08:40:01.406270"
+    },
+    {
+      "id": "edge_1776043978.218543",
+      "source": "node_1776043978.217437",
+      "target": "node_1776043978.217437",
+      "type": "related_to",
+      "confidence": 1.0,
+      "created_at": "2026-04-13T09:32:58.218543"
+    },
+    {
+      "id": "edge_1776045842.103247",
+      "source": "node_1776045842.10017",
+      "target": "node_1776045842.101705",
+      "type": "includes",
+      "confidence": 0.9,
+      "created_at": "2026-04-13T10:04:02.103247"
+    },
+    {
+      "id": "edge_1776045989.964357",
+      "source": "node_1776045989.96008",
+      "target": "node_1776045989.962818",
+      "type": "includes",
+      "confidence": 0.9,
+      "created_at": "2026-04-13T10:06:29.964357"
+    },
+    {
+      "id": "edge_1776049455.815264",
+      "source": "node_1776049455.812547",
+      "target": "node_1776049455.813553",
+      "type": "includes",
+      "confidence": 0.9,
+      "created_at": "2026-04-13T11:04:15.815264"
+    }
+  ]
+}

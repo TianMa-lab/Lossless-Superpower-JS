@@ -1,0 +1,36 @@
+{
+  "DAG与知识图谱集成迭代": [
+    {
+      "id": "DAG与知识图谱集成迭代_test_user_1776598412749",
+      "skillName": "DAG与知识图谱集成迭代",
+      "userId": "test_user",
+      "rating": 5,
+      "comment": "非常好的技能！",
+      "metadata": {},
+      "timestamp": 1776598412749,
+      "status": "pending"
+    },
+    {
+      "id": "DAG与知识图谱集成迭代_test_user_1776598435553",
+      "skillName": "DAG与知识图谱集成迭代",
+      "userId": "test_user",
+      "rating": 5,
+      "comment": "非常好的技能！",
+      "metadata": {},
+      "timestamp": 1776598435553,
+      "status": "pending"
+    }
+  ],
+  "test_skill": [
+    {
+      "id": "test_skill_test_user_1776599575413",
+      "skillName": "test_skill",
+      "userId": "test_user",
+      "rating": 5,
+      "comment": "测试反馈",
+      "metadata": {},
+      "timestamp": 1776599575413,
+      "status": "pending"
+    }
+  ]
+}

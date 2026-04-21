@@ -1,0 +1,72 @@
+{
+  "generatedAt": "2026-04-20T02:09:18.638Z",
+  "configuration": {
+    "baseDir": "./storage",
+    "maxFileSize": 10485760,
+    "maxFilesPerDir": 1000,
+    "cleanupDays": 30,
+    "archiveDays": 90,
+    "compressionLevel": 9
+  },
+  "statistics": {
+    "iterations": {
+      "fileCount": 0,
+      "totalSize": 0,
+      "totalSizeFormatted": "0 B",
+      "oldestFile": null,
+      "newestFile": null
+    },
+    "tasks": {
+      "fileCount": 0,
+      "totalSize": 0,
+      "totalSizeFormatted": "0 B",
+      "oldestFile": null,
+      "newestFile": null
+    },
+    "memory": {
+      "fileCount": 0,
+      "totalSize": 0,
+      "totalSizeFormatted": "0 B",
+      "oldestFile": null,
+      "newestFile": null
+    },
+    "performance": {
+      "fileCount": 0,
+      "totalSize": 0,
+      "totalSizeFormatted": "0 B",
+      "oldestFile": null,
+      "newestFile": null
+    },
+    "knowledge": {
+      "fileCount": 0,
+      "totalSize": 0,
+      "totalSizeFormatted": "0 B",
+      "oldestFile": null,
+      "newestFile": null
+    },
+    "skills": {
+      "fileCount": 0,
+      "totalSize": 0,
+      "totalSizeFormatted": "0 B",
+      "oldestFile": null,
+      "newestFile": null
+    },
+    "backups": {
+      "fileCount": 1,
+      "totalSize": 0,
+      "totalSizeFormatted": "0 B",
+      "oldestFile": "2026-04-20T02:09:18.637Z",
+      "newestFile": "2026-04-20T02:09:18.637Z"
+    },
+    "archives": {
+      "fileCount": 0,
+      "totalSize": 0,
+      "totalSizeFormatted": "0 B",
+      "oldestFile": null,
+      "newestFile": null
+    }
+  },
+  "totalFiles": 1,
+  "totalSize": 0,
+  "totalSizeFormatted": "0 B"
+}

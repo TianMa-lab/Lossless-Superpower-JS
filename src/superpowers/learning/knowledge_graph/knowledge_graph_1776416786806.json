@@ -1,0 +1,57 @@
+{
+  "nodes": [
+    {
+      "id": "测试主体",
+      "label": "测试主体",
+      "type": "subject"
+    },
+    {
+      "id": "测试对象",
+      "label": "测试对象",
+      "type": "object"
+    },
+    {
+      "id": "如何使用永久记忆系统 永久记忆系统",
+      "label": "如何使用永久记忆系统 永久记忆系统",
+      "type": "subject"
+    },
+    {
+      "id": "通过addMemory方法添加记忆，通过getMemories方法获取记忆",
+      "label": "通过addMemory方法添加记忆，通过getMemories方法获取记忆",
+      "type": "object"
+    },
+    {
+      "id": "什么是知识图谱 知识图谱",
+      "label": "什么是知识图谱 知识图谱",
+      "type": "subject"
+    },
+    {
+      "id": "一种以图形方式表示知识的结构，包含节点和边",
+      "label": "一种以图形方式表示知识的结构，包含节点和边",
+      "type": "object"
+    }
+  ],
+  "edges": [
+    {
+      "id": "kg_1776415869917_c6z5yot51",
+      "source": "测试主体",
+      "target": "测试对象",
+      "label": "测试谓词",
+      "confidence": 0.9
+    },
+    {
+      "id": "kg_1776416786753_fh6uu460r",
+      "source": "如何使用永久记忆系统 永久记忆系统",
+      "target": "通过addMemory方法添加记忆，通过getMemories方法获取记忆",
+      "label": "可以",
+      "confidence": 0.7
+    },
+    {
+      "id": "kg_1776416786757_hfswltfy0",
+      "source": "什么是知识图谱 知识图谱",
+      "target": "一种以图形方式表示知识的结构，包含节点和边",
+      "label": "是",
+      "confidence": 0.7
+    }
+  ]
+}

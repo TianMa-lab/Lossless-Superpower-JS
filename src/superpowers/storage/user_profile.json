@@ -1,0 +1,70 @@
+{
+  "interests": {
+    "technology": 20,
+    "education": 20
+  },
+  "preferences": {
+    "short_response": 11,
+    "short_input": 11,
+    "evening_interaction": 3,
+    "morning_interaction": 8
+  },
+  "interaction_history": [
+    {
+      "timestamp": "2026-04-10T20:14:42.195393",
+      "user_input": "如何学习编程？",
+      "assistant_response": "学习编程需要坚持练习，从基础开始。"
+    },
+    {
+      "timestamp": "2026-04-10T20:15:25.072510",
+      "user_input": "如何学习编程？",
+      "assistant_response": "学习编程需要坚持练习，从基础开始。"
+    },
+    {
+      "timestamp": "2026-04-10T20:16:04.969183",
+      "user_input": "如何学习编程？",
+      "assistant_response": "学习编程需要坚持练习，从基础开始。"
+    },
+    {
+      "timestamp": "2026-04-13T08:31:16.120733",
+      "user_input": "如何学习编程？",
+      "assistant_response": "学习编程需要坚持练习，从基础开始。"
+    },
+    {
+      "timestamp": "2026-04-13T08:31:57.453791",
+      "user_input": "如何学习编程？",
+      "assistant_response": "学习编程需要坚持练习，从基础开始。"
+    },
+    {
+      "timestamp": "2026-04-13T08:32:03.855864",
+      "user_input": "如何学习编程？",
+      "assistant_response": "学习编程需要坚持练习，从基础开始。"
+    },
+    {
+      "timestamp": "2026-04-13T08:32:50.318565",
+      "user_input": "如何学习编程？",
+      "assistant_response": "学习编程需要坚持练习，从基础开始。"
+    },
+    {
+      "timestamp": "2026-04-13T08:40:01.418374",
+      "user_input": "如何学习编程？",
+      "assistant_response": "学习编程需要坚持练习，从基础开始。"
+    },
+    {
+      "timestamp": "2026-04-13T10:04:02.231713",
+      "user_input": "如何学习编程？",
+      "assistant_response": "学习编程需要坚持练习，从基础开始。"
+    },
+    {
+      "timestamp": "2026-04-13T10:06:29.986067",
+      "user_input": "如何学习编程？",
+      "assistant_response": "学习编程需要坚持练习，从基础开始。"
+    },
+    {
+      "timestamp": "2026-04-13T11:04:15.836814",
+      "user_input": "如何学习编程？",
+      "assistant_response": "学习编程需要坚持练习，从基础开始。"
+    }
+  ],
+  "last_updated": "2026-04-13T11:04:15.836814"
+}

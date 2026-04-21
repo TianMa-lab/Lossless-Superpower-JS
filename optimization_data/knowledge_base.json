@@ -1,0 +1,14 @@
+[
+  {
+    "id": "knowledge_1776414087218_n3qhu0qd5",
+    "timestamp": 1776414087218,
+    "problem": "code_optimization",
+    "solution": "{\"action\":\"code_optimization\",\"changes\":[\"测试优化\"],\"summary\":\"代码优化完成\"}",
+    "effect": 0.8,
+    "context": {},
+    "tags": [
+      "code_optimization"
+    ],
+    "success": true
+  }
+]

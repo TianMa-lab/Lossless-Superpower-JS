@@ -1,0 +1,10 @@
+[
+  {
+    "id": "feedback_1776601246769_mmip94e9h",
+    "timestamp": 1776601246769,
+    "type": "bug",
+    "sentiment": "negative",
+    "issue": "响应速度慢",
+    "details": "API响应时间超过1秒"
+  }
+]

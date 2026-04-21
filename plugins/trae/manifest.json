@@ -1,0 +1,19 @@
+{
+  "name": "trae",
+  "version": "1.0.0",
+  "description": "Trae plugin for Lossless Superpower",
+  "author": "Lossless Superpower Team",
+  "main": "index.js",
+  "dependencies": {},
+  "capabilities": [
+    "trae_iterations",
+    "generate_reports"
+  ],
+  "permissions": [
+    "read_iterations",
+    "write_reports"
+  ],
+  "config": {
+    "reportsDir": "reports"
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "version": "1.0.0",
+  "last_updated": "2026-04-20",
+  "hermes_code_locations": [
+    {
+      "id": "hermes_main",
+      "name": "Hermes Main Source Code",
+      "path": "C:\\Users\\55237\\hermes-agent",
+      "type": "local",
+      "description": "Hermes的主要源代码目录",
+      "subdirectories": [
+        ".github",
+        ".plans",
+        "acp_adapter",
+        "acp_registry",
+        "agent",
+        "assets",
+        "cron",
+        "datagen-config-examples",
+        "docker",
+        "docs",
+        "environments",
+        "gateway",
+        "hermes_cli",
+        "landingpage",
+        "nix",
+        "optional-skills",
+        "packaging",
+        "plans",
+        "plugins",
+        "scripts",
+        "skills",
+        "tests",
+        "tinker-atropos",
+        "tools",
+        "web",
+        "website"
+      ],
+      "is_git_repo": true,
+      "last_scanned": "2026-04-20"
+    },
+    {
+      "id": "hermes_fusion",
+      "name": "Hermes Fusion Test",
+      "path": "C:\\Users\\55237\\Lossless-Superpower-JS\\test\\test_hermes_fusion",
+      "type": "local",
+      "description": "Hermes融合测试目录",
+      "subdirectories": [
+        "analysis",
+        "skills",
+        "storage",
+        "versions"
+      ],
+      "is_git_repo": false,
+      "last_scanned": "2026-04-20"
+    },
+    {
+      "id": "hermes_analysis",
+      "name": "Hermes Analysis Files",
+      "path": "C:\\Users\\55237\\Lossless-Superpower-JS",
+      "type": "local",
+      "description": "Hermes相关分析文件",
+      "files": [
+        "HERMES_SKILL_SYSTEM_ANALYSIS.md",
+        "SKILL_SYSTEM_HERMES_FUSION_PLAN.md",
+        "record_hermes_tasks.js"
+      ],
+      "last_scanned": "2026-04-20"
+    }
+  ],
+  "config": {
+    "auto_scan": true,
+    "scan_interval": 3600,
+    "notification_enabled": true
+  },
+  "metadata": {
+    "created_by": "AutoIterationRecorder",
+    "created_at": "2026-04-20",
+    "description": "Hermes代码位置配置文件，用于记录本地Hermes代码的路径和相关信息"
+  }
+}

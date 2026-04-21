@@ -1,0 +1,18 @@
+{
+  "test_1776599575436_a1ftrxtbr": {
+    "id": "test_1776599575436_a1ftrxtbr",
+    "name": "Integration Test",
+    "description": "Test integration of all modules",
+    "startTime": 1776599575436,
+    "endTime": 1776599575436,
+    "duration": 0,
+    "status": "passed",
+    "result": {
+      "integrated": true
+    },
+    "error": null,
+    "metadata": {},
+    "steps": [],
+    "createdAt": "2026-04-19T11:52:55.436Z"
+  }
+}

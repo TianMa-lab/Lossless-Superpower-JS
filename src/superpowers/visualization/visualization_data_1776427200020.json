@@ -1,0 +1,706 @@
+{
+  "knowledgeGraph": {
+    "nodes": [
+      {
+        "id": "测试主体",
+        "label": "测试主体",
+        "type": "subject",
+        "group": "knowledge_graph"
+      },
+      {
+        "id": "测试对象",
+        "label": "测试对象",
+        "type": "object",
+        "group": "knowledge_graph"
+      },
+      {
+        "id": "如何使用永久记忆系统 永久记忆系统",
+        "label": "如何使用永久记忆系统 永久记忆系统",
+        "type": "subject",
+        "group": "knowledge_graph"
+      },
+      {
+        "id": "通过addMemory方法添加记忆，通过getMemories方法获取记忆",
+        "label": "通过addMemory方法添加记忆，通过getMemories方法获取记忆",
+        "type": "object",
+        "group": "knowledge_graph"
+      },
+      {
+        "id": "什么是知识图谱 知识图谱",
+        "label": "什么是知识图谱 知识图谱",
+        "type": "subject",
+        "group": "knowledge_graph"
+      },
+      {
+        "id": "一种以图形方式表示知识的结构，包含节点和边",
+        "label": "一种以图形方式表示知识的结构，包含节点和边",
+        "type": "object",
+        "group": "knowledge_graph"
+      },
+      {
+        "id": "系统需要自动记录任务",
+        "label": "系统需要自动记录任务",
+        "type": "subject",
+        "group": "knowledge_graph"
+      },
+      {
+        "id": "的，TaskRunner可以自动记录任务并存储到记忆系统",
+        "label": "的，TaskRunner可以自动记录任务并存储到记忆系统",
+        "type": "object",
+        "group": "knowledge_graph"
+      },
+      {
+        "id": "系统需要自动记录任务 是的，TaskRunner",
+        "label": "系统需要自动记录任务 是的，TaskRunner",
+        "type": "subject",
+        "group": "knowledge_graph"
+      },
+      {
+        "id": "自动记录任务并存储到记忆系统",
+        "label": "自动记录任务并存储到记忆系统",
+        "type": "object",
+        "group": "knowledge_graph"
+      },
+      {
+        "id": "系统",
+        "label": "系统",
+        "type": "subject",
+        "group": "knowledge_graph"
+      },
+      {
+        "id": "自动记录任务 是的，TaskRunner可以自动记录任务并存储到记忆系统",
+        "label": "自动记录任务 是的，TaskRunner可以自动记录任务并存储到记忆系统",
+        "type": "object",
+        "group": "knowledge_graph"
+      }
+    ],
+    "edges": [
+      {
+        "id": "kg_1776415869917_c6z5yot51",
+        "source": "测试主体",
+        "target": "测试对象",
+        "label": "测试谓词",
+        "confidence": 0.9,
+        "group": "knowledge_graph"
+      },
+      {
+        "id": "kg_1776416786753_fh6uu460r",
+        "source": "如何使用永久记忆系统 永久记忆系统",
+        "target": "通过addMemory方法添加记忆，通过getMemories方法获取记忆",
+        "label": "可以",
+        "confidence": 0.7,
+        "group": "knowledge_graph"
+      },
+      {
+        "id": "kg_1776416786757_hfswltfy0",
+        "source": "什么是知识图谱 知识图谱",
+        "target": "一种以图形方式表示知识的结构，包含节点和边",
+        "label": "是",
+        "confidence": 0.7,
+        "group": "knowledge_graph"
+      },
+      {
+        "id": "kg_1776419743487_p5kfqgji6",
+        "source": "测试主体",
+        "target": "测试对象",
+        "label": "测试谓词",
+        "confidence": 0.9,
+        "group": "knowledge_graph"
+      },
+      {
+        "id": "kg_1776419743564_m86bkgwhn",
+        "source": "如何使用永久记忆系统 永久记忆系统",
+        "target": "通过addMemory方法添加记忆，通过getMemories方法获取记忆",
+        "label": "可以",
+        "confidence": 0.7,
+        "group": "knowledge_graph"
+      },
+      {
+        "id": "kg_1776419743567_v651u5g7p",
+        "source": "什么是知识图谱 知识图谱",
+        "target": "一种以图形方式表示知识的结构，包含节点和边",
+        "label": "是",
+        "confidence": 0.7,
+        "group": "knowledge_graph"
+      },
+      {
+        "id": "kg_1776423123570_x3gkj7itr",
+        "source": "系统需要自动记录任务",
+        "target": "的，TaskRunner可以自动记录任务并存储到记忆系统",
+        "label": "是",
+        "confidence": 0.7,
+        "group": "knowledge_graph"
+      },
+      {
+        "id": "kg_1776423123571_9qq5u07a5",
+        "source": "系统需要自动记录任务 是的，TaskRunner",
+        "target": "自动记录任务并存储到记忆系统",
+        "label": "可以",
+        "confidence": 0.7,
+        "group": "knowledge_graph"
+      },
+      {
+        "id": "kg_1776423123572_f5m3w6wgu",
+        "source": "系统",
+        "target": "自动记录任务 是的，TaskRunner可以自动记录任务并存储到记忆系统",
+        "label": "需要",
+        "confidence": 0.7,
+        "group": "knowledge_graph"
+      }
+    ]
+  },
+  "dag": {
+    "nodes": [
+      {
+        "id": "kg_node_测试主体",
+        "label": "测试主体",
+        "originalId": "测试主体",
+        "type": "knowledge",
+        "group": "dag"
+      },
+      {
+        "id": "kg_node_测试对象",
+        "label": "测试对象",
+        "originalId": "测试对象",
+        "type": "knowledge",
+        "group": "dag"
+      },
+      {
+        "id": "kg_node_如何使用永久记忆系统_永久记忆系统",
+        "label": "如何使用永久记忆系统 永久记忆系统",
+        "originalId": "如何使用永久记忆系统 永久记忆系统",
+        "type": "knowledge",
+        "group": "dag"
+      },
+      {
+        "id": "kg_node_通过addmemory方法添加记忆，通过getmemories方法获取记忆",
+        "label": "通过addMemory方法添加记忆，通过getMemories方法获取记忆",
+        "originalId": "通过addMemory方法添加记忆，通过getMemories方法获取记忆",
+        "type": "knowledge",
+        "group": "dag"
+      },
+      {
+        "id": "kg_node_什么是知识图谱_知识图谱",
+        "label": "什么是知识图谱 知识图谱",
+        "originalId": "什么是知识图谱 知识图谱",
+        "type": "knowledge",
+        "group": "dag"
+      },
+      {
+        "id": "kg_node_一种以图形方式表示知识的结构，包含节点和边",
+        "label": "一种以图形方式表示知识的结构，包含节点和边",
+        "originalId": "一种以图形方式表示知识的结构，包含节点和边",
+        "type": "knowledge",
+        "group": "dag"
+      },
+      {
+        "id": "kg_node_系统需要自动记录任务",
+        "label": "系统需要自动记录任务",
+        "originalId": "系统需要自动记录任务",
+        "type": "knowledge",
+        "group": "dag"
+      },
+      {
+        "id": "kg_node_的，taskrunner可以自动记录任务并存储到记忆系统",
+        "label": "的，TaskRunner可以自动记录任务并存储到记忆系统",
+        "originalId": "的，TaskRunner可以自动记录任务并存储到记忆系统",
+        "type": "knowledge",
+        "group": "dag"
+      },
+      {
+        "id": "kg_node_系统需要自动记录任务_是的，taskrunner",
+        "label": "系统需要自动记录任务 是的，TaskRunner",
+        "originalId": "系统需要自动记录任务 是的，TaskRunner",
+        "type": "knowledge",
+        "group": "dag"
+      },
+      {
+        "id": "kg_node_自动记录任务并存储到记忆系统",
+        "label": "自动记录任务并存储到记忆系统",
+        "originalId": "自动记录任务并存储到记忆系统",
+        "type": "knowledge",
+        "group": "dag"
+      },
+      {
+        "id": "kg_node_系统",
+        "label": "系统",
+        "originalId": "系统",
+        "type": "knowledge",
+        "group": "dag"
+      },
+      {
+        "id": "kg_node_自动记录任务_是的，taskrunner可以自动记录任务并存储到记忆系统",
+        "label": "自动记录任务 是的，TaskRunner可以自动记录任务并存储到记忆系统",
+        "originalId": "自动记录任务 是的，TaskRunner可以自动记录任务并存储到记忆系统",
+        "type": "knowledge",
+        "group": "dag"
+      },
+      {
+        "id": "kg_node_测试主体_f6755ba3",
+        "label": "测试主体",
+        "originalId": "测试主体",
+        "type": "knowledge",
+        "group": "dag"
+      },
+      {
+        "id": "kg_node_测试对象_94b4a855",
+        "label": "测试对象",
+        "originalId": "测试对象",
+        "type": "knowledge",
+        "group": "dag"
+      },
+      {
+        "id": "kg_node_如何使用永久记忆系统_永久记忆系统_f30351e0",
+        "label": "如何使用永久记忆系统 永久记忆系统",
+        "originalId": "如何使用永久记忆系统 永久记忆系统",
+        "type": "knowledge",
+        "group": "dag"
+      },
+      {
+        "id": "kg_node_通过addmemory方法添加记忆，通过getmemories方法获取记忆_59fa3701",
+        "label": "通过addMemory方法添加记忆，通过getMemories方法获取记忆",
+        "originalId": "通过addMemory方法添加记忆，通过getMemories方法获取记忆",
+        "type": "knowledge",
+        "group": "dag"
+      },
+      {
+        "id": "kg_node_什么是知识图谱_知识图谱_a78935f1",
+        "label": "什么是知识图谱 知识图谱",
+        "originalId": "什么是知识图谱 知识图谱",
+        "type": "knowledge",
+        "group": "dag"
+      },
+      {
+        "id": "kg_node_一种以图形方式表示知识的结构，包含节点和边_95f2ba8d",
+        "label": "一种以图形方式表示知识的结构，包含节点和边",
+        "originalId": "一种以图形方式表示知识的结构，包含节点和边",
+        "type": "knowledge",
+        "group": "dag"
+      },
+      {
+        "id": "kg_node_系统需要自动记录任务_c0b7f36d",
+        "label": "系统需要自动记录任务",
+        "originalId": "系统需要自动记录任务",
+        "type": "knowledge",
+        "group": "dag"
+      },
+      {
+        "id": "kg_node_的，taskrunner可以自动记录任务并存储到记忆系统_e809d63e",
+        "label": "的，TaskRunner可以自动记录任务并存储到记忆系统",
+        "originalId": "的，TaskRunner可以自动记录任务并存储到记忆系统",
+        "type": "knowledge",
+        "group": "dag"
+      },
+      {
+        "id": "kg_node_系统需要自动记录任务_是的，taskrunner_5615ec5a",
+        "label": "系统需要自动记录任务 是的，TaskRunner",
+        "originalId": "系统需要自动记录任务 是的，TaskRunner",
+        "type": "knowledge",
+        "group": "dag"
+      },
+      {
+        "id": "kg_node_自动记录任务并存储到记忆系统_66f64c59",
+        "label": "自动记录任务并存储到记忆系统",
+        "originalId": "自动记录任务并存储到记忆系统",
+        "type": "knowledge",
+        "group": "dag"
+      },
+      {
+        "id": "kg_node_系统_36dfc67c",
+        "label": "系统",
+        "originalId": "系统",
+        "type": "knowledge",
+        "group": "dag"
+      },
+      {
+        "id": "kg_node_自动记录任务_是的，taskrunner可以自动记录任务并存储到记忆系统_b3fc39c6",
+        "label": "自动记录任务 是的，TaskRunner可以自动记录任务并存储到记忆系统",
+        "originalId": "自动记录任务 是的，TaskRunner可以自动记录任务并存储到记忆系统",
+        "type": "knowledge",
+        "group": "dag"
+      },
+      {
+        "id": "kg_node_测试主体_182c1d46",
+        "label": "测试主体",
+        "originalId": "测试主体",
+        "type": "knowledge",
+        "group": "dag"
+      },
+      {
+        "id": "kg_node_测试对象_b44fc0be",
+        "label": "测试对象",
+        "originalId": "测试对象",
+        "type": "knowledge",
+        "group": "dag"
+      },
+      {
+        "id": "kg_node_如何使用永久记忆系统_永久记忆系统_ff11e9b7",
+        "label": "如何使用永久记忆系统 永久记忆系统",
+        "originalId": "如何使用永久记忆系统 永久记忆系统",
+        "type": "knowledge",
+        "group": "dag"
+      },
+      {
+        "id": "kg_node_通过addmemory方法添加记忆，通过getmemories方法获取记忆_c2a98a28",
+        "label": "通过addMemory方法添加记忆，通过getMemories方法获取记忆",
+        "originalId": "通过addMemory方法添加记忆，通过getMemories方法获取记忆",
+        "type": "knowledge",
+        "group": "dag"
+      },
+      {
+        "id": "kg_node_什么是知识图谱_知识图谱_2b12080c",
+        "label": "什么是知识图谱 知识图谱",
+        "originalId": "什么是知识图谱 知识图谱",
+        "type": "knowledge",
+        "group": "dag"
+      },
+      {
+        "id": "kg_node_一种以图形方式表示知识的结构，包含节点和边_5879eae6",
+        "label": "一种以图形方式表示知识的结构，包含节点和边",
+        "originalId": "一种以图形方式表示知识的结构，包含节点和边",
+        "type": "knowledge",
+        "group": "dag"
+      },
+      {
+        "id": "kg_node_系统需要自动记录任务_1da3c40b",
+        "label": "系统需要自动记录任务",
+        "originalId": "系统需要自动记录任务",
+        "type": "knowledge",
+        "group": "dag"
+      },
+      {
+        "id": "kg_node_的，taskrunner可以自动记录任务并存储到记忆系统_7f3d95e5",
+        "label": "的，TaskRunner可以自动记录任务并存储到记忆系统",
+        "originalId": "的，TaskRunner可以自动记录任务并存储到记忆系统",
+        "type": "knowledge",
+        "group": "dag"
+      },
+      {
+        "id": "kg_node_系统需要自动记录任务_是的，taskrunner_87292da9",
+        "label": "系统需要自动记录任务 是的，TaskRunner",
+        "originalId": "系统需要自动记录任务 是的，TaskRunner",
+        "type": "knowledge",
+        "group": "dag"
+      },
+      {
+        "id": "kg_node_自动记录任务并存储到记忆系统_ba3e0302",
+        "label": "自动记录任务并存储到记忆系统",
+        "originalId": "自动记录任务并存储到记忆系统",
+        "type": "knowledge",
+        "group": "dag"
+      },
+      {
+        "id": "kg_node_系统_ef9c2be9",
+        "label": "系统",
+        "originalId": "系统",
+        "type": "knowledge",
+        "group": "dag"
+      },
+      {
+        "id": "kg_node_自动记录任务_是的，taskrunner可以自动记录任务并存储到记忆系统_910fc1de",
+        "label": "自动记录任务 是的，TaskRunner可以自动记录任务并存储到记忆系统",
+        "originalId": "自动记录任务 是的，TaskRunner可以自动记录任务并存储到记忆系统",
+        "type": "knowledge",
+        "group": "dag"
+      },
+      {
+        "id": "kg_node_测试主体_63626232",
+        "label": "测试主体",
+        "originalId": "测试主体",
+        "type": "knowledge",
+        "group": "dag"
+      },
+      {
+        "id": "kg_node_测试对象_cddc8c4c",
+        "label": "测试对象",
+        "originalId": "测试对象",
+        "type": "knowledge",
+        "group": "dag"
+      },
+      {
+        "id": "kg_node_如何使用永久记忆系统_永久记忆系统_ef84cd11",
+        "label": "如何使用永久记忆系统 永久记忆系统",
+        "originalId": "如何使用永久记忆系统 永久记忆系统",
+        "type": "knowledge",
+        "group": "dag"
+      },
+      {
+        "id": "kg_node_通过addmemory方法添加记忆，通过getmemories方法获取记忆_0fe4f6e1",
+        "label": "通过addMemory方法添加记忆，通过getMemories方法获取记忆",
+        "originalId": "通过addMemory方法添加记忆，通过getMemories方法获取记忆",
+        "type": "knowledge",
+        "group": "dag"
+      },
+      {
+        "id": "kg_node_什么是知识图谱_知识图谱_8729f5d7",
+        "label": "什么是知识图谱 知识图谱",
+        "originalId": "什么是知识图谱 知识图谱",
+        "type": "knowledge",
+        "group": "dag"
+      },
+      {
+        "id": "kg_node_一种以图形方式表示知识的结构，包含节点和边_059fbf51",
+        "label": "一种以图形方式表示知识的结构，包含节点和边",
+        "originalId": "一种以图形方式表示知识的结构，包含节点和边",
+        "type": "knowledge",
+        "group": "dag"
+      },
+      {
+        "id": "kg_node_系统需要自动记录任务_248da886",
+        "label": "系统需要自动记录任务",
+        "originalId": "系统需要自动记录任务",
+        "type": "knowledge",
+        "group": "dag"
+      },
+      {
+        "id": "kg_node_的，taskrunner可以自动记录任务并存储到记忆系统_ffbed61f",
+        "label": "的，TaskRunner可以自动记录任务并存储到记忆系统",
+        "originalId": "的，TaskRunner可以自动记录任务并存储到记忆系统",
+        "type": "knowledge",
+        "group": "dag"
+      },
+      {
+        "id": "kg_node_系统需要自动记录任务_是的，taskrunner_74ca4d45",
+        "label": "系统需要自动记录任务 是的，TaskRunner",
+        "originalId": "系统需要自动记录任务 是的，TaskRunner",
+        "type": "knowledge",
+        "group": "dag"
+      },
+      {
+        "id": "kg_node_自动记录任务并存储到记忆系统_8081c2f6",
+        "label": "自动记录任务并存储到记忆系统",
+        "originalId": "自动记录任务并存储到记忆系统",
+        "type": "knowledge",
+        "group": "dag"
+      },
+      {
+        "id": "kg_node_系统_2c985add",
+        "label": "系统",
+        "originalId": "系统",
+        "type": "knowledge",
+        "group": "dag"
+      },
+      {
+        "id": "kg_node_自动记录任务_是的，taskrunner可以自动记录任务并存储到记忆系统_25295c77",
+        "label": "自动记录任务 是的，TaskRunner可以自动记录任务并存储到记忆系统",
+        "originalId": "自动记录任务 是的，TaskRunner可以自动记录任务并存储到记忆系统",
+        "type": "knowledge",
+        "group": "dag"
+      },
+      {
+        "id": "kg_node_测试主体_2edd97a0",
+        "label": "测试主体",
+        "originalId": "测试主体",
+        "type": "knowledge",
+        "group": "dag"
+      },
+      {
+        "id": "kg_node_测试对象_114af479",
+        "label": "测试对象",
+        "originalId": "测试对象",
+        "type": "knowledge",
+        "group": "dag"
+      },
+      {
+        "id": "kg_node_如何使用永久记忆系统_永久记忆系统_7b20cbfb",
+        "label": "如何使用永久记忆系统 永久记忆系统",
+        "originalId": "如何使用永久记忆系统 永久记忆系统",
+        "type": "knowledge",
+        "group": "dag"
+      },
+      {
+        "id": "kg_node_通过addmemory方法添加记忆，通过getmemories方法获取记忆_86ce9ff6",
+        "label": "通过addMemory方法添加记忆，通过getMemories方法获取记忆",
+        "originalId": "通过addMemory方法添加记忆，通过getMemories方法获取记忆",
+        "type": "knowledge",
+        "group": "dag"
+      },
+      {
+        "id": "kg_node_什么是知识图谱_知识图谱_5c984f4c",
+        "label": "什么是知识图谱 知识图谱",
+        "originalId": "什么是知识图谱 知识图谱",
+        "type": "knowledge",
+        "group": "dag"
+      },
+      {
+        "id": "kg_node_一种以图形方式表示知识的结构，包含节点和边_f55c5222",
+        "label": "一种以图形方式表示知识的结构，包含节点和边",
+        "originalId": "一种以图形方式表示知识的结构，包含节点和边",
+        "type": "knowledge",
+        "group": "dag"
+      },
+      {
+        "id": "kg_node_系统需要自动记录任务_215b716c",
+        "label": "系统需要自动记录任务",
+        "originalId": "系统需要自动记录任务",
+        "type": "knowledge",
+        "group": "dag"
+      },
+      {
+        "id": "kg_node_的，taskrunner可以自动记录任务并存储到记忆系统_859d7544",
+        "label": "的，TaskRunner可以自动记录任务并存储到记忆系统",
+        "originalId": "的，TaskRunner可以自动记录任务并存储到记忆系统",
+        "type": "knowledge",
+        "group": "dag"
+      },
+      {
+        "id": "kg_node_系统需要自动记录任务_是的，taskrunner_be9ada9e",
+        "label": "系统需要自动记录任务 是的，TaskRunner",
+        "originalId": "系统需要自动记录任务 是的，TaskRunner",
+        "type": "knowledge",
+        "group": "dag"
+      },
+      {
+        "id": "kg_node_自动记录任务并存储到记忆系统_eb3872d0",
+        "label": "自动记录任务并存储到记忆系统",
+        "originalId": "自动记录任务并存储到记忆系统",
+        "type": "knowledge",
+        "group": "dag"
+      },
+      {
+        "id": "kg_node_系统_8ba77fb4",
+        "label": "系统",
+        "originalId": "系统",
+        "type": "knowledge",
+        "group": "dag"
+      },
+      {
+        "id": "kg_node_自动记录任务_是的，taskrunner可以自动记录任务并存储到记忆系统_c5d3bfa9",
+        "label": "自动记录任务 是的，TaskRunner可以自动记录任务并存储到记忆系统",
+        "originalId": "自动记录任务 是的，TaskRunner可以自动记录任务并存储到记忆系统",
+        "type": "knowledge",
+        "group": "dag"
+      }
+    ],
+    "edges": []
+  },
+  "mappings": [
+    {
+      "originalId": "kg_1776415869917_c6z5yot51",
+      "unifiedId": "kg_1776415869917_c6z5yot51_ac3be14b",
+      "dagId": "kg_node_测试主体_2edd97a0_kg_node_测试对象_114af479",
+      "type": "edge"
+    },
+    {
+      "originalId": "kg_1776416786753_fh6uu460r",
+      "unifiedId": "kg_1776416786753_fh6uu460r_51814ddc",
+      "dagId": "kg_node_如何使用永久记忆系统_永久记忆系统_7b20cbfb_kg_node_通过addmemory方法添加记忆，通过getmemories方法获取记忆_86ce9ff6",
+      "type": "edge"
+    },
+    {
+      "originalId": "kg_1776416786757_hfswltfy0",
+      "unifiedId": "kg_1776416786757_hfswltfy0_10ee167a",
+      "dagId": "kg_node_什么是知识图谱_知识图谱_5c984f4c_kg_node_一种以图形方式表示知识的结构，包含节点和边_f55c5222",
+      "type": "edge"
+    },
+    {
+      "originalId": "kg_1776419743487_p5kfqgji6",
+      "unifiedId": "kg_1776419743487_p5kfqgji6_4b207fd9",
+      "dagId": "kg_node_测试主体_2edd97a0_kg_node_测试对象_114af479",
+      "type": "edge"
+    },
+    {
+      "originalId": "kg_1776419743564_m86bkgwhn",
+      "unifiedId": "kg_1776419743564_m86bkgwhn_94ad0109",
+      "dagId": "kg_node_如何使用永久记忆系统_永久记忆系统_7b20cbfb_kg_node_通过addmemory方法添加记忆，通过getmemories方法获取记忆_86ce9ff6",
+      "type": "edge"
+    },
+    {
+      "originalId": "kg_1776419743567_v651u5g7p",
+      "unifiedId": "kg_1776419743567_v651u5g7p_fd556228",
+      "dagId": "kg_node_什么是知识图谱_知识图谱_5c984f4c_kg_node_一种以图形方式表示知识的结构，包含节点和边_f55c5222",
+      "type": "edge"
+    },
+    {
+      "originalId": "kg_1776423123570_x3gkj7itr",
+      "unifiedId": "kg_1776423123570_x3gkj7itr_623ed8cc",
+      "dagId": "kg_node_系统需要自动记录任务_215b716c_kg_node_的，taskrunner可以自动记录任务并存储到记忆系统_859d7544",
+      "type": "edge"
+    },
+    {
+      "originalId": "kg_1776423123571_9qq5u07a5",
+      "unifiedId": "kg_1776423123571_9qq5u07a5_286f3501",
+      "dagId": "kg_node_系统需要自动记录任务_是的，taskrunner_be9ada9e_kg_node_自动记录任务并存储到记忆系统_eb3872d0",
+      "type": "edge"
+    },
+    {
+      "originalId": "kg_1776423123572_f5m3w6wgu",
+      "unifiedId": "kg_1776423123572_f5m3w6wgu_b371f098",
+      "dagId": "kg_node_系统_8ba77fb4_kg_node_自动记录任务_是的，taskrunner可以自动记录任务并存储到记忆系统_c5d3bfa9",
+      "type": "edge"
+    },
+    {
+      "originalId": "测试主体",
+      "unifiedId": "测试主体_2edd97a0",
+      "dagId": "kg_node_测试主体_2edd97a0",
+      "type": "node"
+    },
+    {
+      "originalId": "测试对象",
+      "unifiedId": "测试对象_114af479",
+      "dagId": "kg_node_测试对象_114af479",
+      "type": "node"
+    },
+    {
+      "originalId": "如何使用永久记忆系统 永久记忆系统",
+      "unifiedId": "如何使用永久记忆系统_永久记忆系统_7b20cbfb",
+      "dagId": "kg_node_如何使用永久记忆系统_永久记忆系统_7b20cbfb",
+      "type": "node"
+    },
+    {
+      "originalId": "通过addMemory方法添加记忆，通过getMemories方法获取记忆",
+      "unifiedId": "通过addmemory方法添加记忆，通过getmemories方法获取记忆_86ce9ff6",
+      "dagId": "kg_node_通过addmemory方法添加记忆，通过getmemories方法获取记忆_86ce9ff6",
+      "type": "node"
+    },
+    {
+      "originalId": "什么是知识图谱 知识图谱",
+      "unifiedId": "什么是知识图谱_知识图谱_5c984f4c",
+      "dagId": "kg_node_什么是知识图谱_知识图谱_5c984f4c",
+      "type": "node"
+    },
+    {
+      "originalId": "一种以图形方式表示知识的结构，包含节点和边",
+      "unifiedId": "一种以图形方式表示知识的结构，包含节点和边_f55c5222",
+      "dagId": "kg_node_一种以图形方式表示知识的结构，包含节点和边_f55c5222",
+      "type": "node"
+    },
+    {
+      "originalId": "系统需要自动记录任务",
+      "unifiedId": "系统需要自动记录任务_215b716c",
+      "dagId": "kg_node_系统需要自动记录任务_215b716c",
+      "type": "node"
+    },
+    {
+      "originalId": "的，TaskRunner可以自动记录任务并存储到记忆系统",
+      "unifiedId": "的，taskrunner可以自动记录任务并存储到记忆系统_859d7544",
+      "dagId": "kg_node_的，taskrunner可以自动记录任务并存储到记忆系统_859d7544",
+      "type": "node"
+    },
+    {
+      "originalId": "系统需要自动记录任务 是的，TaskRunner",
+      "unifiedId": "系统需要自动记录任务_是的，taskrunner_be9ada9e",
+      "dagId": "kg_node_系统需要自动记录任务_是的，taskrunner_be9ada9e",
+      "type": "node"
+    },
+    {
+      "originalId": "自动记录任务并存储到记忆系统",
+      "unifiedId": "自动记录任务并存储到记忆系统_eb3872d0",
+      "dagId": "kg_node_自动记录任务并存储到记忆系统_eb3872d0",
+      "type": "node"
+    },
+    {
+      "originalId": "系统",
+      "unifiedId": "系统_8ba77fb4",
+      "dagId": "kg_node_系统_8ba77fb4",
+      "type": "node"
+    },
+    {
+      "originalId": "自动记录任务 是的，TaskRunner可以自动记录任务并存储到记忆系统",
+      "unifiedId": "自动记录任务_是的，taskrunner可以自动记录任务并存储到记忆系统_c5d3bfa9",
+      "dagId": "kg_node_自动记录任务_是的，taskrunner可以自动记录任务并存储到记忆系统_c5d3bfa9",
+      "type": "node"
+    }
+  ],
+  "timestamp": 1776427200020
+}

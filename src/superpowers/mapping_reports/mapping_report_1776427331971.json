@@ -1,0 +1,25 @@
+{
+  "knowledgeGraph": {
+    "nodes": 12,
+    "edges": 9
+  },
+  "dag": {
+    "knowledgeNodes": 84,
+    "knowledgeEdges": 0
+  },
+  "coverage": {
+    "nodes": 7,
+    "edges": 0
+  },
+  "accuracy": {
+    "nodes": 1,
+    "edges": 0
+  },
+  "mappingStore": {
+    "size": 21
+  },
+  "changeLog": {
+    "size": 4
+  },
+  "timestamp": 1776427331970
+}

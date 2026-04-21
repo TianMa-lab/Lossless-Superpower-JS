@@ -1,0 +1,50 @@
+{
+  "report": {
+    "cacheStats": {
+      "skillCache": {
+        "size": 0,
+        "expiry": 3600000
+      },
+      "recommendationCache": {
+        "size": 0,
+        "expiry": 1800000
+      },
+      "searchCache": {
+        "size": 0,
+        "expiry": 600000
+      },
+      "analysisCache": {
+        "size": 0,
+        "expiry": 7200000
+      }
+    },
+    "memoryUsage": {
+      "rss": 105984000,
+      "heapTotal": 64974848,
+      "heapUsed": 36301528,
+      "external": 2563688,
+      "arrayBuffers": 33515
+    },
+    "batchJobs": 0,
+    "timestamp": 1776598435558
+  },
+  "caches": {
+    "skillCache": {
+      "size": 0,
+      "entries": []
+    },
+    "recommendationCache": {
+      "size": 0,
+      "entries": []
+    },
+    "searchCache": {
+      "size": 0,
+      "entries": []
+    },
+    "analysisCache": {
+      "size": 0,
+      "entries": []
+    }
+  },
+  "exportedAt": 1776598435558
+}

@@ -1,0 +1,67 @@
+{
+  "name": "DAG与知识图谱集成迭代",
+  "description": "用于执行DAG与知识图谱集成的完整迭代过程，包括性能优化、深度集成、知识图谱推理、系统集成和文档完善等任务",
+  "version": "1.0.0",
+  "author": "Lossless Superpower JS",
+  "created_at": "2026-04-17",
+  "category": "integration",
+  "tags": ["dag", "knowledge_graph", "integration", "iteration", "optimization"],
+  "dependencies": [
+    "task_runner",
+    "enhancedKnowledgeGraphDAGIntegration",
+    "dagkgMonitor"
+  ],
+  "actions": [
+    {
+      "name": "full_iteration",
+      "description": "执行完整的DAG与知识图谱集成迭代过程",
+      "parameters": []
+    },
+    {
+      "name": "performance_optimization",
+      "description": "执行系统性能监控与优化迭代",
+      "parameters": []
+    },
+    {
+      "name": "deep_integration",
+      "description": "执行DAG与知识图谱的深度集成迭代",
+      "parameters": []
+    },
+    {
+      "name": "knowledge_graph_reasoning",
+      "description": "执行高级知识图谱推理功能迭代",
+      "parameters": []
+    },
+    {
+      "name": "ui_features",
+      "description": "执行用户界面高级功能迭代",
+      "parameters": []
+    },
+    {
+      "name": "security_hardening",
+      "description": "执行系统安全加固措施迭代",
+      "parameters": []
+    },
+    {
+      "name": "system_integration",
+      "description": "执行系统集成与API扩展迭代",
+      "parameters": []
+    },
+    {
+      "name": "documentation",
+      "description": "执行系统文档和用户指南完善迭代",
+      "parameters": []
+    }
+  ],
+  "execution": {
+    "main_file": "dag_kg_integration_iteration.js",
+    "entry_point": "runSkill",
+    "timeout": 300000
+  },
+  "metadata": {
+    "system_charter": "Lossless Superpower JS 是 trace CN 的插件系统",
+    "core_task": true,
+    "iterative": true,
+    "version_compatibility": "1.0.0+"
+  }
+}

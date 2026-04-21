@@ -1,0 +1,55 @@
+{
+  "version": "1.0.0",
+  "last_updated": "2026-04-20",
+  "repositories": [
+    {
+      "id": "hermes_main",
+      "name": "Hermes Main Repository",
+      "github_url": "https://github.com/example/hermes.git",
+      "local_path": "C:\\Users\\55237\\hermes-agent",
+      "branch": "main",
+      "sync_enabled": true,
+      "sync_interval": 3600,
+      "auto_pull": true,
+      "auto_push": true,
+      "last_sync": "2026-04-20T06:50:01.232Z",
+      "status": "synced"
+    },
+    {
+      "id": "hermes_fusion",
+      "name": "Hermes Fusion Test",
+      "github_url": "https://github.com/example/hermes-fusion.git",
+      "local_path": "C:\\Users\\55237\\Lossless-Superpower-JS\\test\\test_hermes_fusion",
+      "branch": "main",
+      "sync_enabled": true,
+      "sync_interval": 7200,
+      "auto_pull": true,
+      "auto_push": true,
+      "last_sync": "2026-04-20T00:00:00Z",
+      "status": "idle"
+    }
+  ],
+  "sync_config": {
+    "default_interval": 3600,
+    "max_retries": 3,
+    "retry_delay": 60,
+    "timeout": 300,
+    "notification_enabled": true,
+    "log_level": "info"
+  },
+  "authentication": {
+    "method": "ssh",
+    "token_env_var": "GITHUB_TOKEN",
+    "ssh_key_path": "~/.ssh/id_rsa"
+  },
+  "webhooks": {
+    "enabled": false,
+    "url": "",
+    "secret": ""
+  },
+  "metadata": {
+    "created_by": "AutoIterationRecorder",
+    "created_at": "2026-04-20",
+    "description": "GitHub同步配置文件，用于管理Hermes代码的自动同步"
+  }
+}

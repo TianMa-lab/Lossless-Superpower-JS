@@ -1,0 +1,1 @@
+{"model":{"name":"simpleLinearRegression","slope":0.5,"intercept":0.5},"scaler":{"means":[0.5,0.5,0,0.5,0.5,0,0.5,0.5,4,5],"stds":[0.5,0.5,1,0.5,0.5,1,0.5,0.5,1,1]}}

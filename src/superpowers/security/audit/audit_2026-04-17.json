@@ -1,0 +1,22 @@
+[
+  {
+    "id": "event_1776419454604_xsxq7bt90",
+    "timestamp": 1776419454604,
+    "type": "test_event",
+    "severity": "info",
+    "description": "测试安全事件",
+    "details": {
+      "test": "data"
+    }
+  },
+  {
+    "id": "event_1776419748693_0n5myrow5",
+    "timestamp": 1776419748693,
+    "type": "test_event",
+    "severity": "info",
+    "description": "测试安全事件",
+    "details": {
+      "test": "data"
+    }
+  }
+]

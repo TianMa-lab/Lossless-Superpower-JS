@@ -1,0 +1,26 @@
+{
+  "timestamp": 1776417036827,
+  "system": {
+    "platform": "win32",
+    "arch": "x64",
+    "release": "10.0.26200",
+    "cpus": 20,
+    "totalMemory": 68423172096,
+    "freeMemory": 37339140096,
+    "uptime": 210242.703
+  },
+  "process": {
+    "memoryUsage": {
+      "rss": 59957248,
+      "heapTotal": 7663616,
+      "heapUsed": 5650536,
+      "external": 1632307,
+      "arrayBuffers": 10527
+    },
+    "uptime": 0.0272937,
+    "cpuUsage": {
+      "user": 15000,
+      "system": 15000
+    }
+  }
+}

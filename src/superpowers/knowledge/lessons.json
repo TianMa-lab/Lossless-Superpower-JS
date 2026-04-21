@@ -1,0 +1,36 @@
+[
+  {
+    "id": "lesson-20260414-001",
+    "lesson": "迁移问题需要全面规划，确保所有存储路径都被正确修改",
+    "story": {
+      "context": "迁移问题需要全面规划，确保所有存储路径都被正确修改",
+      "approaches": [],
+      "breakthrough": "迁移问题需要全面规划，确保所有存储路径都被正确修改",
+      "result": "迁移问题需要全面规划，确保所有存储路径都被正确修改"
+    },
+    "triggers": [
+      "问题"
+    ],
+    "related_topics": [],
+    "created": "2026-04-14T11:02:31.256641",
+    "times_matched": 0,
+    "last_matched": null
+  },
+  {
+    "id": "lesson-20260414-002",
+    "lesson": "测试操作自动记录到历史库",
+    "story": {
+      "context": "测试操作自动记录到历史库",
+      "approaches": [],
+      "breakthrough": "测试操作自动记录到历史库",
+      "result": "测试操作自动记录到历史库"
+    },
+    "triggers": [
+      "库"
+    ],
+    "related_topics": [],
+    "created": "2026-04-14T11:04:31.911399",
+    "times_matched": 0,
+    "last_matched": null
+  }
+]

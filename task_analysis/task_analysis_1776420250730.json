@@ -1,0 +1,128 @@
+{
+  "generatedAt": "2026-04-17T10:04:10.730Z",
+  "totalTasks": 4,
+  "statistics": {
+    "total": 4,
+    "completed": 3,
+    "in_progress": 1,
+    "pending": 0,
+    "completion_rate": "75.00%"
+  },
+  "buildTasks": [
+    {
+      "id": "build_1776420186847",
+      "name": "构建项目",
+      "description": "执行webpack构建，生成打包文件",
+      "status": "completed",
+      "start_time": 1776420186.848,
+      "end_time": 1776420191.917,
+      "steps": [
+        {
+          "id": "step_1776420186849",
+          "name": "准备构建环境",
+          "details": "检查依赖和配置",
+          "status": "completed",
+          "start_time": null,
+          "end_time": 1776420191.917
+        },
+        {
+          "id": "step_1776420186849",
+          "name": "执行webpack构建",
+          "details": "运行webpack命令生成打包文件",
+          "status": "completed",
+          "start_time": null,
+          "end_time": 1776420191.917
+        },
+        {
+          "id": "step_1776420191916",
+          "name": "构建完成",
+          "details": "生成lossless-superpower.js文件",
+          "status": "completed",
+          "start_time": null,
+          "end_time": 1776420191.917
+        }
+      ],
+      "result": "构建成功，生成了lossless-superpower.js文件，耗时 5.07 秒"
+    },
+    {
+      "id": "build_1776420115562",
+      "name": "构建项目",
+      "description": "执行webpack构建，生成打包文件",
+      "status": "completed",
+      "start_time": 1776420115.563,
+      "end_time": 1776420120.589,
+      "steps": [],
+      "result": "构建成功，生成了lossless-superpower.js文件"
+    }
+  ],
+  "recentTasks": [
+    {
+      "id": "build_1776420186847",
+      "name": "构建项目",
+      "description": "执行webpack构建，生成打包文件",
+      "status": "completed",
+      "start_time": 1776420186.848,
+      "end_time": 1776420191.917,
+      "steps": [
+        {
+          "id": "step_1776420186849",
+          "name": "准备构建环境",
+          "details": "检查依赖和配置",
+          "status": "completed",
+          "start_time": null,
+          "end_time": 1776420191.917
+        },
+        {
+          "id": "step_1776420186849",
+          "name": "执行webpack构建",
+          "details": "运行webpack命令生成打包文件",
+          "status": "completed",
+          "start_time": null,
+          "end_time": 1776420191.917
+        },
+        {
+          "id": "step_1776420191916",
+          "name": "构建完成",
+          "details": "生成lossless-superpower.js文件",
+          "status": "completed",
+          "start_time": null,
+          "end_time": 1776420191.917
+        }
+      ],
+      "result": "构建成功，生成了lossless-superpower.js文件，耗时 5.07 秒"
+    },
+    {
+      "id": "build_1776420115562",
+      "name": "构建项目",
+      "description": "执行webpack构建，生成打包文件",
+      "status": "completed",
+      "start_time": 1776420115.563,
+      "end_time": 1776420120.589,
+      "steps": [],
+      "result": "构建成功，生成了lossless-superpower.js文件"
+    },
+    {
+      "id": "task2",
+      "name": "Test Task 2",
+      "description": "This is test task 2",
+      "status": "in_progress",
+      "start_time": 1776390621.719,
+      "end_time": null,
+      "steps": [],
+      "result": null
+    },
+    {
+      "id": "task1",
+      "name": "Test Task 1",
+      "description": "This is test task 1",
+      "status": "completed",
+      "start_time": 1776390621.718,
+      "end_time": 1776390621.719,
+      "steps": [],
+      "result": "Task 1 completed"
+    }
+  ],
+  "averageBuildTime": 5.047500014305115,
+  "maxBuildTime": 5.069000005722046,
+  "minBuildTime": 5.026000022888184
+}

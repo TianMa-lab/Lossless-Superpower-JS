@@ -1,0 +1,16 @@
+{
+  "nodes": {},
+  "edges": {
+    "test_skill_test_skill_1776390621622_similar": {
+      "id": "test_skill_test_skill_1776390621622_similar",
+      "source": "test_skill",
+      "target": "test_skill_1776390621622",
+      "relationship": "similar",
+      "strength": 1,
+      "createdAt": 1776599575407,
+      "updatedAt": 1776599575407
+    }
+  },
+  "usageStats": {},
+  "recommendations": {}
+}

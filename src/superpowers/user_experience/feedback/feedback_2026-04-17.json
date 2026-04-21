@@ -1,0 +1,26 @@
+[
+  {
+    "id": "feedback_1776419620518_zxts6yvka",
+    "timestamp": 1776419620518,
+    "type": "bug",
+    "sentiment": "negative",
+    "issue": "响应速度慢",
+    "details": "API响应时间超过1秒"
+  },
+  {
+    "id": "feedback_1776419732237_sj7p8n6o6",
+    "timestamp": 1776419732237,
+    "type": "bug",
+    "sentiment": "negative",
+    "issue": "响应速度慢",
+    "details": "API响应时间超过1秒"
+  },
+  {
+    "id": "feedback_1776419748728_lu7o9ge96",
+    "timestamp": 1776419748728,
+    "type": "bug",
+    "sentiment": "negative",
+    "issue": "响应速度慢",
+    "details": "API响应时间超过1秒"
+  }
+]

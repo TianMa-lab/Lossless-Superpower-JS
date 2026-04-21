@@ -1,0 +1,27 @@
+{
+  "feishu": {
+    "appId": "cli_a96f698aa4f9dcdb",
+    "appSecret": "vScqmz9TRK2eA5T9u6HXILE51tlRbSHk",
+    "tenantAccessToken": "",
+    "apiBaseUrl": "https://open.feishu.cn",
+    "scopes": [
+      "docx:document:readonly",
+      "drive:comment:readonly",
+      "drive:comment:write"
+    ]
+  },
+  "permissions": {
+    "required": [
+      "docx:document:readonly",
+      "drive:comment:readonly",
+      "drive:comment:write"
+    ],
+    "optional": [
+      "im:message:send",
+      "im:chat:readonly"
+    ]
+  },
+  "version": "1.0.0",
+  "createdAt": "2026-04-20",
+  "lastUpdated": "2026-04-20"
+}

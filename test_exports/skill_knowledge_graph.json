@@ -1,0 +1,39 @@
+{
+  "nodes": {},
+  "edges": {
+    "test_skill_test_skill_1776390621622_similar": {
+      "id": "test_skill_test_skill_1776390621622_similar",
+      "source": "test_skill",
+      "target": "test_skill_1776390621622",
+      "relationship": "similar",
+      "strength": 1,
+      "createdAt": 1776598435551,
+      "updatedAt": 1776598435551
+    }
+  },
+  "usageStats": {},
+  "report": {
+    "totalSkills": 0,
+    "totalRelationships": 1,
+    "usageStats": {
+      "totalUses": 0,
+      "averageSuccessRate": 0,
+      "mostUsedSkills": []
+    },
+    "graphStats": {
+      "averageRelationshipsPerSkill": 0,
+      "mostConnectedSkills": [
+        {
+          "skill": "test_skill",
+          "count": 1
+        },
+        {
+          "skill": "test_skill_1776390621622",
+          "count": 1
+        }
+      ]
+    },
+    "timestamp": 1776598435557
+  },
+  "exportedAt": 1776598435557
+}

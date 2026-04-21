@@ -1,0 +1,61 @@
+{
+  "generatedAt": 1776648538733,
+  "period": "30天",
+  "feedbackAnalysis": {
+    "totalFeedback": 5,
+    "byType": {
+      "bug": 5
+    },
+    "bySentiment": {
+      "negative": 5
+    },
+    "commonIssues": [
+      {
+        "issue": "响应速度慢",
+        "count": 5
+      }
+    ]
+  },
+  "metricsAnalysis": {
+    "totalMetrics": 5,
+    "averageResponseTime": 350,
+    "averageSatisfaction": 4.5,
+    "performanceTrends": [
+      {
+        "date": "2026-04-17",
+        "avgResponseTime": 350,
+        "avgSatisfaction": 4.5
+      },
+      {
+        "date": "2026-04-19",
+        "avgResponseTime": 350,
+        "avgSatisfaction": 4.5
+      },
+      {
+        "date": "2026-04-20",
+        "avgResponseTime": 350,
+        "avgSatisfaction": 4.5
+      }
+    ]
+  },
+  "recommendations": [
+    {
+      "type": "issues",
+      "priority": "medium",
+      "description": "存在常见问题，建议针对性解决",
+      "actions": [
+        "解决: 响应速度慢"
+      ]
+    },
+    {
+      "type": "general",
+      "priority": "low",
+      "description": "持续优化用户体验",
+      "actions": [
+        "定期收集用户反馈",
+        "监控系统性能指标",
+        "更新文档和使用指南"
+      ]
+    }
+  ]
+}
