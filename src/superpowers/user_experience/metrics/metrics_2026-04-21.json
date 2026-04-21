@@ -1,0 +1,10 @@
+[
+  {
+    "id": "metrics_1776771629015_i0pbc57p9",
+    "timestamp": 1776771629015,
+    "responseTime": 350,
+    "satisfaction": 4.5,
+    "action": "api_call",
+    "endpoint": "/api/memory"
+  }
+]

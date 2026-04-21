@@ -1,0 +1,56 @@
+[
+  {
+    "id": "memory_1776771628783_bvtsu7pu3",
+    "content": "Jest自动化测试结果\n\n测试名称: 搜索技能\n测试ID: jest_test______1776771628774\n测试类型: test\n状态: passed\n执行时间: 0ms\n\n时间戳: 2026-04-21T11:40:28.783Z",
+    "type": "test_result",
+    "timestamp": 1776771628783,
+    "importance": 3,
+    "tags": "jest,test,passed",
+    "metadata": "{\"testId\":\"jest_test______1776771628774\",\"testName\":\"搜索技能\",\"testType\":\"test\",\"status\":\"passed\",\"duration\":0,\"type\":\"jest_automated_test\",\"timestamp\":1776771628783}"
+  },
+  {
+    "id": "memory_1776771628769_bpywncu78",
+    "content": "Jest自动化测试结果\n\n测试名称: 发布技能到市场\n测试ID: jest_test_________1776771628753\n测试类型: test\n状态: passed\n执行时间: 6ms\n\n时间戳: 2026-04-21T11:40:28.769Z",
+    "type": "test_result",
+    "timestamp": 1776771628769,
+    "importance": 3,
+    "tags": "jest,test,passed",
+    "metadata": "{\"testId\":\"jest_test_________1776771628753\",\"testName\":\"发布技能到市场\",\"testType\":\"test\",\"status\":\"passed\",\"duration\":6,\"type\":\"jest_automated_test\",\"timestamp\":1776771628769}"
+  },
+  {
+    "id": "memory_1776771628731_d2m299415",
+    "content": "Jest自动化测试结果\n\n测试名称: 获取技能推荐\n测试ID: jest_test________1776771628719\n测试类型: test\n状态: passed\n执行时间: 0ms\n\n时间戳: 2026-04-21T11:40:28.731Z",
+    "type": "test_result",
+    "timestamp": 1776771628731,
+    "importance": 3,
+    "tags": "jest,test,passed",
+    "metadata": "{\"testId\":\"jest_test________1776771628719\",\"testName\":\"获取技能推荐\",\"testType\":\"test\",\"status\":\"passed\",\"duration\":0,\"type\":\"jest_automated_test\",\"timestamp\":1776771628731}"
+  },
+  {
+    "id": "memory_1776771628713_7tm8wmqsg",
+    "content": "Jest自动化测试结果\n\n测试名称: 添加技能节点\n测试ID: jest_test________1776771628691\n测试类型: test\n状态: passed\n执行时间: 7ms\n\n时间戳: 2026-04-21T11:40:28.713Z",
+    "type": "test_result",
+    "timestamp": 1776771628713,
+    "importance": 3,
+    "tags": "jest,test,passed",
+    "metadata": "{\"testId\":\"jest_test________1776771628691\",\"testName\":\"添加技能节点\",\"testType\":\"test\",\"status\":\"passed\",\"duration\":7,\"type\":\"jest_automated_test\",\"timestamp\":1776771628713}"
+  },
+  {
+    "id": "memory_1776771628646_2odhgh1o4",
+    "content": "Jest自动化测试结果\n\n测试名称: 获取技能信息\n测试ID: jest_test________1776771628637\n测试类型: test\n状态: passed\n执行时间: 0ms\n\n时间戳: 2026-04-21T11:40:28.646Z",
+    "type": "test_result",
+    "timestamp": 1776771628646,
+    "importance": 3,
+    "tags": "jest,test,passed",
+    "metadata": "{\"testId\":\"jest_test________1776771628637\",\"testName\":\"获取技能信息\",\"testType\":\"test\",\"status\":\"passed\",\"duration\":0,\"type\":\"jest_automated_test\",\"timestamp\":1776771628646}"
+  },
+  {
+    "id": "memory_1776771628627_uxzhzqtmz",
+    "content": "Jest自动化测试结果\n\n测试名称: 扫描技能目录\n测试ID: jest_test________1776771628609\n测试类型: test\n状态: passed\n执行时间: 5ms\n\n时间戳: 2026-04-21T11:40:28.626Z",
+    "type": "test_result",
+    "timestamp": 1776771628627,
+    "importance": 3,
+    "tags": "jest,test,passed",
+    "metadata": "{\"testId\":\"jest_test________1776771628609\",\"testName\":\"扫描技能目录\",\"testType\":\"test\",\"status\":\"passed\",\"duration\":5,\"type\":\"jest_automated_test\",\"timestamp\":1776771628627}"
+  }
+]

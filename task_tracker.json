@@ -24730,6 +24730,14 @@
         "status": "pending",
         "start_time": null,
         "end_time": null
+      },
+      {
+        "id": "step_1776768652684",
+        "name": "执行 7",
+        "details": "执行完成 (0ms)",
+        "status": "pending",
+        "start_time": null,
+        "end_time": null
       }
     ],
     "result": null
@@ -24823,5 +24831,75 @@
     "end_time": 1776743453.644,
     "steps": [],
     "result": "Promise resolved (5ms)"
+  },
+  "jest_session_1776771628176": {
+    "id": "jest_session_1776771628176",
+    "name": "Jest测试会话",
+    "description": "自动化测试执行会话",
+    "status": "in_progress",
+    "start_time": 1776771628.176,
+    "end_time": null,
+    "steps": [],
+    "result": null
+  },
+  "jest_test________1776771628609": {
+    "id": "jest_test________1776771628609",
+    "name": "扫描技能目录",
+    "description": "测试: 扫描技能目录",
+    "status": "completed",
+    "start_time": 1776771628.609,
+    "end_time": 1776771628.622,
+    "steps": [],
+    "result": "✓ 扫描技能目录 (5ms)"
+  },
+  "jest_test________1776771628637": {
+    "id": "jest_test________1776771628637",
+    "name": "获取技能信息",
+    "description": "测试: 获取技能信息",
+    "status": "completed",
+    "start_time": 1776771628.637,
+    "end_time": 1776771628.642,
+    "steps": [],
+    "result": "✓ 获取技能信息 (0ms)"
+  },
+  "jest_test________1776771628691": {
+    "id": "jest_test________1776771628691",
+    "name": "添加技能节点",
+    "description": "测试: 添加技能节点",
+    "status": "completed",
+    "start_time": 1776771628.691,
+    "end_time": 1776771628.706,
+    "steps": [],
+    "result": "✓ 添加技能节点 (7ms)"
+  },
+  "jest_test________1776771628719": {
+    "id": "jest_test________1776771628719",
+    "name": "获取技能推荐",
+    "description": "测试: 获取技能推荐",
+    "status": "completed",
+    "start_time": 1776771628.719,
+    "end_time": 1776771628.725,
+    "steps": [],
+    "result": "✓ 获取技能推荐 (0ms)"
+  },
+  "jest_test_________1776771628753": {
+    "id": "jest_test_________1776771628753",
+    "name": "发布技能到市场",
+    "description": "测试: 发布技能到市场",
+    "status": "completed",
+    "start_time": 1776771628.753,
+    "end_time": 1776771628.764,
+    "steps": [],
+    "result": "✓ 发布技能到市场 (6ms)"
+  },
+  "jest_test______1776771628774": {
+    "id": "jest_test______1776771628774",
+    "name": "搜索技能",
+    "description": "测试: 搜索技能",
+    "status": "completed",
+    "start_time": 1776771628.774,
+    "end_time": 1776771628.779,
+    "steps": [],
+    "result": "✓ 搜索技能 (0ms)"
   }
 }

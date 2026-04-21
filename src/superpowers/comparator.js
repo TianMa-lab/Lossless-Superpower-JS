@@ -117,21 +117,69 @@ class Comparator {
       currentFeatures,
       missingFeatures: [],
       existingFeatures: [],
-      potentialFeatures: []
+      potentialFeatures: [],
+      similarFeatures: [],
+      featureMatchScore: 0
     };
     
+    let matchCount = 0;
+    let totalFeatures = projectFeatures.length;
+    
     projectFeatures.forEach(feature => {
-      if (!currentFeatures.includes(feature)) {
-        comparison.missingFeatures.push(feature);
-      } else {
+      // 精确匹配
+      if (currentFeatures.includes(feature)) {
         comparison.existingFeatures.push(feature);
+        matchCount++;
+      } else {
+        // 模糊匹配
+        const similarFeature = this.findSimilarFeature(feature, currentFeatures);
+        if (similarFeature) {
+          comparison.similarFeatures.push({
+            projectFeature: feature,
+            currentFeature: similarFeature
+          });
+          matchCount += 0.5; // 部分匹配
+        } else {
+          comparison.missingFeatures.push(feature);
+        }
       }
     });
+    
+    // 计算匹配分数
+    comparison.featureMatchScore = totalFeatures > 0 ? 
+      Math.round((matchCount / totalFeatures) * 100) : 0;
     
     // 分析潜在的功能
     comparison.potentialFeatures = this.identifyPotentialFeatures(projectFeatures, currentFeatures);
     
     return comparison;
+  }
+  
+  // 查找相似功能
+  findSimilarFeature(feature, currentFeatures) {
+    const featureLower = feature.toLowerCase();
+    
+    for (const currentFeature of currentFeatures) {
+      const currentLower = currentFeature.toLowerCase();
+      
+      // 检查是否包含相同的关键词
+      const featureWords = featureLower.split(/\s+/);
+      const currentWords = currentLower.split(/\s+/);
+      
+      const commonWords = featureWords.filter(word => currentWords.includes(word));
+      
+      // 如果有超过50%的关键词匹配，则认为是相似功能
+      if (commonWords.length > featureWords.length * 0.5) {
+        return currentFeature;
+      }
+      
+      // 检查子串匹配
+      if (featureLower.includes(currentLower) || currentLower.includes(featureLower)) {
+        return currentFeature;
+      }
+    }
+    
+    return null;
   }
 
   compareTechStack(projectTechStack, currentTechStack) {
@@ -140,31 +188,76 @@ class Comparator {
       currentTechStack,
       missingLanguages: [],
       missingDependencies: [],
-      missingFrameworks: []
+      missingFrameworks: [],
+      missingBuildTools: [],
+      missingDatabases: [],
+      techStackMatchScore: 0,
+      detailedMatchScores: {}
     };
     
+    let totalMatchScore = 0;
+    let totalCategories = 0;
+    
     // 比较语言
-    projectTechStack.languages.forEach(lang => {
-      if (!currentTechStack.languages.includes(lang)) {
-        comparison.missingLanguages.push(lang);
-      }
-    });
+    const languageMatch = this.compareArray(projectTechStack.languages || [], currentTechStack.languages || []);
+    comparison.missingLanguages = languageMatch.missing;
+    comparison.detailedMatchScores.languages = languageMatch.matchScore;
+    totalMatchScore += languageMatch.matchScore;
+    totalCategories++;
     
     // 比较依赖
-    projectTechStack.dependencies.forEach(dep => {
-      if (!currentTechStack.dependencies.includes(dep)) {
-        comparison.missingDependencies.push(dep);
-      }
-    });
+    const dependencyMatch = this.compareArray(projectTechStack.dependencies || [], currentTechStack.dependencies || []);
+    comparison.missingDependencies = dependencyMatch.missing;
+    comparison.detailedMatchScores.dependencies = dependencyMatch.matchScore;
+    totalMatchScore += dependencyMatch.matchScore;
+    totalCategories++;
     
     // 比较框架
-    projectTechStack.frameworks.forEach(frame => {
-      if (!currentTechStack.frameworks.includes(frame)) {
-        comparison.missingFrameworks.push(frame);
+    const frameworkMatch = this.compareArray(projectTechStack.frameworks || [], currentTechStack.frameworks || []);
+    comparison.missingFrameworks = frameworkMatch.missing;
+    comparison.detailedMatchScores.frameworks = frameworkMatch.matchScore;
+    totalMatchScore += frameworkMatch.matchScore;
+    totalCategories++;
+    
+    // 比较构建工具
+    const buildToolMatch = this.compareArray(projectTechStack.buildTools || [], currentTechStack.buildTools || []);
+    comparison.missingBuildTools = buildToolMatch.missing;
+    comparison.detailedMatchScores.buildTools = buildToolMatch.matchScore;
+    totalMatchScore += buildToolMatch.matchScore;
+    totalCategories++;
+    
+    // 比较数据库
+    const databaseMatch = this.compareArray(projectTechStack.databases || [], currentTechStack.databases || []);
+    comparison.missingDatabases = databaseMatch.missing;
+    comparison.detailedMatchScores.databases = databaseMatch.matchScore;
+    totalMatchScore += databaseMatch.matchScore;
+    totalCategories++;
+    
+    // 计算总体匹配分数
+    comparison.techStackMatchScore = totalCategories > 0 ? 
+      Math.round((totalMatchScore / totalCategories) * 100) : 0;
+    
+    return comparison;
+  }
+  
+  // 比较数组并计算匹配分数
+  compareArray(projectItems, currentItems) {
+    const missing = [];
+    let matchCount = 0;
+    const totalItems = projectItems.length;
+    
+    projectItems.forEach(item => {
+      if (currentItems.includes(item)) {
+        matchCount++;
+      } else {
+        missing.push(item);
       }
     });
     
-    return comparison;
+    const matchScore = totalItems > 0 ? 
+      Math.round((matchCount / totalItems) * 100) : 100;
+    
+    return { missing, matchScore };
   }
 
   compareAPI(projectAPI, currentAPI) {

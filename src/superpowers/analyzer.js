@@ -96,27 +96,57 @@ class Analyzer {
 
   analyzeDirectoryStructure(dir) {
     const structure = {};
+    const ignoredDirs = ['.git', 'node_modules', 'dist', 'build', '.vscode', '.idea'];
+    const maxDepth = 5;
     
-    function traverse(currentPath, currentStructure) {
-      const files = fs.readdirSync(currentPath);
+    function traverse(currentPath, currentStructure, depth) {
+      if (depth >= maxDepth) {
+        currentStructure['...'] = '目录深度超过限制';
+        return;
+      }
       
-      files.forEach(file => {
-        const fullPath = path.join(currentPath, file);
-        const stats = fs.statSync(fullPath);
+      try {
+        const files = fs.readdirSync(currentPath);
         
-        if (stats.isDirectory()) {
-          currentStructure[file] = {};
-          traverse(fullPath, currentStructure[file]);
-        } else {
-          currentStructure[file] = {
-            size: stats.size,
-            mtime: stats.mtime.toISOString()
-          };
-        }
-      });
+        files.forEach(file => {
+          if (ignoredDirs.includes(file)) {
+            return;
+          }
+          
+          const fullPath = path.join(currentPath, file);
+          try {
+            const stats = fs.statSync(fullPath);
+            
+            if (stats.isDirectory()) {
+              currentStructure[file] = {};
+              traverse(fullPath, currentStructure[file], depth + 1);
+            } else {
+              // 只存储重要文件的信息
+              const ext = path.extname(file);
+              const importantExts = ['.js', '.ts', '.py', '.json', '.md', '.yml', '.yaml', '.txt'];
+              
+              if (importantExts.includes(ext) || file === 'README' || file === 'package.json' || file === 'requirements.txt') {
+                currentStructure[file] = {
+                  size: stats.size,
+                  mtime: stats.mtime.toISOString(),
+                  type: ext || 'txt'
+                };
+              } else {
+                // 对于其他文件，只记录存在性
+                currentStructure[file] = 'file';
+              }
+            }
+          } catch (error) {
+            // 忽略无法访问的文件
+            currentStructure[file] = 'access_error';
+          }
+        });
+      } catch (error) {
+        currentStructure['error'] = error.message;
+      }
     }
     
-    traverse(dir, structure);
+    traverse(dir, structure, 0);
     return structure;
   }
 
@@ -124,86 +154,157 @@ class Analyzer {
     const techStack = {
       languages: new Set(),
       dependencies: new Set(),
-      frameworks: new Set()
+      frameworks: new Set(),
+      buildTools: new Set(),
+      databases: new Set()
     };
+    
+    const ignoredDirs = ['.git', 'node_modules', 'dist', 'build', '.vscode', '.idea'];
+    const maxDepth = 3;
     
     // 检查package.json
     const packageJsonPath = path.join(dir, 'package.json');
     if (fs.existsSync(packageJsonPath)) {
-      const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'));
-      techStack.frameworks.add('Node.js');
-      
-      if (packageJson.dependencies) {
-        Object.keys(packageJson.dependencies).forEach(dep => {
-          techStack.dependencies.add(dep);
-        });
+      try {
+        const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'));
+        techStack.frameworks.add('Node.js');
+        
+        // 检查依赖
+        if (packageJson.dependencies) {
+          Object.keys(packageJson.dependencies).forEach(dep => {
+            techStack.dependencies.add(dep);
+            // 识别常见框架和库
+            if (['react', 'vue', 'angular', 'express', 'koa', 'nestjs'].includes(dep)) {
+              techStack.frameworks.add(dep);
+            }
+            if (['mongodb', 'mongoose', 'mysql', 'pg', 'redis'].includes(dep)) {
+              techStack.databases.add(dep);
+            }
+          });
+        }
+        
+        // 检查开发依赖
+        if (packageJson.devDependencies) {
+          Object.keys(packageJson.devDependencies).forEach(dep => {
+            techStack.dependencies.add(dep);
+            if (['webpack', 'vite', 'babel', 'eslint', 'jest', 'mocha'].includes(dep)) {
+              techStack.buildTools.add(dep);
+            }
+          });
+        }
+      } catch (error) {
+        console.error('分析package.json失败:', error.message);
       }
     }
     
     // 检查requirements.txt
     const requirementsPath = path.join(dir, 'requirements.txt');
     if (fs.existsSync(requirementsPath)) {
-      techStack.frameworks.add('Python');
-      const content = fs.readFileSync(requirementsPath, 'utf8');
-      content.split('\n').forEach(line => {
-        if (line.trim() && !line.startsWith('#')) {
-          techStack.dependencies.add(line.split('=')[0].trim());
-        }
-      });
+      try {
+        techStack.frameworks.add('Python');
+        const content = fs.readFileSync(requirementsPath, 'utf8');
+        content.split('\n').forEach(line => {
+          if (line.trim() && !line.startsWith('#')) {
+            const dep = line.split('=')[0].trim();
+            techStack.dependencies.add(dep);
+            // 识别常见Python库
+            if (['django', 'flask', 'fastapi', 'pytorch', 'tensorflow', 'numpy', 'pandas'].includes(dep)) {
+              techStack.frameworks.add(dep);
+            }
+            if (['pymongo', 'psycopg2', 'mysql-connector', 'redis'].includes(dep)) {
+              techStack.databases.add(dep);
+            }
+          }
+        });
+      } catch (error) {
+        console.error('分析requirements.txt失败:', error.message);
+      }
     }
+    
+    // 检查其他配置文件
+    const configFiles = [
+      { name: 'tsconfig.json', framework: 'TypeScript' },
+      { name: 'webpack.config.js', buildTool: 'Webpack' },
+      { name: 'vite.config.js', buildTool: 'Vite' },
+      { name: 'Dockerfile', buildTool: 'Docker' },
+      { name: 'docker-compose.yml', buildTool: 'Docker Compose' }
+    ];
+    
+    configFiles.forEach(config => {
+      const configPath = path.join(dir, config.name);
+      if (fs.existsSync(configPath)) {
+        if (config.framework) {
+          techStack.frameworks.add(config.framework);
+        }
+        if (config.buildTool) {
+          techStack.buildTools.add(config.buildTool);
+        }
+      }
+    });
     
     // 检查其他语言文件
-    function checkFiles(currentPath) {
-      const files = fs.readdirSync(currentPath);
+    function checkFiles(currentPath, depth) {
+      if (depth >= maxDepth) {
+        return;
+      }
       
-      files.forEach(file => {
-        const fullPath = path.join(currentPath, file);
-        const stats = fs.statSync(fullPath);
+      try {
+        const files = fs.readdirSync(currentPath);
         
-        if (stats.isDirectory()) {
-          checkFiles(fullPath);
-        } else {
-          const ext = path.extname(file);
-          switch (ext) {
-            case '.js':
-            case '.jsx':
-              techStack.languages.add('JavaScript');
-              break;
-            case '.ts':
-            case '.tsx':
-              techStack.languages.add('TypeScript');
-              break;
-            case '.py':
-              techStack.languages.add('Python');
-              break;
-            case '.go':
-              techStack.languages.add('Go');
-              break;
-            case '.java':
-              techStack.languages.add('Java');
-              break;
-            case '.cs':
-              techStack.languages.add('C#');
-              break;
-            case '.cpp':
-            case '.cc':
-              techStack.languages.add('C++');
-              break;
-            case '.c':
-              techStack.languages.add('C');
-              break;
+        files.forEach(file => {
+          if (ignoredDirs.includes(file)) {
+            return;
           }
-        }
-      });
+          
+          const fullPath = path.join(currentPath, file);
+          try {
+            const stats = fs.statSync(fullPath);
+            
+            if (stats.isDirectory()) {
+              checkFiles(fullPath, depth + 1);
+            } else {
+              const ext = path.extname(file);
+              const extToLanguage = {
+                '.js': 'JavaScript',
+                '.jsx': 'JavaScript',
+                '.ts': 'TypeScript',
+                '.tsx': 'TypeScript',
+                '.py': 'Python',
+                '.go': 'Go',
+                '.java': 'Java',
+                '.cs': 'C#',
+                '.cpp': 'C++',
+                '.cc': 'C++',
+                '.c': 'C',
+                '.rb': 'Ruby',
+                '.php': 'PHP',
+                '.swift': 'Swift',
+                '.kt': 'Kotlin',
+                '.rs': 'Rust'
+              };
+              
+              if (extToLanguage[ext]) {
+                techStack.languages.add(extToLanguage[ext]);
+              }
+            }
+          } catch (error) {
+            // 忽略无法访问的文件
+          }
+        });
+      } catch (error) {
+        // 忽略无法访问的目录
+      }
     }
     
-    checkFiles(dir);
+    checkFiles(dir, 0);
     
     // 转换Set为数组
     return {
       languages: Array.from(techStack.languages),
       dependencies: Array.from(techStack.dependencies),
-      frameworks: Array.from(techStack.frameworks)
+      frameworks: Array.from(techStack.frameworks),
+      buildTools: Array.from(techStack.buildTools),
+      databases: Array.from(techStack.databases)
     };
   }
 
