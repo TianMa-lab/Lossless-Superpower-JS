@@ -237,28 +237,23 @@ class SyncManager {
 
   async syncProject(project) {
     const logFile = path.join(this.config.logPath, `${project.id}_${new Date().toISOString().split('T')[0]}.log`);
-    const logStream = fs.createWriteStream(logFile, { flags: 'a' });
     
     try {
-      logStream.write(`[${new Date().toISOString()}] 开始同步项目: ${project.name}\n`);
-      
       // 检查本地目录是否存在
       if (!fs.existsSync(project.localPath)) {
-        logStream.write(`[${new Date().toISOString()}] 本地目录不存在，开始克隆项目\n`);
+        console.log(`[${project.name}] 本地目录不存在，开始克隆项目`);
         execSync(`git clone ${project.repository} "${project.localPath}"`, {
-          stdio: ['ignore', logStream, logStream]
+          stdio: 'inherit'
         });
       } else {
-        logStream.write(`[${new Date().toISOString()}] 本地目录存在，开始拉取更新\n`);
+        console.log(`[${project.name}] 本地目录存在，开始拉取更新`);
         execSync(`git -C "${project.localPath}" checkout ${project.branch}`, {
-          stdio: ['ignore', logStream, logStream]
+          stdio: 'inherit'
         });
         execSync(`git -C "${project.localPath}" pull`, {
-          stdio: ['ignore', logStream, logStream]
+          stdio: 'inherit'
         });
       }
-      
-      logStream.write(`[${new Date().toISOString()}] 同步完成: ${project.name}\n`);
       
       return {
         project: project.name,
@@ -266,10 +261,8 @@ class SyncManager {
         message: '同步成功'
       };
     } catch (error) {
-      logStream.write(`[${new Date().toISOString()}] 同步失败: ${project.name}, 错误: ${error.message}\n`);
+      console.error(`[${project.name}] 同步失败: ${error.message}`);
       throw error;
-    } finally {
-      logStream.end();
     }
   }
 

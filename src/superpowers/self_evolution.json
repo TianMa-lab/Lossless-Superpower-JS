@@ -1,5 +1,5 @@
 {
-  "lastEvaluation": 1776409704.972,
+  "lastEvaluation": 1776786309.841,
   "lastMaintenance": 1776775245.663,
   "performanceMetrics": {
     "1776398039": {
@@ -40,6 +40,36 @@
       "knowledgeExtraction": 0.03,
       "responseQuality": 1,
       "userSatisfaction": 1,
+      "improvementAreas": []
+    },
+    "1776779109": {
+      "timestamp": 1776779109.989,
+      "userInteractions": 5,
+      "knowledgeExtraction": 0.05,
+      "responseQuality": 1,
+      "userSatisfaction": 1,
+      "errorRate": 0,
+      "skillCreation": 0,
+      "improvementAreas": []
+    },
+    "1776782709": {
+      "timestamp": 1776782709.918,
+      "userInteractions": 5,
+      "knowledgeExtraction": 0.05,
+      "responseQuality": 1,
+      "userSatisfaction": 1,
+      "errorRate": 0,
+      "skillCreation": 0,
+      "improvementAreas": []
+    },
+    "1776786309": {
+      "timestamp": 1776786309.841,
+      "userInteractions": 5,
+      "knowledgeExtraction": 0.05,
+      "responseQuality": 1,
+      "userSatisfaction": 1,
+      "errorRate": 0,
+      "skillCreation": 0,
       "improvementAreas": []
     }
   },
@@ -211,11 +241,14 @@
     }
   ],
   "createdSkills": [],
-  "lastSkillGeneration": 0,
+  "lastSkillGeneration": 1776779109.989,
   "errorPatterns": [],
   "systemHealth": {
-    "score": 100,
-    "issues": []
+    "timestamp": 1776782709.917,
+    "score": 95,
+    "issues": [
+      "No new skills created in the last 7 days"
+    ]
   },
   "optimizationHistory": [],
   "version": "2.0.0"

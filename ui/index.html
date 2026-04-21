@@ -219,6 +219,48 @@
       border-radius: 4px;
       margin-bottom: 10px;
     }
+
+    .progress-info {
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+
+    .progress-bar {
+      width: 100%;
+      height: 20px;
+      background-color: #e9ecef;
+      border-radius: 4px;
+      overflow: hidden;
+      margin-bottom: 10px;
+    }
+
+    .progress-fill {
+      height: 100%;
+      background-color: #3498db;
+      transition: width 0.3s ease;
+      width: 0%;
+    }
+
+    .progress-stats {
+      text-align: center;
+      color: #7f8c8d;
+    }
+
+    .spinner {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      border: 3px solid rgba(0,0,0,0.1);
+      border-radius: 50%;
+      border-top-color: #3498db;
+      animation: spin 1s linear infinite;
+      margin-right: 10px;
+      vertical-align: middle;
+    }
+
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
   </style>
 </head>
 <body>
@@ -226,6 +268,22 @@
     <h1>自动迭代系统管理</h1>
 
     <div id="message-container"></div>
+
+    <!-- 同步进度显示 -->
+    <div id="sync-progress" class="card" style="display: none; margin-bottom: 20px;">
+      <h2>同步进度</h2>
+      <div id="sync-progress-content">
+        <div class="progress-info">
+          <span id="progress-current-project">准备中...</span>
+        </div>
+        <div class="progress-bar">
+          <div id="progress-bar" class="progress-fill"></div>
+        </div>
+        <div class="progress-stats">
+          <span id="progress-completed">0</span> / <span id="progress-total">0</span> 已完成
+        </div>
+      </div>
+    </div>
 
     <div class="dashboard">
       <div class="card">
@@ -445,42 +503,79 @@
       alertsContainer.innerHTML = html;
     }
 
+    // 显示同步进度
+    function showSyncProgress(current, total, projectName) {
+      const progressDiv = document.getElementById('sync-progress');
+      const progressBar = document.getElementById('progress-bar');
+      const currentProject = document.getElementById('progress-current-project');
+      const completedSpan = document.getElementById('progress-completed');
+      const totalSpan = document.getElementById('progress-total');
+
+      progressDiv.style.display = 'block';
+      currentProject.innerHTML = `<span class="spinner"></span>正在同步: ${projectName}`;
+      const percentage = total > 0 ? Math.round((current / total) * 100) : 0;
+      progressBar.style.width = `${percentage}%`;
+      completedSpan.textContent = current;
+      totalSpan.textContent = total;
+    }
+
+    // 隐藏同步进度
+    function hideSyncProgress() {
+      const progressDiv = document.getElementById('sync-progress');
+      setTimeout(() => {
+        progressDiv.style.display = 'none';
+      }, 2000);
+    }
+
     // 同步所有项目
     async function syncAll() {
       const btn = document.getElementById('sync-all-btn');
       btn.disabled = true;
       btn.textContent = '同步中...';
 
+      const totalProjects = dataState.projects.length;
+      let completedProjects = 0;
+
+      showSyncProgress(0, totalProjects, '开始同步...');
+
       try {
-        showMessage('开始同步所有项目...', 'info');
+        for (let i = 0; i < dataState.projects.length; i++) {
+          const project = dataState.projects[i];
+          completedProjects = i + 1;
+          showSyncProgress(i, totalProjects, project.name);
 
-        const response = await fetch(`${API_BASE}/sync/all`, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' }
-        });
+          try {
+            const response = await fetch(`${API_BASE}/sync/${project.id}`, {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' }
+            });
 
-        const result = await response.json();
+            const result = await response.json();
 
-        if (result.success) {
-          showMessage('同步完成！', 'success');
+            if (result.success) {
+              project.status = 'success';
+              project.lastSync = new Date().toISOString();
+            } else {
+              project.status = 'failed';
+            }
+          } catch (error) {
+            project.status = 'failed';
+            console.error(`同步项目 ${project.name} 失败:`, error);
+          }
 
-          // 更新项目状态
-          dataState.projects.forEach(project => {
-            project.status = 'success';
-            project.lastSync = new Date().toISOString();
-          });
-
-          // 更新统计数据
-          dataState.sync.success = dataState.projects.length;
-          dataState.sync.failed = 0;
-
-          updateDashboard();
           updateProjectList();
-        } else {
-          showMessage(`同步失败: ${result.error}`, 'error');
+          showSyncProgress(completedProjects, totalProjects, project.name);
         }
+
+        dataState.sync.success = dataState.projects.filter(p => p.status === 'success').length;
+        dataState.sync.failed = dataState.projects.filter(p => p.status === 'failed').length;
+
+        updateDashboard();
+        hideSyncProgress();
+        showMessage('同步完成！', 'success');
       } catch (error) {
         console.error('同步失败:', error);
+        hideSyncProgress();
         showMessage(`同步失败: ${error.message}`, 'error');
       } finally {
         btn.disabled = false;
@@ -532,6 +627,13 @@
         return;
       }
 
+      const btn = event.target;
+      const originalText = btn.textContent;
+      btn.disabled = true;
+      btn.textContent = '同步中...';
+
+      showSyncProgress(0, 1, project.name);
+
       try {
         showMessage(`开始同步项目: ${project.name}`, 'info');
 
@@ -542,25 +644,30 @@
 
         const result = await response.json();
 
+        showSyncProgress(1, 1, project.name);
+
         if (result.success) {
           showMessage(`项目 ${project.name} 同步成功！`, 'success');
-
-          // 更新项目状态
           project.status = 'success';
           project.lastSync = new Date().toISOString();
-
-          // 更新统计数据
           dataState.sync.failed = Math.max(0, dataState.sync.failed - 1);
           dataState.sync.success = Math.min(dataState.sync.total, dataState.sync.success + 1);
-
-          updateDashboard();
-          updateProjectList();
         } else {
           showMessage(`项目 ${project.name} 同步失败: ${result.error}`, 'error');
+          project.status = 'failed';
         }
+
+        updateDashboard();
+        updateProjectList();
+        hideSyncProgress();
       } catch (error) {
         console.error('同步失败:', error);
+        project.status = 'failed';
+        hideSyncProgress();
         showMessage(`同步失败: ${error.message}`, 'error');
+      } finally {
+        btn.disabled = false;
+        btn.textContent = originalText;
       }
     }
 

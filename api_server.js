@@ -85,18 +85,17 @@ app.get('/api/sync/status', (req, res) => {
 
 // 同步单个项目
 app.post('/api/sync/:projectId', async (req, res) => {
+  const { projectId } = req.params;
+  const projects = syncManager.getProjects();
+  const project = projects.find(p => p.id === projectId);
+  
+  if (!project) {
+    return res.status(404).json({ success: false, error: '项目不存在' });
+  }
+  
   try {
-    const { projectId } = req.params;
-    const projects = syncManager.getProjects();
-    const project = projects.find(p => p.id === projectId);
-    
-    if (!project) {
-      return res.status(404).json({ success: false, error: '项目不存在' });
-    }
-    
     const result = await syncManager.syncProject(project);
     updateProjectSyncStatus(projectId, true);
-    
     res.json({ success: true, result });
   } catch (error) {
     updateProjectSyncStatus(projectId, false);
