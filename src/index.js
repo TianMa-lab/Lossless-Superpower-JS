@@ -133,6 +133,12 @@ const lazyLoad = {
   get performanceOptimizer() {
     delete this.performanceOptimizer;
     return this.performanceOptimizer = require('./superpowers/performance_optimizer');
+  },
+  
+  // KGR自动迭代
+  get kgrAutoIteration() {
+    delete this.kgrAutoIteration;
+    return this.kgrAutoIteration = require('./superpowers/kgr_auto_iteration');
   }
 };
 
@@ -278,6 +284,16 @@ const coreFunctions = {
   PerformanceOptimizer: lazyLoad.performanceOptimizer.PerformanceOptimizer,
   createPerformanceOptimizer: (config) => lazyLoad.performanceOptimizer.performanceOptimizerManager.createOptimizer(config),
   
+  // KGR自动迭代
+  kgrAutoIteration: lazyLoad.kgrAutoIteration.kgrAutoIterationManager,
+  KGRAutoIteration: lazyLoad.kgrAutoIteration.KGRAutoIteration,
+  createKGR_auto_iteration: (config) => lazyLoad.kgrAutoIteration.kgrAutoIterationManager.createAutoIteration(config),
+  startKGR_auto_iteration: (config) => {
+    const autoIteration = lazyLoad.kgrAutoIteration.kgrAutoIterationManager.createAutoIteration(config);
+    autoIteration.start();
+    return autoIteration;
+  },
+  
   // 工具函数
   getCharter: () => {
     const charterPath = path.join(__dirname, '..', 'SYSTEM_CHARTER.md');
@@ -399,6 +415,12 @@ const coreFunctions = {
         performanceOptimizer.init();
       }
       
+      // 初始化KGR自动迭代
+      if (mergedConfig.enableKGRAutoIteration !== false) {
+        const autoIteration = new lazyLoad.kgrAutoIteration.KGRAutoIteration(mergedConfig.kgrAutoIterationConfig || {});
+        autoIteration.start();
+      }
+      
       console.log('Lossless Superpower 系统初始化成功');
       return true;
     } catch (error) {
@@ -453,6 +475,11 @@ const coreFunctions = {
       }
       if (lazyLoad.performanceOptimizer) {
         lazyLoad.performanceOptimizer.performanceOptimizerManager.cleanup();
+      }
+      
+      // 清理KGR自动迭代
+      if (lazyLoad.kgrAutoIteration) {
+        // KGR自动迭代的清理逻辑
       }
       
       console.log('Lossless Superpower 系统清理完成');
