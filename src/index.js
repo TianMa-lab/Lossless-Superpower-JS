@@ -91,6 +91,12 @@ const lazyLoad = {
   get githubSync() {
     delete this.githubSync;
     return this.githubSync = require('./superpowers/github_sync');
+  },
+  
+  // 知识图谱推理器
+  get knowledgeGraphReasoner() {
+    delete this.knowledgeGraphReasoner;
+    return this.knowledgeGraphReasoner = require('./superpowers/knowledge_graph_reasoner');
   }
 };
 
@@ -175,6 +181,28 @@ const coreFunctions = {
   stopGitHubSync: () => lazyLoad.githubSync.stopAutoSync(),
   syncGitHub: () => lazyLoad.githubSync.sync(),
   getGitHubSyncStatus: () => lazyLoad.githubSync.getSyncStatus(),
+  
+  // 知识图谱推理器
+  knowledgeGraphReasoner: lazyLoad.knowledgeGraphReasoner.knowledgeGraphReasoner,
+  KnowledgeGraphReasoner: lazyLoad.knowledgeGraphReasoner.KnowledgeGraphReasoner,
+  reason: (type, params) => {
+    switch (type) {
+      case 'path':
+        return lazyLoad.knowledgeGraphReasoner.knowledgeGraphReasoner.pathReasoning(params.source, params.target, params.maxDepth);
+      case 'relationship':
+        return lazyLoad.knowledgeGraphReasoner.knowledgeGraphReasoner.relationshipReasoning(params.node1, params.node2);
+      case 'semantic':
+        return lazyLoad.knowledgeGraphReasoner.knowledgeGraphReasoner.semanticReasoning(params.node, params.topK);
+      case 'rule':
+        return lazyLoad.knowledgeGraphReasoner.knowledgeGraphReasoner.ruleBasedReasoning(params.rules);
+      case 'completion':
+        return lazyLoad.knowledgeGraphReasoner.knowledgeGraphReasoner.graphCompletion(params.topK);
+      case 'multi':
+        return lazyLoad.knowledgeGraphReasoner.knowledgeGraphReasoner.multiStepReasoning(params.queries);
+      default:
+        throw new Error('Unknown reasoning type');
+    }
+  },
   
   // 工具函数
   getCharter: () => {
@@ -285,6 +313,12 @@ const coreFunctions = {
         githubSync.init();
       }
       
+      // 初始化知识图谱推理器
+      if (mergedConfig.enableKnowledgeGraphReasoning !== false) {
+        const knowledgeGraphReasoner = new lazyLoad.knowledgeGraphReasoner.KnowledgeGraphReasoner();
+        await knowledgeGraphReasoner.init();
+      }
+      
       console.log('Lossless Superpower 系统初始化成功');
       return true;
     } catch (error) {
@@ -314,6 +348,11 @@ const coreFunctions = {
       // 停止 GitHub 同步
       if (lazyLoad.githubSync) {
         lazyLoad.githubSync.githubSync.cleanup();
+      }
+      
+      // 清理知识图谱推理器
+      if (lazyLoad.knowledgeGraphReasoner) {
+        lazyLoad.knowledgeGraphReasoner.knowledgeGraphReasoner.cleanup();
       }
       
       console.log('Lossless Superpower 系统清理完成');

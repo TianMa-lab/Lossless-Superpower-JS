@@ -243,6 +243,9 @@ flowchart TD
 - **stopAutoSync()**
 - **sync()**
 - **getSyncStatus()**
+- **getLocalProjectStatus()**
+- **setRemote(url)**
+- **pushLocalProject()**
 
 ### 5.31 plugin_system 模块 (src\superpowers\plugin_system.js)
 
@@ -3356,5 +3359,167 @@ Lossless Superpower JavaScript Version 是一个功能强大、架构清晰的AI
 ---
 
 **文档版本**: 1.0.0  
-**最后更新**: 2026-04-21T00:39:02.764Z  
+**最后更新**: 2026-04-21T01:39:02.693Z  
 **生成工具**: DocGenerator
+
+## 15. GitHub 同步功能使用方法
+
+### 15.1 核心功能
+- **外部仓库同步**: 每天0点自动同步 superpowers 和 hermes-agent 仓库
+- **本地项目推送**: 每天0点自动将 Lossless-Superpower-JS 项目推送到 GitHub
+- **变更分析**: 分析外部仓库变更，判断是否需要更新项目
+- **自动更新**: 根据变更分析结果，自动更新文档、依赖等
+
+### 15.2 配置选项
+
+#### 外部仓库配置
+```javascript
+repos: [
+  {
+    name: 'superpowers',
+    path: 'C:\\USERS\\55237\\superpowers',
+    remoteUrl: 'https://github.com/obra/superpowers.git',
+    branch: 'main'
+  },
+  {
+    name: 'hermes-agent',
+    path: 'C:\\USERS\\55237\\hermes-agent',
+    remoteUrl: 'https://github.com/NousResearch/hermes-agent.git',
+    branch: 'main'
+  }
+]
+```
+
+#### 本地项目配置
+```javascript
+localProject: {
+  name: 'Lossless-Superpower-JS',
+  path: 'C:\\USERS\\55237\\Lossless-Superpower-JS',
+  remoteUrl: 'https://github.com/TianMa-lab/Lossless-Superpower-JS.git',
+  branch: 'main',
+  autoCommit: true,
+  commitMessage: '自动同步更新'
+}
+```
+
+#### 同步时间配置
+```javascript
+syncTime: {
+  hour: 0,  // 每天0点
+  minute: 0
+}
+```
+
+### 15.3 使用方法
+
+#### 1. 手动触发同步
+```javascript
+const { sync } = require('./src/superpowers/github_sync');
+sync(); // 执行一次完整的同步
+```
+
+#### 2. 获取同步状态
+```javascript
+const { getSyncStatus, getLocalProjectStatus } = require('./src/superpowers/github_sync');
+
+// 获取外部仓库同步状态
+const syncStatus = getSyncStatus();
+console.log(syncStatus);
+
+// 获取本地项目状态
+const localStatus = getLocalProjectStatus();
+console.log(localStatus);
+```
+
+#### 3. 配置远程仓库
+```javascript
+const { setRemote } = require('./src/superpowers/github_sync');
+setRemote('https://github.com/your-username/your-repo.git');
+```
+
+#### 4. 手动推送本地项目
+```javascript
+const { pushLocalProject } = require('./src/superpowers/github_sync');
+pushLocalProject();
+```
+
+### 15.4 同步流程
+
+1. **初始化**: 系统启动时自动初始化 GitHub 同步器
+2. **定时同步**: 每天0点自动执行同步操作
+3. **外部仓库同步**: 拉取 superpowers 和 hermes-agent 最新代码
+4. **变更分析**: 分析代码变更，判断是否需要更新项目
+5. **项目更新**: 根据分析结果，自动更新文档、依赖等
+6. **本地项目推送**: 自动将本地项目推送到 GitHub
+
+### 15.5 变更分析规则
+
+系统会根据以下规则判断是否需要更新项目：
+
+| 判断条件 | 说明 |
+|---------|------|
+| 重大变更 (BREAKING) | 提交信息中包含 BREAKING、breaking-change 等关键字 |
+| 核心功能影响 | 变更涉及 skills/、agents/、commands/ 等核心目录 |
+| 新功能 | 提交信息中包含 feat、feature、new 等关键字 |
+| 配置变更 | 变更涉及 config、setting、environment 等配置文件 |
+| 大量文件变更 | 变更文件数超过 10 个阈值 |
+
+### 15.6 自动更新操作
+
+| 变更类型 | 自动执行的操作 |
+|---------|--------------|
+| 文档变更 | 自动更新系统设计文档 |
+| 依赖变更 | 提示用户更新依赖 |
+| 技能变更 | 同步更新技能定义 |
+| 配置变更 | 同步更新配置文件 |
+
+### 15.7 最佳实践
+
+1. **定期检查同步状态**：使用 `getSyncStatus()` 和 `getLocalProjectStatus()` 检查同步状态
+2. **手动触发同步**：在重要变更后，手动触发同步以确保代码及时更新
+3. **监控变更分析**：关注系统的变更分析结果，及时处理需要手动更新的内容
+4. **保持远程仓库可用**：确保 GitHub 远程仓库可访问，避免同步失败
+
+### 15.8 故障排除
+
+| 问题 | 可能原因 | 解决方案 |
+|------|---------|--------|
+| 同步失败 | 网络连接问题 | 检查网络连接，确保 GitHub 可访问 |
+| 推送失败 | 权限问题 | 确保本地 Git 配置了正确的 GitHub 凭证 |
+| 变更分析失败 | Git 命令执行失败 | 检查 Git 安装和仓库状态 |
+| 自动更新失败 | 依赖缺失 | 安装必要的依赖包 |
+
+### 15.9 示例输出
+
+```
+开始同步所有 GitHub 仓库...
+
+同步仓库: superpowers
+拉取 superpowers 最新代码...
+superpowers 已是最新版本
+superpowers 同步成功
+
+同步仓库: hermes-agent
+拉取 hermes-agent 最新代码...
+hermes-agent 已是最新版本
+hermes-agent 同步成功
+
+推送本地项目到 GitHub...
+添加所有变更到暂存区...
+提交变更: 自动同步更新 - 2026-04-21T01:31:47.955Z
+推送到 GitHub: https://github.com/TianMa-lab/Lossless-Superpower-JS.git
+Lossless-Superpower-JS 推送成功!
+
+所有 GitHub 仓库同步完成
+下次同步时间: 2026-04-21T16:00:00.000Z
+```
+
+### 15.10 注意事项
+
+- **网络连接**：确保系统能够访问 GitHub
+- **Git 配置**：确保本地 Git 已正确配置
+- **权限设置**：确保有推送权限到 GitHub 仓库
+- **存储空间**：确保有足够的存储空间同步外部仓库
+- **定时任务**：确保系统在0点时处于运行状态
+
+通过以上配置和使用方法，系统将每天0点自动同步外部仓库代码，并将本地项目推送到 GitHub，确保代码库的一致性和最新性。
