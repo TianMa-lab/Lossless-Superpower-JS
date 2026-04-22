@@ -576,7 +576,7 @@ if (require.main === module) {
   console.log('Lossless Superpower JavaScript Version');
   console.log('AI Agent Meta-capabilities Framework');
   console.log('====================================');
-  
+
   // 显示系统宪章
   const charter = coreFunctions.getCharter();
   if (charter) {
@@ -584,11 +584,23 @@ if (require.main === module) {
     console.log(charter);
     console.log('==============================\n');
   }
-  
+
   console.log('Available skills:', Object.values(PHASE_SKILLS));
   console.log('====================================');
   console.log('Type "require(\'./src\')" to access all functions');
   console.log('Type "require(\'./src\').init()" to initialize the system');
+
+  // 自动初始化系统
+  console.log('\n正在初始化系统...\n');
+  coreFunctions.init().then(result => {
+    if (result) {
+      console.log('\n系统初始化成功！\n');
+    } else {
+      console.log('\n系统初始化失败！\n');
+    }
+  }).catch(error => {
+    console.error('\n系统初始化出错:', error.message, '\n');
+  });
 }
 
 // 导出完整API（向后兼容）
