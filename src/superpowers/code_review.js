@@ -323,11 +323,12 @@ class CodeReview {
 
   reviewDirectory(directoryPath) {
     const results = [];
+    const self = this;
     
     function processFile(filePath) {
       try {
         const content = fs.readFileSync(filePath, 'utf8');
-        const result = this.reviewCode(filePath, content);
+        const result = self.reviewCode(filePath, content);
         results.push(result);
       } catch (error) {
         console.error(`Error reviewing file ${filePath}:`, error);
@@ -344,12 +345,12 @@ class CodeReview {
         if (stats.isDirectory() && file !== 'node_modules' && file !== '.git') {
           processDirectory(fullPath);
         } else if (stats.isFile() && (file.endsWith('.js') || file.endsWith('.ts') || file.endsWith('.jsx') || file.endsWith('.tsx'))) {
-          processFile.call(this, fullPath);
+          processFile(fullPath);
         }
       }
     }
 
-    processDirectory.call(this, directoryPath);
+    processDirectory(directoryPath);
     
     return {
       results,
