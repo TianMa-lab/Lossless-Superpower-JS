@@ -342,6 +342,101 @@
         </div>
         <button class="btn btn-primary" onclick="refreshStatus()">刷新状态</button>
       </div>
+
+      <div class="card">
+        <h2>性能监控</h2>
+        <div class="stats">
+          <div class="stat-item">
+            <div class="stat-value" id="cpu-usage">0</div>
+            <div class="stat-label">CPU使用率 (%)</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value" id="disk-usage">0</div>
+            <div class="stat-label">磁盘使用率 (%)</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value" id="network-speed">0</div>
+            <div class="stat-label">网络速度 (MB/s)</div>
+          </div>
+        </div>
+        <button class="btn btn-primary" onclick="viewPerformanceReport()">查看性能报告</button>
+      </div>
+
+      <div class="card">
+        <h2>安全扫描</h2>
+        <div class="stats">
+          <div class="stat-item">
+            <div class="stat-value" id="security-scans">0</div>
+            <div class="stat-label">扫描次数</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value" id="security-vulnerabilities">0</div>
+            <div class="stat-label">漏洞数</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value" id="security-last-scan">-</div>
+            <div class="stat-label">最后扫描</div>
+          </div>
+        </div>
+        <button class="btn btn-primary" onclick="runSecurityScan()">运行安全扫描</button>
+      </div>
+
+      <div class="card">
+        <h2>经验教训</h2>
+        <div class="stats">
+          <div class="stat-item">
+            <div class="stat-value" id="lessons-total">0</div>
+            <div class="stat-label">总教训数</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value" id="lessons-applied">0</div>
+            <div class="stat-label">已应用</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value" id="lessons-new">0</div>
+            <div class="stat-label">新教训</div>
+          </div>
+        </div>
+        <button class="btn btn-primary" onclick="viewLessons()">查看经验教训</button>
+      </div>
+
+      <div class="card">
+        <h2>自动优化</h2>
+        <div class="stats">
+          <div class="stat-item">
+            <div class="stat-value" id="optimization-count">0</div>
+            <div class="stat-label">优化次数</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value" id="optimization-success">0</div>
+            <div class="stat-label">成功优化</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value" id="optimization-last">-</div>
+            <div class="stat-label">最后优化</div>
+          </div>
+        </div>
+        <button class="btn btn-primary" onclick="runOptimization()">运行优化</button>
+      </div>
+
+      <div class="card">
+        <h2>系统健康</h2>
+        <div class="stats">
+          <div class="stat-item">
+            <div class="stat-value" id="health-score">0</div>
+            <div class="stat-label">健康评分</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value" id="health-status">-</div>
+            <div class="stat-label">状态</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value" id="health-checks">0</div>
+            <div class="stat-label">检查项</div>
+          </div>
+        </div>
+        <button class="btn btn-primary" onclick="runHealthCheck()">健康检查</button>
+      </div>
     </div>
 
     <div class="projects">
@@ -366,6 +461,11 @@
       sync: { total: 0, success: 0, failed: 0 },
       analysis: { total: 0, success: 0, failed: 0 },
       system: { memoryUsage: 0, uptime: 0, alertCount: 0 },
+      performance: { cpu: 0, disk: 0, network: 0, lastReport: null },
+      security: { scans: 0, vulnerabilities: 0, lastScan: null },
+      lessons: { total: 0, applied: 0, new: 0, lastUpdate: null },
+      optimization: { count: 0, success: 0, last: null },
+      health: { score: 0, status: 'unknown', checks: 0 },
       projects: [],
       alerts: []
     };
@@ -442,6 +542,26 @@
       document.getElementById('memory-usage').textContent = dataState.system.memoryUsage;
       document.getElementById('uptime').textContent = dataState.system.uptime;
       document.getElementById('alert-count').textContent = dataState.system.alertCount;
+
+      document.getElementById('cpu-usage').textContent = dataState.performance.cpu;
+      document.getElementById('disk-usage').textContent = dataState.performance.disk;
+      document.getElementById('network-speed').textContent = dataState.performance.network;
+
+      document.getElementById('security-scans').textContent = dataState.security.scans;
+      document.getElementById('security-vulnerabilities').textContent = dataState.security.vulnerabilities;
+      document.getElementById('security-last-scan').textContent = dataState.security.lastScan || '-';
+
+      document.getElementById('lessons-total').textContent = dataState.lessons.total;
+      document.getElementById('lessons-applied').textContent = dataState.lessons.applied;
+      document.getElementById('lessons-new').textContent = dataState.lessons.new;
+
+      document.getElementById('optimization-count').textContent = dataState.optimization.count;
+      document.getElementById('optimization-success').textContent = dataState.optimization.success;
+      document.getElementById('optimization-last').textContent = dataState.optimization.last || '-';
+
+      document.getElementById('health-score').textContent = dataState.health.score;
+      document.getElementById('health-status').textContent = dataState.health.status;
+      document.getElementById('health-checks').textContent = dataState.health.checks;
     }
 
     // 更新项目列表
@@ -715,6 +835,119 @@
       updateProjectList();
       updateAlerts();
       showMessage('状态已更新！', 'success');
+    }
+
+    // 查看性能报告
+    async function viewPerformanceReport() {
+      try {
+        showMessage('加载性能报告...', 'info');
+        const response = await fetch(`${API_BASE}/performance/report`);
+        const result = await response.json();
+        
+        if (result.success) {
+          showMessage('性能报告加载成功！', 'success');
+          // 这里可以显示性能报告的详细信息
+        } else {
+          showMessage('无法加载性能报告', 'error');
+        }
+      } catch (error) {
+        console.error('加载性能报告失败:', error);
+        showMessage('加载性能报告失败', 'error');
+      }
+    }
+
+    // 运行安全扫描
+    async function runSecurityScan() {
+      try {
+        showMessage('开始安全扫描...', 'info');
+        const response = await fetch(`${API_BASE}/security/scan`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' }
+        });
+        const result = await response.json();
+        
+        if (result.success) {
+          showMessage('安全扫描完成！', 'success');
+          dataState.security.scans = (dataState.security.scans || 0) + 1;
+          dataState.security.vulnerabilities = result.vulnerabilities || 0;
+          dataState.security.lastScan = new Date().toLocaleString();
+          updateDashboard();
+        } else {
+          showMessage('安全扫描失败', 'error');
+        }
+      } catch (error) {
+        console.error('安全扫描失败:', error);
+        showMessage('安全扫描失败', 'error');
+      }
+    }
+
+    // 查看经验教训
+    async function viewLessons() {
+      try {
+        showMessage('加载经验教训...', 'info');
+        const response = await fetch(`${API_BASE}/lessons`);
+        const result = await response.json();
+        
+        if (result.success) {
+          showMessage('经验教训加载成功！', 'success');
+          // 这里可以显示经验教训的详细信息
+        } else {
+          showMessage('无法加载经验教训', 'error');
+        }
+      } catch (error) {
+        console.error('加载经验教训失败:', error);
+        showMessage('加载经验教训失败', 'error');
+      }
+    }
+
+    // 运行优化
+    async function runOptimization() {
+      try {
+        showMessage('开始系统优化...', 'info');
+        const response = await fetch(`${API_BASE}/optimization/run`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' }
+        });
+        const result = await response.json();
+        
+        if (result.success) {
+          showMessage('系统优化完成！', 'success');
+          dataState.optimization.count = (dataState.optimization.count || 0) + 1;
+          dataState.optimization.success = (dataState.optimization.success || 0) + 1;
+          dataState.optimization.last = new Date().toLocaleString();
+          updateDashboard();
+        } else {
+          showMessage('系统优化失败', 'error');
+        }
+      } catch (error) {
+        console.error('系统优化失败:', error);
+        showMessage('系统优化失败', 'error');
+      }
+    }
+
+    // 运行健康检查
+    async function runHealthCheck() {
+      try {
+        showMessage('开始健康检查...', 'info');
+        const response = await fetch(`${API_BASE}/health/check`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' }
+        });
+        const result = await response.json();
+        
+        if (result.success) {
+          showMessage('健康检查完成！', 'success');
+          dataState.health.score = result.score || 0;
+          dataState.health.status = result.status || 'unknown';
+          dataState.health.checks = result.checks || 0;
+          updateDashboard();
+        } else {
+          showMessage('健康检查失败', 'error');
+        }
+      } catch (error) {
+        console.error('健康检查失败:', error);
+        showMessage('健康检查失败', 'error');
+      }
     }
 
     // 页面加载完成后初始化

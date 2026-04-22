@@ -149,6 +149,26 @@ const lazyLoad = {
   get dagKgAutoIteration() {
     delete this.dagKgAutoIteration;
     return this.dagKgAutoIteration = require('./superpowers/dag_kg_auto_iteration');
+  },
+  
+  // 代码审查模块
+  get codeReview() {
+    delete this.codeReview;
+    const CodeReview = require('./superpowers/code_review');
+    return this.codeReview = {
+      CodeReview,
+      codeReview: new CodeReview()
+    };
+  },
+  
+  // 智能编码助手模块
+  get codingAssistant() {
+    delete this.codingAssistant;
+    const CodingAssistant = require('./superpowers/coding_assistant');
+    return this.codingAssistant = {
+      CodingAssistant,
+      codingAssistant: new CodingAssistant()
+    };
   }
 };
 
@@ -314,6 +334,21 @@ const coreFunctions = {
     return autoIteration;
   },
   
+  // 代码审查模块
+  codeReview: lazyLoad.codeReview.codeReview,
+  CodeReview: lazyLoad.codeReview.CodeReview,
+  reviewCode: (filePath, content) => lazyLoad.codeReview.codeReview.reviewCode(filePath, content),
+  reviewDirectory: (directoryPath) => lazyLoad.codeReview.codeReview.reviewDirectory(directoryPath),
+  generateCodeReviewReport: (reviewResults) => lazyLoad.codeReview.codeReview.generateReport(reviewResults),
+  
+  // 智能编码助手模块
+  codingAssistant: lazyLoad.codingAssistant.codingAssistant,
+  CodingAssistant: lazyLoad.codingAssistant.CodingAssistant,
+  getCodingSuggestions: (content, filePath) => lazyLoad.codingAssistant.codingAssistant.getCodingSuggestions(content, filePath),
+  generateCodeTemplate: (taskDescription) => lazyLoad.codingAssistant.codingAssistant.generateCodeTemplate(taskDescription),
+  getRefactoringSuggestions: (content) => lazyLoad.codingAssistant.codingAssistant.getRefactoringSuggestions(content),
+  analyzeCodeQuality: (content) => lazyLoad.codingAssistant.codingAssistant.analyzeCodeQuality(content),
+  
   // 工具函数
   getCharter: () => {
     const charterPath = path.join(__dirname, '..', 'SYSTEM_CHARTER.md');
@@ -339,7 +374,9 @@ const coreFunctions = {
         memoryDir: './memory',
         storageDir: './storage',
         debug: false,
-        enableAutoIterationScheduler: true
+        enableAutoIterationScheduler: true,
+        enableCodeReview: true,
+        enableCodingAssistant: true
       };
     },
     
@@ -441,6 +478,28 @@ const coreFunctions = {
         const autoIteration = new lazyLoad.kgrAutoIteration.KGRAutoIteration(mergedConfig.kgrAutoIterationConfig || {});
         autoIteration.start();
       }
+      
+      // 初始化代码审查模块
+      if (mergedConfig.enableCodeReview !== false) {
+        try {
+          console.log('[代码审查] 开始初始化代码审查模块...');
+          const codeReview = new lazyLoad.codeReview.CodeReview();
+          console.log('[代码审查] 代码审查模块初始化完成');
+        } catch (error) {
+          console.error('[代码审查] 初始化代码审查模块失败:', error.message);
+        }
+      }
+      
+      // 初始化智能编码助手模块
+      if (mergedConfig.enableCodingAssistant !== false) {
+        try {
+          console.log('[编码助手] 开始初始化智能编码助手模块...');
+          const codingAssistant = new lazyLoad.codingAssistant.CodingAssistant();
+          console.log('[编码助手] 智能编码助手模块初始化完成');
+        } catch (error) {
+          console.error('[编码助手] 初始化智能编码助手模块失败:', error.message);
+        }
+      }
 
       // 启动自动迭代调度器（每天0点执行同步）
       if (mergedConfig.enableAutoIterationScheduler !== false) {
@@ -450,6 +509,95 @@ const coreFunctions = {
           console.log('[调度器] 自动迭代调度器启动完成');
         } catch (error) {
           console.error('[调度器] 启动自动迭代调度器失败:', error.message);
+        }
+      }
+
+      // 启动系统监控（每5分钟执行一次）
+      if (mergedConfig.enableMonitoring !== false) {
+        try {
+          console.log('[监控] 开始启动系统监控...');
+          const MonitoringSystem = require('./superpowers/monitoring');
+          const monitoringSystem = new MonitoringSystem();
+          monitoringSystem.startMonitoring();
+          console.log('[监控] 系统监控启动完成');
+        } catch (error) {
+          console.error('[监控] 启动系统监控失败:', error.message);
+        }
+      }
+
+      // 启动备份管理器（每天执行一次备份）
+      if (mergedConfig.enableBackup !== false) {
+        try {
+          console.log('[备份] 开始启动备份管理器...');
+          const BackupManager = require('./superpowers/backup_manager');
+          const backupManager = new BackupManager();
+          backupManager.startBackupSchedule();
+          console.log('[备份] 备份管理器启动完成');
+        } catch (error) {
+          console.error('[备份] 启动备份管理器失败:', error.message);
+        }
+      }
+
+      // 启动通知管理器
+      if (mergedConfig.enableNotification !== false) {
+        try {
+          console.log('[通知] 开始启动通知管理器...');
+          const NotificationManager = require('./superpowers/notification_manager');
+          const notificationManager = new NotificationManager();
+          console.log('[通知] 通知管理器启动完成');
+        } catch (error) {
+          console.error('[通知] 启动通知管理器失败:', error.message);
+        }
+      }
+
+      // 启动性能监控（每周执行一次性能分析）
+      if (mergedConfig.enablePerformanceMonitor !== false) {
+        try {
+          console.log('[性能] 开始启动性能监控...');
+          const PerformanceMonitor = require('./superpowers/performance_monitor');
+          const performanceMonitor = new PerformanceMonitor();
+          performanceMonitor.startPerformanceMonitoring();
+          console.log('[性能] 性能监控启动完成');
+        } catch (error) {
+          console.error('[性能] 启动性能监控失败:', error.message);
+        }
+      }
+
+      // 启动安全扫描（每周执行一次安全检查）
+      if (mergedConfig.enableSecurityScan !== false) {
+        try {
+          console.log('[安全] 开始启动安全扫描...');
+          const SecurityScanner = require('./superpowers/security_scanner');
+          const securityScanner = new SecurityScanner();
+          securityScanner.startSecurityScanning();
+          console.log('[安全] 安全扫描启动完成');
+        } catch (error) {
+          console.error('[安全] 启动安全扫描失败:', error.message);
+        }
+      }
+
+      // 启动经验教训收集（每小时自动提取经验教训）
+      if (mergedConfig.enableLessonCollection !== false) {
+        try {
+          console.log('[经验教训] 开始启动经验教训收集...');
+          const lessonManager = require('./superpowers/knowledge/lesson_manager');
+          lessonManager.startAutoExtraction();
+          console.log('[经验教训] 经验教训收集启动完成');
+        } catch (error) {
+          console.error('[经验教训] 启动经验教训收集失败:', error.message);
+        }
+      }
+
+      // 启动自动优化（每天执行一次系统优化）
+      if (mergedConfig.enableAutoOptimization !== false) {
+        try {
+          console.log('[优化] 开始启动自动优化...');
+          const AutoOptimizer = require('./superpowers/auto_optimizer');
+          const autoOptimizer = new AutoOptimizer();
+          autoOptimizer.startAutoOptimization();
+          console.log('[优化] 自动优化启动完成');
+        } catch (error) {
+          console.error('[优化] 启动自动优化失败:', error.message);
         }
       }
 

@@ -32,5 +32,105 @@
     "created": "2026-04-14T11:04:31.911399",
     "times_matched": 0,
     "last_matched": null
+  },
+  {
+    "id": "lesson-20260422-001",
+    "lesson": "系统初始化时应使用延迟加载避免模块初始化阻塞",
+    "story": {
+      "context": "调度器初始化时直接加载所有模块导致系统启动阻塞",
+      "approaches": [
+        "直接初始化所有模块",
+        "使用延迟加载模式"
+      ],
+      "breakthrough": "采用延迟加载（getter方法）避免模块初始化阻塞",
+      "result": "系统启动速度提升，调度器正常运行"
+    },
+    "triggers": [
+      "初始化",
+      "阻塞",
+      "延迟加载"
+    ],
+    "related_topics": [
+      "系统架构",
+      "性能优化"
+    ],
+    "created": "2026-04-22T02:21:21.848Z",
+    "times_matched": 0,
+    "last_matched": null
+  },
+  {
+    "id": "lesson-20260422-002",
+    "lesson": "定时任务应使用精确时间点而非固定间隔",
+    "story": {
+      "context": "调度器使用24小时间隔导致同步时间不断偏移",
+      "approaches": [
+        "使用固定时间间隔",
+        "计算到目标时间点的延迟"
+      ],
+      "breakthrough": "计算距离下次0点的时间，确保每天准时执行",
+      "result": "同步任务在每天0点准时执行"
+    },
+    "triggers": [
+      "定时任务",
+      "时间偏移",
+      "0点执行"
+    ],
+    "related_topics": [
+      "调度系统",
+      "时间管理"
+    ],
+    "created": "2026-04-22T02:21:21.852Z",
+    "times_matched": 0,
+    "last_matched": null
+  },
+  {
+    "id": "lesson-20260422-003",
+    "lesson": "UI界面应提供真实的同步进度反馈",
+    "story": {
+      "context": "同步按钮点击后无反馈，用户体验差",
+      "approaches": [
+        "使用模拟进度",
+        "实现真实进度显示"
+      ],
+      "breakthrough": "添加进度条、旋转动画和实时状态更新",
+      "result": "用户可以看到同步进度，体验大大改善"
+    },
+    "triggers": [
+      "UI反馈",
+      "同步进度",
+      "用户体验"
+    ],
+    "related_topics": [
+      "前端开发",
+      "用户界面"
+    ],
+    "created": "2026-04-22T02:21:21.853Z",
+    "times_matched": 0,
+    "last_matched": null
+  },
+  {
+    "id": "lesson-20260422-004",
+    "lesson": "API服务器应正确处理错误并返回详细信息",
+    "story": {
+      "context": "API服务器错误处理不当导致前端显示失败",
+      "approaches": [
+        "简单错误返回",
+        "详细错误信息"
+      ],
+      "breakthrough": "完善错误处理，返回具体错误信息和状态码",
+      "result": "前端可以正确处理错误，用户看到具体失败原因"
+    },
+    "triggers": [
+      "API错误",
+      "错误处理",
+      "前端显示"
+    ],
+    "related_topics": [
+      "后端开发",
+      "API设计"
+    ],
+    "created": "2026-04-22T02:21:21.853Z",
+    "times_matched": 0,
+    "last_matched": null
   }
 ]
