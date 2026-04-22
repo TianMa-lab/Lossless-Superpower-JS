@@ -338,7 +338,8 @@ const coreFunctions = {
         skillsDir: './skills',
         memoryDir: './memory',
         storageDir: './storage',
-        debug: false
+        debug: false,
+        enableAutoIterationScheduler: true
       };
     },
     

@@ -24945,5 +24945,15 @@
     "end_time": null,
     "steps": [],
     "result": null
+  },
+  "auto_record_session_1776818391159": {
+    "id": "auto_record_session_1776818391159",
+    "name": "自动记录会话",
+    "description": "全局自动任务记录会话",
+    "status": "in_progress",
+    "start_time": 1776818391.159,
+    "end_time": null,
+    "steps": [],
+    "result": null
   }
 }
