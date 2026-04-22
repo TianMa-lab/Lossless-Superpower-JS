@@ -443,7 +443,13 @@ const coreFunctions = {
 
       // 启动自动迭代调度器（每天0点执行同步）
       if (mergedConfig.enableAutoIterationScheduler !== false) {
-        coreFunctions.startAutoIteration();
+        try {
+          console.log('[调度器] 开始启动自动迭代调度器...');
+          coreFunctions.startAutoIteration();
+          console.log('[调度器] 自动迭代调度器启动完成');
+        } catch (error) {
+          console.error('[调度器] 启动自动迭代调度器失败:', error.message);
+        }
       }
 
       console.log('Lossless Superpower 系统初始化成功');
