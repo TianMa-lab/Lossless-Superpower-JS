@@ -87,14 +87,27 @@ class Scheduler {
   }
 
   startScheduledCycle() {
-    this.runFullCycle(); // 立即执行一次
+    // 计算距离下一个0点的时间
+    const now = new Date();
+    const midnight = new Date(now);
+    midnight.setHours(24, 0, 0, 0); // 设置为明天0点
+    const msUntilMidnight = midnight.getTime() - now.getTime();
     
-    // 设置定时任务
-    setInterval(() => {
+    console.log(`距离下次自动同步 (0点) 还有 ${Math.round(msUntilMidnight / 1000 / 60)} 分钟`);
+    
+    // 先在0点执行一次
+    setTimeout(() => {
+      console.log('[自动任务] 开始执行每日0点同步...');
       this.runFullCycle();
-    }, this.config.syncInterval);
+      
+      // 然后每24小时执行一次
+      setInterval(() => {
+        console.log('[自动任务] 开始执行每日0点同步...');
+        this.runFullCycle();
+      }, 24 * 60 * 60 * 1000);
+    }, msUntilMidnight);
     
-    console.log('自动执行任务已启动，每24小时执行一次完整周期');
+    console.log('自动执行任务已启动，将在每天0点执行完整周期');
   }
 
   async runManualCycle() {

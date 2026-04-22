@@ -440,7 +440,12 @@ const coreFunctions = {
         const autoIteration = new lazyLoad.kgrAutoIteration.KGRAutoIteration(mergedConfig.kgrAutoIterationConfig || {});
         autoIteration.start();
       }
-      
+
+      // 启动自动迭代调度器（每天0点执行同步）
+      if (mergedConfig.enableAutoIterationScheduler !== false) {
+        coreFunctions.startAutoIteration();
+      }
+
       console.log('Lossless Superpower 系统初始化成功');
       return true;
     } catch (error) {
