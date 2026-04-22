@@ -19,12 +19,48 @@ class Scheduler {
       fs.mkdirSync(this.config.logPath, { recursive: true });
     }
     
-    // 初始化各个模块
-    this.syncManager = new SyncManager();
-    this.analyzer = new Analyzer();
-    this.comparator = new Comparator();
-    this.docGenerator = new DocGenerator();
-    this.executor = new Executor();
+    // 延迟初始化各个模块（避免阻塞启动）
+    this._syncManager = null;
+    this._analyzer = null;
+    this._comparator = null;
+    this._docGenerator = null;
+    this._executor = null;
+  }
+  
+  // 延迟加载模块
+  get syncManager() {
+    if (!this._syncManager) {
+      this._syncManager = new SyncManager();
+    }
+    return this._syncManager;
+  }
+  
+  get analyzer() {
+    if (!this._analyzer) {
+      this._analyzer = new Analyzer();
+    }
+    return this._analyzer;
+  }
+  
+  get comparator() {
+    if (!this._comparator) {
+      this._comparator = new Comparator();
+    }
+    return this._comparator;
+  }
+  
+  get docGenerator() {
+    if (!this._docGenerator) {
+      this._docGenerator = new DocGenerator();
+    }
+    return this._docGenerator;
+  }
+  
+  get executor() {
+    if (!this._executor) {
+      this._executor = new Executor();
+    }
+    return this._executor;
   }
 
   async runFullCycle() {
