@@ -21,6 +21,103 @@
     .container {
       max-width: 1200px;
       margin: 0 auto;
+      padding: 0;
+    }
+
+    /* 导航栏样式 */
+    .navbar {
+      background-color: #2c3e50;
+      color: white;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .navbar-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 20px;
+    }
+
+    .navbar-brand {
+      font-size: 18px;
+      font-weight: bold;
+      padding: 15px 0;
+    }
+
+    .navbar-menu {
+      display: flex;
+      list-style: none;
+    }
+
+    .navbar-item {
+      position: relative;
+    }
+
+    .navbar-link {
+      display: block;
+      padding: 15px 20px;
+      color: white;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .navbar-link:hover {
+      background-color: #34495e;
+    }
+
+    /* 下拉菜单样式 */
+    .dropdown {
+      position: relative;
+    }
+
+    .dropdown-menu {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #2c3e50;
+      min-width: 200px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+      display: none;
+      z-index: 1000;
+    }
+
+    .dropdown:hover .dropdown-menu {
+      display: block;
+    }
+
+    .dropdown-item {
+      list-style: none;
+    }
+
+    .dropdown-link {
+      display: block;
+      padding: 10px 20px;
+      color: white;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .dropdown-link:hover {
+      background-color: #34495e;
+    }
+
+    /* 三级菜单样式 */
+    .dropdown-submenu {
+      position: relative;
+    }
+
+    .dropdown-submenu .dropdown-menu {
+      left: 100%;
+      top: 0;
+    }
+
+    .dropdown-submenu:hover > .dropdown-menu {
+      display: block;
+    }
+
+    .content {
       padding: 20px;
     }
 
@@ -261,202 +358,547 @@
     @keyframes spin {
       to { transform: rotate(360deg); }
     }
+
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.5);
+    }
+
+    .modal-content {
+      background-color: white;
+      margin: 5% auto;
+      padding: 20px;
+      border-radius: 8px;
+      width: 80%;
+      max-width: 900px;
+      max-height: 80vh;
+      overflow-y: auto;
+    }
+
+    .modal-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .close {
+      font-size: 28px;
+      font-weight: bold;
+      cursor: pointer;
+      color: #aaa;
+    }
+
+    .close:hover {
+      color: #000;
+    }
+
+    .code-input {
+      width: 100%;
+      height: 200px;
+      margin-bottom: 10px;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      font-family: monospace;
+      font-size: 14px;
+    }
+
+    .result-area {
+      background-color: #f8f9fa;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      padding: 15px;
+      margin-top: 10px;
+      max-height: 400px;
+      overflow-y: auto;
+    }
+
+    .suggestion-item {
+      padding: 10px;
+      margin-bottom: 10px;
+      border-left: 3px solid #3498db;
+      background-color: #f8f9fa;
+    }
+
+    .suggestion-type {
+      font-weight: bold;
+      color: #3498db;
+      margin-bottom: 5px;
+    }
+
+    .suggestion-message {
+      color: #333;
+      margin-bottom: 5px;
+    }
+
+    .suggestion-example {
+      font-family: monospace;
+      font-size: 12px;
+      color: #666;
+      background-color: #fff;
+      padding: 5px;
+      border-radius: 3px;
+    }
+
+    .quality-score {
+      display: flex;
+      justify-content: space-around;
+      margin-bottom: 20px;
+    }
+
+    .quality-item {
+      text-align: center;
+    }
+
+    .quality-value {
+      font-size: 36px;
+      font-weight: bold;
+      color: #3498db;
+    }
+
+    .quality-label {
+      font-size: 14px;
+      color: #7f8c8d;
+    }
+
+    .guidelines-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .guidelines-list li {
+      padding: 10px;
+      margin-bottom: 10px;
+      background-color: #f8f9fa;
+      border-left: 3px solid #2ecc71;
+    }
+
+    /* 响应式设计 */
+    @media (max-width: 768px) {
+      .navbar-container {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .navbar-menu {
+        flex-direction: column;
+        width: 100%;
+      }
+
+      .navbar-item {
+        width: 100%;
+      }
+
+      .navbar-link {
+        padding: 10px 20px;
+      }
+
+      .dropdown-menu {
+        position: static;
+        box-shadow: none;
+        border-top: 1px solid #34495e;
+      }
+
+      .dropdown-submenu .dropdown-menu {
+        left: 0;
+        top: 100%;
+      }
+
+      .dashboard {
+        grid-template-columns: 1fr;
+      }
+    }
   </style>
 </head>
 <body>
+  <nav class="navbar">
+    <div class="navbar-container">
+      <div class="navbar-brand">自动迭代系统管理</div>
+      <ul class="navbar-menu">
+        <li class="navbar-item">
+          <a href="#" class="navbar-link" onclick="showSection('dashboard')">仪表盘</a>
+        </li>
+        <li class="navbar-item dropdown">
+          <a href="#" class="navbar-link">项目管理</a>
+          <ul class="dropdown-menu">
+            <li class="dropdown-item">
+              <a href="#" class="dropdown-link" onclick="showSection('sync-status')">同步状态</a>
+            </li>
+            <li class="dropdown-item">
+              <a href="#" class="dropdown-link" onclick="showSection('analysis-status')">分析状态</a>
+            </li>
+            <li class="dropdown-item">
+              <a href="#" class="dropdown-link" onclick="showSection('projects')">项目列表</a>
+            </li>
+          </ul>
+        </li>
+        <li class="navbar-item dropdown">
+          <a href="#" class="navbar-link">代码质量</a>
+          <ul class="dropdown-menu">
+            <li class="dropdown-item">
+              <a href="#" class="dropdown-link" onclick="openCodeReviewModal()">代码审查</a>
+            </li>
+            <li class="dropdown-item">
+              <a href="#" class="dropdown-link" onclick="openCodingAssistantModal()">智能编码助手</a>
+            </li>
+            <li class="dropdown-item dropdown-submenu">
+              <a href="#" class="dropdown-link">编码工具</a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-item">
+                  <a href="#" class="dropdown-link" onclick="generateCodeTemplate()">代码模板生成</a>
+                </li>
+                <li class="dropdown-item">
+                  <a href="#" class="dropdown-link" onclick="openGuidelinesModal()">编码准则</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li class="navbar-item dropdown">
+          <a href="#" class="navbar-link">系统监控</a>
+          <ul class="dropdown-menu">
+            <li class="dropdown-item">
+              <a href="#" class="dropdown-link" onclick="showSection('system-status')">系统状态</a>
+            </li>
+            <li class="dropdown-item">
+              <a href="#" class="dropdown-link" onclick="showSection('performance')">性能监控</a>
+            </li>
+            <li class="dropdown-item">
+              <a href="#" class="dropdown-link" onclick="runSecurityScan()">安全扫描</a>
+            </li>
+            <li class="dropdown-item">
+              <a href="#" class="dropdown-link" onclick="runHealthCheck()">系统健康</a>
+            </li>
+          </ul>
+        </li>
+        <li class="navbar-item dropdown">
+          <a href="#" class="navbar-link">系统维护</a>
+          <ul class="dropdown-menu">
+            <li class="dropdown-item">
+              <a href="#" class="dropdown-link" onclick="viewLessons()">经验教训</a>
+            </li>
+            <li class="dropdown-item">
+              <a href="#" class="dropdown-link" onclick="runOptimization()">自动优化</a>
+            </li>
+            <li class="dropdown-item">
+              <a href="#" class="dropdown-link" onclick="refreshStatus()">刷新状态</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
   <div class="container">
-    <h1>自动迭代系统管理</h1>
+    <div class="content">
+      <div id="message-container"></div>
 
-    <div id="message-container"></div>
-
-    <!-- 同步进度显示 -->
-    <div id="sync-progress" class="card" style="display: none; margin-bottom: 20px;">
-      <h2>同步进度</h2>
-      <div id="sync-progress-content">
-        <div class="progress-info">
-          <span id="progress-current-project">准备中...</span>
-        </div>
-        <div class="progress-bar">
-          <div id="progress-bar" class="progress-fill"></div>
-        </div>
-        <div class="progress-stats">
-          <span id="progress-completed">0</span> / <span id="progress-total">0</span> 已完成
+      <div id="sync-progress" class="card" style="display: none; margin-bottom: 20px;">
+        <h2>同步进度</h2>
+        <div id="sync-progress-content">
+          <div class="progress-info">
+            <span id="progress-current-project">准备中...</span>
+          </div>
+          <div class="progress-bar">
+            <div id="progress-bar" class="progress-fill"></div>
+          </div>
+          <div class="progress-stats">
+            <span id="progress-completed">0</span> / <span id="progress-total">0</span> 已完成
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="dashboard">
-      <div class="card">
-        <h2>同步状态</h2>
-        <div class="stats">
-          <div class="stat-item">
-            <div class="stat-value" id="sync-total">0</div>
-            <div class="stat-label">总项目数</div>
+      <div id="dashboard" class="dashboard">
+        <div class="card" id="sync-status-card">
+          <h2>同步状态</h2>
+          <div class="stats">
+            <div class="stat-item">
+              <div class="stat-value" id="sync-total">0</div>
+              <div class="stat-label">总项目数</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-value" id="sync-success">0</div>
+              <div class="stat-label">同步成功</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-value" id="sync-failed">0</div>
+              <div class="stat-label">同步失败</div>
+            </div>
           </div>
-          <div class="stat-item">
-            <div class="stat-value" id="sync-success">0</div>
-            <div class="stat-label">同步成功</div>
-          </div>
-          <div class="stat-item">
-            <div class="stat-value" id="sync-failed">0</div>
-            <div class="stat-label">同步失败</div>
-          </div>
+          <button class="btn btn-primary" id="sync-all-btn" onclick="syncAll()">同步所有项目</button>
         </div>
-        <button class="btn btn-primary" id="sync-all-btn" onclick="syncAll()">同步所有项目</button>
+
+        <div class="card" id="analysis-status-card">
+          <h2>分析状态</h2>
+          <div class="stats">
+            <div class="stat-item">
+              <div class="stat-value" id="analysis-total">0</div>
+              <div class="stat-label">总分析数</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-value" id="analysis-success">0</div>
+              <div class="stat-label">分析成功</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-value" id="analysis-failed">0</div>
+              <div class="stat-label">分析失败</div>
+            </div>
+          </div>
+          <button class="btn btn-primary" id="analyze-all-btn" onclick="analyzeAll()">分析所有项目</button>
+        </div>
+
+        <div class="card" id="system-status-card">
+          <h2>系统状态</h2>
+          <div class="stats">
+            <div class="stat-item">
+              <div class="stat-value" id="memory-usage">0</div>
+              <div class="stat-label">内存使用 (MB)</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-value" id="uptime">0</div>
+              <div class="stat-label">运行时间 (小时)</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-value" id="alert-count">0</div>
+              <div class="stat-label">告警数</div>
+            </div>
+          </div>
+          <button class="btn btn-primary" onclick="refreshStatus()">刷新状态</button>
+        </div>
+
+        <div class="card" id="code-review-card">
+          <h2>代码审查</h2>
+          <div class="stats">
+            <div class="stat-item">
+              <div class="stat-value" id="review-files">0</div>
+              <div class="stat-label">审查文件</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-value" id="review-issues">0</div>
+              <div class="stat-label">发现问题</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-value" id="review-quality">-</div>
+              <div class="stat-label">代码质量</div>
+            </div>
+          </div>
+          <button class="btn btn-primary" onclick="openCodeReviewModal()">代码审查</button>
+          <button class="btn btn-secondary" onclick="openGuidelinesModal()">查看准则</button>
+        </div>
+
+        <div class="card" id="coding-assistant-card">
+          <h2>智能编码助手</h2>
+          <div class="stats">
+            <div class="stat-item">
+              <div class="stat-value" id="assistant-suggestions">0</div>
+              <div class="stat-label">建议数</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-value" id="assistant-templates">-</div>
+              <div class="stat-label">模板生成</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-value" id="assistant-refactoring">-</div>
+              <div class="stat-label">重构建议</div>
+            </div>
+          </div>
+          <button class="btn btn-primary" onclick="openCodingAssistantModal()">编码助手</button>
+          <button class="btn btn-secondary" onclick="generateCodeTemplate()">生成模板</button>
+        </div>
+
+        <div class="card" id="performance-card">
+          <h2>性能监控</h2>
+          <div class="stats">
+            <div class="stat-item">
+              <div class="stat-value" id="cpu-usage">0</div>
+              <div class="stat-label">CPU使用率 (%)</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-value" id="disk-usage">0</div>
+              <div class="stat-label">磁盘使用率 (%)</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-value" id="network-speed">0</div>
+              <div class="stat-label">网络速度 (MB/s)</div>
+            </div>
+          </div>
+          <button class="btn btn-primary" onclick="viewPerformanceReport()">查看性能报告</button>
+        </div>
+
+        <div class="card" id="security-card">
+          <h2>安全扫描</h2>
+          <div class="stats">
+            <div class="stat-item">
+              <div class="stat-value" id="security-scans">0</div>
+              <div class="stat-label">扫描次数</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-value" id="security-vulnerabilities">0</div>
+              <div class="stat-label">漏洞数</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-value" id="security-last-scan">-</div>
+              <div class="stat-label">最后扫描</div>
+            </div>
+          </div>
+          <button class="btn btn-primary" onclick="runSecurityScan()">运行安全扫描</button>
+        </div>
+
+        <div class="card" id="lessons-card">
+          <h2>经验教训</h2>
+          <div class="stats">
+            <div class="stat-item">
+              <div class="stat-value" id="lessons-total">0</div>
+              <div class="stat-label">总教训数</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-value" id="lessons-applied">0</div>
+              <div class="stat-label">已应用</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-value" id="lessons-new">0</div>
+              <div class="stat-label">新教训</div>
+            </div>
+          </div>
+          <button class="btn btn-primary" onclick="viewLessons()">查看经验教训</button>
+        </div>
+
+        <div class="card" id="optimization-card">
+          <h2>自动优化</h2>
+          <div class="stats">
+            <div class="stat-item">
+              <div class="stat-value" id="optimization-count">0</div>
+              <div class="stat-label">优化次数</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-value" id="optimization-success">0</div>
+              <div class="stat-label">成功优化</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-value" id="optimization-last">-</div>
+              <div class="stat-label">最后优化</div>
+            </div>
+          </div>
+          <button class="btn btn-primary" onclick="runOptimization()">运行优化</button>
+        </div>
+
+        <div class="card" id="health-card">
+          <h2>系统健康</h2>
+          <div class="stats">
+            <div class="stat-item">
+              <div class="stat-value" id="health-score">0</div>
+              <div class="stat-label">健康评分</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-value" id="health-status">-</div>
+              <div class="stat-label">状态</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-value" id="health-checks">0</div>
+              <div class="stat-label">检查项</div>
+            </div>
+          </div>
+          <button class="btn btn-primary" onclick="runHealthCheck()">健康检查</button>
+        </div>
       </div>
 
-      <div class="card">
-        <h2>分析状态</h2>
-        <div class="stats">
-          <div class="stat-item">
-            <div class="stat-value" id="analysis-total">0</div>
-            <div class="stat-label">总分析数</div>
-          </div>
-          <div class="stat-item">
-            <div class="stat-value" id="analysis-success">0</div>
-            <div class="stat-label">分析成功</div>
-          </div>
-          <div class="stat-item">
-            <div class="stat-value" id="analysis-failed">0</div>
-            <div class="stat-label">分析失败</div>
-          </div>
+      <div class="projects" id="projects">
+        <h2>项目管理</h2>
+        <div class="project-list" id="project-list">
+          <div class="loading">加载中...</div>
         </div>
-        <button class="btn btn-primary" id="analyze-all-btn" onclick="analyzeAll()">分析所有项目</button>
       </div>
 
-      <div class="card">
-        <h2>系统状态</h2>
-        <div class="stats">
-          <div class="stat-item">
-            <div class="stat-value" id="memory-usage">0</div>
-            <div class="stat-label">内存使用 (MB)</div>
-          </div>
-          <div class="stat-item">
-            <div class="stat-value" id="uptime">0</div>
-            <div class="stat-label">运行时间 (小时)</div>
-          </div>
-          <div class="stat-item">
-            <div class="stat-value" id="alert-count">0</div>
-            <div class="stat-label">告警数</div>
-          </div>
-        </div>
-        <button class="btn btn-primary" onclick="refreshStatus()">刷新状态</button>
-      </div>
-
-      <div class="card">
-        <h2>性能监控</h2>
-        <div class="stats">
-          <div class="stat-item">
-            <div class="stat-value" id="cpu-usage">0</div>
-            <div class="stat-label">CPU使用率 (%)</div>
-          </div>
-          <div class="stat-item">
-            <div class="stat-value" id="disk-usage">0</div>
-            <div class="stat-label">磁盘使用率 (%)</div>
-          </div>
-          <div class="stat-item">
-            <div class="stat-value" id="network-speed">0</div>
-            <div class="stat-label">网络速度 (MB/s)</div>
-          </div>
-        </div>
-        <button class="btn btn-primary" onclick="viewPerformanceReport()">查看性能报告</button>
-      </div>
-
-      <div class="card">
-        <h2>安全扫描</h2>
-        <div class="stats">
-          <div class="stat-item">
-            <div class="stat-value" id="security-scans">0</div>
-            <div class="stat-label">扫描次数</div>
-          </div>
-          <div class="stat-item">
-            <div class="stat-value" id="security-vulnerabilities">0</div>
-            <div class="stat-label">漏洞数</div>
-          </div>
-          <div class="stat-item">
-            <div class="stat-value" id="security-last-scan">-</div>
-            <div class="stat-label">最后扫描</div>
-          </div>
-        </div>
-        <button class="btn btn-primary" onclick="runSecurityScan()">运行安全扫描</button>
-      </div>
-
-      <div class="card">
-        <h2>经验教训</h2>
-        <div class="stats">
-          <div class="stat-item">
-            <div class="stat-value" id="lessons-total">0</div>
-            <div class="stat-label">总教训数</div>
-          </div>
-          <div class="stat-item">
-            <div class="stat-value" id="lessons-applied">0</div>
-            <div class="stat-label">已应用</div>
-          </div>
-          <div class="stat-item">
-            <div class="stat-value" id="lessons-new">0</div>
-            <div class="stat-label">新教训</div>
-          </div>
-        </div>
-        <button class="btn btn-primary" onclick="viewLessons()">查看经验教训</button>
-      </div>
-
-      <div class="card">
-        <h2>自动优化</h2>
-        <div class="stats">
-          <div class="stat-item">
-            <div class="stat-value" id="optimization-count">0</div>
-            <div class="stat-label">优化次数</div>
-          </div>
-          <div class="stat-item">
-            <div class="stat-value" id="optimization-success">0</div>
-            <div class="stat-label">成功优化</div>
-          </div>
-          <div class="stat-item">
-            <div class="stat-value" id="optimization-last">-</div>
-            <div class="stat-label">最后优化</div>
-          </div>
-        </div>
-        <button class="btn btn-primary" onclick="runOptimization()">运行优化</button>
-      </div>
-
-      <div class="card">
-        <h2>系统健康</h2>
-        <div class="stats">
-          <div class="stat-item">
-            <div class="stat-value" id="health-score">0</div>
-            <div class="stat-label">健康评分</div>
-          </div>
-          <div class="stat-item">
-            <div class="stat-value" id="health-status">-</div>
-            <div class="stat-label">状态</div>
-          </div>
-          <div class="stat-item">
-            <div class="stat-value" id="health-checks">0</div>
-            <div class="stat-label">检查项</div>
-          </div>
-        </div>
-        <button class="btn btn-primary" onclick="runHealthCheck()">健康检查</button>
-      </div>
-    </div>
-
-    <div class="projects">
-      <h2>项目管理</h2>
-      <div class="project-list" id="project-list">
+      <div class="alerts" id="alerts">
+        <h2>告警信息</h2>
         <div class="loading">加载中...</div>
       </div>
     </div>
+  </div>
 
-    <div class="alerts" id="alerts">
-      <h2>告警信息</h2>
-      <div class="loading">加载中...</div>
+  <div id="codeReviewModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>代码审查</h2>
+        <span class="close" onclick="closeCodeReviewModal()">&times;</span>
+      </div>
+      <div>
+        <label>文件路径:</label>
+        <input type="text" id="review-file-path" class="code-input" style="height:40px;" placeholder="例如: src/index.js">
+        <label>代码内容:</label>
+        <textarea id="review-code-content" class="code-input" placeholder="在这里粘贴要审查的代码..."></textarea>
+        <button class="btn btn-primary" onclick="reviewCode()">审查代码</button>
+        <button class="btn btn-secondary" onclick="reviewDirectory()">审查目录</button>
+      </div>
+      <div id="review-result" class="result-area" style="display:none;">
+        <h3>审查结果</h3>
+        <div id="review-result-content"></div>
+      </div>
+    </div>
+  </div>
+
+  <div id="codingAssistantModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>智能编码助手</h2>
+        <span class="close" onclick="closeCodingAssistantModal()">&times;</span>
+      </div>
+      <div>
+        <label>文件路径:</label>
+        <input type="text" id="assistant-file-path" class="code-input" style="height:40px;" placeholder="例如: src/index.js">
+        <label>代码内容:</label>
+        <textarea id="assistant-code-content" class="code-input" placeholder="在这里粘贴要分析的代码..."></textarea>
+        <button class="btn btn-primary" onclick="getCodingSuggestions()">获取建议</button>
+        <button class="btn btn-secondary" onclick="analyzeCodeQuality()">分析质量</button>
+        <button class="btn btn-secondary" onclick="getRefactoringSuggestions()">重构建议</button>
+      </div>
+      <div id="assistant-result" class="result-area" style="display:none;">
+        <h3>分析结果</h3>
+        <div id="assistant-result-content"></div>
+      </div>
+    </div>
+  </div>
+
+  <div id="guidelinesModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>编码准则</h2>
+        <span class="close" onclick="closeGuidelinesModal()">&times;</span>
+      </div>
+      <div id="guidelines-content">
+        <div class="loading">加载中...</div>
+      </div>
+    </div>
+  </div>
+
+  <div id="templateModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>代码模板生成</h2>
+        <span class="close" onclick="closeTemplateModal()">&times;</span>
+      </div>
+      <div>
+        <label>任务描述:</label>
+        <textarea id="template-task" class="code-input" placeholder="描述你要实现的代码功能..."></textarea>
+        <button class="btn btn-primary" onclick="generateTemplate()">生成模板</button>
+      </div>
+      <div id="template-result" class="result-area" style="display:none;">
+        <h3>生成的模板</h3>
+        <pre id="template-result-content" style="white-space:pre-wrap;"></pre>
+      </div>
     </div>
   </div>
 
   <script>
-    // API基础URL
     const API_BASE = 'http://localhost:3001/api';
 
-    // 数据状态
     let dataState = {
       sync: { total: 0, success: 0, failed: 0 },
       analysis: { total: 0, success: 0, failed: 0 },
@@ -466,11 +908,12 @@
       lessons: { total: 0, applied: 0, new: 0, lastUpdate: null },
       optimization: { count: 0, success: 0, last: null },
       health: { score: 0, status: 'unknown', checks: 0 },
+      codeReview: { files: 0, issues: 0, quality: '-' },
+      codingAssistant: { suggestions: 0, templates: '-', refactoring: '-' },
       projects: [],
       alerts: []
     };
 
-    // 显示消息
     function showMessage(message, type = 'info') {
       const container = document.getElementById('message-container');
       container.innerHTML = `<div class="${type}-message">${message}</div>`;
@@ -479,26 +922,31 @@
       }, 3000);
     }
 
-    // 初始化页面
     async function init() {
+      console.log('开始初始化...');
       await loadData();
+      console.log('数据加载完成，项目数量:', dataState.projects.length);
       updateDashboard();
       updateProjectList();
       updateAlerts();
+      console.log('初始化完成');
     }
 
-    // 加载数据
     async function loadData() {
       try {
-        // 并行加载所有数据
-        const [syncRes, projectsRes, systemRes, analysisRes] = await Promise.all([
-          fetch(`${API_BASE}/sync/status`).then(r => r.json()).catch(() => ({ success: true, stats: { total: 0, success: 0, failed: 0 } })),
-          fetch(`${API_BASE}/projects`).then(r => r.json()).catch(() => ({ success: true, projects: [] })),
-          fetch(`${API_BASE}/system/status`).then(r => r.json()).catch(() => ({ success: true, status: { memoryUsage: 0, uptime: 0 } })),
-          fetch(`${API_BASE}/analysis/status`).then(r => r.json()).catch(() => ({ success: true, stats: { total: 0, completed: 0, pending: 0 } }))
-        ]);
+        // 分别获取数据，确保即使某个API失败，其他数据仍然可以加载
+        const syncRes = await fetch(`${API_BASE}/sync/status`).then(r => r.json()).catch(() => ({ success: true, stats: { total: 0, success: 0, failed: 0 } }));
+        const projectsRes = await fetch(`${API_BASE}/projects`).then(r => r.json()).catch(() => ({ success: true, projects: [] }));
+        const systemRes = await fetch(`${API_BASE}/system/status`).then(r => r.json()).catch(() => ({ success: true, status: { memoryUsage: 0, uptime: 0 } }));
+        const analysisRes = await fetch(`${API_BASE}/analysis/status`).then(r => r.json()).catch(() => ({ success: true, stats: { total: 0, completed: 0, pending: 0 } }));
+        const lessonsRes = await fetch(`${API_BASE}/lessons`).then(r => r.json()).catch(() => ({ success: true, stats: { total: 0, applied: 0, new: 0 } }));
+        const optimizationRes = await fetch(`${API_BASE}/optimization/status`).then(r => r.json()).catch(() => ({ success: true, stats: { count: 0, success: 0, last: null } }));
+        const securityRes = await fetch(`${API_BASE}/security/status`).then(r => r.json()).catch(() => ({ success: true, stats: { scans: 0, vulnerabilities: 0, lastScan: null } }));
+        const performanceRes = await fetch(`${API_BASE}/performance/status`).then(r => r.json()).catch(() => ({ success: true, stats: { cpu: 0, disk: 0, network: 0, lastReport: null } }));
+        const codingRes = await fetch(`${API_BASE}/coding/status`).then(r => r.json()).catch(() => ({ success: true, stats: { suggestions: 0, templates: '-', refactoring: '-' } }));
+        const codeReviewRes = await fetch(`${API_BASE}/code/status`).then(r => r.json()).catch(() => ({ success: true, stats: { files: 0, issues: 0, quality: '-' } }));
+        const healthRes = await fetch(`${API_BASE}/health/status`).then(r => r.json()).catch(() => ({ success: true, stats: { score: 0, status: 'unknown', checks: 0 } }));
 
-        dataState.sync = syncRes.stats || { total: 0, success: 0, failed: 0 };
         dataState.projects = projectsRes.projects || [];
         dataState.system = {
           memoryUsage: systemRes.status?.memoryUsage || 0,
@@ -510,26 +958,75 @@
           success: analysisRes.stats?.completed || 0,
           failed: analysisRes.stats?.pending || 0
         };
+        dataState.lessons = {
+          total: lessonsRes.stats?.total || 0,
+          applied: lessonsRes.stats?.applied || 0,
+          new: lessonsRes.stats?.new || 0,
+          lastUpdate: new Date().toISOString()
+        };
+        dataState.optimization = {
+          count: optimizationRes.stats?.count || 0,
+          success: optimizationRes.stats?.success || 0,
+          last: optimizationRes.stats?.last || null
+        };
+        dataState.security = {
+          scans: securityRes.stats?.scans || 0,
+          vulnerabilities: securityRes.stats?.vulnerabilities || 0,
+          lastScan: securityRes.stats?.lastScan || null
+        };
+        dataState.performance = {
+          cpu: performanceRes.stats?.cpu || 0,
+          disk: performanceRes.stats?.disk || 0,
+          network: performanceRes.stats?.network || 0,
+          lastReport: performanceRes.stats?.lastReport || null
+        };
+        dataState.codingAssistant = {
+          suggestions: codingRes.stats?.suggestions || 0,
+          templates: codingRes.stats?.templates || '-',
+          refactoring: codingRes.stats?.refactoring || '-'
+        };
+        dataState.codeReview = {
+          files: codeReviewRes.stats?.files || 0,
+          issues: codeReviewRes.stats?.issues || 0,
+          quality: codeReviewRes.stats?.quality || '-' 
+        };
+        dataState.health = {
+          score: healthRes.stats?.score || 0,
+          status: healthRes.stats?.status || 'unknown',
+          checks: healthRes.stats?.checks || 0
+        };
 
-        // 设置默认状态
+        // 设置项目状态并更新同步状态计数
         dataState.projects.forEach(project => {
           project.status = project.lastSync ? 'success' : 'pending';
         });
 
+        // 基于项目状态更新同步计数
+        dataState.sync.total = dataState.projects.length;
+        dataState.sync.success = dataState.projects.filter(p => p.status === 'success').length;
+        dataState.sync.failed = dataState.projects.filter(p => p.status === 'failed').length;
+
+        // 确保所有数据都有默认值
+        dataState.alerts = dataState.alerts || [];
+
       } catch (error) {
         console.error('加载数据失败:', error);
-        // 使用默认空数据
-        dataState = {
-          sync: { total: 0, success: 0, failed: 0 },
-          analysis: { total: 0, success: 0, failed: 0 },
-          system: { memoryUsage: 0, uptime: 0, alertCount: 0 },
-          projects: [],
-          alerts: []
-        };
+        // 确保即使出错也有默认数据
+        dataState.sync = { total: 0, success: 0, failed: 0 };
+        dataState.analysis = { total: 0, success: 0, failed: 0 };
+        dataState.system = { memoryUsage: 0, uptime: 0, alertCount: 0 };
+        dataState.performance = { cpu: 0, disk: 0, network: 0, lastReport: null };
+        dataState.security = { scans: 0, vulnerabilities: 0, lastScan: null };
+        dataState.lessons = { total: 0, applied: 0, new: 0, lastUpdate: null };
+        dataState.optimization = { count: 0, success: 0, last: null };
+        dataState.health = { score: 0, status: 'unknown', checks: 0 };
+        dataState.codeReview = { files: 0, issues: 0, quality: '-' };
+        dataState.codingAssistant = { suggestions: 0, templates: '-', refactoring: '-' };
+        dataState.projects = [];
+        dataState.alerts = [];
       }
     }
 
-    // 更新仪表盘
     function updateDashboard() {
       document.getElementById('sync-total').textContent = dataState.sync.total;
       document.getElementById('sync-success').textContent = dataState.sync.success;
@@ -562,9 +1059,16 @@
       document.getElementById('health-score').textContent = dataState.health.score;
       document.getElementById('health-status').textContent = dataState.health.status;
       document.getElementById('health-checks').textContent = dataState.health.checks;
+
+      document.getElementById('review-files').textContent = dataState.codeReview.files;
+      document.getElementById('review-issues').textContent = dataState.codeReview.issues;
+      document.getElementById('review-quality').textContent = dataState.codeReview.quality;
+
+      document.getElementById('assistant-suggestions').textContent = dataState.codingAssistant.suggestions;
+      document.getElementById('assistant-templates').textContent = dataState.codingAssistant.templates;
+      document.getElementById('assistant-refactoring').textContent = dataState.codingAssistant.refactoring;
     }
 
-    // 更新项目列表
     function updateProjectList() {
       const projectList = document.getElementById('project-list');
 
@@ -600,7 +1104,6 @@
       });
     }
 
-    // 更新告警信息
     function updateAlerts() {
       const alertsContainer = document.getElementById('alerts');
 
@@ -623,7 +1126,6 @@
       alertsContainer.innerHTML = html;
     }
 
-    // 显示同步进度
     function showSyncProgress(current, total, projectName) {
       const progressDiv = document.getElementById('sync-progress');
       const progressBar = document.getElementById('progress-bar');
@@ -639,7 +1141,6 @@
       totalSpan.textContent = total;
     }
 
-    // 隐藏同步进度
     function hideSyncProgress() {
       const progressDiv = document.getElementById('sync-progress');
       setTimeout(() => {
@@ -647,7 +1148,6 @@
       }, 2000);
     }
 
-    // 同步所有项目
     async function syncAll() {
       const btn = document.getElementById('sync-all-btn');
       btn.disabled = true;
@@ -703,7 +1203,6 @@
       }
     }
 
-    // 分析所有项目
     async function analyzeAll() {
       const btn = document.getElementById('analyze-all-btn');
       btn.disabled = true;
@@ -722,7 +1221,6 @@
         if (result.success) {
           showMessage('分析完成！', 'success');
 
-          // 更新分析状态
           dataState.analysis.success = result.results?.length || 0;
           dataState.analysis.failed = 0;
 
@@ -739,7 +1237,6 @@
       }
     }
 
-    // 同步单个项目
     async function syncProject(projectId) {
       const project = dataState.projects.find(p => p.id === projectId);
       if (!project) {
@@ -791,7 +1288,6 @@
       }
     }
 
-    // 分析单个项目
     async function analyzeProject(projectId) {
       const project = dataState.projects.find(p => p.id === projectId);
       if (!project) {
@@ -820,14 +1316,12 @@
       }
     }
 
-    // 删除项目
     function removeProject(projectId) {
       if (confirm(`确定要删除项目 ${projectId} 吗？`)) {
         showMessage('删除功能暂未实现', 'info');
       }
     }
 
-    // 刷新状态
     async function refreshStatus() {
       showMessage('刷新状态...', 'info');
       await loadData();
@@ -837,16 +1331,401 @@
       showMessage('状态已更新！', 'success');
     }
 
-    // 查看性能报告
+    // 菜单功能
+    function showSection(sectionId) {
+      // 这里可以实现显示特定部分的逻辑
+      // 目前我们只是显示一个消息
+      showMessage(`显示 ${sectionId} 部分`, 'info');
+      
+      // 滚动到相应的卡片
+      const card = document.getElementById(`${sectionId}-card`);
+      if (card) {
+        card.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+
+    function openCodeReviewModal() {
+      document.getElementById('codeReviewModal').style.display = 'block';
+    }
+
+    function closeCodeReviewModal() {
+      document.getElementById('codeReviewModal').style.display = 'none';
+    }
+
+    async function reviewCode() {
+      const filePath = document.getElementById('review-file-path').value;
+      const content = document.getElementById('review-code-content').value;
+
+      if (!filePath || !content) {
+        showMessage('请填写文件路径和代码内容', 'error');
+        return;
+      }
+
+      try {
+        showMessage('正在进行代码审查...', 'info');
+
+        const response = await fetch(`${API_BASE}/code/review`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ filePath, content })
+        });
+
+        const result = await response.json();
+
+        if (result.success) {
+          const issues = result.result.issues || [];
+          dataState.codeReview.files = 1;
+          dataState.codeReview.issues = issues.length;
+          updateDashboard();
+
+          let html = `<p><strong>文件:</strong> ${filePath}</p>`;
+          html += `<p><strong>发现问题:</strong> ${issues.length} 个</p>`;
+
+          if (issues.length > 0) {
+            html += '<h4>问题列表:</h4>';
+            issues.forEach((issue, index) => {
+              html += `
+                <div class="suggestion-item">
+                  <div class="suggestion-type">[${issue.severity.toUpperCase()}] ${issue.category}</div>
+                  <div class="suggestion-message">${issue.message}</div>
+                </div>
+              `;
+            });
+          }
+
+          document.getElementById('review-result-content').innerHTML = html;
+          document.getElementById('review-result').style.display = 'block';
+          showMessage('代码审查完成！', 'success');
+        } else {
+          showMessage(`审查失败: ${result.error}`, 'error');
+        }
+      } catch (error) {
+        console.error('代码审查失败:', error);
+        showMessage('代码审查失败', 'error');
+      }
+    }
+
+    async function reviewDirectory() {
+      const directoryPath = prompt('请输入要审查的目录路径:', 'D:\\opensource\\Lossless-Superpower-JS\\src');
+
+      if (!directoryPath) {
+        return;
+      }
+
+      try {
+        showMessage('正在审查目录...', 'info');
+
+        const response = await fetch(`${API_BASE}/code/review/directory`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ directoryPath })
+        });
+
+        const result = await response.json();
+
+        if (result.success) {
+          const totalFiles = result.result.totalFiles || 0;
+          const totalIssues = result.result.totalIssues || 0;
+          dataState.codeReview.files = totalFiles;
+          dataState.codeReview.issues = totalIssues;
+          updateDashboard();
+
+          let html = `<p><strong>审查目录:</strong> ${directoryPath}</p>`;
+          html += `<p><strong>审查文件:</strong> ${totalFiles} 个</p>`;
+          html += `<p><strong>发现问题:</strong> ${totalIssues} 个</p>`;
+
+          document.getElementById('review-result-content').innerHTML = html;
+          document.getElementById('review-result').style.display = 'block';
+          showMessage('目录审查完成！', 'success');
+        } else {
+          showMessage(`审查失败: ${result.error}`, 'error');
+        }
+      } catch (error) {
+        console.error('目录审查失败:', error);
+        showMessage('目录审查失败', 'error');
+      }
+    }
+
+    function openCodingAssistantModal() {
+      document.getElementById('codingAssistantModal').style.display = 'block';
+    }
+
+    function closeCodingAssistantModal() {
+      document.getElementById('codingAssistantModal').style.display = 'none';
+    }
+
+    async function getCodingSuggestions() {
+      const filePath = document.getElementById('assistant-file-path').value;
+      const content = document.getElementById('assistant-code-content').value;
+
+      if (!filePath || !content) {
+        showMessage('请填写文件路径和代码内容', 'error');
+        return;
+      }
+
+      try {
+        showMessage('正在获取编码建议...', 'info');
+
+        const response = await fetch(`${API_BASE}/coding/suggestions`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ filePath, content })
+        });
+
+        const result = await response.json();
+
+        if (result.success) {
+          const suggestions = result.result.suggestions || [];
+          dataState.codingAssistant.suggestions = suggestions.length;
+          updateDashboard();
+
+          let html = `<h4>编码建议 (${suggestions.length} 条)</h4>`;
+
+          suggestions.forEach((suggestion, index) => {
+            html += `
+              <div class="suggestion-item">
+                <div class="suggestion-type">${suggestion.type}</div>
+                <div class="suggestion-message">${suggestion.message}</div>
+                ${suggestion.example ? `<div class="suggestion-example">${suggestion.example}</div>` : ''}
+              </div>
+            `;
+          });
+
+          document.getElementById('assistant-result-content').innerHTML = html;
+          document.getElementById('assistant-result').style.display = 'block';
+          showMessage('获取建议完成！', 'success');
+        } else {
+          showMessage(`获取建议失败: ${result.error}`, 'error');
+        }
+      } catch (error) {
+        console.error('获取编码建议失败:', error);
+        showMessage('获取编码建议失败', 'error');
+      }
+    }
+
+    async function analyzeCodeQuality() {
+      const content = document.getElementById('assistant-code-content').value;
+
+      if (!content) {
+        showMessage('请填写代码内容', 'error');
+        return;
+      }
+
+      try {
+        showMessage('正在分析代码质量...', 'info');
+
+        const response = await fetch(`${API_BASE}/coding/quality`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ content })
+        });
+
+        const result = await response.json();
+
+        if (result.success) {
+          const metrics = result.result.qualityMetrics || {};
+          const overallScore = result.result.overallScore || 0;
+          dataState.codeReview.quality = overallScore.toFixed(1);
+          updateDashboard();
+
+          let html = `
+            <h4>代码质量分析</h4>
+            <div class="quality-score">
+              <div class="quality-item">
+                <div class="quality-value">${overallScore.toFixed(1)}</div>
+                <div class="quality-label">综合评分</div>
+              </div>
+            </div>
+            <div class="quality-score">
+              <div class="quality-item">
+                <div class="quality-value">${(metrics.complexity || 0).toFixed(1)}</div>
+                <div class="quality-label">复杂度</div>
+              </div>
+              <div class="quality-item">
+                <div class="quality-value">${(metrics.readability || 0).toFixed(1)}</div>
+                <div class="quality-label">可读性</div>
+              </div>
+              <div class="quality-item">
+                <div class="quality-value">${(metrics.maintainability || 0).toFixed(1)}</div>
+                <div class="quality-label">可维护性</div>
+              </div>
+              <div class="quality-item">
+                <div class="quality-value">${metrics.bestPractices || 0}</div>
+                <div class="quality-label">最佳实践</div>
+              </div>
+            </div>
+          `;
+
+          document.getElementById('assistant-result-content').innerHTML = html;
+          document.getElementById('assistant-result').style.display = 'block';
+          showMessage('质量分析完成！', 'success');
+        } else {
+          showMessage(`分析失败: ${result.error}`, 'error');
+        }
+      } catch (error) {
+        console.error('代码质量分析失败:', error);
+        showMessage('代码质量分析失败', 'error');
+      }
+    }
+
+    async function getRefactoringSuggestions() {
+      const content = document.getElementById('assistant-code-content').value;
+
+      if (!content) {
+        showMessage('请填写代码内容', 'error');
+        return;
+      }
+
+      try {
+        showMessage('正在获取重构建议...', 'info');
+
+        const response = await fetch(`${API_BASE}/coding/refactoring`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ content })
+        });
+
+        const result = await response.json();
+
+        if (result.success) {
+          const suggestions = result.result || [];
+          dataState.codingAssistant.refactoring = suggestions.length + ' 条';
+          updateDashboard();
+
+          let html = `<h4>重构建议 (${suggestions.length} 条)</h4>`;
+
+          if (suggestions.length > 0) {
+            suggestions.forEach((suggestion, index) => {
+              html += `
+                <div class="suggestion-item">
+                  <div class="suggestion-type">${suggestion.type}</div>
+                  <div class="suggestion-message">${suggestion.message}</div>
+                  ${suggestion.example ? `<div class="suggestion-example">${suggestion.example}</div>` : ''}
+                </div>
+              `;
+            });
+          } else {
+            html += '<p>没有发现需要重构的问题</p>';
+          }
+
+          document.getElementById('assistant-result-content').innerHTML = html;
+          document.getElementById('assistant-result').style.display = 'block';
+          showMessage('重构建议获取完成！', 'success');
+        } else {
+          showMessage(`获取建议失败: ${result.error}`, 'error');
+        }
+      } catch (error) {
+        console.error('获取重构建议失败:', error);
+        showMessage('获取重构建议失败', 'error');
+      }
+    }
+
+    function openGuidelinesModal() {
+      document.getElementById('guidelinesModal').style.display = 'block';
+      loadGuidelines();
+    }
+
+    function closeGuidelinesModal() {
+      document.getElementById('guidelinesModal').style.display = 'none';
+    }
+
+    async function loadGuidelines() {
+      try {
+        const response = await fetch(`${API_BASE}/coding/guidelines`);
+        const result = await response.json();
+
+        if (result.success) {
+          const guidelines = result.guidelines || {};
+          let html = '<h3>四大核心编码原则</h3>';
+
+          html += '<h4>1. 思考后编码 (Think Before Coding)</h4>';
+          html += '<ul class="guidelines-list">';
+          (guidelines.thinkBeforeCoding || []).forEach(item => {
+            html += `<li>${item}</li>`;
+          });
+          html += '</ul>';
+
+          html += '<h4>2. 简单优先 (Simplicity First)</h4>';
+          html += '<ul class="guidelines-list">';
+          (guidelines.simplicityFirst || []).forEach(item => {
+            html += `<li>${item}</li>`;
+          });
+          html += '</ul>';
+
+          html += '<h4>3. 外科手术式修改 (Surgical Changes)</h4>';
+          html += '<ul class="guidelines-list">';
+          (guidelines.surgicalChanges || []).forEach(item => {
+            html += `<li>${item}</li>`;
+          });
+          html += '</ul>';
+
+          html += '<h4>4. 目标驱动执行 (Goal-Driven Execution)</h4>';
+          html += '<ul class="guidelines-list">';
+          (guidelines.goalDrivenExecution || []).forEach(item => {
+            html += `<li>${item}</li>`;
+          });
+          html += '</ul>';
+
+          document.getElementById('guidelines-content').innerHTML = html;
+        } else {
+          document.getElementById('guidelines-content').innerHTML = '<p>加载准则失败</p>';
+        }
+      } catch (error) {
+        console.error('加载编码准则失败:', error);
+        document.getElementById('guidelines-content').innerHTML = '<p>加载编码准则失败</p>';
+      }
+    }
+
+    function generateCodeTemplate() {
+      document.getElementById('templateModal').style.display = 'block';
+    }
+
+    function closeTemplateModal() {
+      document.getElementById('templateModal').style.display = 'none';
+    }
+
+    async function generateTemplate() {
+      const taskDescription = document.getElementById('template-task').value;
+
+      if (!taskDescription) {
+        showMessage('请填写任务描述', 'error');
+        return;
+      }
+
+      try {
+        showMessage('正在生成代码模板...', 'info');
+
+        const response = await fetch(`${API_BASE}/coding/template`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ taskDescription })
+        });
+
+        const result = await response.json();
+
+        if (result.success) {
+          document.getElementById('template-result-content').textContent = result.result;
+          document.getElementById('template-result').style.display = 'block';
+          dataState.codingAssistant.templates = '已生成';
+          updateDashboard();
+          showMessage('模板生成成功！', 'success');
+        } else {
+          showMessage(`生成失败: ${result.error}`, 'error');
+        }
+      } catch (error) {
+        console.error('生成代码模板失败:', error);
+        showMessage('生成代码模板失败', 'error');
+      }
+    }
+
     async function viewPerformanceReport() {
       try {
         showMessage('加载性能报告...', 'info');
         const response = await fetch(`${API_BASE}/performance/report`);
         const result = await response.json();
-        
+
         if (result.success) {
           showMessage('性能报告加载成功！', 'success');
-          // 这里可以显示性能报告的详细信息
         } else {
           showMessage('无法加载性能报告', 'error');
         }
@@ -856,7 +1735,6 @@
       }
     }
 
-    // 运行安全扫描
     async function runSecurityScan() {
       try {
         showMessage('开始安全扫描...', 'info');
@@ -865,7 +1743,7 @@
           headers: { 'Content-Type': 'application/json' }
         });
         const result = await response.json();
-        
+
         if (result.success) {
           showMessage('安全扫描完成！', 'success');
           dataState.security.scans = (dataState.security.scans || 0) + 1;
@@ -881,16 +1759,14 @@
       }
     }
 
-    // 查看经验教训
     async function viewLessons() {
       try {
         showMessage('加载经验教训...', 'info');
         const response = await fetch(`${API_BASE}/lessons`);
         const result = await response.json();
-        
+
         if (result.success) {
           showMessage('经验教训加载成功！', 'success');
-          // 这里可以显示经验教训的详细信息
         } else {
           showMessage('无法加载经验教训', 'error');
         }
@@ -900,7 +1776,6 @@
       }
     }
 
-    // 运行优化
     async function runOptimization() {
       try {
         showMessage('开始系统优化...', 'info');
@@ -909,7 +1784,7 @@
           headers: { 'Content-Type': 'application/json' }
         });
         const result = await response.json();
-        
+
         if (result.success) {
           showMessage('系统优化完成！', 'success');
           dataState.optimization.count = (dataState.optimization.count || 0) + 1;
@@ -925,7 +1800,6 @@
       }
     }
 
-    // 运行健康检查
     async function runHealthCheck() {
       try {
         showMessage('开始健康检查...', 'info');
@@ -934,7 +1808,7 @@
           headers: { 'Content-Type': 'application/json' }
         });
         const result = await response.json();
-        
+
         if (result.success) {
           showMessage('健康检查完成！', 'success');
           dataState.health.score = result.score || 0;
@@ -950,8 +1824,17 @@
       }
     }
 
-    // 页面加载完成后初始化
+    // 点击模态框外部关闭
+    window.onclick = function(event) {
+      const modals = document.getElementsByClassName('modal');
+      for (let i = 0; i < modals.length; i++) {
+        const modal = modals[i];
+        if (event.target == modal) {
+          modal.style.display = 'none';
+        }
+      }
+    }
+
+    // 初始化
     window.onload = init;
   </script>
-</body>
-</html>

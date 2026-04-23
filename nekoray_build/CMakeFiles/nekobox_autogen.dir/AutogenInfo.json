@@ -1,0 +1,683 @@
+{
+	"AUTOGEN_COMMAND_LINE_LENGTH_MAX" : 32000,
+	"BUILD_DIR" : "C:/Users/55237/Lossless-Superpower-JS/nekoray_build/nekobox_autogen",
+	"CMAKE_BINARY_DIR" : "C:/Users/55237/Lossless-Superpower-JS/nekoray_build",
+	"CMAKE_CURRENT_BINARY_DIR" : "C:/Users/55237/Lossless-Superpower-JS/nekoray_build",
+	"CMAKE_CURRENT_SOURCE_DIR" : "D:/opensource/nekoray",
+	"CMAKE_EXECUTABLE" : "C:/Program Files/CMake/bin/cmake.exe",
+	"CMAKE_LIST_FILES" : 
+	[
+		"D:/opensource/nekoray/CMakeLists.txt",
+		"C:/Users/55237/Lossless-Superpower-JS/nekoray_build/CMakeFiles/4.3.1/CMakeSystem.cmake",
+		"C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeSystemSpecificInitialize.cmake",
+		"C:/Program Files/CMake/share/cmake-4.3/Modules/Platform/Windows-Initialize.cmake",
+		"C:/Users/55237/Lossless-Superpower-JS/nekoray_build/CMakeFiles/4.3.1/CMakeCXXCompiler.cmake",
+		"C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeSystemSpecificInformation.cmake",
+		"C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeGenericSystem.cmake",
+		"C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeInitializeConfigs.cmake",
+		"C:/Program Files/CMake/share/cmake-4.3/Modules/Platform/Windows.cmake",
+		"C:/Program Files/CMake/share/cmake-4.3/Modules/Platform/WindowsPaths.cmake",
+		"C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeCXXInformation.cmake",
+		"C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeLanguageInformation.cmake",
+		"C:/Program Files/CMake/share/cmake-4.3/Modules/Compiler/MSVC-CXX.cmake",
+		"C:/Program Files/CMake/share/cmake-4.3/Modules/Compiler/MSVC.cmake",
+		"C:/Program Files/CMake/share/cmake-4.3/Modules/Compiler/CMakeCommonCompilerMacros.cmake",
+		"C:/Program Files/CMake/share/cmake-4.3/Modules/Platform/Windows-MSVC-CXX.cmake",
+		"C:/Program Files/CMake/share/cmake-4.3/Modules/Platform/Windows-MSVC.cmake",
+		"C:/Users/55237/Lossless-Superpower-JS/nekoray_build/CMakeFiles/4.3.1/CMakeRCCompiler.cmake",
+		"C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeRCInformation.cmake",
+		"C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeCommonLanguageInclude.cmake",
+		"C:/Program Files/CMake/share/cmake-4.3/Modules/Internal/CMakeCXXLinkerInformation.cmake",
+		"C:/Program Files/CMake/share/cmake-4.3/Modules/Internal/CMakeCommonLinkerInformation.cmake",
+		"C:/Program Files/CMake/share/cmake-4.3/Modules/Linker/MSVC-CXX.cmake",
+		"C:/Program Files/CMake/share/cmake-4.3/Modules/Linker/MSVC.cmake",
+		"C:/Program Files/CMake/share/cmake-4.3/Modules/Platform/Linker/Windows-MSVC-CXX.cmake",
+		"C:/Program Files/CMake/share/cmake-4.3/Modules/Platform/Linker/Windows-MSVC.cmake",
+		"C:/ProgramData/anaconda3/Library/lib/cmake/Qt5/Qt5ConfigVersion.cmake",
+		"C:/ProgramData/anaconda3/Library/lib/cmake/Qt5/Qt5Config.cmake",
+		"C:/ProgramData/anaconda3/Library/lib/cmake/Qt5/Qt5ModuleLocation.cmake",
+		"C:/ProgramData/anaconda3/Library/lib/cmake/Qt5Widgets/Qt5WidgetsConfigVersion.cmake",
+		"C:/ProgramData/anaconda3/Library/lib/cmake/Qt5Widgets/Qt5WidgetsConfig.cmake",
+		"C:/ProgramData/anaconda3/Library/lib/cmake/Qt5Gui/Qt5GuiConfigVersion.cmake",
+		"C:/ProgramData/anaconda3/Library/lib/cmake/Qt5Gui/Qt5GuiConfig.cmake",
+		"C:/ProgramData/anaconda3/Library/lib/cmake/Qt5Core/Qt5CoreConfigVersion.cmake",
+		"C:/ProgramData/anaconda3/Library/lib/cmake/Qt5Core/Qt5CoreConfig.cmake",
+		"C:/ProgramData/anaconda3/Library/lib/cmake/Qt5Core/Qt5CoreConfigExtras.cmake",
+		"C:/ProgramData/anaconda3/Library/lib/cmake/Qt5Core/Qt5CoreConfigExtrasMkspecDir.cmake",
+		"C:/ProgramData/anaconda3/Library/lib/cmake/Qt5Core/Qt5CoreMacros.cmake",
+		"C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeParseArguments.cmake",
+		"C:/ProgramData/anaconda3/Library/lib/cmake/Qt5Gui/Qt5Gui_QGifPlugin.cmake",
+		"C:/ProgramData/anaconda3/Library/lib/cmake/Qt5Gui/Qt5Gui_QICNSPlugin.cmake",
+		"C:/ProgramData/anaconda3/Library/lib/cmake/Qt5Gui/Qt5Gui_QICOPlugin.cmake",
+		"C:/ProgramData/anaconda3/Library/lib/cmake/Qt5Gui/Qt5Gui_QJpegPlugin.cmake",
+		"C:/ProgramData/anaconda3/Library/lib/cmake/Qt5Gui/Qt5Gui_QMinimalIntegrationPlugin.cmake",
+		"C:/ProgramData/anaconda3/Library/lib/cmake/Qt5Gui/Qt5Gui_QOffscreenIntegrationPlugin.cmake",
+		"C:/ProgramData/anaconda3/Library/lib/cmake/Qt5Gui/Qt5Gui_QPdfPlugin.cmake",
+		"C:/ProgramData/anaconda3/Library/lib/cmake/Qt5Gui/Qt5Gui_QSvgIconPlugin.cmake",
+		"C:/ProgramData/anaconda3/Library/lib/cmake/Qt5Gui/Qt5Gui_QSvgPlugin.cmake",
+		"C:/ProgramData/anaconda3/Library/lib/cmake/Qt5Gui/Qt5Gui_QTgaPlugin.cmake",
+		"C:/ProgramData/anaconda3/Library/lib/cmake/Qt5Gui/Qt5Gui_QTiffPlugin.cmake",
+		"C:/ProgramData/anaconda3/Library/lib/cmake/Qt5Gui/Qt5Gui_QTuioTouchPlugin.cmake",
+		"C:/ProgramData/anaconda3/Library/lib/cmake/Qt5Gui/Qt5Gui_QVirtualKeyboardPlugin.cmake",
+		"C:/ProgramData/anaconda3/Library/lib/cmake/Qt5Gui/Qt5Gui_QWbmpPlugin.cmake",
+		"C:/ProgramData/anaconda3/Library/lib/cmake/Qt5Gui/Qt5Gui_QWebGLIntegrationPlugin.cmake",
+		"C:/ProgramData/anaconda3/Library/lib/cmake/Qt5Gui/Qt5Gui_QWebpPlugin.cmake",
+		"C:/ProgramData/anaconda3/Library/lib/cmake/Qt5Gui/Qt5Gui_QWindowsDirect2DIntegrationPlugin.cmake",
+		"C:/ProgramData/anaconda3/Library/lib/cmake/Qt5Gui/Qt5Gui_QWindowsIntegrationPlugin.cmake",
+		"C:/ProgramData/anaconda3/Library/lib/cmake/Qt5Gui/Qt5Gui_QXdgDesktopPortalThemePlugin.cmake",
+		"C:/ProgramData/anaconda3/Library/lib/cmake/Qt5Gui/Qt5GuiConfigExtras.cmake",
+		"C:/ProgramData/anaconda3/Library/lib/cmake/Qt5Widgets/Qt5Widgets_QWindowsVistaStylePlugin.cmake",
+		"C:/ProgramData/anaconda3/Library/lib/cmake/Qt5Widgets/Qt5WidgetsConfigExtras.cmake",
+		"C:/ProgramData/anaconda3/Library/lib/cmake/Qt5Widgets/Qt5WidgetsMacros.cmake",
+		"C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeParseArguments.cmake",
+		"C:/ProgramData/anaconda3/Library/lib/cmake/Qt5Network/Qt5NetworkConfigVersion.cmake",
+		"C:/ProgramData/anaconda3/Library/lib/cmake/Qt5Network/Qt5NetworkConfig.cmake",
+		"C:/ProgramData/anaconda3/Library/lib/cmake/Qt5Network/Qt5Network_QGenericEnginePlugin.cmake",
+		"C:/ProgramData/anaconda3/Library/lib/cmake/Qt5Svg/Qt5SvgConfigVersion.cmake",
+		"C:/ProgramData/anaconda3/Library/lib/cmake/Qt5Svg/Qt5SvgConfig.cmake",
+		"C:/ProgramData/anaconda3/Library/lib/cmake/Qt5LinguistTools/Qt5LinguistToolsConfigVersion.cmake",
+		"C:/ProgramData/anaconda3/Library/lib/cmake/Qt5LinguistTools/Qt5LinguistToolsConfig.cmake",
+		"C:/ProgramData/anaconda3/Library/lib/cmake/Qt5LinguistTools/Qt5LinguistToolsMacros.cmake",
+		"C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeParseArguments.cmake",
+		"D:/opensource/nekoray/cmake/windows/windows.cmake",
+		"D:/opensource/nekoray/cmake/windows/generate_product_version.cmake",
+		"C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeParseArguments.cmake",
+		"D:/opensource/nekoray/cmake/windows/VersionInfo.in",
+		"D:/opensource/nekoray/cmake/windows/VersionResource.rc",
+		"D:/opensource/nekoray/cmake/print.cmake",
+		"D:/opensource/nekoray/cmake/nkr.cmake",
+		"C:/Program Files/CMake/share/cmake-4.3/Modules/FindThreads.cmake",
+		"C:/Program Files/CMake/share/cmake-4.3/Modules/CheckLibraryExists.cmake",
+		"C:/Program Files/CMake/share/cmake-4.3/Modules/CheckIncludeFileCXX.cmake",
+		"C:/Program Files/CMake/share/cmake-4.3/Modules/CheckCXXSourceCompiles.cmake",
+		"C:/Program Files/CMake/share/cmake-4.3/Modules/Internal/CheckSourceCompiles.cmake",
+		"C:/Program Files/CMake/share/cmake-4.3/Modules/FindPackageHandleStandardArgs.cmake",
+		"C:/Program Files/CMake/share/cmake-4.3/Modules/FindPackageMessage.cmake",
+		"D:/opensource/nekoray/cmake/myproto.cmake",
+		"C:/ProgramData/anaconda3/Library/lib/cmake/protobuf/protobuf-config-version.cmake",
+		"C:/ProgramData/anaconda3/Library/lib/cmake/protobuf/protobuf-config.cmake",
+		"C:/ProgramData/anaconda3/Library/lib/cmake/protobuf/protobuf-options.cmake",
+		"C:/Program Files/CMake/share/cmake-4.3/Modules/FindZLIB.cmake",
+		"C:/Program Files/CMake/share/cmake-4.3/Modules/SelectLibraryConfigurations.cmake",
+		"C:/Program Files/CMake/share/cmake-4.3/Modules/FindPackageHandleStandardArgs.cmake",
+		"C:/Program Files/CMake/share/cmake-4.3/Modules/FindPackageMessage.cmake",
+		"C:/ProgramData/anaconda3/Library/lib/cmake/absl/abslConfigVersion.cmake",
+		"C:/ProgramData/anaconda3/Library/lib/cmake/absl/abslConfig.cmake",
+		"C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeFindDependencyMacro.cmake",
+		"C:/Program Files/CMake/share/cmake-4.3/Modules/FindThreads.cmake",
+		"C:/Program Files/CMake/share/cmake-4.3/Modules/CheckLibraryExists.cmake",
+		"C:/Program Files/CMake/share/cmake-4.3/Modules/CheckIncludeFileCXX.cmake",
+		"C:/Program Files/CMake/share/cmake-4.3/Modules/CheckCXXSourceCompiles.cmake",
+		"C:/Program Files/CMake/share/cmake-4.3/Modules/FindPackageHandleStandardArgs.cmake",
+		"C:/Program Files/CMake/share/cmake-4.3/Modules/FindPackageMessage.cmake",
+		"C:/ProgramData/anaconda3/Library/lib/cmake/absl/abslTargets.cmake",
+		"C:/ProgramData/anaconda3/Library/lib/cmake/absl/abslTargets-release.cmake",
+		"C:/ProgramData/anaconda3/Library/lib/cmake/utf8_range/utf8_range-config.cmake",
+		"C:/ProgramData/anaconda3/Library/lib/cmake/utf8_range/utf8_range-targets.cmake",
+		"C:/ProgramData/anaconda3/Library/lib/cmake/utf8_range/utf8_range-targets-release.cmake",
+		"C:/ProgramData/anaconda3/Library/lib/cmake/protobuf/protobuf-targets.cmake",
+		"C:/ProgramData/anaconda3/Library/lib/cmake/protobuf/protobuf-targets-release.cmake",
+		"C:/ProgramData/anaconda3/Library/lib/cmake/protobuf/protobuf-generate.cmake",
+		"C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeParseArguments.cmake",
+		"C:/ProgramData/anaconda3/Library/lib/cmake/yaml-cpp/yaml-cpp-config-version.cmake",
+		"C:/ProgramData/anaconda3/Library/lib/cmake/yaml-cpp/yaml-cpp-config.cmake",
+		"C:/ProgramData/anaconda3/Library/lib/cmake/yaml-cpp/yaml-cpp-targets.cmake",
+		"C:/ProgramData/anaconda3/Library/lib/cmake/yaml-cpp/yaml-cpp-targets-release.cmake",
+		"D:/opensource/nekoray/libs/deps/built/lib/cmake/ZXing/ZXingConfigVersion.cmake",
+		"D:/opensource/nekoray/libs/deps/built/lib/cmake/ZXing/ZXingConfig.cmake",
+		"D:/opensource/nekoray/libs/deps/built/lib/cmake/ZXing/ZXingTargets.cmake",
+		"D:/opensource/nekoray/libs/deps/built/lib/cmake/ZXing/ZXingTargets-release.cmake",
+		"D:/opensource/nekoray/translations/translations.qrc",
+		"D:/opensource/nekoray/res/neko.qrc",
+		"D:/opensource/nekoray/res/theme/feiyangqingyun/qss.qrc",
+		"C:/Users/55237/Lossless-Superpower-JS/nekoray_build/translations.qrc"
+	],
+	"CMAKE_SOURCE_DIR" : "D:/opensource/nekoray",
+	"CROSS_CONFIG" : false,
+	"DEP_FILE" : "",
+	"DEP_FILE_RULE_NAME" : "",
+	"HEADERS" : 
+	[
+		[
+			"C:/Users/55237/Lossless-Superpower-JS/nekoray_build/VersionInfo.h",
+			"MU",
+			"EJRQKI7XPS/moc_VersionInfo.cpp",
+			null
+		],
+		[
+			"D:/opensource/nekoray/3rdparty/QtExtKeySequenceEdit.h",
+			"MU",
+			"WWFCTI4UCT/moc_QtExtKeySequenceEdit.cpp",
+			null
+		],
+		[
+			"D:/opensource/nekoray/3rdparty/WinCommander.hpp",
+			"MU",
+			"WWFCTI4UCT/moc_WinCommander.cpp",
+			null
+		],
+		[
+			"D:/opensource/nekoray/3rdparty/base64.h",
+			"MU",
+			"WWFCTI4UCT/moc_base64.cpp",
+			null
+		],
+		[
+			"D:/opensource/nekoray/3rdparty/qrcodegen.hpp",
+			"MU",
+			"WWFCTI4UCT/moc_qrcodegen.cpp",
+			null
+		],
+		[
+			"D:/opensource/nekoray/3rdparty/qv2ray/v2/components/proxy/QvProxyConfigurator.hpp",
+			"MU",
+			"VGXHORQZLD/moc_QvProxyConfigurator.cpp",
+			null
+		],
+		[
+			"D:/opensource/nekoray/3rdparty/qv2ray/v2/ui/QvAutoCompleteTextEdit.hpp",
+			"MU",
+			"YTSSO7XMZ7/moc_QvAutoCompleteTextEdit.cpp",
+			null
+		],
+		[
+			"D:/opensource/nekoray/3rdparty/qv2ray/v2/ui/widgets/common/QJsonModel.hpp",
+			"MU",
+			"VLMJRO3NMR/moc_QJsonModel.cpp",
+			null
+		],
+		[
+			"D:/opensource/nekoray/3rdparty/qv2ray/v2/ui/widgets/editors/w_JsonEditor.hpp",
+			"MU",
+			"OG3OXVAR2R/moc_w_JsonEditor.cpp",
+			null
+		],
+		[
+			"D:/opensource/nekoray/3rdparty/qv2ray/v3/components/GeositeReader/GeositeReader.hpp",
+			"MU",
+			"XSTRMR7H5M/moc_GeositeReader.cpp",
+			null
+		],
+		[
+			"D:/opensource/nekoray/3rdparty/qv2ray/v3/components/GeositeReader/picoproto.hpp",
+			"MU",
+			"XSTRMR7H5M/moc_picoproto.cpp",
+			null
+		],
+		[
+			"D:/opensource/nekoray/db/ConfigBuilder.hpp",
+			"MU",
+			"SQIZ3OIOWK/moc_ConfigBuilder.cpp",
+			null
+		],
+		[
+			"D:/opensource/nekoray/db/Database.hpp",
+			"MU",
+			"SQIZ3OIOWK/moc_Database.cpp",
+			null
+		],
+		[
+			"D:/opensource/nekoray/db/ProfileFilter.hpp",
+			"MU",
+			"SQIZ3OIOWK/moc_ProfileFilter.cpp",
+			null
+		],
+		[
+			"D:/opensource/nekoray/db/traffic/TrafficLooper.hpp",
+			"MU",
+			"JKJNF276KU/moc_TrafficLooper.cpp",
+			null
+		],
+		[
+			"D:/opensource/nekoray/fmt/AbstractBean.hpp",
+			"MU",
+			"5VCLREVD7A/moc_AbstractBean.cpp",
+			null
+		],
+		[
+			"D:/opensource/nekoray/fmt/ChainBean.hpp",
+			"MU",
+			"5VCLREVD7A/moc_ChainBean.cpp",
+			null
+		],
+		[
+			"D:/opensource/nekoray/main/HTTPRequestHelper.hpp",
+			"MU",
+			"FKWUBUMHKV/moc_HTTPRequestHelper.cpp",
+			null
+		],
+		[
+			"D:/opensource/nekoray/main/NekoGui.hpp",
+			"MU",
+			"FKWUBUMHKV/moc_NekoGui.cpp",
+			null
+		],
+		[
+			"D:/opensource/nekoray/main/NekoGui_Utils.hpp",
+			"MU",
+			"FKWUBUMHKV/moc_NekoGui_Utils.cpp",
+			null
+		],
+		[
+			"D:/opensource/nekoray/rpc/gRPC.h",
+			"MU",
+			"TONJ5D5MHD/moc_gRPC.cpp",
+			null
+		],
+		[
+			"D:/opensource/nekoray/sub/GroupUpdater.hpp",
+			"MU",
+			"C4MMZXNAPD/moc_GroupUpdater.cpp",
+			null
+		],
+		[
+			"D:/opensource/nekoray/sys/AutoRun.hpp",
+			"MU",
+			"FWVECHRDDZ/moc_AutoRun.cpp",
+			null
+		],
+		[
+			"D:/opensource/nekoray/sys/ExternalProcess.hpp",
+			"MU",
+			"FWVECHRDDZ/moc_ExternalProcess.cpp",
+			null
+		],
+		[
+			"D:/opensource/nekoray/sys/windows/MiniDump.h",
+			"MU",
+			"AYDGGUMIZ4/moc_MiniDump.cpp",
+			null
+		],
+		[
+			"D:/opensource/nekoray/sys/windows/guihelper.h",
+			"MU",
+			"AYDGGUMIZ4/moc_guihelper.cpp",
+			null
+		],
+		[
+			"D:/opensource/nekoray/ui/Icon.hpp",
+			"MU",
+			"UYX5XTB5RZ/moc_Icon.cpp",
+			null
+		],
+		[
+			"D:/opensource/nekoray/ui/ThemeManager.hpp",
+			"MU",
+			"UYX5XTB5RZ/moc_ThemeManager.cpp",
+			null
+		],
+		[
+			"D:/opensource/nekoray/ui/dialog_basic_settings.h",
+			"MU",
+			"UYX5XTB5RZ/moc_dialog_basic_settings.cpp",
+			null
+		],
+		[
+			"D:/opensource/nekoray/ui/dialog_hotkey.h",
+			"MU",
+			"UYX5XTB5RZ/moc_dialog_hotkey.cpp",
+			null
+		],
+		[
+			"D:/opensource/nekoray/ui/dialog_manage_groups.h",
+			"MU",
+			"UYX5XTB5RZ/moc_dialog_manage_groups.cpp",
+			null
+		],
+		[
+			"D:/opensource/nekoray/ui/dialog_manage_routes.h",
+			"MU",
+			"UYX5XTB5RZ/moc_dialog_manage_routes.cpp",
+			null
+		],
+		[
+			"D:/opensource/nekoray/ui/dialog_vpn_settings.h",
+			"MU",
+			"UYX5XTB5RZ/moc_dialog_vpn_settings.cpp",
+			null
+		],
+		[
+			"D:/opensource/nekoray/ui/edit/dialog_edit_group.h",
+			"MU",
+			"QAEFNB5DF7/moc_dialog_edit_group.cpp",
+			null
+		],
+		[
+			"D:/opensource/nekoray/ui/edit/dialog_edit_profile.h",
+			"MU",
+			"QAEFNB5DF7/moc_dialog_edit_profile.cpp",
+			null
+		],
+		[
+			"D:/opensource/nekoray/ui/edit/edit_chain.h",
+			"MU",
+			"QAEFNB5DF7/moc_edit_chain.cpp",
+			null
+		],
+		[
+			"D:/opensource/nekoray/ui/edit/edit_custom.h",
+			"MU",
+			"QAEFNB5DF7/moc_edit_custom.cpp",
+			null
+		],
+		[
+			"D:/opensource/nekoray/ui/edit/edit_naive.h",
+			"MU",
+			"QAEFNB5DF7/moc_edit_naive.cpp",
+			null
+		],
+		[
+			"D:/opensource/nekoray/ui/edit/edit_quic.h",
+			"MU",
+			"QAEFNB5DF7/moc_edit_quic.cpp",
+			null
+		],
+		[
+			"D:/opensource/nekoray/ui/edit/edit_shadowsocks.h",
+			"MU",
+			"QAEFNB5DF7/moc_edit_shadowsocks.cpp",
+			null
+		],
+		[
+			"D:/opensource/nekoray/ui/edit/edit_socks_http.h",
+			"MU",
+			"QAEFNB5DF7/moc_edit_socks_http.cpp",
+			null
+		],
+		[
+			"D:/opensource/nekoray/ui/edit/edit_trojan_vless.h",
+			"MU",
+			"QAEFNB5DF7/moc_edit_trojan_vless.cpp",
+			null
+		],
+		[
+			"D:/opensource/nekoray/ui/edit/edit_vmess.h",
+			"MU",
+			"QAEFNB5DF7/moc_edit_vmess.cpp",
+			null
+		],
+		[
+			"D:/opensource/nekoray/ui/mainwindow.h",
+			"MU",
+			"UYX5XTB5RZ/moc_mainwindow.cpp",
+			null
+		],
+		[
+			"D:/opensource/nekoray/ui/widget/GroupItem.h",
+			"MU",
+			"G4RAZZAF3Z/moc_GroupItem.cpp",
+			null
+		],
+		[
+			"D:/opensource/nekoray/ui/widget/ProxyItem.h",
+			"MU",
+			"G4RAZZAF3Z/moc_ProxyItem.cpp",
+			null
+		]
+	],
+	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
+	"INCLUDE_DIR" : "C:/Users/55237/Lossless-Superpower-JS/nekoray_build/nekobox_autogen/include",
+	"INCLUDE_DIR_Debug" : "C:/Users/55237/Lossless-Superpower-JS/nekoray_build/nekobox_autogen/include_Debug",
+	"INCLUDE_DIR_MinSizeRel" : "C:/Users/55237/Lossless-Superpower-JS/nekoray_build/nekobox_autogen/include_MinSizeRel",
+	"INCLUDE_DIR_RelWithDebInfo" : "C:/Users/55237/Lossless-Superpower-JS/nekoray_build/nekobox_autogen/include_RelWithDebInfo",
+	"INCLUDE_DIR_Release" : "C:/Users/55237/Lossless-Superpower-JS/nekoray_build/nekobox_autogen/include_Release",
+	"MOC_COMPILATION_FILE" : "C:/Users/55237/Lossless-Superpower-JS/nekoray_build/nekobox_autogen/mocs_compilation.cpp",
+	"MOC_COMPILATION_FILE_Debug" : "C:/Users/55237/Lossless-Superpower-JS/nekoray_build/nekobox_autogen/mocs_compilation_Debug.cpp",
+	"MOC_COMPILATION_FILE_MinSizeRel" : "C:/Users/55237/Lossless-Superpower-JS/nekoray_build/nekobox_autogen/mocs_compilation_MinSizeRel.cpp",
+	"MOC_COMPILATION_FILE_RelWithDebInfo" : "C:/Users/55237/Lossless-Superpower-JS/nekoray_build/nekobox_autogen/mocs_compilation_RelWithDebInfo.cpp",
+	"MOC_COMPILATION_FILE_Release" : "C:/Users/55237/Lossless-Superpower-JS/nekoray_build/nekobox_autogen/mocs_compilation_Release.cpp",
+	"MOC_DEFINITIONS" : [],
+	"MOC_DEFINITIONS_Debug" : 
+	[
+		"ABSL_CONSUME_DLL",
+		"NKR_VERSION=\"4.0.1-2024-12-12\"",
+		"NOMINMAX",
+		"PROTOBUF_USE_DLLS",
+		"QT_CORE_LIB",
+		"QT_GUI_LIB",
+		"QT_NETWORK_LIB",
+		"QT_SVG_LIB",
+		"QT_WIDGETS_LIB",
+		"UNICODE",
+		"WIN32",
+		"_CRT_SECURE_NO_WARNINGS",
+		"_SCL_SECURE_NO_WARNINGS",
+		"_UNICODE",
+		"_WIN32_WINNT=0x600"
+	],
+	"MOC_DEFINITIONS_MinSizeRel" : 
+	[
+		"ABSL_CONSUME_DLL",
+		"NKR_VERSION=\"4.0.1-2024-12-12\"",
+		"NOMINMAX",
+		"PROTOBUF_USE_DLLS",
+		"QT_CORE_LIB",
+		"QT_GUI_LIB",
+		"QT_NETWORK_LIB",
+		"QT_NO_DEBUG",
+		"QT_SVG_LIB",
+		"QT_WIDGETS_LIB",
+		"UNICODE",
+		"WIN32",
+		"_CRT_SECURE_NO_WARNINGS",
+		"_SCL_SECURE_NO_WARNINGS",
+		"_UNICODE",
+		"_WIN32_WINNT=0x600"
+	],
+	"MOC_DEFINITIONS_RelWithDebInfo" : 
+	[
+		"ABSL_CONSUME_DLL",
+		"NKR_VERSION=\"4.0.1-2024-12-12\"",
+		"NOMINMAX",
+		"PROTOBUF_USE_DLLS",
+		"QT_CORE_LIB",
+		"QT_GUI_LIB",
+		"QT_NETWORK_LIB",
+		"QT_NO_DEBUG",
+		"QT_SVG_LIB",
+		"QT_WIDGETS_LIB",
+		"UNICODE",
+		"WIN32",
+		"_CRT_SECURE_NO_WARNINGS",
+		"_SCL_SECURE_NO_WARNINGS",
+		"_UNICODE",
+		"_WIN32_WINNT=0x600"
+	],
+	"MOC_DEFINITIONS_Release" : 
+	[
+		"ABSL_CONSUME_DLL",
+		"NKR_VERSION=\"4.0.1-2024-12-12\"",
+		"NOMINMAX",
+		"PROTOBUF_USE_DLLS",
+		"QT_CORE_LIB",
+		"QT_GUI_LIB",
+		"QT_NETWORK_LIB",
+		"QT_NO_DEBUG",
+		"QT_SVG_LIB",
+		"QT_WIDGETS_LIB",
+		"UNICODE",
+		"WIN32",
+		"_CRT_SECURE_NO_WARNINGS",
+		"_SCL_SECURE_NO_WARNINGS",
+		"_UNICODE",
+		"_WIN32_WINNT=0x600"
+	],
+	"MOC_DEPEND_FILTERS" : 
+	[
+		[
+			"Q_PLUGIN_METADATA",
+			"[\n][ \t]*Q_PLUGIN_METADATA[ \t]*\\([^\\)]*FILE[ \t]*\"([^\"]+)\""
+		]
+	],
+	"MOC_INCLUDES" : [],
+	"MOC_INCLUDES_Debug" : 
+	[
+		"C:/Users/55237/Lossless-Superpower-JS/nekoray_build",
+		"D:/opensource/nekoray",
+		"D:/opensource/nekoray/3rdparty/QHotkey/QHotkey",
+		"C:/ProgramData/anaconda3/Library/include/qt",
+		"C:/ProgramData/anaconda3/Library/include/qt/QtWidgets",
+		"C:/ProgramData/anaconda3/Library/include/qt/QtGui",
+		"C:/ProgramData/anaconda3/Library/include/qt/QtANGLE",
+		"C:/ProgramData/anaconda3/Library/include/qt/QtCore",
+		"C:/ProgramData/anaconda3/Library/mkspecs/win32-msvc",
+		"C:/ProgramData/anaconda3/Library/include/qt/QtNetwork",
+		"C:/ProgramData/anaconda3/Library/include/qt/QtSvg",
+		"C:/ProgramData/anaconda3/Library/include",
+		"D:/opensource/nekoray/libs/deps/built/include"
+	],
+	"MOC_INCLUDES_MinSizeRel" : 
+	[
+		"C:/Users/55237/Lossless-Superpower-JS/nekoray_build",
+		"D:/opensource/nekoray",
+		"D:/opensource/nekoray/3rdparty/QHotkey/QHotkey",
+		"C:/ProgramData/anaconda3/Library/include/qt",
+		"C:/ProgramData/anaconda3/Library/include/qt/QtWidgets",
+		"C:/ProgramData/anaconda3/Library/include/qt/QtGui",
+		"C:/ProgramData/anaconda3/Library/include/qt/QtANGLE",
+		"C:/ProgramData/anaconda3/Library/include/qt/QtCore",
+		"C:/ProgramData/anaconda3/Library/mkspecs/win32-msvc",
+		"C:/ProgramData/anaconda3/Library/include/qt/QtNetwork",
+		"C:/ProgramData/anaconda3/Library/include/qt/QtSvg",
+		"C:/ProgramData/anaconda3/Library/include",
+		"D:/opensource/nekoray/libs/deps/built/include"
+	],
+	"MOC_INCLUDES_RelWithDebInfo" : 
+	[
+		"C:/Users/55237/Lossless-Superpower-JS/nekoray_build",
+		"D:/opensource/nekoray",
+		"D:/opensource/nekoray/3rdparty/QHotkey/QHotkey",
+		"C:/ProgramData/anaconda3/Library/include/qt",
+		"C:/ProgramData/anaconda3/Library/include/qt/QtWidgets",
+		"C:/ProgramData/anaconda3/Library/include/qt/QtGui",
+		"C:/ProgramData/anaconda3/Library/include/qt/QtANGLE",
+		"C:/ProgramData/anaconda3/Library/include/qt/QtCore",
+		"C:/ProgramData/anaconda3/Library/mkspecs/win32-msvc",
+		"C:/ProgramData/anaconda3/Library/include/qt/QtNetwork",
+		"C:/ProgramData/anaconda3/Library/include/qt/QtSvg",
+		"C:/ProgramData/anaconda3/Library/include",
+		"D:/opensource/nekoray/libs/deps/built/include"
+	],
+	"MOC_INCLUDES_Release" : 
+	[
+		"C:/Users/55237/Lossless-Superpower-JS/nekoray_build",
+		"D:/opensource/nekoray",
+		"D:/opensource/nekoray/3rdparty/QHotkey/QHotkey",
+		"C:/ProgramData/anaconda3/Library/include/qt",
+		"C:/ProgramData/anaconda3/Library/include/qt/QtWidgets",
+		"C:/ProgramData/anaconda3/Library/include/qt/QtGui",
+		"C:/ProgramData/anaconda3/Library/include/qt/QtANGLE",
+		"C:/ProgramData/anaconda3/Library/include/qt/QtCore",
+		"C:/ProgramData/anaconda3/Library/mkspecs/win32-msvc",
+		"C:/ProgramData/anaconda3/Library/include/qt/QtNetwork",
+		"C:/ProgramData/anaconda3/Library/include/qt/QtSvg",
+		"C:/ProgramData/anaconda3/Library/include",
+		"D:/opensource/nekoray/libs/deps/built/include"
+	],
+	"MOC_MACRO_NAMES" : [ "Q_OBJECT", "Q_GADGET", "Q_NAMESPACE", "Q_NAMESPACE_EXPORT" ],
+	"MOC_OPTIONS" : [],
+	"MOC_PATH_PREFIX" : false,
+	"MOC_PREDEFS_CMD" : [],
+	"MOC_PREDEFS_FILE" : "",
+	"MOC_RELAXED_MODE" : false,
+	"MOC_SKIP" : [],
+	"MULTI_CONFIG" : true,
+	"PARALLEL" : 14,
+	"PARSE_CACHE_FILE" : "C:/Users/55237/Lossless-Superpower-JS/nekoray_build/CMakeFiles/nekobox_autogen.dir/ParseCache.txt",
+	"PARSE_CACHE_FILE_Debug" : "C:/Users/55237/Lossless-Superpower-JS/nekoray_build/CMakeFiles/nekobox_autogen.dir/ParseCache_Debug.txt",
+	"PARSE_CACHE_FILE_MinSizeRel" : "C:/Users/55237/Lossless-Superpower-JS/nekoray_build/CMakeFiles/nekobox_autogen.dir/ParseCache_MinSizeRel.txt",
+	"PARSE_CACHE_FILE_RelWithDebInfo" : "C:/Users/55237/Lossless-Superpower-JS/nekoray_build/CMakeFiles/nekobox_autogen.dir/ParseCache_RelWithDebInfo.txt",
+	"PARSE_CACHE_FILE_Release" : "C:/Users/55237/Lossless-Superpower-JS/nekoray_build/CMakeFiles/nekobox_autogen.dir/ParseCache_Release.txt",
+	"QT_MOC_EXECUTABLE" : "C:/ProgramData/anaconda3/Library/bin/moc.exe",
+	"QT_UIC_EXECUTABLE" : "C:/ProgramData/anaconda3/Library/bin/uic.exe",
+	"QT_VERSION_MAJOR" : 5,
+	"QT_VERSION_MINOR" : 15,
+	"SETTINGS_FILE" : "C:/Users/55237/Lossless-Superpower-JS/nekoray_build/CMakeFiles/nekobox_autogen.dir/AutogenUsed.txt",
+	"SETTINGS_FILE_Debug" : "C:/Users/55237/Lossless-Superpower-JS/nekoray_build/CMakeFiles/nekobox_autogen.dir/AutogenUsed_Debug.txt",
+	"SETTINGS_FILE_MinSizeRel" : "C:/Users/55237/Lossless-Superpower-JS/nekoray_build/CMakeFiles/nekobox_autogen.dir/AutogenUsed_MinSizeRel.txt",
+	"SETTINGS_FILE_RelWithDebInfo" : "C:/Users/55237/Lossless-Superpower-JS/nekoray_build/CMakeFiles/nekobox_autogen.dir/AutogenUsed_RelWithDebInfo.txt",
+	"SETTINGS_FILE_Release" : "C:/Users/55237/Lossless-Superpower-JS/nekoray_build/CMakeFiles/nekobox_autogen.dir/AutogenUsed_Release.txt",
+	"SOURCES" : 
+	[
+		[ "D:/opensource/nekoray/3rdparty/QtExtKeySequenceEdit.cpp", "MU", null ],
+		[ "D:/opensource/nekoray/3rdparty/WinCommander.cpp", "MU", null ],
+		[ "D:/opensource/nekoray/3rdparty/base64.cpp", "MU", null ],
+		[ "D:/opensource/nekoray/3rdparty/qrcodegen.cpp", "MU", null ],
+		[
+			"D:/opensource/nekoray/3rdparty/qv2ray/v2/components/proxy/QvProxyConfigurator.cpp",
+			"MU",
+			null
+		],
+		[
+			"D:/opensource/nekoray/3rdparty/qv2ray/v2/ui/QvAutoCompleteTextEdit.cpp",
+			"MU",
+			null
+		],
+		[
+			"D:/opensource/nekoray/3rdparty/qv2ray/v2/ui/widgets/common/QJsonModel.cpp",
+			"MU",
+			null
+		],
+		[
+			"D:/opensource/nekoray/3rdparty/qv2ray/v2/ui/widgets/editors/w_JsonEditor.cpp",
+			"MU",
+			null
+		],
+		[
+			"D:/opensource/nekoray/3rdparty/qv2ray/v3/components/GeositeReader/GeositeReader.cpp",
+			"MU",
+			null
+		],
+		[
+			"D:/opensource/nekoray/3rdparty/qv2ray/v3/components/GeositeReader/picoproto.cpp",
+			"MU",
+			null
+		],
+		[ "D:/opensource/nekoray/db/ConfigBuilder.cpp", "MU", null ],
+		[ "D:/opensource/nekoray/db/Database.cpp", "MU", null ],
+		[ "D:/opensource/nekoray/db/ProfileFilter.cpp", "MU", null ],
+		[ "D:/opensource/nekoray/db/traffic/TrafficLooper.cpp", "MU", null ],
+		[ "D:/opensource/nekoray/fmt/AbstractBean.cpp", "MU", null ],
+		[ "D:/opensource/nekoray/fmt/Bean2CoreObj_box.cpp", "MU", null ],
+		[ "D:/opensource/nekoray/fmt/Bean2External.cpp", "MU", null ],
+		[ "D:/opensource/nekoray/fmt/Bean2Link.cpp", "MU", null ],
+		[ "D:/opensource/nekoray/fmt/Link2Bean.cpp", "MU", null ],
+		[ "D:/opensource/nekoray/main/HTTPRequestHelper.cpp", "MU", null ],
+		[ "D:/opensource/nekoray/main/NekoGui.cpp", "MU", null ],
+		[ "D:/opensource/nekoray/main/NekoGui_Utils.cpp", "MU", null ],
+		[ "D:/opensource/nekoray/main/main.cpp", "MU", null ],
+		[ "D:/opensource/nekoray/rpc/gRPC.cpp", "MU", null ],
+		[ "D:/opensource/nekoray/sub/GroupUpdater.cpp", "MU", null ],
+		[ "D:/opensource/nekoray/sys/AutoRun.cpp", "MU", null ],
+		[ "D:/opensource/nekoray/sys/ExternalProcess.cpp", "MU", null ],
+		[ "D:/opensource/nekoray/sys/windows/MiniDump.cpp", "MU", null ],
+		[ "D:/opensource/nekoray/sys/windows/guihelper.cpp", "MU", null ],
+		[ "D:/opensource/nekoray/ui/Icon.cpp", "MU", null ],
+		[ "D:/opensource/nekoray/ui/ThemeManager.cpp", "MU", null ],
+		[ "D:/opensource/nekoray/ui/dialog_basic_settings.cpp", "MU", null ],
+		[ "D:/opensource/nekoray/ui/dialog_hotkey.cpp", "MU", null ],
+		[ "D:/opensource/nekoray/ui/dialog_manage_groups.cpp", "MU", null ],
+		[ "D:/opensource/nekoray/ui/dialog_manage_routes.cpp", "MU", null ],
+		[ "D:/opensource/nekoray/ui/dialog_vpn_settings.cpp", "MU", null ],
+		[ "D:/opensource/nekoray/ui/edit/dialog_edit_group.cpp", "MU", null ],
+		[ "D:/opensource/nekoray/ui/edit/dialog_edit_profile.cpp", "MU", null ],
+		[ "D:/opensource/nekoray/ui/edit/edit_chain.cpp", "MU", null ],
+		[ "D:/opensource/nekoray/ui/edit/edit_custom.cpp", "MU", null ],
+		[ "D:/opensource/nekoray/ui/edit/edit_naive.cpp", "MU", null ],
+		[ "D:/opensource/nekoray/ui/edit/edit_quic.cpp", "MU", null ],
+		[ "D:/opensource/nekoray/ui/edit/edit_shadowsocks.cpp", "MU", null ],
+		[ "D:/opensource/nekoray/ui/edit/edit_socks_http.cpp", "MU", null ],
+		[ "D:/opensource/nekoray/ui/edit/edit_trojan_vless.cpp", "MU", null ],
+		[ "D:/opensource/nekoray/ui/edit/edit_vmess.cpp", "MU", null ],
+		[ "D:/opensource/nekoray/ui/mainwindow.cpp", "MU", null ],
+		[ "D:/opensource/nekoray/ui/mainwindow_grpc.cpp", "MU", null ],
+		[ "D:/opensource/nekoray/ui/widget/GroupItem.cpp", "MU", null ],
+		[ "D:/opensource/nekoray/ui/widget/ProxyItem.cpp", "MU", null ]
+	],
+	"UIC_OPTIONS" : [],
+	"UIC_SEARCH_PATHS" : [],
+	"UIC_SKIP" : [],
+	"UIC_UI_FILES" : [],
+	"USE_BETTER_GRAPH" : false,
+	"VERBOSITY" : 0
+}

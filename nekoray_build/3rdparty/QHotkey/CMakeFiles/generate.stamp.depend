@@ -1,0 +1,13 @@
+# CMake generation dependency list for this directory.
+C:/Program Files/CMake/share/cmake-4.3/Modules/BasicConfigVersion-AnyNewerVersion.cmake.in
+C:/Program Files/CMake/share/cmake-4.3/Modules/CMakePackageConfigHelpers.cmake
+C:/Program Files/CMake/share/cmake-4.3/Modules/GNUInstallDirs.cmake
+C:/Program Files/CMake/share/cmake-4.3/Modules/WriteBasicConfigVersionFile.cmake
+C:/ProgramData/anaconda3/Library/lib/cmake/Qt5/Qt5Config.cmake
+C:/ProgramData/anaconda3/Library/lib/cmake/Qt5/Qt5ConfigVersion.cmake
+C:/ProgramData/anaconda3/Library/lib/cmake/Qt5/Qt5ModuleLocation.cmake
+C:/ProgramData/anaconda3/Library/lib/cmake/Qt5Core/Qt5CoreConfig.cmake
+C:/ProgramData/anaconda3/Library/lib/cmake/Qt5Core/Qt5CoreConfigVersion.cmake
+C:/ProgramData/anaconda3/Library/lib/cmake/Qt5Gui/Qt5GuiConfig.cmake
+C:/ProgramData/anaconda3/Library/lib/cmake/Qt5Gui/Qt5GuiConfigVersion.cmake
+D:/opensource/nekoray/3rdparty/QHotkey/CMakeLists.txt

@@ -7,6 +7,7 @@ const { taskTracker } = require('./task_tracker');
 const { permanentMemorySystem } = require('./permanent_memory');
 const { eventRecorder } = require('./event_recorder');
 const { iterationManager } = require('./iteration_manager');
+const { dagTaskAutoRecorder } = require('./dag_task_auto_recorder');
 
 // 全局任务计数器
 let taskCounter = 0;
@@ -20,6 +21,7 @@ const config = {
   enableMemoryStorage: true,
   enableEventRecording: true,
   enableIterationTracking: true,
+  enableDAGRecording: true,
   defaultTaskImportance: 3
 };
 
@@ -41,6 +43,12 @@ class AutoTaskRecorder {
     try {
       // 初始化记忆系统
       await permanentMemorySystem.init();
+
+      // 初始化DAG任务自动记录器
+      if (config.enableDAGRecording) {
+        await dagTaskAutoRecorder.initialize();
+        console.log('[AutoTaskRecorder] DAG任务自动记录器已初始化');
+      }
 
       // 创建会话
       this.sessionId = `auto_record_session_${Date.now()}`;
@@ -479,12 +487,32 @@ class AutoTaskRecorder {
       { type: 'manual', ...options }
     );
 
+    let dagTaskId = null;
+    if (config.enableDAGRecording && dagTaskAutoRecorder.dagInitialized) {
+      const dagResult = await dagTaskAutoRecorder.recordTask({
+        name,
+        description,
+        ...options
+      });
+      if (dagResult.success) {
+        dagTaskId = dagResult.taskId;
+      }
+    }
+
     try {
       const result = await taskFn();
       const duration = Date.now() - startTime;
       const resultMessage = `任务 ${name} 完成 (${duration}ms)`;
 
       taskTracker.completeTask(taskId, resultMessage);
+
+      if (dagTaskId && config.enableDAGRecording) {
+        await dagTaskAutoRecorder.completeTask(dagTaskId, {
+          success: true,
+          duration,
+          result: resultMessage
+        }, []);
+      }
 
       if (config.enableMemoryStorage) {
         await permanentMemorySystem.addMemory(
@@ -510,6 +538,14 @@ class AutoTaskRecorder {
       const errorMessage = `任务 ${name} 失败: ${error.message} (${duration}ms)`;
 
       taskTracker.completeTask(taskId, errorMessage);
+
+      if (dagTaskId && config.enableDAGRecording) {
+        await dagTaskAutoRecorder.completeTask(dagTaskId, {
+          success: false,
+          duration,
+          error: error.message
+        }, [`任务失败: ${error.message}`]);
+      }
 
       if (config.enableMemoryStorage) {
         await permanentMemorySystem.addMemory(

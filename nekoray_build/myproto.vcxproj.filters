@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\55237\Lossless-Superpower-JS\nekoray_build\go\grpc_server\gen\libcore.pb.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\55237\Lossless-Superpower-JS\nekoray_build\go\grpc_server\gen\libcore.pb.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\55237\Lossless-Superpower-JS\nekoray_build\CMakeFiles\21aad3ee2eba680db0ffe9b3c6415e6a\libcore.pb.h.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\opensource\nekoray\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="D:\opensource\nekoray\go\grpc_server\gen\libcore.proto" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{085F7FBF-ACDF-3967-9827-F4E2A3A55055}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{190925B8-C94D-34D2-B48B-78EAE7433803}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{8ED5D408-9663-3937-8531-2CBD5AA4BA8E}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

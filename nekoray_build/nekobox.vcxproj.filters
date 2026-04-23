@@ -1,0 +1,546 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\55237\Lossless-Superpower-JS\nekoray_build\nekobox_autogen\mocs_compilation_Debug.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\opensource\nekoray\3rdparty\WinCommander.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\opensource\nekoray\sys\windows\guihelper.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\opensource\nekoray\sys\windows\MiniDump.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\opensource\nekoray\main\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\opensource\nekoray\main\NekoGui.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\opensource\nekoray\main\NekoGui_Utils.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\opensource\nekoray\main\HTTPRequestHelper.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\opensource\nekoray\3rdparty\base64.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\opensource\nekoray\3rdparty\qrcodegen.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\opensource\nekoray\3rdparty\QtExtKeySequenceEdit.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\opensource\nekoray\3rdparty\qv2ray\v2\ui\QvAutoCompleteTextEdit.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\opensource\nekoray\3rdparty\qv2ray\v2\components\proxy\QvProxyConfigurator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\opensource\nekoray\3rdparty\qv2ray\v2\ui\widgets\common\QJsonModel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\opensource\nekoray\3rdparty\qv2ray\v2\ui\widgets\editors\w_JsonEditor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\opensource\nekoray\3rdparty\qv2ray\v3\components\GeositeReader\GeositeReader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\opensource\nekoray\3rdparty\qv2ray\v3\components\GeositeReader\picoproto.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\opensource\nekoray\rpc\gRPC.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\opensource\nekoray\db\Database.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\opensource\nekoray\db\traffic\TrafficLooper.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\opensource\nekoray\db\ProfileFilter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\opensource\nekoray\db\ConfigBuilder.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\opensource\nekoray\fmt\AbstractBean.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\opensource\nekoray\fmt\Bean2CoreObj_box.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\opensource\nekoray\fmt\Bean2External.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\opensource\nekoray\fmt\Bean2Link.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\opensource\nekoray\fmt\Link2Bean.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\opensource\nekoray\sub\GroupUpdater.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\opensource\nekoray\sys\ExternalProcess.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\opensource\nekoray\sys\AutoRun.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\opensource\nekoray\ui\ThemeManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\opensource\nekoray\ui\Icon.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\opensource\nekoray\ui\mainwindow_grpc.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\opensource\nekoray\ui\mainwindow.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\opensource\nekoray\ui\edit\dialog_edit_profile.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\opensource\nekoray\ui\edit\dialog_edit_group.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\opensource\nekoray\ui\edit\edit_chain.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\opensource\nekoray\ui\edit\edit_socks_http.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\opensource\nekoray\ui\edit\edit_shadowsocks.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\opensource\nekoray\ui\edit\edit_vmess.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\opensource\nekoray\ui\edit\edit_trojan_vless.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\opensource\nekoray\ui\edit\edit_naive.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\opensource\nekoray\ui\edit\edit_quic.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\opensource\nekoray\ui\edit\edit_custom.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\opensource\nekoray\ui\dialog_basic_settings.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\opensource\nekoray\ui\dialog_manage_groups.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\opensource\nekoray\ui\dialog_manage_routes.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\opensource\nekoray\ui\dialog_vpn_settings.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\opensource\nekoray\ui\dialog_hotkey.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\opensource\nekoray\ui\widget\ProxyItem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\opensource\nekoray\ui\widget\GroupItem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\55237\Lossless-Superpower-JS\nekoray_build\nekobox_autogen\PNK5WDWK6L\qrc_neko.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\55237\Lossless-Superpower-JS\nekoray_build\nekobox_autogen\3WNQF2Z6YU\qrc_qss.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\55237\Lossless-Superpower-JS\nekoray_build\nekobox_autogen\EJRQKI7XPS\qrc_translations.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\55237\Lossless-Superpower-JS\nekoray_build\nekobox_autogen\mocs_compilation_Release.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\55237\Lossless-Superpower-JS\nekoray_build\nekobox_autogen\mocs_compilation_MinSizeRel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\55237\Lossless-Superpower-JS\nekoray_build\nekobox_autogen\mocs_compilation_RelWithDebInfo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="D:\opensource\nekoray\3rdparty\qv2ray\v2\ui\widgets\editors\w_JsonEditor.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\opensource\nekoray\fmt\ChainBean.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\opensource\nekoray\ui\mainwindow.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\opensource\nekoray\ui\edit\dialog_edit_profile.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\opensource\nekoray\ui\edit\dialog_edit_group.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\opensource\nekoray\ui\edit\edit_chain.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\opensource\nekoray\ui\edit\edit_socks_http.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\opensource\nekoray\ui\edit\edit_shadowsocks.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\opensource\nekoray\ui\edit\edit_vmess.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\opensource\nekoray\ui\edit\edit_trojan_vless.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\opensource\nekoray\ui\edit\edit_naive.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\opensource\nekoray\ui\edit\edit_quic.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\opensource\nekoray\ui\edit\edit_custom.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\opensource\nekoray\ui\dialog_basic_settings.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\opensource\nekoray\ui\dialog_manage_groups.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\opensource\nekoray\ui\dialog_manage_routes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\opensource\nekoray\ui\dialog_vpn_settings.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\opensource\nekoray\ui\dialog_hotkey.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\opensource\nekoray\ui\widget\ProxyItem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\opensource\nekoray\ui\widget\GroupItem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\55237\Lossless-Superpower-JS\nekoray_build\VersionInfo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\55237\Lossless-Superpower-JS\nekoray_build\nekobox_autogen\include_Debug\3rdparty\qv2ray\v2\ui\widgets\editors\ui_w_JsonEditor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\55237\Lossless-Superpower-JS\nekoray_build\nekobox_autogen\include_Debug\ui\ui_mainwindow.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\55237\Lossless-Superpower-JS\nekoray_build\nekobox_autogen\include_Debug\ui\edit\ui_dialog_edit_profile.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\55237\Lossless-Superpower-JS\nekoray_build\nekobox_autogen\include_Debug\ui\edit\ui_dialog_edit_group.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\55237\Lossless-Superpower-JS\nekoray_build\nekobox_autogen\include_Debug\ui\edit\ui_edit_chain.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\55237\Lossless-Superpower-JS\nekoray_build\nekobox_autogen\include_Debug\ui\edit\ui_edit_socks_http.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\55237\Lossless-Superpower-JS\nekoray_build\nekobox_autogen\include_Debug\ui\edit\ui_edit_shadowsocks.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\55237\Lossless-Superpower-JS\nekoray_build\nekobox_autogen\include_Debug\ui\edit\ui_edit_vmess.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\55237\Lossless-Superpower-JS\nekoray_build\nekobox_autogen\include_Debug\ui\edit\ui_edit_trojan_vless.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\55237\Lossless-Superpower-JS\nekoray_build\nekobox_autogen\include_Debug\ui\edit\ui_edit_naive.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\55237\Lossless-Superpower-JS\nekoray_build\nekobox_autogen\include_Debug\ui\edit\ui_edit_quic.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\55237\Lossless-Superpower-JS\nekoray_build\nekobox_autogen\include_Debug\ui\edit\ui_edit_custom.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\55237\Lossless-Superpower-JS\nekoray_build\nekobox_autogen\include_Debug\ui\ui_dialog_basic_settings.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\55237\Lossless-Superpower-JS\nekoray_build\nekobox_autogen\include_Debug\ui\ui_dialog_manage_groups.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\55237\Lossless-Superpower-JS\nekoray_build\nekobox_autogen\include_Debug\ui\ui_dialog_manage_routes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\55237\Lossless-Superpower-JS\nekoray_build\nekobox_autogen\include_Debug\ui\ui_dialog_vpn_settings.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\55237\Lossless-Superpower-JS\nekoray_build\nekobox_autogen\include_Debug\ui\ui_dialog_hotkey.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\55237\Lossless-Superpower-JS\nekoray_build\nekobox_autogen\include_Debug\ui\widget\ui_ProxyItem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\55237\Lossless-Superpower-JS\nekoray_build\nekobox_autogen\include_Debug\ui\widget\ui_GroupItem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\55237\Lossless-Superpower-JS\nekoray_build\nekobox_autogen\include_Release\3rdparty\qv2ray\v2\ui\widgets\editors\ui_w_JsonEditor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\55237\Lossless-Superpower-JS\nekoray_build\nekobox_autogen\include_Release\ui\ui_mainwindow.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\55237\Lossless-Superpower-JS\nekoray_build\nekobox_autogen\include_Release\ui\edit\ui_dialog_edit_profile.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\55237\Lossless-Superpower-JS\nekoray_build\nekobox_autogen\include_Release\ui\edit\ui_dialog_edit_group.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\55237\Lossless-Superpower-JS\nekoray_build\nekobox_autogen\include_Release\ui\edit\ui_edit_chain.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\55237\Lossless-Superpower-JS\nekoray_build\nekobox_autogen\include_Release\ui\edit\ui_edit_socks_http.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\55237\Lossless-Superpower-JS\nekoray_build\nekobox_autogen\include_Release\ui\edit\ui_edit_shadowsocks.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\55237\Lossless-Superpower-JS\nekoray_build\nekobox_autogen\include_Release\ui\edit\ui_edit_vmess.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\55237\Lossless-Superpower-JS\nekoray_build\nekobox_autogen\include_Release\ui\edit\ui_edit_trojan_vless.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\55237\Lossless-Superpower-JS\nekoray_build\nekobox_autogen\include_Release\ui\edit\ui_edit_naive.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\55237\Lossless-Superpower-JS\nekoray_build\nekobox_autogen\include_Release\ui\edit\ui_edit_quic.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\55237\Lossless-Superpower-JS\nekoray_build\nekobox_autogen\include_Release\ui\edit\ui_edit_custom.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\55237\Lossless-Superpower-JS\nekoray_build\nekobox_autogen\include_Release\ui\ui_dialog_basic_settings.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\55237\Lossless-Superpower-JS\nekoray_build\nekobox_autogen\include_Release\ui\ui_dialog_manage_groups.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\55237\Lossless-Superpower-JS\nekoray_build\nekobox_autogen\include_Release\ui\ui_dialog_manage_routes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\55237\Lossless-Superpower-JS\nekoray_build\nekobox_autogen\include_Release\ui\ui_dialog_vpn_settings.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\55237\Lossless-Superpower-JS\nekoray_build\nekobox_autogen\include_Release\ui\ui_dialog_hotkey.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\55237\Lossless-Superpower-JS\nekoray_build\nekobox_autogen\include_Release\ui\widget\ui_ProxyItem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\55237\Lossless-Superpower-JS\nekoray_build\nekobox_autogen\include_Release\ui\widget\ui_GroupItem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\55237\Lossless-Superpower-JS\nekoray_build\nekobox_autogen\include_MinSizeRel\3rdparty\qv2ray\v2\ui\widgets\editors\ui_w_JsonEditor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\55237\Lossless-Superpower-JS\nekoray_build\nekobox_autogen\include_MinSizeRel\ui\ui_mainwindow.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\55237\Lossless-Superpower-JS\nekoray_build\nekobox_autogen\include_MinSizeRel\ui\edit\ui_dialog_edit_profile.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\55237\Lossless-Superpower-JS\nekoray_build\nekobox_autogen\include_MinSizeRel\ui\edit\ui_dialog_edit_group.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\55237\Lossless-Superpower-JS\nekoray_build\nekobox_autogen\include_MinSizeRel\ui\edit\ui_edit_chain.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\55237\Lossless-Superpower-JS\nekoray_build\nekobox_autogen\include_MinSizeRel\ui\edit\ui_edit_socks_http.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\55237\Lossless-Superpower-JS\nekoray_build\nekobox_autogen\include_MinSizeRel\ui\edit\ui_edit_shadowsocks.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\55237\Lossless-Superpower-JS\nekoray_build\nekobox_autogen\include_MinSizeRel\ui\edit\ui_edit_vmess.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\55237\Lossless-Superpower-JS\nekoray_build\nekobox_autogen\include_MinSizeRel\ui\edit\ui_edit_trojan_vless.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\55237\Lossless-Superpower-JS\nekoray_build\nekobox_autogen\include_MinSizeRel\ui\edit\ui_edit_naive.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\55237\Lossless-Superpower-JS\nekoray_build\nekobox_autogen\include_MinSizeRel\ui\edit\ui_edit_quic.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\55237\Lossless-Superpower-JS\nekoray_build\nekobox_autogen\include_MinSizeRel\ui\edit\ui_edit_custom.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\55237\Lossless-Superpower-JS\nekoray_build\nekobox_autogen\include_MinSizeRel\ui\ui_dialog_basic_settings.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\55237\Lossless-Superpower-JS\nekoray_build\nekobox_autogen\include_MinSizeRel\ui\ui_dialog_manage_groups.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\55237\Lossless-Superpower-JS\nekoray_build\nekobox_autogen\include_MinSizeRel\ui\ui_dialog_manage_routes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\55237\Lossless-Superpower-JS\nekoray_build\nekobox_autogen\include_MinSizeRel\ui\ui_dialog_vpn_settings.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\55237\Lossless-Superpower-JS\nekoray_build\nekobox_autogen\include_MinSizeRel\ui\ui_dialog_hotkey.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\55237\Lossless-Superpower-JS\nekoray_build\nekobox_autogen\include_MinSizeRel\ui\widget\ui_ProxyItem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\55237\Lossless-Superpower-JS\nekoray_build\nekobox_autogen\include_MinSizeRel\ui\widget\ui_GroupItem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\55237\Lossless-Superpower-JS\nekoray_build\nekobox_autogen\include_RelWithDebInfo\3rdparty\qv2ray\v2\ui\widgets\editors\ui_w_JsonEditor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\55237\Lossless-Superpower-JS\nekoray_build\nekobox_autogen\include_RelWithDebInfo\ui\ui_mainwindow.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\55237\Lossless-Superpower-JS\nekoray_build\nekobox_autogen\include_RelWithDebInfo\ui\edit\ui_dialog_edit_profile.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\55237\Lossless-Superpower-JS\nekoray_build\nekobox_autogen\include_RelWithDebInfo\ui\edit\ui_dialog_edit_group.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\55237\Lossless-Superpower-JS\nekoray_build\nekobox_autogen\include_RelWithDebInfo\ui\edit\ui_edit_chain.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\55237\Lossless-Superpower-JS\nekoray_build\nekobox_autogen\include_RelWithDebInfo\ui\edit\ui_edit_socks_http.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\55237\Lossless-Superpower-JS\nekoray_build\nekobox_autogen\include_RelWithDebInfo\ui\edit\ui_edit_shadowsocks.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\55237\Lossless-Superpower-JS\nekoray_build\nekobox_autogen\include_RelWithDebInfo\ui\edit\ui_edit_vmess.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\55237\Lossless-Superpower-JS\nekoray_build\nekobox_autogen\include_RelWithDebInfo\ui\edit\ui_edit_trojan_vless.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\55237\Lossless-Superpower-JS\nekoray_build\nekobox_autogen\include_RelWithDebInfo\ui\edit\ui_edit_naive.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\55237\Lossless-Superpower-JS\nekoray_build\nekobox_autogen\include_RelWithDebInfo\ui\edit\ui_edit_quic.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\55237\Lossless-Superpower-JS\nekoray_build\nekobox_autogen\include_RelWithDebInfo\ui\edit\ui_edit_custom.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\55237\Lossless-Superpower-JS\nekoray_build\nekobox_autogen\include_RelWithDebInfo\ui\ui_dialog_basic_settings.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\55237\Lossless-Superpower-JS\nekoray_build\nekobox_autogen\include_RelWithDebInfo\ui\ui_dialog_manage_groups.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\55237\Lossless-Superpower-JS\nekoray_build\nekobox_autogen\include_RelWithDebInfo\ui\ui_dialog_manage_routes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\55237\Lossless-Superpower-JS\nekoray_build\nekobox_autogen\include_RelWithDebInfo\ui\ui_dialog_vpn_settings.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\55237\Lossless-Superpower-JS\nekoray_build\nekobox_autogen\include_RelWithDebInfo\ui\ui_dialog_hotkey.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\55237\Lossless-Superpower-JS\nekoray_build\nekobox_autogen\include_RelWithDebInfo\ui\widget\ui_ProxyItem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\55237\Lossless-Superpower-JS\nekoray_build\nekobox_autogen\include_RelWithDebInfo\ui\widget\ui_GroupItem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\55237\Lossless-Superpower-JS\nekoray_build\CMakeFiles\7ee6d00545d3e05cce258d2b86931d4c\autouic_(CONFIG).stamp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\55237\Lossless-Superpower-JS\nekoray_build\CMakeFiles\caf6dfd0f2eef8017797780a12739741\qrc_neko.cpp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\55237\Lossless-Superpower-JS\nekoray_build\CMakeFiles\27ffce5a75e8503274e8cb0b25a8bed0\qrc_qss.cpp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\55237\Lossless-Superpower-JS\nekoray_build\CMakeFiles\f26c9ffa5110a40d83eec1e1f561b6e5\fa_IR.ts.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\55237\Lossless-Superpower-JS\nekoray_build\CMakeFiles\0e676d380ae5c66d79eaed38962d973d\fa_IR.qm.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\55237\Lossless-Superpower-JS\nekoray_build\CMakeFiles\f26c9ffa5110a40d83eec1e1f561b6e5\ru_RU.ts.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\55237\Lossless-Superpower-JS\nekoray_build\CMakeFiles\0e676d380ae5c66d79eaed38962d973d\ru_RU.qm.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\55237\Lossless-Superpower-JS\nekoray_build\CMakeFiles\f26c9ffa5110a40d83eec1e1f561b6e5\zh_CN.ts.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\55237\Lossless-Superpower-JS\nekoray_build\CMakeFiles\0e676d380ae5c66d79eaed38962d973d\zh_CN.qm.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\55237\Lossless-Superpower-JS\nekoray_build\CMakeFiles\9d3df84b44eaa90dde3e885c3cc0712d\qrc_translations.cpp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\opensource\nekoray\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="D:\opensource\nekoray\3rdparty\qv2ray\v2\ui\widgets\editors\w_JsonEditor.ui" />
+    <None Include="D:\opensource\nekoray\ui\mainwindow.ui" />
+    <None Include="D:\opensource\nekoray\ui\edit\dialog_edit_profile.ui" />
+    <None Include="D:\opensource\nekoray\ui\edit\dialog_edit_group.ui" />
+    <None Include="D:\opensource\nekoray\ui\edit\edit_chain.ui" />
+    <None Include="D:\opensource\nekoray\ui\edit\edit_socks_http.ui" />
+    <None Include="D:\opensource\nekoray\ui\edit\edit_shadowsocks.ui" />
+    <None Include="D:\opensource\nekoray\ui\edit\edit_vmess.ui" />
+    <None Include="D:\opensource\nekoray\ui\edit\edit_trojan_vless.ui" />
+    <None Include="D:\opensource\nekoray\ui\edit\edit_naive.ui" />
+    <None Include="D:\opensource\nekoray\ui\edit\edit_quic.ui" />
+    <None Include="D:\opensource\nekoray\ui\edit\edit_custom.ui" />
+    <None Include="D:\opensource\nekoray\ui\dialog_basic_settings.ui" />
+    <None Include="D:\opensource\nekoray\ui\dialog_manage_groups.ui" />
+    <None Include="D:\opensource\nekoray\ui\dialog_manage_routes.ui" />
+    <None Include="D:\opensource\nekoray\ui\dialog_vpn_settings.ui" />
+    <None Include="D:\opensource\nekoray\ui\dialog_hotkey.ui" />
+    <None Include="D:\opensource\nekoray\ui\widget\ProxyItem.ui" />
+    <None Include="D:\opensource\nekoray\ui\widget\GroupItem.ui" />
+    <None Include="D:\opensource\nekoray\res\neko.qrc" />
+    <None Include="D:\opensource\nekoray\res\theme\feiyangqingyun\qss.qrc" />
+    <None Include="C:\Users\55237\Lossless-Superpower-JS\nekoray_build\translations.qrc" />
+    <None Include="C:\Users\55237\Lossless-Superpower-JS\nekoray_build\nekobox_autogen\autouic_Debug.stamp" />
+    <None Include="C:\Users\55237\Lossless-Superpower-JS\nekoray_build\nekobox_autogen\autouic_Release.stamp" />
+    <None Include="C:\Users\55237\Lossless-Superpower-JS\nekoray_build\nekobox_autogen\autouic_MinSizeRel.stamp" />
+    <None Include="C:\Users\55237\Lossless-Superpower-JS\nekoray_build\nekobox_autogen\autouic_RelWithDebInfo.stamp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="C:\Users\55237\Lossless-Superpower-JS\nekoray_build\VersionResource.rc">
+      <Filter>Source Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{085F7FBF-ACDF-3967-9827-F4E2A3A55055}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{190925B8-C94D-34D2-B48B-78EAE7433803}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{8ED5D408-9663-3937-8531-2CBD5AA4BA8E}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

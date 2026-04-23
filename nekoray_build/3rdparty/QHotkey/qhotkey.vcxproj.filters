@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\55237\Lossless-Superpower-JS\nekoray_build\3rdparty\QHotkey\qhotkey_autogen\mocs_compilation_Debug.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\opensource\nekoray\3rdparty\QHotkey\QHotkey\qhotkey.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\opensource\nekoray\3rdparty\QHotkey\QHotkey\qhotkey_win.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\55237\Lossless-Superpower-JS\nekoray_build\3rdparty\QHotkey\qhotkey_autogen\mocs_compilation_Release.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\55237\Lossless-Superpower-JS\nekoray_build\3rdparty\QHotkey\qhotkey_autogen\mocs_compilation_MinSizeRel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\55237\Lossless-Superpower-JS\nekoray_build\3rdparty\QHotkey\qhotkey_autogen\mocs_compilation_RelWithDebInfo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\opensource\nekoray\3rdparty\QHotkey\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{8ED5D408-9663-3937-8531-2CBD5AA4BA8E}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

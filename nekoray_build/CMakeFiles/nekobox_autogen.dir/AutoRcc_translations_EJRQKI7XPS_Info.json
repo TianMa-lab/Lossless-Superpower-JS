@@ -1,0 +1,35 @@
+{
+	"BUILD_DIR" : "C:/Users/55237/Lossless-Superpower-JS/nekoray_build/nekobox_autogen",
+	"CMAKE_BINARY_DIR" : "C:/Users/55237/Lossless-Superpower-JS/nekoray_build",
+	"CMAKE_CURRENT_BINARY_DIR" : "C:/Users/55237/Lossless-Superpower-JS/nekoray_build",
+	"CMAKE_CURRENT_SOURCE_DIR" : "D:/opensource/nekoray",
+	"CMAKE_SOURCE_DIR" : "D:/opensource/nekoray",
+	"CROSS_CONFIG" : false,
+	"GENERATOR" : "Visual Studio 17 2022",
+	"INCLUDE_DIR" : "C:/Users/55237/Lossless-Superpower-JS/nekoray_build/nekobox_autogen/include",
+	"INCLUDE_DIR_Debug" : "C:/Users/55237/Lossless-Superpower-JS/nekoray_build/nekobox_autogen/include_Debug",
+	"INCLUDE_DIR_MinSizeRel" : "C:/Users/55237/Lossless-Superpower-JS/nekoray_build/nekobox_autogen/include_MinSizeRel",
+	"INCLUDE_DIR_RelWithDebInfo" : "C:/Users/55237/Lossless-Superpower-JS/nekoray_build/nekobox_autogen/include_RelWithDebInfo",
+	"INCLUDE_DIR_Release" : "C:/Users/55237/Lossless-Superpower-JS/nekoray_build/nekobox_autogen/include_Release",
+	"INPUTS" : 
+	[
+		"C:/Users/55237/Lossless-Superpower-JS/nekoray_build/fa_IR.qm",
+		"C:/Users/55237/Lossless-Superpower-JS/nekoray_build/ru_RU.qm",
+		"C:/Users/55237/Lossless-Superpower-JS/nekoray_build/zh_CN.qm"
+	],
+	"LOCK_FILE" : "C:/Users/55237/Lossless-Superpower-JS/nekoray_build/CMakeFiles/nekobox_autogen.dir/AutoRcc_translations_EJRQKI7XPS_Lock.lock",
+	"MULTI_CONFIG" : true,
+	"OPTIONS" : [ "-name", "translations" ],
+	"OUTPUT_CHECKSUM" : "EJRQKI7XPS",
+	"OUTPUT_NAME" : "qrc_translations.cpp",
+	"RCC_EXECUTABLE" : "C:/ProgramData/anaconda3/Library/bin/rcc.exe",
+	"RCC_LIST_OPTIONS" : [],
+	"SETTINGS_FILE" : "C:/Users/55237/Lossless-Superpower-JS/nekoray_build/CMakeFiles/nekobox_autogen.dir/AutoRcc_translations_EJRQKI7XPS_Used.txt",
+	"SETTINGS_FILE_Debug" : "C:/Users/55237/Lossless-Superpower-JS/nekoray_build/CMakeFiles/nekobox_autogen.dir/AutoRcc_translations_EJRQKI7XPS_Used_Debug.txt",
+	"SETTINGS_FILE_MinSizeRel" : "C:/Users/55237/Lossless-Superpower-JS/nekoray_build/CMakeFiles/nekobox_autogen.dir/AutoRcc_translations_EJRQKI7XPS_Used_MinSizeRel.txt",
+	"SETTINGS_FILE_RelWithDebInfo" : "C:/Users/55237/Lossless-Superpower-JS/nekoray_build/CMakeFiles/nekobox_autogen.dir/AutoRcc_translations_EJRQKI7XPS_Used_RelWithDebInfo.txt",
+	"SETTINGS_FILE_Release" : "C:/Users/55237/Lossless-Superpower-JS/nekoray_build/CMakeFiles/nekobox_autogen.dir/AutoRcc_translations_EJRQKI7XPS_Used_Release.txt",
+	"SOURCE" : "C:/Users/55237/Lossless-Superpower-JS/nekoray_build/translations.qrc",
+	"USE_BETTER_GRAPH" : false,
+	"VERBOSITY" : 0
+}

@@ -988,6 +988,63 @@
       "status": "active",
       "id": "kg_node_自动记录任务_是的，taskrunner可以自动记录任务并存储到记忆系统_f8ab906f",
       "createdAt": 1776428325632
+    },
+    "task_node_task_1776905303008": {
+      "id": "task_node_task_1776905303008",
+      "type": "task",
+      "taskId": "task_1776905303008",
+      "status": "completed",
+      "priority": "high",
+      "topic": "NekoBox代理配置",
+      "description": "配置NekoBox使用海外静态住宅IP代理服务器",
+      "createdAt": 1776905303008,
+      "updatedAt": 1776905303011,
+      "completedAt": 1776905303011,
+      "metadata": {
+        "agent": "assistant",
+        "project": "nekoray",
+        "tags": [
+          "nekoray",
+          "proxy",
+          "configuration"
+        ],
+        "outcome": null,
+        "lessons": []
+      },
+      "outcome": {
+        "success": true,
+        "proxyConnected": true,
+        "ip": "64.105.162.121",
+        "location": "Singapore"
+      },
+      "lessons": [
+        "配置文件格式使用addr和port字段",
+        "代理服务器位于新加坡",
+        "某些网站可能限制代理访问"
+      ]
+    },
+    "task_node_task_1776905303009": {
+      "id": "task_node_task_1776905303009",
+      "type": "task",
+      "taskId": "task_1776905303009",
+      "status": "active",
+      "priority": "medium",
+      "topic": "测试代理连接",
+      "description": "测试NekoBox代理服务器连接和速度",
+      "createdAt": 1776905303009,
+      "updatedAt": 1776905303009,
+      "completedAt": null,
+      "metadata": {
+        "agent": "assistant",
+        "project": "nekoray",
+        "tags": [
+          "nekoray",
+          "proxy",
+          "testing"
+        ],
+        "outcome": null,
+        "lessons": []
+      }
     }
   },
   "edges": [
@@ -2660,6 +2717,14 @@
       "originalId": "kg_1776423123572_f5m3w6wgu",
       "unifiedId": "kg_1776423123572_f5m3w6wgu_64f8f814",
       "createdAt": 1776428325671
+    },
+    {
+      "id": "edge_1776905303010_lzi8hk6zc",
+      "source": "task_node_task_1776905303008",
+      "target": "task_node_task_1776905303009",
+      "type": "task_relation",
+      "relationType": "depends_on",
+      "createdAt": 1776905303010
     }
   ]
 }

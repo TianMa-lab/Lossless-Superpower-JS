@@ -1,0 +1,124 @@
+^C:\USERS\55237\LOSSLESS-SUPERPOWER-JS\NEKORAY_BUILD\CMAKEFILES\7EE6D00545D3E05CCE258D2B86931D4C\AUTOUIC_(CONFIG).STAMP.RULE
+setlocal
+cd C:\Users\55237\Lossless-Superpower-JS\nekoray_build
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\55237\LOSSLESS-SUPERPOWER-JS\NEKORAY_BUILD\CMAKEFILES\CAF6DFD0F2EEF8017797780A12739741\QRC_NEKO.CPP.RULE
+setlocal
+cd C:\Users\55237\Lossless-Superpower-JS\nekoray_build
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E cmake_autorcc C:/Users/55237/Lossless-Superpower-JS/nekoray_build/CMakeFiles/nekobox_autogen.dir/AutoRcc_neko_PNK5WDWK6L_Info.json Release
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\55237\LOSSLESS-SUPERPOWER-JS\NEKORAY_BUILD\CMAKEFILES\27FFCE5A75E8503274E8CB0B25A8BED0\QRC_QSS.CPP.RULE
+setlocal
+cd C:\Users\55237\Lossless-Superpower-JS\nekoray_build
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E cmake_autorcc C:/Users/55237/Lossless-Superpower-JS/nekoray_build/CMakeFiles/nekobox_autogen.dir/AutoRcc_qss_3WNQF2Z6YU_Info.json Release
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\55237\LOSSLESS-SUPERPOWER-JS\NEKORAY_BUILD\CMAKEFILES\F26C9FFA5110A40D83EEC1E1F561B6E5\FA_IR.TS.RULE
+setlocal
+C:\ProgramData\anaconda3\Library\bin\lupdate.exe -locations none -no-obsolete @C:/Users/55237/Lossless-Superpower-JS/nekoray_build/CMakeFiles/fa_IR.ts_lst_file -ts D:/opensource/nekoray/translations/fa_IR.ts
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\55237\LOSSLESS-SUPERPOWER-JS\NEKORAY_BUILD\CMAKEFILES\0E676D380AE5C66D79EAED38962D973D\FA_IR.QM.RULE
+setlocal
+C:\ProgramData\anaconda3\Library\bin\lrelease.exe D:/opensource/nekoray/translations/fa_IR.ts -qm C:/Users/55237/Lossless-Superpower-JS/nekoray_build/fa_IR.qm
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\55237\LOSSLESS-SUPERPOWER-JS\NEKORAY_BUILD\CMAKEFILES\F26C9FFA5110A40D83EEC1E1F561B6E5\RU_RU.TS.RULE
+setlocal
+C:\ProgramData\anaconda3\Library\bin\lupdate.exe -locations none -no-obsolete @C:/Users/55237/Lossless-Superpower-JS/nekoray_build/CMakeFiles/ru_RU.ts_lst_file -ts D:/opensource/nekoray/translations/ru_RU.ts
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\55237\LOSSLESS-SUPERPOWER-JS\NEKORAY_BUILD\CMAKEFILES\0E676D380AE5C66D79EAED38962D973D\RU_RU.QM.RULE
+setlocal
+C:\ProgramData\anaconda3\Library\bin\lrelease.exe D:/opensource/nekoray/translations/ru_RU.ts -qm C:/Users/55237/Lossless-Superpower-JS/nekoray_build/ru_RU.qm
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\55237\LOSSLESS-SUPERPOWER-JS\NEKORAY_BUILD\CMAKEFILES\F26C9FFA5110A40D83EEC1E1F561B6E5\ZH_CN.TS.RULE
+setlocal
+C:\ProgramData\anaconda3\Library\bin\lupdate.exe -locations none -no-obsolete @C:/Users/55237/Lossless-Superpower-JS/nekoray_build/CMakeFiles/zh_CN.ts_lst_file -ts D:/opensource/nekoray/translations/zh_CN.ts
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\55237\LOSSLESS-SUPERPOWER-JS\NEKORAY_BUILD\CMAKEFILES\0E676D380AE5C66D79EAED38962D973D\ZH_CN.QM.RULE
+setlocal
+C:\ProgramData\anaconda3\Library\bin\lrelease.exe D:/opensource/nekoray/translations/zh_CN.ts -qm C:/Users/55237/Lossless-Superpower-JS/nekoray_build/zh_CN.qm
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\55237\LOSSLESS-SUPERPOWER-JS\NEKORAY_BUILD\CMAKEFILES\9D3DF84B44EAA90DDE3E885C3CC0712D\QRC_TRANSLATIONS.CPP.RULE
+setlocal
+cd C:\Users\55237\Lossless-Superpower-JS\nekoray_build
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E cmake_autorcc C:/Users/55237/Lossless-Superpower-JS/nekoray_build/CMakeFiles/nekobox_autogen.dir/AutoRcc_translations_EJRQKI7XPS_Info.json Release
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^D:\OPENSOURCE\NEKORAY\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/opensource/nekoray -BC:/Users/55237/Lossless-Superpower-JS/nekoray_build --check-stamp-file C:/Users/55237/Lossless-Superpower-JS/nekoray_build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
