@@ -1045,6 +1045,32 @@
         "outcome": null,
         "lessons": []
       }
+    },
+    "task_node_task_1776906804497": {
+      "id": "task_node_task_1776906804497",
+      "type": "task",
+      "taskId": "task_1776906804497",
+      "status": "completed",
+      "priority": "high",
+      "topic": "测试任务-DAG自动记录",
+      "description": "测试DAG任务自动记录功能",
+      "createdAt": 1776906804497,
+      "updatedAt": 1776906804499,
+      "completedAt": 1776906804499,
+      "metadata": {
+        "agent": "assistant",
+        "project": "test",
+        "tags": [],
+        "outcome": null,
+        "lessons": []
+      },
+      "outcome": {
+        "success": true,
+        "message": "测试完成"
+      },
+      "lessons": [
+        "这是经验教训"
+      ]
     }
   },
   "edges": [
