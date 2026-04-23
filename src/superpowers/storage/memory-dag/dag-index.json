@@ -1301,6 +1301,313 @@
         "confidence": 0.9,
         "relevance": 0.8
       }
+    },
+    "conversation_test_conversation_auto_1": {
+      "id": "conversation_test_conversation_auto_1",
+      "type": "conversation",
+      "topic": "DAG系统是一个基于有向无环图的任务管理系统，它可以帮助你跟踪任务的依赖关系和执行状态 那如何添加任务到DAG系统中呢？ 你好，我需要了解如何使用DAG系统进行任务管理",
+      "messageCount": 4,
+      "participantCount": 2,
+      "entities": [],
+      "metadata": {
+        "topic": "DAG系统使用指南",
+        "source": "chat",
+        "user_id": "test_user",
+        "startTime": 1776909965427,
+        "endTime": 1776910265427
+      },
+      "createdAt": 1776913565428
+    },
+    "task_node_task_1776913565429": {
+      "id": "task_node_task_1776913565429",
+      "type": "task",
+      "taskId": "task_1776913565429",
+      "status": "active",
+      "priority": "medium",
+      "topic": "管理系统，它可以帮助你跟踪任务的依赖关系和执行状态",
+      "description": "任务管理系统，它可以帮助你跟踪任务的依赖关系和执行状态",
+      "createdAt": 1776913565429,
+      "updatedAt": 1776913565429,
+      "completedAt": null,
+      "metadata": {
+        "agent": "unknown",
+        "project": "conversation",
+        "tags": [
+          "conversation",
+          "extracted"
+        ],
+        "outcome": null,
+        "lessons": []
+      }
+    },
+    "task_node_task_1776913565431": {
+      "id": "task_node_task_1776913565431",
+      "type": "task",
+      "taskId": "task_1776913565431",
+      "status": "active",
+      "priority": "medium",
+      "topic": "到DAG系统中呢？",
+      "description": "任务到DAG系统中呢？",
+      "createdAt": 1776913565431,
+      "updatedAt": 1776913565431,
+      "completedAt": null,
+      "metadata": {
+        "agent": "unknown",
+        "project": "conversation",
+        "tags": [
+          "conversation",
+          "extracted"
+        ],
+        "outcome": null,
+        "lessons": []
+      }
+    },
+    "task_node_task_1776913565433": {
+      "id": "task_node_task_1776913565433",
+      "type": "task",
+      "taskId": "task_1776913565433",
+      "status": "active",
+      "priority": "medium",
+      "topic": "Recorder模块的recordTask方法来添加任务，它会自动处理任务的依赖关系和状态管理",
+      "description": "TaskRecorder模块的recordTask方法来添加任务，它会自动处理任务的依赖关系和状态管理",
+      "createdAt": 1776913565433,
+      "updatedAt": 1776913565433,
+      "completedAt": null,
+      "metadata": {
+        "agent": "unknown",
+        "project": "conversation",
+        "tags": [
+          "conversation",
+          "extracted"
+        ],
+        "outcome": null,
+        "lessons": []
+      }
+    },
+    "message_test_conversation_auto_1_0": {
+      "id": "message_test_conversation_auto_1_0",
+      "type": "message",
+      "role": "user",
+      "content": "你好，我需要了解如何使用DAG系统进行任务管理",
+      "timestamp": 1776909965427,
+      "metadata": {
+        "conversationId": "test_conversation_auto_1",
+        "sequence": 0
+      },
+      "createdAt": 1776913565434
+    },
+    "message_test_conversation_auto_1_1": {
+      "id": "message_test_conversation_auto_1_1",
+      "type": "message",
+      "role": "assistant",
+      "content": "DAG系统是一个基于有向无环图的任务管理系统，它可以帮助你跟踪任务的依赖关系和执行状态",
+      "timestamp": 1776910065427,
+      "metadata": {
+        "conversationId": "test_conversation_auto_1",
+        "sequence": 1
+      },
+      "createdAt": 1776913565436
+    },
+    "message_test_conversation_auto_1_2": {
+      "id": "message_test_conversation_auto_1_2",
+      "type": "message",
+      "role": "user",
+      "content": "那如何添加任务到DAG系统中呢？",
+      "timestamp": 1776910165427,
+      "metadata": {
+        "conversationId": "test_conversation_auto_1",
+        "sequence": 2
+      },
+      "createdAt": 1776913565438
+    },
+    "message_test_conversation_auto_1_3": {
+      "id": "message_test_conversation_auto_1_3",
+      "type": "message",
+      "role": "assistant",
+      "content": "你可以使用TaskRecorder模块的recordTask方法来添加任务，它会自动处理任务的依赖关系和状态管理",
+      "timestamp": 1776910265427,
+      "metadata": {
+        "conversationId": "test_conversation_auto_1",
+        "sequence": 3
+      },
+      "createdAt": 1776913565441
+    },
+    "memory_1776913565444_4q26t82di": {
+      "id": "memory_1776913565444_4q26t82di",
+      "type": "memory",
+      "topic": "DAG系统使用指南",
+      "createdAt": 1776913565609,
+      "layers": {
+        "raw": {
+          "data": {
+            "original": "你好，我需要了解如何使用DAG系统进行任务管理\nDAG系统是一个基于有向无环图的任务管理系统，它可以帮助你跟踪任务的依赖关系和执行状态\n那如何添加任务到DAG系统中呢？\n你可以使用TaskRecorder模块的recordTask方法来添加任务，它会自动处理任务的依赖关系和状态管理",
+            "timestamp": 1776913565444,
+            "size": 141,
+            "type": "string",
+            "source": "conversation"
+          },
+          "processedAt": 1776913565444,
+          "description": "原始数据层"
+        },
+        "structured": {
+          "data": {
+            "entities": [],
+            "keywords": [
+              "你好，我需要了解如何使用dag系统进行任务管理",
+              "dag系统是一个基于有向无环图的任务管理系统，它可以帮助你跟踪任务的依赖关系和执行状态",
+              "那如何添加任务到dag系统中呢？",
+              "你可以使用taskrecorder模块的recordtask方法来添加任务，它会自动处理任务的依赖关系和状态管理"
+            ],
+            "relationships": [],
+            "metadata": {}
+          },
+          "processedAt": 1776913565608,
+          "description": "结构化数据层"
+        },
+        "semantic": {
+          "data": {
+            "topics": [],
+            "sentiments": [
+              {
+                "type": "positive",
+                "word": "好"
+              }
+            ],
+            "intentions": [],
+            "concepts": []
+          },
+          "processedAt": 1776913565608,
+          "description": "语义理解层"
+        },
+        "knowledge": {
+          "data": {
+            "facts": [],
+            "rules": [],
+            "patterns": [],
+            "insights": []
+          },
+          "processedAt": 1776913565609,
+          "description": "知识提取层"
+        },
+        "insight": {
+          "data": {
+            "trends": [],
+            "opportunities": [],
+            "risks": [],
+            "recommendations": []
+          },
+          "processedAt": 1776913565609,
+          "description": "洞察发现层"
+        }
+      },
+      "metadata": {
+        "source": "conversation",
+        "confidence": 0.8,
+        "relevance": 0.7
+      }
+    },
+    "task_node_task_1776913565764": {
+      "id": "task_node_task_1776913565764",
+      "type": "task",
+      "taskId": "task_1776913565764",
+      "status": "completed",
+      "priority": "medium",
+      "topic": "对话自动处理",
+      "description": "自动处理对话 test_conversation_auto_1，提取记忆 memory_1776913565444_4q26t82di",
+      "createdAt": 1776913565764,
+      "updatedAt": 1776913565913,
+      "completedAt": 1776913565913,
+      "metadata": {
+        "agent": "assistant",
+        "project": "auto_memory",
+        "tags": [
+          "conversation",
+          "memory",
+          "auto_processing"
+        ],
+        "outcome": null,
+        "lessons": []
+      },
+      "outcome": {
+        "success": true,
+        "duration": 153,
+        "result": "任务 对话自动处理 完成 (153ms)"
+      },
+      "lessons": []
+    },
+    "memory_1776913568370_97zhesrai": {
+      "id": "memory_1776913568370_97zhesrai",
+      "type": "memory",
+      "topic": "DAG系统分析",
+      "createdAt": 1776913568371,
+      "layers": {
+        "raw": {
+          "data": {
+            "original": "你好，我需要了解如何使用DAG系统进行任务管理\nDAG系统是一个基于有向无环图的任务管理系统，它可以帮助你跟踪任务的依赖关系和执行状态\n那如何添加任务到DAG系统中呢？\n你可以使用TaskRecorder模块的recordTask方法来添加任务，它会自动处理任务的依赖关系和状态管理",
+            "timestamp": 1776913568370,
+            "size": 141,
+            "type": "string",
+            "source": "test"
+          },
+          "processedAt": 1776913568370,
+          "description": "原始数据层"
+        },
+        "structured": {
+          "data": {
+            "entities": [],
+            "keywords": [
+              "你好，我需要了解如何使用dag系统进行任务管理",
+              "dag系统是一个基于有向无环图的任务管理系统，它可以帮助你跟踪任务的依赖关系和执行状态",
+              "那如何添加任务到dag系统中呢？",
+              "你可以使用taskrecorder模块的recordtask方法来添加任务，它会自动处理任务的依赖关系和状态管理"
+            ],
+            "relationships": [],
+            "metadata": {}
+          },
+          "processedAt": 1776913568370,
+          "description": "结构化数据层"
+        },
+        "semantic": {
+          "data": {
+            "topics": [],
+            "sentiments": [
+              {
+                "type": "positive",
+                "word": "好"
+              }
+            ],
+            "intentions": [],
+            "concepts": []
+          },
+          "processedAt": 1776913568370,
+          "description": "语义理解层"
+        },
+        "knowledge": {
+          "data": {
+            "facts": [],
+            "rules": [],
+            "patterns": [],
+            "insights": []
+          },
+          "processedAt": 1776913568370,
+          "description": "知识提取层"
+        },
+        "insight": {
+          "data": {
+            "trends": [],
+            "opportunities": [],
+            "risks": [],
+            "recommendations": []
+          },
+          "processedAt": 1776913568371,
+          "description": "洞察发现层"
+        }
+      },
+      "metadata": {
+        "source": "test",
+        "confidence": 0.8,
+        "relevance": 0.7
+      }
     }
   },
   "edges": [
@@ -3093,6 +3400,86 @@
       "type": "followed_by",
       "sequence": 6,
       "createdAt": 1776911749247
+    },
+    {
+      "id": "edge_1776913565430_vs18x6wje",
+      "source": "conversation_test_conversation_auto_1",
+      "target": "task_node_task_1776913565429",
+      "type": "contains_task",
+      "confidence": 0.7,
+      "createdAt": 1776913565430
+    },
+    {
+      "id": "edge_1776913565432_u867fx8kv",
+      "source": "conversation_test_conversation_auto_1",
+      "target": "task_node_task_1776913565431",
+      "type": "contains_task",
+      "confidence": 0.7,
+      "createdAt": 1776913565432
+    },
+    {
+      "id": "edge_1776913565434_dbibe6x48",
+      "source": "conversation_test_conversation_auto_1",
+      "target": "task_node_task_1776913565433",
+      "type": "contains_task",
+      "confidence": 0.7,
+      "createdAt": 1776913565434
+    },
+    {
+      "id": "edge_1776913565435_04y9jmd57",
+      "source": "conversation_test_conversation_auto_1",
+      "target": "message_test_conversation_auto_1_0",
+      "type": "contains_message",
+      "sequence": 0,
+      "createdAt": 1776913565435
+    },
+    {
+      "id": "edge_1776913565437_swjfp9zle",
+      "source": "conversation_test_conversation_auto_1",
+      "target": "message_test_conversation_auto_1_1",
+      "type": "contains_message",
+      "sequence": 1,
+      "createdAt": 1776913565437
+    },
+    {
+      "id": "edge_1776913565437_kej8yn9ny",
+      "source": "message_test_conversation_auto_1_0",
+      "target": "message_test_conversation_auto_1_1",
+      "type": "followed_by",
+      "sequence": 1,
+      "createdAt": 1776913565437
+    },
+    {
+      "id": "edge_1776913565439_sp22k8ys6",
+      "source": "conversation_test_conversation_auto_1",
+      "target": "message_test_conversation_auto_1_2",
+      "type": "contains_message",
+      "sequence": 2,
+      "createdAt": 1776913565439
+    },
+    {
+      "id": "edge_1776913565440_oeh2ofpzd",
+      "source": "message_test_conversation_auto_1_1",
+      "target": "message_test_conversation_auto_1_2",
+      "type": "followed_by",
+      "sequence": 2,
+      "createdAt": 1776913565440
+    },
+    {
+      "id": "edge_1776913565442_411r4b0ke",
+      "source": "conversation_test_conversation_auto_1",
+      "target": "message_test_conversation_auto_1_3",
+      "type": "contains_message",
+      "sequence": 3,
+      "createdAt": 1776913565442
+    },
+    {
+      "id": "edge_1776913565443_3djm74bff",
+      "source": "message_test_conversation_auto_1_2",
+      "target": "message_test_conversation_auto_1_3",
+      "type": "followed_by",
+      "sequence": 3,
+      "createdAt": 1776913565443
     }
   ]
 }

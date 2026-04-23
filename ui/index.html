@@ -184,6 +184,70 @@
       padding: 20px;
     }
 
+    .skills {
+      margin-top: 30px;
+    }
+
+    .skills h2 {
+      margin-bottom: 20px;
+      color: #2c3e50;
+    }
+
+    .skill-list {
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      padding: 20px;
+    }
+
+    .skill-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px;
+      border-bottom: 1px solid #eee;
+    }
+
+    .skill-item:last-child {
+      border-bottom: none;
+    }
+
+    .skill-name {
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    .skill-description {
+      font-size: 14px;
+      color: #666;
+      margin-bottom: 10px;
+      line-height: 1.4;
+    }
+
+    .skill-info {
+      font-size: 14px;
+      color: #7f8c8d;
+    }
+
+    .skill-patterns {
+      margin-right: 20px;
+    }
+
+    .skill-trigger {
+      margin-right: 20px;
+    }
+
+    .skill-success {
+      margin-right: 20px;
+      font-weight: bold;
+      color: #e67e22;
+    }
+
+    .skill-status {
+      font-weight: bold;
+      color: #27ae60;
+    }
+
     .project-item {
       display: flex;
       justify-content: space-between;
@@ -807,6 +871,64 @@
           </div>
           <button class="btn btn-primary" onclick="runHealthCheck()">健康检查</button>
         </div>
+
+        <div class="card" id="intelligent-trigger-card">
+          <h2>智能触发</h2>
+          <div class="stats">
+            <div class="stat-item">
+              <div class="stat-value" id="trigger-count">0</div>
+              <div class="stat-label">触发次数</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-value" id="trigger-success">0</div>
+              <div class="stat-label">成功触发</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-value" id="trigger-last">-</div>
+              <div class="stat-label">最后触发</div>
+            </div>
+          </div>
+          <div class="stats">
+            <div class="stat-item">
+              <div class="stat-value" id="trigger-knowledge">0</div>
+              <div class="stat-label">知识提取</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-value" id="trigger-alignment">0</div>
+              <div class="stat-label">DAG-KG对齐</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-value" id="trigger-optimization">0</div>
+              <div class="stat-label">系统优化</div>
+            </div>
+          </div>
+          <div class="stats">
+            <div class="stat-item">
+              <div class="stat-value" id="trigger-iteration">0</div>
+              <div class="stat-label">智能迭代</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-value" id="trigger-skill">0</div>
+              <div class="stat-label">技能开发</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-value" id="trigger-improvement">0</div>
+              <div class="stat-label">系统改进</div>
+            </div>
+          </div>
+          <button class="btn btn-primary" onclick="viewTriggerHistory()">查看触发历史</button>
+          <button class="btn btn-secondary" onclick="toggleTrigger()">切换触发状态</button>
+        </div>
+
+
+      </div>
+
+      <div class="skills" id="skills">
+        <h2>技能管理</h2>
+        <div class="skill-list" id="skill-list">
+          <div class="loading">加载中...</div>
+        </div>
+        <button class="btn btn-primary" onclick="refreshSkills()">刷新技能</button>
       </div>
 
       <div class="projects" id="projects">
@@ -910,6 +1032,7 @@
       health: { score: 0, status: 'unknown', checks: 0 },
       codeReview: { files: 0, issues: 0, quality: '-' },
       codingAssistant: { suggestions: 0, templates: '-', refactoring: '-' },
+      intelligentTrigger: { count: 0, success: 0, last: null, enabled: true, history: [] },
       projects: [],
       alerts: []
     };
@@ -929,6 +1052,7 @@
       updateDashboard();
       updateProjectList();
       updateAlerts();
+      await refreshSkills();
       console.log('初始化完成');
     }
 
@@ -946,6 +1070,7 @@
         const codingRes = await fetch(`${API_BASE}/coding/status`).then(r => r.json()).catch(() => ({ success: true, stats: { suggestions: 0, templates: '-', refactoring: '-' } }));
         const codeReviewRes = await fetch(`${API_BASE}/code/status`).then(r => r.json()).catch(() => ({ success: true, stats: { files: 0, issues: 0, quality: '-' } }));
         const healthRes = await fetch(`${API_BASE}/health/status`).then(r => r.json()).catch(() => ({ success: true, stats: { score: 0, status: 'unknown', checks: 0 } }));
+        const triggerRes = await fetch(`${API_BASE}/intelligent-trigger/status`).then(r => r.json()).catch(() => ({ success: true, status: { count: 0, success: 0, last: null, enabled: true, history: [] } }));
 
         dataState.projects = projectsRes.projects || [];
         dataState.system = {
@@ -994,6 +1119,14 @@
           score: healthRes.stats?.score || 0,
           status: healthRes.stats?.status || 'unknown',
           checks: healthRes.stats?.checks || 0
+        };
+
+        dataState.intelligentTrigger = {
+          count: triggerRes.status?.count || 0,
+          success: triggerRes.status?.success || 0,
+          last: triggerRes.status?.last || null,
+          enabled: triggerRes.status?.enabled || true,
+          history: triggerRes.status?.history || []
         };
 
         // 设置项目状态并更新同步状态计数
@@ -1059,6 +1192,47 @@
       document.getElementById('health-score').textContent = dataState.health.score;
       document.getElementById('health-status').textContent = dataState.health.status;
       document.getElementById('health-checks').textContent = dataState.health.checks;
+
+      document.getElementById('trigger-count').textContent = dataState.intelligentTrigger.count;
+      document.getElementById('trigger-success').textContent = dataState.intelligentTrigger.success;
+      document.getElementById('trigger-last').textContent = dataState.intelligentTrigger.last || '-';
+
+      // 统计每种任务类型的触发次数
+      const taskTypeCounts = {
+        knowledge_extraction: 0,
+        dag_kg_alignment: 0,
+        system_optimization: 0,
+        intelligent_iteration: 0,
+        skill_development: 0,
+        system_improvement: 0
+      };
+
+      // 遍历触发历史，统计每种任务类型的触发次数
+      dataState.intelligentTrigger.history.forEach(entry => {
+        if (entry.taskName) {
+          if (entry.taskName.toLowerCase().includes('提取') || entry.taskName.toLowerCase().includes('知识') || entry.taskName.toLowerCase().includes('信息')) {
+            taskTypeCounts.knowledge_extraction++;
+          } else if (entry.taskName.toLowerCase().includes('对齐') || entry.taskName.toLowerCase().includes('dag') || entry.taskName.toLowerCase().includes('知识图谱')) {
+            taskTypeCounts.dag_kg_alignment++;
+          } else if (entry.taskName.toLowerCase().includes('优化') || entry.taskName.toLowerCase().includes('性能') || entry.taskName.toLowerCase().includes('效率')) {
+            taskTypeCounts.system_optimization++;
+          } else if (entry.taskName.toLowerCase().includes('迭代') || entry.taskName.toLowerCase().includes('更新') || entry.taskName.toLowerCase().includes('改进')) {
+            taskTypeCounts.intelligent_iteration++;
+          } else if (entry.taskName.toLowerCase().includes('技能') || entry.taskName.toLowerCase().includes('开发') || entry.taskName.toLowerCase().includes('创建')) {
+            taskTypeCounts.skill_development++;
+          } else if (entry.taskName.toLowerCase().includes('系统')) {
+            taskTypeCounts.system_improvement++;
+          }
+        }
+      });
+
+      // 更新每种任务类型的触发次数
+      document.getElementById('trigger-knowledge').textContent = taskTypeCounts.knowledge_extraction;
+      document.getElementById('trigger-alignment').textContent = taskTypeCounts.dag_kg_alignment;
+      document.getElementById('trigger-optimization').textContent = taskTypeCounts.system_optimization;
+      document.getElementById('trigger-iteration').textContent = taskTypeCounts.intelligent_iteration;
+      document.getElementById('trigger-skill').textContent = taskTypeCounts.skill_development;
+      document.getElementById('trigger-improvement').textContent = taskTypeCounts.system_improvement;
 
       document.getElementById('review-files').textContent = dataState.codeReview.files;
       document.getElementById('review-issues').textContent = dataState.codeReview.issues;
@@ -1341,6 +1515,66 @@
       const card = document.getElementById(`${sectionId}-card`);
       if (card) {
         card.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+
+    function viewTriggerHistory() {
+      if (dataState.intelligentTrigger.history.length === 0) {
+        showMessage('暂无触发历史', 'info');
+        return;
+      }
+
+      let html = '<h3>智能触发历史</h3>';
+      dataState.intelligentTrigger.history.slice(-10).reverse().forEach((item, index) => {
+        html += `
+          <div class="suggestion-item">
+            <div class="suggestion-type">${item.taskName}</div>
+            <div class="suggestion-message">${item.triggerReason}</div>
+            <div class="suggestion-example">置信度: ${(item.confidence * 100).toFixed(1)}% | 时间: ${new Date(item.timestamp).toLocaleString()}</div>
+          </div>
+        `;
+      });
+
+      // 创建一个简单的模态框显示历史
+      const modal = document.createElement('div');
+      modal.className = 'modal';
+      modal.innerHTML = `
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2>智能触发历史</h2>
+            <span class="close" onclick="this.parentElement.parentElement.parentElement.remove()">&times;</span>
+          </div>
+          <div class="result-area">
+            ${html}
+          </div>
+        </div>
+      `;
+      document.body.appendChild(modal);
+      modal.style.display = 'block';
+    }
+
+    async function toggleTrigger() {
+      try {
+        const newState = !dataState.intelligentTrigger.enabled;
+        showMessage(`正在${newState ? '启用' : '禁用'}智能触发...`, 'info');
+
+        const response = await fetch(`${API_BASE}/trigger/toggle`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ enabled: newState })
+        });
+
+        const result = await response.json();
+
+        if (result.success) {
+          dataState.intelligentTrigger.enabled = newState;
+          showMessage(`智能触发已${newState ? '启用' : '禁用'}`, 'success');
+        } else {
+          showMessage(`操作失败: ${result.error}`, 'error');
+        }
+      } catch (error) {
+        console.error('切换触发状态失败:', error);
+        showMessage('切换触发状态失败', 'error');
       }
     }
 
@@ -1833,6 +2067,55 @@
           modal.style.display = 'none';
         }
       }
+    }
+
+    async function refreshSkills() {
+      console.log('开始刷新技能列表...');
+      try {
+        console.log('API_BASE:', API_BASE);
+        const response = await fetch(`${API_BASE}/skills`);
+        console.log('技能API响应状态:', response.status);
+        const data = await response.json();
+        console.log('技能API响应数据:', data);
+        if (data.success) {
+          console.log('技能列表:', data.skills);
+          updateSkillsList(data.skills);
+          showMessage('技能列表已更新', 'success');
+        } else {
+          console.log('获取技能列表失败:', data.error);
+          showMessage('获取技能列表失败', 'error');
+        }
+      } catch (error) {
+        console.error('获取技能列表异常:', error);
+        showMessage('获取技能列表失败', 'error');
+      }
+    }
+
+    function updateSkillsList(skills) {
+      const skillList = document.getElementById('skill-list');
+      
+      if (skills.length === 0) {
+        skillList.innerHTML = '<div class="empty">暂无技能</div>';
+        return;
+      }
+
+      let html = '';
+      skills.forEach(skill => {
+        html += `
+          <div class="skill-item">
+            <div class="skill-name">${skill.name}</div>
+            <div class="skill-description">${skill.description || '无描述'}</div>
+            <div class="skill-info">
+              <span class="skill-patterns">触发模式: ${skill.patterns.length}个</span>
+              <span class="skill-trigger">触发次数: ${skill.triggerCount || 0}</span>
+              <span class="skill-success">成功率: ${skill.successRate || 0}%</span>
+              <span class="skill-status">${skill.enabled ? '启用' : '禁用'}</span>
+            </div>
+          </div>
+        `;
+      });
+
+      skillList.innerHTML = html;
     }
 
     // 初始化

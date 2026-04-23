@@ -8,6 +8,8 @@ class TraePlugin {
     this.name = 'trae';
     this.version = '1.0.0';
     this.description = 'Trae plugin for Lossless Superpower';
+    this.intelligentTrigger = null;
+    this.skillTrigger = null;
   }
 
   /**
@@ -18,6 +20,16 @@ class TraePlugin {
   init(context) {
     console.log('trae 插件初始化');
     this.context = context;
+
+    // 延迟加载智能触发系统和技能触发器
+    try {
+      this.intelligentTrigger = require('../../src/superpowers/intelligent_trigger').intelligentTrigger;
+      this.skillTrigger = require('../../src/superpowers/skill_trigger').skillTrigger;
+      console.log('智能触发系统和技能触发器已加载');
+    } catch (error) {
+      console.error('加载系统模块失败:', error.message);
+    }
+
     return true;
   }
 
@@ -29,8 +41,32 @@ class TraePlugin {
     return {
       name: this.name,
       version: this.version,
-      description: this.description
+      description: this.description,
+      skills: this.getSkills()
     };
+  }
+
+  /**
+   * 获取插件提供的技能列表
+   * @returns {Array} 技能列表
+   */
+  getSkills() {
+    return [
+      {
+        name: '智能触发技能',
+        key: 'intelligent_trigger_skill',
+        description: '当AI认为任务完成时，主动触发此技能，智能分析任务并决定是否触发其他技能',
+        patterns: ['智能触发', '自动触发', '触发分析', '技能触发', '智能分析', '任务完成', '任务分析'],
+        autoTrigger: true
+      },
+      {
+        name: '任务记录技能',
+        key: 'task_recorder',
+        description: '在任务完成时触发，记录任务信息，总结经验教训',
+        patterns: ['记录任务', '任务记录', '任务管理'],
+        autoTrigger: true
+      }
+    ];
   }
 
   /**
@@ -39,7 +75,7 @@ class TraePlugin {
    * @param {Object} params - 动作参数
    * @returns {Object} 执行结果
    */
-  execute(action, params = {}) {
+  async execute(action, params = {}) {
     console.log(`trae 插件执行动作: ${action}`, params);
 
     switch (action) {
@@ -47,11 +83,107 @@ class TraePlugin {
         return this.traeIterations(params);
       case 'generate_reports':
         return this.generateReports(params);
+      case 'task_completed':
+        return await this.handleTaskCompleted(params);
+      case 'trigger_skill':
+        return await this.handleTriggerSkill(params);
+      case 'get_skills':
+        return this.getSkills();
       default:
         return {
           success: false,
           error: `未知动作: ${action}`
         };
+    }
+  }
+
+  /**
+   * 处理技能触发
+   * @param {Object} params - 参数
+   * @returns {Object} 执行结果
+   */
+  async handleTriggerSkill(params) {
+    console.log('处理技能触发', params);
+
+    try {
+      const { skillName, taskInfo, taskResult } = params;
+
+      if (skillName === 'intelligent_trigger_skill') {
+        // 触发智能触发技能
+        if (this.intelligentTrigger) {
+          await this.intelligentTrigger.analyzeTaskCompletion(
+            taskInfo || params,
+            taskResult || { success: true },
+            { source: 'trae' }
+          );
+          console.log('智能触发技能已执行');
+        }
+        return {
+          success: true,
+          message: '智能触发技能执行成功'
+        };
+      } else if (skillName === 'task_recorder') {
+        // 触发任务记录技能
+        if (this.skillTrigger) {
+          const result = await this.skillTrigger.triggerSkill({
+            skillName: 'task_recorder',
+            params: { taskInfo, taskResult }
+          });
+          console.log('任务记录技能已执行:', result);
+        }
+        return {
+          success: true,
+          message: '任务记录技能执行成功'
+        };
+      } else {
+        return {
+          success: false,
+          error: `未知技能: ${skillName}`
+        };
+      }
+    } catch (error) {
+      console.error('处理技能触发失败:', error.message);
+      return {
+        success: false,
+        error: `处理技能触发失败: ${error.message}`
+      };
+    }
+  }
+
+  /**
+   * 处理任务完成
+   * @param {Object} params - 参数
+   * @returns {Object} 执行结果
+   */
+  async handleTaskCompleted(params) {
+    console.log('处理任务完成事件', params);
+
+    try {
+      // 触发智能触发技能
+      if (this.intelligentTrigger) {
+        await this.intelligentTrigger.analyzeTaskCompletion(
+          params.taskInfo || params,
+          params.taskResult || { success: true },
+          { source: 'trae' }
+        );
+        console.log('智能触发技能已执行');
+      }
+
+      return {
+        success: true,
+        message: '任务完成处理成功',
+        data: {
+          taskId: params.taskInfo?.id || params.id,
+          taskName: params.taskInfo?.name || params.name,
+          timestamp: Date.now()
+        }
+      };
+    } catch (error) {
+      console.error('处理任务完成失败:', error.message);
+      return {
+        success: false,
+        error: `处理任务完成失败: ${error.message}`
+      };
     }
   }
 
@@ -131,6 +263,9 @@ module.exports = {
   },
   getInfo: function() {
     return traePlugin.getInfo();
+  },
+  getSkills: function() {
+    return traePlugin.getSkills();
   },
   cleanup: function() {
     return traePlugin.cleanup();

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>智能触发测试</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f4f4f4;
+    }
+    .dashboard {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      padding: 20px;
+    }
+    .card h2 {
+      margin-bottom: 15px;
+      color: #34495e;
+      font-size: 18px;
+    }
+    .stats {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px;
+    }
+    .stat-item {
+      text-align: center;
+    }
+    .stat-value {
+      font-size: 24px;
+      font-weight: bold;
+      color: #3498db;
+    }
+    .stat-label {
+      font-size: 14px;
+      color: #7f8c8d;
+    }
+    .btn {
+      padding: 8px 16px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-right: 10px;
+    }
+    .btn-primary {
+      background-color: #3498db;
+      color: white;
+    }
+    .btn-secondary {
+      background-color: #95a5a6;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <div class="dashboard">
+    <div class="card" id="intelligent-trigger-card">
+      <h2>智能触发</h2>
+      <div class="stats">
+        <div class="stat-item">
+          <div class="stat-value" id="trigger-count">0</div>
+          <div class="stat-label">触发次数</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-value" id="trigger-success">0</div>
+          <div class="stat-label">成功触发</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-value" id="trigger-last">-</div>
+          <div class="stat-label">最后触发</div>
+        </div>
+      </div>
+      <button class="btn btn-primary" onclick="viewTriggerHistory()">查看触发历史</button>
+      <button class="btn btn-secondary" onclick="toggleTrigger()">切换触发状态</button>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,51 @@
+{
+  "name": "智能迭代",
+  "description": "DAG-KG智能迭代系统的技能包装",
+  "version": "1.0.0",
+  "author": "System",
+  "category": "system",
+  "tags": ["intelligent", "iteration", "upgrade", "system"],
+  "actions": [
+    {
+      "name": "start",
+      "description": "启动智能迭代系统",
+      "parameters": []
+    },
+    {
+      "name": "stop",
+      "description": "停止智能迭代系统",
+      "parameters": []
+    },
+    {
+      "name": "status",
+      "description": "获取智能迭代系统状态",
+      "parameters": []
+    },
+    {
+      "name": "trigger_iteration",
+      "description": "手动触发智能迭代",
+      "parameters": []
+    },
+    {
+      "name": "trigger_upgrade",
+      "description": "手动触发智能升级",
+      "parameters": []
+    },
+    {
+      "name": "history",
+      "description": "获取升级历史",
+      "parameters": []
+    }
+  ],
+  "requirements": {
+    "node": ">=14.0.0"
+  },
+  "dependencies": {
+    "uuid": "^8.3.2"
+  },
+  "memory": {
+    "importance": 5,
+    "retention": "long_term",
+    "tags": ["intelligent_iteration", "system_maintenance"]
+  }
+}

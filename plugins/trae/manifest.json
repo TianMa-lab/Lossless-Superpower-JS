@@ -7,13 +7,36 @@
   "dependencies": {},
   "capabilities": [
     "trae_iterations",
-    "generate_reports"
+    "generate_reports",
+    "intelligent_trigger",
+    "task_completed"
+  ],
+  "skills": [
+    {
+      "name": "智能触发技能",
+      "key": "intelligent_trigger_skill",
+      "description": "当AI认为任务完成时，主动触发此技能，智能分析任务并决定是否触发其他技能",
+      "patterns": ["智能触发", "自动触发", "触发分析", "技能触发", "智能分析", "任务完成", "任务分析"],
+      "autoTrigger": true
+    },
+    {
+      "name": "任务记录技能",
+      "key": "task_recorder",
+      "description": "在任务完成时触发，记录任务信息，总结经验教训",
+      "patterns": ["记录任务", "任务记录", "任务管理"],
+      "autoTrigger": true
+    }
   ],
   "permissions": [
     "read_iterations",
-    "write_reports"
+    "write_reports",
+    "execute_skills"
   ],
   "config": {
     "reportsDir": "reports"
-  }
+  },
+  "events": [
+    "task_completed",
+    "skill_triggered"
+  ]
 }

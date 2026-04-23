@@ -1,0 +1,227 @@
+[
+  {
+    "id": "memory_1776940538571_pia7xcm4i",
+    "content": "任务ID: test_task_1776940537280\n任务名称: 测试任务记录技能\n任务描述: 这是一个测试任务，用于验证任务记录技能是否能正常工作\n任务结果: 任务 测试任务记录技能 执行成功\n执行结果: \"测试任务执行成功\"\n时间: 2026-04-23T10:35:38.570Z",
+    "type": "task_result",
+    "timestamp": 1776940538571,
+    "importance": 4,
+    "tags": "test,task,recorder",
+    "metadata": "{\"taskId\":\"test_task_1776940537280\",\"taskName\":\"测试任务记录技能\",\"description\":\"这是一个测试任务，用于验证任务记录技能是否能正常工作\",\"resultMessage\":\"任务 测试任务记录技能 执行成功\",\"timestamp\":1776940538570}"
+  },
+  {
+    "id": "memory_1776934412379_qlrzqlt4r",
+    "content": "智能触发DAG-KG技能: extract_knowledge\n任务: DAG-KG对齐测试\n置信度: 43.3%",
+    "type": "intelligent_trigger",
+    "timestamp": 1776934412379,
+    "importance": 4,
+    "tags": "intelligent,trigger,dag_kg,auto",
+    "metadata": "{\"taskId\":\"test_dag_kg_9\",\"taskName\":\"DAG-KG对齐测试\",\"action\":\"extract_knowledge\",\"confidence\":0.43272727272727274,\"timestamp\":1776934412379}"
+  },
+  {
+    "id": "memory_1776934412363_edp0oh90s",
+    "content": "任务ID: test_dag_kg_9\n任务名称: DAG-KG对齐测试\n任务描述: 测试DAG与知识图谱的对齐功能\n任务结果: 任务 DAG-KG对齐测试 执行成功\n执行结果: \"测试成功\"\n时间: 2026-04-23T08:53:32.363Z",
+    "type": "task_result",
+    "timestamp": 1776934412363,
+    "importance": 3,
+    "tags": "task",
+    "metadata": "{\"taskId\":\"test_dag_kg_9\",\"taskName\":\"DAG-KG对齐测试\",\"description\":\"测试DAG与知识图谱的对齐功能\",\"resultMessage\":\"任务 DAG-KG对齐测试 执行成功\",\"timestamp\":1776934412363}"
+  },
+  {
+    "id": "memory_1776934353044_kaxk64j19",
+    "content": "智能触发DAG-KG技能: extract_knowledge\n任务: DAG-KG对齐测试\n置信度: 43.3%",
+    "type": "intelligent_trigger",
+    "timestamp": 1776934353044,
+    "importance": 4,
+    "tags": "intelligent,trigger,dag_kg,auto",
+    "metadata": "{\"taskId\":\"test_dag_kg_8\",\"taskName\":\"DAG-KG对齐测试\",\"action\":\"extract_knowledge\",\"confidence\":0.43272727272727274,\"timestamp\":1776934353044}"
+  },
+  {
+    "id": "memory_1776934353028_k6dc1v6lw",
+    "content": "任务ID: test_dag_kg_8\n任务名称: DAG-KG对齐测试\n任务描述: 测试DAG与知识图谱的对齐功能\n任务结果: 任务 DAG-KG对齐测试 执行成功\n执行结果: \"测试成功\"\n时间: 2026-04-23T08:52:33.028Z",
+    "type": "task_result",
+    "timestamp": 1776934353028,
+    "importance": 3,
+    "tags": "task",
+    "metadata": "{\"taskId\":\"test_dag_kg_8\",\"taskName\":\"DAG-KG对齐测试\",\"description\":\"测试DAG与知识图谱的对齐功能\",\"resultMessage\":\"任务 DAG-KG对齐测试 执行成功\",\"timestamp\":1776934353028}"
+  },
+  {
+    "id": "memory_1776934275769_gksbn1ixt",
+    "content": "智能触发DAG-KG技能: extract_knowledge\n任务: DAG-KG对齐测试\n置信度: 43.3%",
+    "type": "intelligent_trigger",
+    "timestamp": 1776934275769,
+    "importance": 4,
+    "tags": "intelligent,trigger,dag_kg,auto",
+    "metadata": "{\"taskId\":\"test_dag_kg_7\",\"taskName\":\"DAG-KG对齐测试\",\"action\":\"extract_knowledge\",\"confidence\":0.43272727272727274,\"timestamp\":1776934275769}"
+  },
+  {
+    "id": "memory_1776934275753_8kuodlzrk",
+    "content": "任务ID: test_dag_kg_7\n任务名称: DAG-KG对齐测试\n任务描述: 测试DAG与知识图谱的对齐功能\n任务结果: 任务 DAG-KG对齐测试 执行成功\n执行结果: \"测试成功\"\n时间: 2026-04-23T08:51:15.753Z",
+    "type": "task_result",
+    "timestamp": 1776934275753,
+    "importance": 3,
+    "tags": "task",
+    "metadata": "{\"taskId\":\"test_dag_kg_7\",\"taskName\":\"DAG-KG对齐测试\",\"description\":\"测试DAG与知识图谱的对齐功能\",\"resultMessage\":\"任务 DAG-KG对齐测试 执行成功\",\"timestamp\":1776934275753}"
+  },
+  {
+    "id": "memory_1776933543928_q6lx0zt9m",
+    "content": "智能触发DAG-KG技能: extract_knowledge\n任务: DAG-KG对齐测试\n置信度: 43.3%",
+    "type": "intelligent_trigger",
+    "timestamp": 1776933543928,
+    "importance": 4,
+    "tags": "intelligent,trigger,dag_kg,auto",
+    "metadata": "{\"taskId\":\"test_dag_kg_6\",\"taskName\":\"DAG-KG对齐测试\",\"action\":\"extract_knowledge\",\"confidence\":0.43272727272727274,\"timestamp\":1776933543928}"
+  },
+  {
+    "id": "memory_1776933543912_fgjbp1u2f",
+    "content": "任务ID: test_dag_kg_6\n任务名称: DAG-KG对齐测试\n任务描述: 测试DAG与知识图谱的对齐功能\n任务结果: 任务 DAG-KG对齐测试 执行成功\n执行结果: \"测试成功\"\n时间: 2026-04-23T08:39:03.911Z",
+    "type": "task_result",
+    "timestamp": 1776933543912,
+    "importance": 3,
+    "tags": "task",
+    "metadata": "{\"taskId\":\"test_dag_kg_6\",\"taskName\":\"DAG-KG对齐测试\",\"description\":\"测试DAG与知识图谱的对齐功能\",\"resultMessage\":\"任务 DAG-KG对齐测试 执行成功\",\"timestamp\":1776933543912}"
+  },
+  {
+    "id": "memory_1776933425204_kv6t3c4sw",
+    "content": "任务ID: test_dag_kg_5\n任务名称: DAG-KG对齐测试\n任务描述: 测试DAG与知识图谱的对齐功能\n任务结果: 任务 DAG-KG对齐测试 执行成功\n执行结果: \"测试成功\"\n时间: 2026-04-23T08:37:05.203Z",
+    "type": "task_result",
+    "timestamp": 1776933425204,
+    "importance": 3,
+    "tags": "task",
+    "metadata": "{\"taskId\":\"test_dag_kg_5\",\"taskName\":\"DAG-KG对齐测试\",\"description\":\"测试DAG与知识图谱的对齐功能\",\"resultMessage\":\"任务 DAG-KG对齐测试 执行成功\",\"timestamp\":1776933425203}"
+  },
+  {
+    "id": "memory_1776933370658_wxqq7yeb7",
+    "content": "任务ID: test_dag_kg_4\n任务名称: DAG-KG对齐测试\n任务描述: 测试DAG与知识图谱的对齐功能\n任务结果: 任务 DAG-KG对齐测试 执行成功\n执行结果: \"测试成功\"\n时间: 2026-04-23T08:36:10.657Z",
+    "type": "task_result",
+    "timestamp": 1776933370658,
+    "importance": 3,
+    "tags": "task",
+    "metadata": "{\"taskId\":\"test_dag_kg_4\",\"taskName\":\"DAG-KG对齐测试\",\"description\":\"测试DAG与知识图谱的对齐功能\",\"resultMessage\":\"任务 DAG-KG对齐测试 执行成功\",\"timestamp\":1776933370658}"
+  },
+  {
+    "id": "memory_1776933225047_38scdtlq4",
+    "content": "任务ID: test_dag_kg_3\n任务名称: DAG-KG对齐测试\n任务描述: 测试DAG与知识图谱的对齐功能\n任务结果: 任务 DAG-KG对齐测试 执行成功\n执行结果: \"测试成功\"\n时间: 2026-04-23T08:33:45.046Z",
+    "type": "task_result",
+    "timestamp": 1776933225047,
+    "importance": 3,
+    "tags": "task",
+    "metadata": "{\"taskId\":\"test_dag_kg_3\",\"taskName\":\"DAG-KG对齐测试\",\"description\":\"测试DAG与知识图谱的对齐功能\",\"resultMessage\":\"任务 DAG-KG对齐测试 执行成功\",\"timestamp\":1776933225047}"
+  },
+  {
+    "id": "memory_1776933121543_xo3frtalq",
+    "content": "任务ID: test_dag_kg_2\n任务名称: DAG-KG对齐测试\n任务描述: 测试DAG与知识图谱的对齐功能\n任务结果: 任务 DAG-KG对齐测试 执行成功\n执行结果: \"测试成功\"\n时间: 2026-04-23T08:32:01.542Z",
+    "type": "task_result",
+    "timestamp": 1776933121543,
+    "importance": 3,
+    "tags": "task",
+    "metadata": "{\"taskId\":\"test_dag_kg_2\",\"taskName\":\"DAG-KG对齐测试\",\"description\":\"测试DAG与知识图谱的对齐功能\",\"resultMessage\":\"任务 DAG-KG对齐测试 执行成功\",\"timestamp\":1776933121543}"
+  },
+  {
+    "id": "memory_1776933002395_tletn61lo",
+    "content": "任务ID: test_dag_kg\n任务名称: DAG-KG对齐测试\n任务描述: 测试DAG与知识图谱的对齐功能\n任务结果: 任务 DAG-KG对齐测试 执行成功\n执行结果: \"测试成功\"\n时间: 2026-04-23T08:30:02.394Z",
+    "type": "task_result",
+    "timestamp": 1776933002395,
+    "importance": 3,
+    "tags": "task",
+    "metadata": "{\"taskId\":\"test_dag_kg\",\"taskName\":\"DAG-KG对齐测试\",\"description\":\"测试DAG与知识图谱的对齐功能\",\"resultMessage\":\"任务 DAG-KG对齐测试 执行成功\",\"timestamp\":1776933002395}"
+  },
+  {
+    "id": "memory_1776932979937_w8jifpe69",
+    "content": "任务ID: test_intelligent_trigger_2\n任务名称: 智能触发测试\n任务描述: 测试智能触发系统\n任务结果: 任务 智能触发测试 执行成功\n执行结果: \"测试成功\"\n时间: 2026-04-23T08:29:39.936Z",
+    "type": "task_result",
+    "timestamp": 1776932979937,
+    "importance": 3,
+    "tags": "task",
+    "metadata": "{\"taskId\":\"test_intelligent_trigger_2\",\"taskName\":\"智能触发测试\",\"description\":\"测试智能触发系统\",\"resultMessage\":\"任务 智能触发测试 执行成功\",\"timestamp\":1776932979937}"
+  },
+  {
+    "id": "memory_1776932733329_h8y81cfzb",
+    "content": "任务ID: test_intelligent_trigger\n任务名称: 智能触发测试\n任务描述: 测试智能触发系统\n任务结果: 任务 智能触发测试 执行成功\n执行结果: \"测试成功\"\n时间: 2026-04-23T08:25:33.328Z",
+    "type": "task_result",
+    "timestamp": 1776932733329,
+    "importance": 3,
+    "tags": "task",
+    "metadata": "{\"taskId\":\"test_intelligent_trigger\",\"taskName\":\"智能触发测试\",\"description\":\"测试智能触发系统\",\"resultMessage\":\"任务 智能触发测试 执行成功\",\"timestamp\":1776932733329}"
+  },
+  {
+    "id": "memory_1776916276014_rdsgzrh3n",
+    "content": "任务ID: intelligent_iteration_status\n任务名称: 获取智能迭代系统状态\n任务描述: 获取DAG-KG智能迭代系统的当前状态\n任务结果: 任务 获取智能迭代系统状态 执行成功\n执行结果: \"{\\n  \\\"running\\\": false,\\n  \\\"iterationCount\\\": 0,\\n  \\\"upgradeCount\\\": 0,\\n  \\\"upgraderStatus\\\": {\\n    \\\"currentVersion\\\": \\\"1.0.0\\\",\\n    \\\"targetVersion\\\": \\\"1.0.0\\\",\\n    \\\"upgradeHistory\\\": 0,\\n    \\\"analysisResults\\\": 0,\\n    \\\"lastUpgrade\\\": null\\n  },\\n  \\\"nextIterationTime\\\": null,\\n  \\\"nextUpgradeTime\\\": null,\\n  \\\"config\\\": {\\n    \\\"enabled\\\": true,\\n    \\\"iterationInterval\\\": 43200000,\\n    \\\"upgradeInterval\\\": 86400000,\\n    \\\"minUpgradePotential\\\": 0.3\\n  }\\n}\"\n时间: 2026-04-23T03:51:16.014Z",
+    "type": "task_result",
+    "timestamp": 1776916276014,
+    "importance": 3,
+    "tags": "intelligent_iteration,status",
+    "metadata": "{\"taskId\":\"intelligent_iteration_status\",\"taskName\":\"获取智能迭代系统状态\",\"description\":\"获取DAG-KG智能迭代系统的当前状态\",\"resultMessage\":\"任务 获取智能迭代系统状态 执行成功\",\"timestamp\":1776916276014}"
+  },
+  {
+    "id": "memory_1776913565918_tdq8hszqt",
+    "content": "任务执行结果: 对话自动处理\n\n自动处理对话 test_conversation_auto_1，提取记忆 memory_1776913565444_4q26t82di\n\n执行时间: 153ms\n状态: 成功\n时间戳: 2026-04-23T03:06:05.918Z",
+    "type": "task_result",
+    "timestamp": 1776913565918,
+    "importance": 3,
+    "tags": "task,manual,conversation,memory,auto_processing",
+    "metadata": "{\"taskId\":\"manual_对话自动处理_1776913565616_1\",\"name\":\"对话自动处理\",\"description\":\"自动处理对话 test_conversation_auto_1，提取记忆 memory_1776913565444_4q26t82di\",\"duration\":153,\"status\":\"completed\",\"type\":\"manual_task\",\"timestamp\":1776913565918}"
+  },
+  {
+    "id": "memory_1776908377256_ods3cnwnv",
+    "content": "任务执行结果: DAG系统技术迭代\n\n实施DAG系统第二阶段功能增强\n\n执行时间: 124ms\n状态: 成功\n时间戳: 2026-04-23T01:39:37.256Z",
+    "type": "task_result",
+    "timestamp": 1776908377256,
+    "importance": 3,
+    "tags": "task,manual,dag,iteration,enhancement",
+    "metadata": "{\"taskId\":\"manual_dag系统技术迭代_1776908377021_1\",\"name\":\"DAG系统技术迭代\",\"description\":\"实施DAG系统第二阶段功能增强\",\"duration\":124,\"status\":\"completed\",\"type\":\"manual_task\",\"timestamp\":1776908377256}"
+  },
+  {
+    "id": "memory_1776771628783_bvtsu7pu3",
+    "content": "Jest自动化测试结果\n\n测试名称: 搜索技能\n测试ID: jest_test______1776771628774\n测试类型: test\n状态: passed\n执行时间: 0ms\n\n时间戳: 2026-04-21T11:40:28.783Z",
+    "type": "test_result",
+    "timestamp": 1776771628783,
+    "importance": 3,
+    "tags": "jest,test,passed",
+    "metadata": "{\"testId\":\"jest_test______1776771628774\",\"testName\":\"搜索技能\",\"testType\":\"test\",\"status\":\"passed\",\"duration\":0,\"type\":\"jest_automated_test\",\"timestamp\":1776771628783}"
+  },
+  {
+    "id": "memory_1776771628769_bpywncu78",
+    "content": "Jest自动化测试结果\n\n测试名称: 发布技能到市场\n测试ID: jest_test_________1776771628753\n测试类型: test\n状态: passed\n执行时间: 6ms\n\n时间戳: 2026-04-21T11:40:28.769Z",
+    "type": "test_result",
+    "timestamp": 1776771628769,
+    "importance": 3,
+    "tags": "jest,test,passed",
+    "metadata": "{\"testId\":\"jest_test_________1776771628753\",\"testName\":\"发布技能到市场\",\"testType\":\"test\",\"status\":\"passed\",\"duration\":6,\"type\":\"jest_automated_test\",\"timestamp\":1776771628769}"
+  },
+  {
+    "id": "memory_1776771628731_d2m299415",
+    "content": "Jest自动化测试结果\n\n测试名称: 获取技能推荐\n测试ID: jest_test________1776771628719\n测试类型: test\n状态: passed\n执行时间: 0ms\n\n时间戳: 2026-04-21T11:40:28.731Z",
+    "type": "test_result",
+    "timestamp": 1776771628731,
+    "importance": 3,
+    "tags": "jest,test,passed",
+    "metadata": "{\"testId\":\"jest_test________1776771628719\",\"testName\":\"获取技能推荐\",\"testType\":\"test\",\"status\":\"passed\",\"duration\":0,\"type\":\"jest_automated_test\",\"timestamp\":1776771628731}"
+  },
+  {
+    "id": "memory_1776771628713_7tm8wmqsg",
+    "content": "Jest自动化测试结果\n\n测试名称: 添加技能节点\n测试ID: jest_test________1776771628691\n测试类型: test\n状态: passed\n执行时间: 7ms\n\n时间戳: 2026-04-21T11:40:28.713Z",
+    "type": "test_result",
+    "timestamp": 1776771628713,
+    "importance": 3,
+    "tags": "jest,test,passed",
+    "metadata": "{\"testId\":\"jest_test________1776771628691\",\"testName\":\"添加技能节点\",\"testType\":\"test\",\"status\":\"passed\",\"duration\":7,\"type\":\"jest_automated_test\",\"timestamp\":1776771628713}"
+  },
+  {
+    "id": "memory_1776771628646_2odhgh1o4",
+    "content": "Jest自动化测试结果\n\n测试名称: 获取技能信息\n测试ID: jest_test________1776771628637\n测试类型: test\n状态: passed\n执行时间: 0ms\n\n时间戳: 2026-04-21T11:40:28.646Z",
+    "type": "test_result",
+    "timestamp": 1776771628646,
+    "importance": 3,
+    "tags": "jest,test,passed",
+    "metadata": "{\"testId\":\"jest_test________1776771628637\",\"testName\":\"获取技能信息\",\"testType\":\"test\",\"status\":\"passed\",\"duration\":0,\"type\":\"jest_automated_test\",\"timestamp\":1776771628646}"
+  },
+  {
+    "id": "memory_1776771628627_uxzhzqtmz",
+    "content": "Jest自动化测试结果\n\n测试名称: 扫描技能目录\n测试ID: jest_test________1776771628609\n测试类型: test\n状态: passed\n执行时间: 5ms\n\n时间戳: 2026-04-21T11:40:28.626Z",
+    "type": "test_result",
+    "timestamp": 1776771628627,
+    "importance": 3,
+    "tags": "jest,test,passed",
+    "metadata": "{\"testId\":\"jest_test________1776771628609\",\"testName\":\"扫描技能目录\",\"testType\":\"test\",\"status\":\"passed\",\"duration\":5,\"type\":\"jest_automated_test\",\"timestamp\":1776771628627}"
+  }
+]

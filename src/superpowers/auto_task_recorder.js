@@ -8,6 +8,7 @@ const { permanentMemorySystem } = require('./permanent_memory');
 const { eventRecorder } = require('./event_recorder');
 const { iterationManager } = require('./iteration_manager');
 const { dagTaskAutoRecorder } = require('./dag_task_auto_recorder');
+const { comprehensiveAutoRecorder } = require('./comprehensive_auto_recorder');
 
 // 全局任务计数器
 let taskCounter = 0;
@@ -49,6 +50,10 @@ class AutoTaskRecorder {
         await dagTaskAutoRecorder.initialize();
         console.log('[AutoTaskRecorder] DAG任务自动记录器已初始化');
       }
+
+      // 初始化综合自动记录器（文件监控）
+      await comprehensiveAutoRecorder.initialize();
+      console.log('[AutoTaskRecorder] 综合自动记录器已初始化');
 
       // 创建会话
       this.sessionId = `auto_record_session_${Date.now()}`;

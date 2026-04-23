@@ -6,6 +6,7 @@
 const { taskTracker } = require('./task_tracker');
 const { iterationManager } = require('./iteration_manager');
 const { permanentMemorySystem } = require('./permanent_memory');
+const { intelligentTrigger } = require('./intelligent_trigger');
 
 class TaskRunner {
   /**
@@ -50,6 +51,21 @@ class TaskRunner {
         );
       }
       
+      // 智能触发分析
+      console.log('[TaskRunner] 调用智能触发分析:', taskName);
+      await intelligentTrigger.analyzeTaskCompletion(
+        {
+          id: taskId,
+          taskName,
+          description,
+          importance: options.memoryImportance || 3,
+          tags: options.memoryTags || 'task'
+        },
+        taskResult
+      );
+      console.log('[TaskRunner] 智能触发分析完成');
+      console.log('[TaskRunner] 智能触发状态:', await intelligentTrigger.getStatus());
+      
       console.log(`任务 ${taskName} 执行完成并记录`);
       return result;
     } catch (error) {
@@ -72,6 +88,18 @@ class TaskRunner {
           }
         );
       }
+      
+      // 智能触发分析（失败任务）
+      await intelligentTrigger.analyzeTaskCompletion(
+        {
+          id: taskId,
+          taskName,
+          description,
+          importance: options.memoryImportance || 4, // 失败任务更重要
+          tags: `${options.memoryTags || 'task'},error`
+        },
+        errorMessage
+      );
       
       console.error(errorMessage);
       throw error;
@@ -196,6 +224,18 @@ ${result ? `执行结果: ${JSON.stringify(result)}` : ''}
         );
       }
       
+      // 智能触发分析（失败任务）
+      await intelligentTrigger.analyzeTaskCompletion(
+        {
+          id: taskId,
+          taskName,
+          description,
+          importance: options.memoryImportance || 4, // 失败任务更重要
+          tags: `${options.memoryTags || 'task'},error`
+        },
+        errorMessage
+      );
+      
       console.error(errorMessage);
       throw error;
     }
@@ -284,6 +324,18 @@ ${result ? `执行结果: ${JSON.stringify(result)}` : ''}
           }
         );
       }
+      
+      // 智能触发分析（失败任务）
+      await intelligentTrigger.analyzeTaskCompletion(
+        {
+          id: taskId,
+          taskName,
+          description,
+          importance: options.memoryImportance || 4, // 失败任务更重要
+          tags: `${options.memoryTags || 'task'},error`
+        },
+        errorMessage
+      );
       
       console.error(errorMessage);
       throw error;

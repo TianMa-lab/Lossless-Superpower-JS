@@ -4,6 +4,8 @@
  */
 
 const { fuzzyMatch } = require('./fuzzy_match');
+const { taskTracker } = require('./task_tracker');
+const { comprehensiveAutoRecorder } = require('./comprehensive_auto_recorder');
 
 class SkillTrigger {
   constructor() {
@@ -26,6 +28,47 @@ class SkillTrigger {
         "变更记录",
         "记录改进",
         "改进记录"
+      ],
+      "intelligent_iteration": [
+        "智能迭代",
+        "自动迭代",
+        "系统迭代",
+        "启动迭代",
+        "停止迭代",
+        "迭代状态",
+        "升级历史"
+      ],
+      "intelligent_trigger_skill": [
+        "智能触发",
+        "自动触发",
+        "触发分析",
+        "技能触发",
+        "智能分析",
+        "任务完成",
+        "任务分析",
+        "触发技能"
+      ],
+      "task_recorder": [
+        "记录任务",
+        "任务记录",
+        "任务管理",
+        "执行任务",
+        "任务分析",
+        "记录该次任务",
+        "记录这次任务"
+      ],
+      "task_driven_dag_kg": [
+        "任务驱动",
+        "DAG-KG迭代",
+        "知识提取",
+        "DAG对齐",
+        "DAG-KG对齐",
+        "对齐",
+        "完整迭代",
+        "任务迭代",
+        "任务驱动状态",
+        "启动任务驱动",
+        "停止任务驱动"
       ],
       "lesson_collector": [
         "收集教训",
@@ -126,6 +169,48 @@ class SkillTrigger {
     return params;
   }
 
+  _extractIntelligentIterationAction(userInput) {
+    const userInputLower = userInput.toLowerCase();
+    
+    if (userInputLower.includes('启动')) {
+      return 'start';
+    } else if (userInputLower.includes('停止')) {
+      return 'stop';
+    } else if (userInputLower.includes('状态')) {
+      return 'status';
+    } else if (userInputLower.includes('触发') && userInputLower.includes('迭代')) {
+      return 'trigger_iteration';
+    } else if (userInputLower.includes('触发') && userInputLower.includes('升级')) {
+      return 'trigger_upgrade';
+    } else if (userInputLower.includes('历史')) {
+      return 'history';
+    } else {
+      return 'status';
+    }
+  }
+
+  _extractTaskDrivenDAGKGAction(userInput) {
+    const userInputLower = userInput.toLowerCase();
+    
+    if (userInputLower.includes('启动')) {
+      return 'start';
+    } else if (userInputLower.includes('停止')) {
+      return 'stop';
+    } else if (userInputLower.includes('状态')) {
+      return 'status';
+    } else if (userInputLower.includes('知识提取')) {
+      return 'extract_knowledge';
+    } else if (userInputLower.includes('对齐') || userInputLower.includes('DAG对齐') || userInputLower.includes('DAG-KG对齐')) {
+      return 'align_dag_kg';
+    } else if (userInputLower.includes('完整迭代')) {
+      return 'full_iteration';
+    } else if (userInputLower.includes('添加任务')) {
+      return 'add_task';
+    } else {
+      return 'status';
+    }
+  }
+
   /**
    * 触发技能
    * @param {Object} skillInfo - 技能信息字典
@@ -167,6 +252,26 @@ class SkillTrigger {
             result = "教训收集技能未实现";
           }
           break;
+        case "intelligent_iteration":
+          // 导入并执行智能迭代技能
+          try {
+            const { runSkill } = require('./skills/intelligent_iteration');
+            const action = params.action || this._extractIntelligentIterationAction('状态');
+            result = await runSkill(action);
+          } catch (error) {
+            result = "智能迭代技能未实现";
+          }
+          break;
+        case "task_driven_dag_kg":
+          // 导入并执行任务驱动的DAG-KG迭代技能
+          try {
+            const { runSkill } = require('./skills/task_driven_dag_kg_iteration');
+            const action = params.action || this._extractTaskDrivenDAGKGAction('状态');
+            result = await runSkill(action);
+          } catch (error) {
+            result = "任务驱动的DAG-KG迭代技能未实现";
+          }
+          break;
         case "self_introspection":
           // 导入并执行自我反思技能
           try {
@@ -174,6 +279,31 @@ class SkillTrigger {
             result = await runSkill("自我反思");
           } catch (error) {
             result = "自我反思技能未实现";
+          }
+          break;
+        case "intelligent_trigger_skill":
+          // 导入并执行智能触发技能
+          try {
+            const { run } = require('./skills/intelligent_trigger_skill');
+            result = await run(params.taskInfo, params.taskResult);
+          } catch (error) {
+            result = "智能触发技能未实现";
+          }
+          break;
+        case "task_recorder":
+          // 导入并执行任务记录技能
+          try {
+            const { run } = require('./skills/task_recorder');
+            // 传递默认的任务信息
+            const defaultTaskInfo = {
+              id: `task_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
+              name: '用户任务',
+              description: '用户请求记录的任务',
+              timestamp: Date.now()
+            };
+            result = await run(defaultTaskInfo, { success: true, message: '任务执行成功' });
+          } catch (error) {
+            result = `任务记录技能执行失败: ${error.message}`;
           }
           break;
         default:
@@ -194,16 +324,50 @@ class SkillTrigger {
    * @returns {*} 技能执行结果
    */
   async processInput(userInput) {
+    const startTime = Date.now();
+    const taskId = `skill_trigger_${startTime}_${Math.random().toString(36).substr(2, 9)}`;
+
+    taskTracker.startTask(
+      taskId,
+      '技能触发',
+      userInput,
+      { type: 'skill_trigger', userInput }
+    );
+
     // 分析用户输入
     const skillInfo = this.analyzeInput(userInput);
-    
+
     if (skillInfo) {
       // 触发技能
       const result = await this.triggerSkill(skillInfo);
+
+      const duration = Date.now() - startTime;
+      taskTracker.completeTask(
+        taskId,
+        `技能 ${skillInfo.skillName} 执行完成 (${duration}ms): ${result}`
+      );
+
+      // 记录相关文件变化
+      setTimeout(() => {
+        this.recordRelatedFileChanges(skillInfo);
+      }, 2000);
+
       return result;
     } else {
       // 没有识别到技能
+      taskTracker.completeTask(
+        taskId,
+        '未识别到需要触发的技能'
+      );
       return "未识别到需要触发的技能";
+    }
+  }
+
+  recordRelatedFileChanges(skillInfo) {
+    try {
+      comprehensiveAutoRecorder.pollForChanges();
+    } catch (error) {
+      console.error('[SkillTrigger] 记录文件变化失败:', error.message);
     }
   }
 }
