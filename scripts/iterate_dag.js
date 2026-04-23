@@ -22,7 +22,7 @@ async function iterateDAG() {
 
   // 3. 记录迭代任务
   console.log('\n3. 记录DAG迭代任务...');
-  const iterationTask = await autoTaskRecorder.autoTaskRecorder.recordTask(
+  const iterationTask = await autoTaskRecorder.recordTask(
     'DAG系统技术迭代',
     '实施DAG系统第二阶段功能增强',
     async () => {
