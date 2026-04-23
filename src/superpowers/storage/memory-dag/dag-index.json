@@ -1071,6 +1071,236 @@
       "lessons": [
         "这是经验教训"
       ]
+    },
+    "task_node_task_1776908377141": {
+      "id": "task_node_task_1776908377141",
+      "type": "task",
+      "taskId": "task_1776908377141",
+      "status": "completed",
+      "priority": "medium",
+      "topic": "测试任务",
+      "description": "测试DAG迭代后的任务记录功能",
+      "createdAt": 1776908377141,
+      "updatedAt": 1776908377143,
+      "completedAt": 1776908377143,
+      "metadata": {
+        "agent": "unknown",
+        "project": "test",
+        "tags": [],
+        "outcome": null,
+        "lessons": []
+      },
+      "outcome": {
+        "success": true,
+        "message": "测试任务完成"
+      },
+      "lessons": [
+        "测试成功的经验教训"
+      ]
+    },
+    "conversation_test_conversation_1": {
+      "id": "conversation_test_conversation_1",
+      "type": "conversation",
+      "topic": "你好，我需要配置NekoBox使用海外静态住宅IP代理服务器 好的，我可以帮你配置NekoBox。请提供代理服务器的地址、端口、用户名和密码 服务器地址是64.105.162.121，端口7778，用户名1ifv2sdd22p26d，密码ipweb",
+      "messageCount": 7,
+      "participantCount": 2,
+      "entities": [
+        "64.105.162.121"
+      ],
+      "metadata": {
+        "channel": "chat",
+        "user_id": "test_user",
+        "language": "Chinese",
+        "startTime": 1776908149229,
+        "endTime": 1776908749229
+      },
+      "createdAt": 1776911749230
+    },
+    "task_node_task_1776911749231": {
+      "id": "task_node_task_1776911749231",
+      "type": "task",
+      "taskId": "task_1776911749231",
+      "status": "active",
+      "priority": "medium",
+      "topic": "，NekoBox现在应该可以使用海外静态住宅IP代理服务器了",
+      "description": "完成，NekoBox现在应该可以使用海外静态住宅IP代理服务器了",
+      "createdAt": 1776911749231,
+      "updatedAt": 1776911749231,
+      "completedAt": null,
+      "metadata": {
+        "agent": "unknown",
+        "project": "conversation",
+        "tags": [
+          "conversation",
+          "extracted"
+        ],
+        "outcome": null,
+        "lessons": []
+      }
+    },
+    "message_test_conversation_1_0": {
+      "id": "message_test_conversation_1_0",
+      "type": "message",
+      "role": "user",
+      "content": "你好，我需要配置NekoBox使用海外静态住宅IP代理服务器",
+      "timestamp": 1776908149229,
+      "metadata": {
+        "conversationId": "test_conversation_1",
+        "sequence": 0
+      },
+      "createdAt": 1776911749232
+    },
+    "message_test_conversation_1_1": {
+      "id": "message_test_conversation_1_1",
+      "type": "message",
+      "role": "assistant",
+      "content": "好的，我可以帮你配置NekoBox。请提供代理服务器的地址、端口、用户名和密码",
+      "timestamp": 1776908249229,
+      "metadata": {
+        "conversationId": "test_conversation_1",
+        "sequence": 1
+      },
+      "createdAt": 1776911749234
+    },
+    "message_test_conversation_1_2": {
+      "id": "message_test_conversation_1_2",
+      "type": "message",
+      "role": "user",
+      "content": "服务器地址是64.105.162.121，端口7778，用户名1ifv2sdd22p26d，密码ipweb",
+      "timestamp": 1776908349229,
+      "metadata": {
+        "conversationId": "test_conversation_1",
+        "sequence": 2
+      },
+      "createdAt": 1776911749236
+    },
+    "message_test_conversation_1_3": {
+      "id": "message_test_conversation_1_3",
+      "type": "message",
+      "role": "assistant",
+      "content": "收到，我会帮你配置NekoBox。首先我需要检查配置文件的位置，然后创建正确的配置格式",
+      "timestamp": 1776908449229,
+      "metadata": {
+        "conversationId": "test_conversation_1",
+        "sequence": 3
+      },
+      "createdAt": 1776911749239
+    },
+    "message_test_conversation_1_4": {
+      "id": "message_test_conversation_1_4",
+      "type": "message",
+      "role": "assistant",
+      "content": "配置已完成，NekoBox现在应该可以使用海外静态住宅IP代理服务器了",
+      "timestamp": 1776908549229,
+      "metadata": {
+        "conversationId": "test_conversation_1",
+        "sequence": 4
+      },
+      "createdAt": 1776911749241
+    },
+    "message_test_conversation_1_5": {
+      "id": "message_test_conversation_1_5",
+      "type": "message",
+      "role": "user",
+      "content": "谢谢，现在我需要测试代理连接是否正常",
+      "timestamp": 1776908649229,
+      "metadata": {
+        "conversationId": "test_conversation_1",
+        "sequence": 5
+      },
+      "createdAt": 1776911749243
+    },
+    "message_test_conversation_1_6": {
+      "id": "message_test_conversation_1_6",
+      "type": "message",
+      "role": "assistant",
+      "content": "好的，我可以帮你测试代理连接。让我运行测试命令来验证",
+      "timestamp": 1776908749229,
+      "metadata": {
+        "conversationId": "test_conversation_1",
+        "sequence": 6
+      },
+      "createdAt": 1776911749246
+    },
+    "memory_1776913221097_n6vkj9jij": {
+      "id": "memory_1776913221097_n6vkj9jij",
+      "type": "memory",
+      "topic": "NekoBox代理配置",
+      "createdAt": 1776913221099,
+      "layers": {
+        "raw": {
+          "data": {
+            "original": "\n    你好，我需要配置NekoBox使用海外静态住宅IP代理服务器。\n    服务器地址是64.105.162.121，端口7778，用户名1ifv2sdd22p26d，密码ipweb。\n    我希望能够通过这个代理访问谷歌地图和其他国际网站。\n    配置完成后，我需要测试代理连接是否正常。\n    另外，我还需要了解如何在浏览器中设置代理服务器。\n  ",
+            "timestamp": 1776913221097,
+            "size": 182,
+            "type": "string",
+            "source": "conversation"
+          },
+          "processedAt": 1776913221097,
+          "description": "原始数据层"
+        },
+        "structured": {
+          "data": {
+            "entities": [
+              {
+                "type": "ip",
+                "value": "64.105.162.121"
+              }
+            ],
+            "keywords": [
+              "你好，我需要配置nekobox使用海外静态住宅ip代理服务器。",
+              "服务器地址是64.105.162.121，端口7778，用户名1ifv2sdd22p26d，密码ipweb。",
+              "我希望能够通过这个代理访问谷歌地图和其他国际网站。",
+              "配置完成后，我需要测试代理连接是否正常。",
+              "另外，我还需要了解如何在浏览器中设置代理服务器。"
+            ],
+            "relationships": [],
+            "metadata": {}
+          },
+          "processedAt": 1776913221097,
+          "description": "结构化数据层"
+        },
+        "semantic": {
+          "data": {
+            "topics": [],
+            "sentiments": [
+              {
+                "type": "positive",
+                "word": "好"
+              }
+            ],
+            "intentions": [],
+            "concepts": []
+          },
+          "processedAt": 1776913221098,
+          "description": "语义理解层"
+        },
+        "knowledge": {
+          "data": {
+            "facts": [],
+            "rules": [],
+            "patterns": [],
+            "insights": []
+          },
+          "processedAt": 1776913221098,
+          "description": "知识提取层"
+        },
+        "insight": {
+          "data": {
+            "trends": [],
+            "opportunities": [],
+            "risks": [],
+            "recommendations": []
+          },
+          "processedAt": 1776913221099,
+          "description": "洞察发现层"
+        }
+      },
+      "metadata": {
+        "source": "conversation",
+        "confidence": 0.9,
+        "relevance": 0.8
+      }
     }
   },
   "edges": [
@@ -2751,6 +2981,118 @@
       "type": "task_relation",
       "relationType": "depends_on",
       "createdAt": 1776905303010
+    },
+    {
+      "id": "edge_1776911749231_bt9uj0tis",
+      "source": "conversation_test_conversation_1",
+      "target": "task_node_task_1776911749231",
+      "type": "contains_task",
+      "confidence": 0.7,
+      "createdAt": 1776911749231
+    },
+    {
+      "id": "edge_1776911749234_vn0frkwkv",
+      "source": "conversation_test_conversation_1",
+      "target": "message_test_conversation_1_0",
+      "type": "contains_message",
+      "sequence": 0,
+      "createdAt": 1776911749234
+    },
+    {
+      "id": "edge_1776911749235_6ogz84h3b",
+      "source": "conversation_test_conversation_1",
+      "target": "message_test_conversation_1_1",
+      "type": "contains_message",
+      "sequence": 1,
+      "createdAt": 1776911749235
+    },
+    {
+      "id": "edge_1776911749236_c3uheqnec",
+      "source": "message_test_conversation_1_0",
+      "target": "message_test_conversation_1_1",
+      "type": "followed_by",
+      "sequence": 1,
+      "createdAt": 1776911749236
+    },
+    {
+      "id": "edge_1776911749237_yml6aa47b",
+      "source": "conversation_test_conversation_1",
+      "target": "message_test_conversation_1_2",
+      "type": "contains_message",
+      "sequence": 2,
+      "createdAt": 1776911749237
+    },
+    {
+      "id": "edge_1776911749238_l9y2nd4cu",
+      "source": "message_test_conversation_1_1",
+      "target": "message_test_conversation_1_2",
+      "type": "followed_by",
+      "sequence": 2,
+      "createdAt": 1776911749238
+    },
+    {
+      "id": "edge_1776911749239_8ofkypwte",
+      "source": "conversation_test_conversation_1",
+      "target": "message_test_conversation_1_3",
+      "type": "contains_message",
+      "sequence": 3,
+      "createdAt": 1776911749239
+    },
+    {
+      "id": "edge_1776911749240_h4dlcarbj",
+      "source": "message_test_conversation_1_2",
+      "target": "message_test_conversation_1_3",
+      "type": "followed_by",
+      "sequence": 3,
+      "createdAt": 1776911749240
+    },
+    {
+      "id": "edge_1776911749242_injz6j9ut",
+      "source": "conversation_test_conversation_1",
+      "target": "message_test_conversation_1_4",
+      "type": "contains_message",
+      "sequence": 4,
+      "createdAt": 1776911749242
+    },
+    {
+      "id": "edge_1776911749243_n5v75n39m",
+      "source": "message_test_conversation_1_3",
+      "target": "message_test_conversation_1_4",
+      "type": "followed_by",
+      "sequence": 4,
+      "createdAt": 1776911749243
+    },
+    {
+      "id": "edge_1776911749244_njfq10j29",
+      "source": "conversation_test_conversation_1",
+      "target": "message_test_conversation_1_5",
+      "type": "contains_message",
+      "sequence": 5,
+      "createdAt": 1776911749244
+    },
+    {
+      "id": "edge_1776911749245_1xew2pdgx",
+      "source": "message_test_conversation_1_4",
+      "target": "message_test_conversation_1_5",
+      "type": "followed_by",
+      "sequence": 5,
+      "createdAt": 1776911749245
+    },
+    {
+      "id": "edge_1776911749246_31wde4h7o",
+      "source": "conversation_test_conversation_1",
+      "target": "message_test_conversation_1_6",
+      "type": "contains_message",
+      "sequence": 6,
+      "createdAt": 1776911749246
+    },
+    {
+      "id": "edge_1776911749247_7o2jryvm0",
+      "source": "message_test_conversation_1_5",
+      "target": "message_test_conversation_1_6",
+      "type": "followed_by",
+      "sequence": 6,
+      "createdAt": 1776911749247
     }
   ]
 }
